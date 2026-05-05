@@ -166,6 +166,37 @@ Chosen proof stores:
 - **Koala**: strong objection handling, trial/warranty/delivery confidence, sticky buying action, and clear purchase reassurance. It is fine to reuse because it does a lot of things right.
 - **Good Pair Days**: wine discovery and repeat-purchase proof for clients in wine, alcohol, premium food, gifting, hamper, pantry, or local-producer categories.
 
+## Proof Notes From John
+
+### The Good Guys
+
+- Use The Good Guys as the main big-brand retail proof point for Find, Trust, Decide, and Buy.
+- They understand buyer objections in the same broad way JB Hi-Fi does, but without reusing JB Hi-Fi from the previous video.
+- They are strong on trust and safety: recognisable brand, store presence, support, delivery/pickup reassurance, and finance/payment confidence.
+- They proactively answer price objections. They let customers contact them if they have seen a cheaper price, and they can scan for cheaper prices online, so they are not waiting for the customer to challenge the price manually.
+- They handle delivery objections clearly.
+- They help customers get to the product they want quickly through search and product discovery.
+- They also show similar/related possibilities, which helps the customer compare and decide rather than hitting a dead end.
+
+### Koala
+
+- Use Koala as the online-first proof point for trust and objection handling.
+- Koala has to work especially hard because the customer cannot walk into a store and may not be able to talk to someone in the same way they could with a physical retailer.
+- Their site needs to make the customer feel very safe before buying.
+- They are review-led and use social proof heavily.
+- They handle the category-specific objections well: trial, warranty, delivery, comfort, returns, quality, and confidence around buying a mattress online.
+- They are a strong example of a store that understands the emotional risk of an online-only considered purchase.
+
+### Good Pair Days
+
+- Use Good Pair Days as the wine/premium-food proof point for mobile experience, product education, and repeat purchase.
+- Their mobile experience is strong and should be inspected closely before recording.
+- Their product pages explain the wine in clear, obvious ways that customers actually want.
+- They show recommended recipes/pairings.
+- They show reviews.
+- Their repeat-buying mechanisms are excellent and map well to Come Back.
+- They reduce category anxiety by helping customers understand wine without needing to already be an expert.
+
 Wine/alcohol/premium food proof store:
 
 Good Pair Days is the selected third proof store. It makes wine discovery feel personal through a taste-profile quiz, "personal sommelier" positioning, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Decide, and Come Back.

@@ -60,9 +60,9 @@ An abandoned cart discount might be useful in some situations, but it is not aut
 ## Screen Recording Beats
 
 - Show a simple diagram or notes page with the buying-cycle stages.
-- Inspect The Good Guys for trust, safety, product discovery, and purchase confidence.
-- Inspect Koala for objection handling, reassurance, and buying action.
-- Inspect Good Pair Days for wine discovery, trust, product education, repeat purchase, and category-specific objections.
+- Inspect The Good Guys for trust, safety, search/product discovery, related product options, delivery reassurance, and proactive price-objection handling.
+- Inspect Koala for review-led trust, online-only reassurance, trial/warranty/delivery, and category-specific objection handling.
+- Inspect Good Pair Days for mobile experience, clear wine education, recipes/pairings, reviews, repeat purchase, and reducing wine-buying anxiety.
 - Show a checklist-style summary at the end.
 
 ## On-Screen Callouts
