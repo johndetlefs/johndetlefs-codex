@@ -91,6 +91,17 @@ Last updated: YYYY-MM-DD
 
 ## Opening Hook
 
+## Story Arc
+
+Use the but/therefore principle:
+
+- Premise:
+- But:
+- Therefore:
+- But:
+- Therefore:
+- Resolution:
+
 ## Structure
 
 ## Full Script

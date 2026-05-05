@@ -40,6 +40,29 @@ Use the successful structure from the mobile experience guide:
 
 The delivery should be conversational and fast-moving. Explain each concept quickly, then prove it with the store example. Avoid long definitions.
 
+## Storytelling Rule
+
+Use the Trey Parker/Matt Stone "but/therefore" principle for the video structure.
+
+The script should not feel like:
+
+- "Here is point one, and then point two, and then point three."
+
+It should feel like:
+
+- "Here is what the store owner believes, but here is why that breaks online. Therefore they need to handle this part of the buying cycle. But even if they fix that, another risk appears. Therefore the next part of the store has to do this job."
+
+Do not literally overuse the words "but" and "therefore". Vary the language with phrases like:
+
+- "The problem is..."
+- "That works until..."
+- "Which means..."
+- "So the next job is..."
+- "That solves one problem, but creates another..."
+- "This is where..."
+
+Every major beat should either create tension, explain a consequence, or resolve one problem while naturally leading to the next.
+
 ## Recommended Framework
 
 Use a simple, owner-friendly buying-cycle framework:

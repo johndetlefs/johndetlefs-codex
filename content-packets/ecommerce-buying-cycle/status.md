@@ -33,6 +33,7 @@ Last updated: 2026-05-05
 - Preferred hook direction: "Most people on the Central Coast want to support local brands, but they do not want to feel like they are buying from Dodgy Brothers."
 - Include an early message-timing principle: the wrong message at the wrong time can kill a sale, so email/SMS/remarketing should match the customer's stage in the buying cycle.
 - Flag possible follow-up video: matching Klaviyo/email flows to the buying cycle, especially why an abandoned cart discount is not always the right answer.
+- All videos should use the Trey Parker/Matt Stone "but/therefore" principle: avoid "and then" lists; each beat should create tension, consequence, or a resolution that leads naturally to the next problem.
 
 ## Open Questions
 

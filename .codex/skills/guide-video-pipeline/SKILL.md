@@ -53,19 +53,22 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 
 1. **Idea and angle**: define the target Shopify operator, pain point, commercial intent, proof/examples, and likely Fix-It Call connection.
 2. **Hook tests**: create several testable bait-and-switch hooks for the first 10 seconds of the main video, YouTube title/thumbnail framing, Shorts/Reels, and Meta Ads. Prefer the pattern: agreement, reversal, bridge.
-3. **Script and recording plan**: write the long-form YouTube script, screen-share beats, selected opening hook, CTA, and capture checklist.
-4. **Edit brief**: translate the script into a CapCut-friendly timeline, cut list, captions, zooms, callouts, and export notes.
-5. **YouTube package**: produce title variants, description, chapters, tags, thumbnail concepts, pinned comment, and CTA.
-6. **Short-form plan**: choose clips for YouTube Shorts, Meta Reels, and other vertical placements with hooks, captions, and framing notes.
-7. **Guide page**: turn the transcript/script into a standalone MDX guide under `next/content/guides/<slug>/index.mdx`, with a video hero and useful written content.
-8. **Deploy support**: validate the smallest relevant checks in `next/` and summarize deploy readiness.
-9. **Meta Ads**: create traffic ads that send to the guide page, with UTM conventions, angle variants, and creative briefs.
+3. **Story arc**: shape the script using the Trey Parker/Matt Stone "but/therefore" principle. Avoid "and then" lists. Each beat should create tension, consequence, or resolution that leads to the next beat.
+4. **Script and recording plan**: write the long-form YouTube script, screen-share beats, selected opening hook, CTA, and capture checklist.
+5. **Edit brief**: translate the script into a CapCut-friendly timeline, cut list, captions, zooms, callouts, and export notes.
+6. **YouTube package**: produce title variants, description, chapters, tags, thumbnail concepts, pinned comment, and CTA.
+7. **Short-form plan**: choose clips for YouTube Shorts, Meta Reels, and other vertical placements with hooks, captions, and framing notes.
+8. **Guide page**: turn the transcript/script into a standalone MDX guide under `next/content/guides/<slug>/index.mdx`, with a video hero and useful written content.
+9. **Deploy support**: validate the smallest relevant checks in `next/` and summarize deploy readiness.
+10. **Meta Ads**: create traffic ads that send to the guide page, with UTM conventions, angle variants, and creative briefs.
 
 ## Operating Rules
 
 - Keep the Fix-It Call as the main public conversion path.
 - Treat invoiced follow-on hours as a post-call/customer-success option, not a primary public CTA.
 - When a useful follow-up topic appears, add a brief entry to `content-packets/IDEA_BACKLOG.md` instead of expanding the current guide beyond its scope.
+- Build scripts with a "but/therefore" story arc: introduce a premise, create a problem or reversal, explain the consequence, offer a practical move, then reveal the next problem. Vary the wording; do not literally overuse "but" and "therefore".
+- Avoid "and then" structure. If a section is just a list of points, rewrite it so each point either creates a question, resolves tension, or leads to the next tension.
 - Make guide pages useful without requiring the viewer to watch the video.
 - Send paid social traffic to the guide page unless the user explicitly asks for a homepage or booking-page campaign.
 - Maintain Australian spelling and JohnDetlefs.com voice: direct, practical, experienced, and low-fluff.
