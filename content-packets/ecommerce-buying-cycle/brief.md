@@ -26,6 +26,20 @@ Proposed title direction:
 - Operators who know their products and customers in person, but have not translated that sales knowledge into ecommerce pages.
 - Australian store owners who want practical examples, not abstract funnel diagrams.
 
+## John Positioning In This Guide
+
+John should come across as the approachable translator between big-brand ecommerce practice and smaller Shopify stores.
+
+The positioning is:
+
+- "I work with large agencies and major Australian ecommerce brands, so I get to see how serious ecommerce teams think."
+- "That does not mean I am claiming to be The Good Guys, Koala, or any other brand we inspect."
+- "It means I can look at what big brands do well, explain the thinking behind it, and show smaller stores which parts are worth copying."
+
+The emotional role is almost interviewer/advocate: ask the big-brand ecommerce questions on behalf of smaller store owners, then bring the useful answers back in plain English.
+
+Use this lightly. The video should still be about the viewer's store, not John's resume.
+
 ## Style And Structure To Match
 
 Use the successful structure from the mobile experience guide:
@@ -131,6 +145,12 @@ Potential standalone follow-up video:
 ## Proof Pattern
 
 Use real, recognisable Australian ecommerce stores as proof on screen. The examples should be inspected close to recording time so the script reflects what is actually visible.
+
+Frame proof examples carefully:
+
+- John is not saying he is those brands.
+- John is saying he works in and around that level of ecommerce through agencies and large-brand projects, so he understands the patterns and can translate them.
+- The viewer should feel like they are getting access to big-brand ecommerce thinking without agency overhead or jargon.
 
 Chosen proof stores:
 

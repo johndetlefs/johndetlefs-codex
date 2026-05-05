@@ -95,6 +95,25 @@ Core value:
 - Practical fixes and clear priorities, not discovery-heavy consulting.
 - Lower-risk, low-commitment entry point compared with agency retainers or large projects.
 
+## Positioning
+
+John's role is best understood as a translator and conduit between big-brand ecommerce practice and smaller Shopify stores.
+
+- He works with large agencies that serve some of the largest ecommerce brands in Australia.
+- He has legitimate hands-on familiarity with large, serious ecommerce websites and how major brands think about storefronts, conversion, trust, customer journeys, and technical execution.
+- He should not position himself as "I am JB Hi-Fi" or "I am Oz Hair and Beauty"; the point is "I work in that world, I see how those teams think, and I can translate the useful parts for smaller stores."
+- The credibility signal is: big brands and large agencies trust John's judgement, so small stores can also trust him.
+- The emotional position is approachable and advocate-like, not distant expert or agency consultant.
+- He is the practical middleman: he speaks to the big-brand ecommerce world and brings those lessons back to small Australian Shopify store owners in plain language.
+- Future content may lean into an interview/podcast style where John asks big brands, agencies, and ecommerce operators the questions smaller stores would want answered.
+
+Tone to preserve:
+
+- Personable, warm, direct, and useful.
+- Senior enough to be trusted by big brands, but approachable enough that a small store owner feels safe asking basic questions.
+- More "let me translate what the big end of town knows" than "look how clever I am".
+- Avoid sounding like John represents big brands formally unless that is explicitly true for the specific context.
+
 Proof points currently used:
 
 - Client list includes Guess, Camilla, Sukin, Tigerlily, Haymes Paint, Early Settler, UTS, Mission Australia, Massey, Macros, Soulara, DEPT, Acidgreen, Omnicom.

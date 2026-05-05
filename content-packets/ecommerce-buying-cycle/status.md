@@ -34,6 +34,7 @@ Last updated: 2026-05-05
 - Include an early message-timing principle: the wrong message at the wrong time can kill a sale, so email/SMS/remarketing should match the customer's stage in the buying cycle.
 - Flag possible follow-up video: matching Klaviyo/email flows to the buying cycle, especially why an abandoned cart discount is not always the right answer.
 - All videos should use the Trey Parker/Matt Stone "but/therefore" principle: avoid "and then" lists; each beat should create tension, consequence, or a resolution that leads naturally to the next problem.
+- John positioning: approachable translator between big-brand ecommerce practice and smaller Shopify stores. The guide should use large Australian stores as proof examples while making clear John is translating patterns from that world, not claiming to be those brands.
 
 ## Open Questions
 
