@@ -52,7 +52,7 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 ## Workflow
 
 1. **Idea and angle**: define the target Shopify operator, pain point, commercial intent, proof/examples, and likely Fix-It Call connection.
-2. **Hook tests**: create several testable hooks for the first 10 seconds of the main video, YouTube title/thumbnail framing, Shorts/Reels, and Meta Ads.
+2. **Hook tests**: create several testable bait-and-switch hooks for the first 10 seconds of the main video, YouTube title/thumbnail framing, Shorts/Reels, and Meta Ads. Prefer the pattern: agreement, reversal, bridge.
 3. **Script and recording plan**: write the long-form YouTube script, screen-share beats, selected opening hook, CTA, and capture checklist.
 4. **Edit brief**: translate the script into a CapCut-friendly timeline, cut list, captions, zooms, callouts, and export notes.
 5. **YouTube package**: produce title variants, description, chapters, tags, thumbnail concepts, pinned comment, and CTA.

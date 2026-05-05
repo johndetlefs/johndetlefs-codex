@@ -29,7 +29,8 @@ Last updated: 2026-05-05
 - Use The Good Guys and Koala as proof stores.
 - Choose one wine/alcohol/premium food store after inspection; candidates include Dan Murphy's, BWS, Vinomofo, Naked Wines Australia, Harris Farm Markets, and Simon Johnson.
 - Hooks are a first-class asset for this workflow. Use `hooks.md` for the main video opening, Shorts/Reels, YouTube packaging, and Meta Ads tests.
-- Preferred hook direction: local customers want to support local brands, but local goodwill has limits if the store feels risky or "Dodgy Brothers".
+- Preferred hook structure: bait-and-switch. Start with an obvious agreement, then add a reversal that creates tension.
+- Preferred hook direction: "Most people on the Central Coast want to support local brands, but they do not want to feel like they are buying from Dodgy Brothers."
 - Include an early message-timing principle: the wrong message at the wrong time can kill a sale, so email/SMS/remarketing should match the customer's stage in the buying cycle.
 - Flag possible follow-up video: matching Klaviyo/email flows to the buying cycle, especially why an abandoned cart discount is not always the right answer.
 

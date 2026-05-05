@@ -8,7 +8,9 @@ By the end of this video, a Shopify store owner should understand the basic buyi
 
 Preferred hook direction:
 
-Would you believe most people on the Central Coast actually do want to support local brands? But there is a limit to how Dodgy Brothers they are willing to go.
+Most people on the Central Coast want to support local brands. I genuinely believe that.
+
+But they do not want to feel like they are buying from Dodgy Brothers.
 
 If your Shopify store feels unclear, risky, hard to navigate, or like nobody is quite sure what happens after they enter their credit card details, that local goodwill disappears pretty quickly.
 

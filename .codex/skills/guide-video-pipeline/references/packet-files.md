@@ -111,6 +111,12 @@ Last updated: YYYY-MM-DD
 
 ## Hook Strategy
 
+Use bait-and-switch hooks:
+
+1. Agreement: an obvious truth the viewer accepts.
+2. Reversal: an unexpected or uncomfortable turn.
+3. Bridge: why the video matters.
+
 ## Main Video Opening Candidates
 
 ## Short-Form Hooks

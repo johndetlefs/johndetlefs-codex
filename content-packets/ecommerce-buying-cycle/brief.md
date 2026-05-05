@@ -8,7 +8,7 @@ This guide should explain the ecommerce buying cycle in a quick, practical way, 
 
 The lesson is not "learn marketing theory". The lesson is: grab your phone or laptop, load up your Shopify store, and check whether each step of the buying cycle is being handled properly.
 
-The hook should be a little controversial, especially for Central Coast and local-brand audiences. The point is not to insult small businesses; it is to say the quiet part out loud: plenty of customers want to support local brands, but they still need the store to feel credible, safe, and easy to buy from.
+The hook should use a bait-and-switch structure: start with an obvious statement the viewer agrees with, then add a reversal that creates tension. The point is not to insult small businesses; it is to say the quiet part out loud. Example: people do want to support local brands, but they still need the store to feel credible, safe, and easy to buy from.
 
 Include an early note that the buying cycle affects messaging as well as page design. If you send the wrong message at the wrong time, you can kill a sale. For example, an abandoned cart discount is not always the right response. Depending on where the customer is in the cycle, they may need trust, delivery clarity, product education, sizing help, reassurance, or a reminder rather than a discount. Klaviyo, Shopify Email, Mailchimp, or any other email/SMS platform should be used to send the right message at the right time based on behaviour, not just blast generic offers.
 
@@ -275,6 +275,12 @@ Hooks are a first-class asset for this guide. Keep a dedicated `hooks.md` file i
 - YouTube Shorts/Reels openings;
 - Meta Ads primary text and creative openings.
 
+Preferred hook pattern:
+
+- Agreement: "Most people want to support local brands."
+- Reversal: "But they do not want to feel like they are buying from Dodgy Brothers."
+- Bridge: "Your Shopify store has to earn enough trust to turn local goodwill into a sale."
+
 YouTube/search hooks:
 
 - Why people visit your Shopify store but do not buy.
@@ -286,6 +292,8 @@ YouTube/search hooks:
 Short-form hooks:
 
 - "Most Central Coast shoppers want to support local brands. They just do not want to feel like they are buying from Dodgy Brothers."
+- "People do want to buy from small local brands. They just do not necessarily trust your store yet."
+- "Sending an abandoned cart email is a great idea, unless you send the wrong message at the wrong time."
 - "The wrong email at the wrong time can kill a sale."
 - "Stop sending discounts when customers need answers."
 - "Your Shopify store is not a shelf. It is a sales conversation."
