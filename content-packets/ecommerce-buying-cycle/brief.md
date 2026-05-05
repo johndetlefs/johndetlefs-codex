@@ -166,16 +166,19 @@ Chosen proof stores:
 - **Koala**: strong objection handling, trial/warranty/delivery confidence, sticky buying action, and clear purchase reassurance. It is fine to reuse because it does a lot of things right.
 - **Wine/alcohol/premium foodstuff brand to choose after inspection**: use this to make the guide relevant to clients in wine, alcohol, premium food, gifting, hamper, pantry, or local-producer categories.
 
-Candidate wine/alcohol/premium food proof stores to inspect:
+Wine/alcohol/premium food proof shortlist:
 
-- **Dan Murphy's**: broad alcohol catalogue, search/discovery, delivery/pickup, price/value cues, trust and compliance expectations.
-- **BWS**: convenience, local pickup/delivery, product discovery, promos, and repeat purchase.
-- **Vinomofo**: wine discovery, offer framing, urgency/value, education, and trust.
-- **Naked Wines Australia**: wine discovery, membership-style buying, producer story, and repeat purchase.
-- **Harris Farm Markets**: premium food/grocery trust, freshness, delivery, provenance, and product discovery.
-- **Simon Johnson** or similar premium food retailer: premium positioning, product education, gifting, and trust.
+- **Good Pair Days**: best current first-choice proof store. It makes wine discovery feel personal through a taste-profile quiz, "personal sommelier" positioning, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Decide, and Come Back.
+- **Naked Wines Australia**: strong for producer story, fairness/transparency, guarantee/credit-back reassurance, independent winemaker positioning, reviews, and membership-style repeat purchase. Useful for Trust, Decide, and Come Back.
+- **Vinomofo**: strong for simple offer framing, deal/value, curation, urgency, clubs, and a distinctive brand voice. Useful for Find, Decide, and Buy.
+- **Dan Murphy's**: strong broad-catalogue and convenience benchmark: huge range, search/category structure, same-day delivery or pickup, stores, membership, price/value cues, help centre, and compliance. Useful if the script needs a large-retailer alcohol example rather than a boutique/premium one.
+- **Qantas Wine**: strong for loyalty mechanics, points earn/redeem, premium membership benefits, subscriptions, and support-local-winemakers framing. Useful for Come Back and trust-through-brand association.
+- **Harris Farm Markets**: strong premium fresh food/grocery example: same-day express delivery, click and collect, postcode-led availability, freshness, premium produce, help/contact signals, and repeat grocery behaviour. Useful if the food angle matters more than wine.
+- **Simon Johnson**: strong premium food/gifting example: curated collections, premium products, producer relationships, recipes, stores, click and collect, and high-value hampers. Useful for premium positioning, gifting, provenance, and product education.
 
 Do not force every store into the video. Pick three to five strong examples that clearly prove the teaching points.
+
+Recommended third proof store for this video: **Good Pair Days**, unless we decide the guide needs a premium food/gifting example more than a wine-discovery example.
 
 ## Concept-To-Example Map
 
