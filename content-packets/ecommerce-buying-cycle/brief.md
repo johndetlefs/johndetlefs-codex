@@ -40,6 +40,13 @@ The emotional role is almost interviewer/advocate: ask the big-brand ecommerce q
 
 Use this lightly. The video should still be about the viewer's store, not John's resume.
 
+Important proof angle for this guide:
+
+- Ironically, brands like JB Hi-Fi and The Good Guys can feel more personable, safer, and more trustworthy online than many local stores.
+- That is not because big brands are naturally more human. It is because they spend heavily and think deliberately about making the digital experience feel helpful, safe, and reassuring.
+- Many small local stores unintentionally create a sterile online experience even though the real people behind the business are warm, knowledgeable, and trustworthy.
+- The useful lesson is not "become a big brand". It is "copy the trust-building behaviours that make big brands feel safe online."
+
 ## Style And Structure To Match
 
 Use the successful structure from the mobile experience guide:
@@ -151,6 +158,7 @@ Frame proof examples carefully:
 - John is not saying he is those brands.
 - John is saying he works in and around that level of ecommerce through agencies and large-brand projects, so he understands the patterns and can translate them.
 - The viewer should feel like they are getting access to big-brand ecommerce thinking without agency overhead or jargon.
+- The irony to highlight: small stores should have the human advantage, but big brands often create the more personable online experience because they deliberately design for reassurance.
 
 Chosen proof stores:
 

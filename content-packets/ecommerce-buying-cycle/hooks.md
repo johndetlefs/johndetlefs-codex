@@ -45,6 +45,8 @@ They just do not necessarily trust your store yet.
 
 That sounds harsh, but online the customer cannot look you in the eye, ask a question over the counter, or see whether the shop feels real. Your Shopify store has to build that confidence for you.
 
+And the ironic thing is that brands like JB Hi-Fi and The Good Guys often feel more personable and trustworthy online than local stores do. Not because they are naturally more human, but because they spend millions making the website feel safe, helpful, and reassuring.
+
 ### Option 3: Abandoned Cart Reversal
 
 Sending an email to someone who left your checkout is a fantastic idea.
@@ -81,6 +83,8 @@ Before you offer money off, you need to know whether they are stuck on price, tr
 
 - "Most people want to support local brands. They just do not want to feel like they are buying from Dodgy Brothers."
 - "People do want to buy from small local brands. They just do not necessarily trust your store yet."
+- "The ironic thing is JB Hi-Fi and The Good Guys can feel more personable online than a local store."
+- "Big brands spend millions trying to feel human online. Local stores sometimes accidentally feel sterile."
 - "Abandoned cart emails are a great idea, unless you send the wrong message at the wrong time."
 - "More traffic sounds great, unless your store is just creating more people who leave."
 - "A prettier Shopify store can still fail if it does not answer the questions customers need answered."
@@ -100,6 +104,10 @@ Most local customers want to support small brands. But if your Shopify store fee
 
 People may like your products and still not trust your store enough to buy. This guide shows how to check the buying cycle your Shopify store is taking them through.
 
+### Big Brand Irony
+
+Small stores should feel more personal than big brands. But online, brands like The Good Guys often feel safer and more reassuring because they deliberately build trust into every step.
+
 ### Abandoned Cart Reversal
 
 Abandoned cart emails are smart. But if the customer needed trust, sizing help, delivery clarity, or product education, a discount may be the wrong message.
@@ -115,6 +123,7 @@ A better-looking Shopify store is useful. But if it does not help customers find
 ## Thumbnail/Text Tests
 
 - "They Don't Trust You Yet"
+- "Big Brands Feel More Human?"
 - "Wrong Message, Wrong Time"
 - "Traffic Won't Fix This"
 - "Stop Discounting Everything"
@@ -128,4 +137,4 @@ A better-looking Shopify store is useful. But if it does not help customers find
 
 Use Option 1 or Option 2 as the main opening unless testing suggests the email angle is stronger:
 
-> Most people on the Central Coast want to support local brands. But they do not want to feel like they are buying from Dodgy Brothers. If your Shopify store feels unclear, risky, or hard to buy from, that local goodwill disappears pretty quickly.
+> People do want to buy from small local brands. They just do not necessarily trust your store yet. And the ironic thing is that brands like JB Hi-Fi and The Good Guys often feel more personable and trustworthy online, because they spend millions making the website feel safe, helpful, and reassuring.

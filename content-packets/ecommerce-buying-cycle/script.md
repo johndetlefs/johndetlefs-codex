@@ -8,11 +8,13 @@ By the end of this video, a Shopify store owner should understand the basic buyi
 
 Preferred hook direction:
 
-Most people on the Central Coast want to support local brands. I genuinely believe that.
+People do want to buy from small local brands. I genuinely believe that.
 
-But they do not want to feel like they are buying from Dodgy Brothers.
+They just do not necessarily trust your store yet.
 
-If your Shopify store feels unclear, risky, hard to navigate, or like nobody is quite sure what happens after they enter their credit card details, that local goodwill disappears pretty quickly.
+That sounds harsh, but online the customer cannot look you in the eye, ask a question over the counter, or see whether the shop feels real. Your Shopify store has to build that confidence for you.
+
+And the ironic thing is that JB Hi-Fi and The Good Guys often feel more personable and trustworthy online than a local store does. Not because they are naturally more human, but because they spend millions making their websites feel safe, helpful, and reassuring.
 
 So today we are going to look at the ecommerce buying cycle: the steps your store needs to take a customer through before they are comfortable buying from you.
 
@@ -23,8 +25,8 @@ See `hooks.md` for alternate opening tests.
 Use this as the spine for the full script:
 
 - **Premise**: Most people want to support local brands, and small business owners assume that goodwill should help online.
-- **But**: Local goodwill does not overcome a Shopify store that feels unclear, risky, or hard to buy from.
-- **Therefore**: Use big-brand ecommerce patterns as a practical reference point, translated into something a small Shopify store can actually use.
+- **But**: Local goodwill does not overcome a Shopify store that feels unclear, risky, sterile, or hard to buy from.
+- **Therefore**: Use big-brand ecommerce patterns as a practical reference point, because big brands spend heavily to feel safe, helpful, and personable online.
 - **But**: The buying cycle is not only about what is on the page; the wrong email or remarketing message at the wrong time can also kill the sale.
 - **Therefore**: Store pages and messages need to match where the customer is: Find, Trust, Decide, Buy, or Come Back.
 - **But**: Fixing one stage does not automatically fix the next. A customer might find the product but not trust the store, trust the store but still have objections, or decide to buy but hit friction.
@@ -34,7 +36,7 @@ Use this as the spine for the full script:
 ## Structure
 
 1. Local goodwill sounds like an advantage, but trust still has to be earned online.
-2. Big brands have teams thinking about this every day, therefore we can use them as proof without pretending small stores need to become them.
+2. Big brands can ironically feel more personable and trustworthy online, therefore we can learn from how they deliberately build reassurance.
 3. A physical shop can sell through human interaction, therefore a Shopify store has to do that work through pages and messages.
 4. The wrong message at the wrong time can kill a sale, therefore behaviour should guide email/SMS/remarketing.
 5. The buying cycle gives us a simple map: Find, Trust, Decide, Buy, Come Back.
