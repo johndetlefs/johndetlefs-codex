@@ -258,6 +258,17 @@ Use bait-and-switch hooks:
 
 ## Core Angle
 
+## Email Story Arc
+
+Use the but/therefore principle:
+
+- Promise:
+- But:
+- Therefore:
+- But:
+- Therefore:
+- Curiosity gap before CTA:
+
 ## Draft Structure
 
 ## CTA

@@ -55,23 +55,46 @@ The email should introduce the buying cycle as a simple checklist:
 - Buy
 - Come Back
 
+## Email Story Arc
+
+Use the same but/therefore principle as the video, but end with a useful curiosity gap that the guide/video resolves.
+
+Working subject promise:
+
+- `Dan Murphy's sells bottles of wine for $270. This is how they do it.`
+
+Story spine:
+
+- **Promise**: A big retailer can sell a very expensive bottle of wine online.
+- **But**: Customers do not buy expensive products just because they exist on a website.
+- **Therefore**: The page and surrounding buying journey have to build enough confidence to make the purchase feel safe and sensible.
+- **But**: Confidence does not come from one thing. It comes from the right sequence of trust, education, objection handling, delivery clarity, reviews, and timing.
+- **Therefore**: The real mechanism is the ecommerce buying cycle.
+- **Curiosity gap before CTA**: The email should not fully explain every stage. It should make the reader want to see the full breakdown in the guide/video.
+
+CTA build:
+
+- "I break the full cycle down here, using The Good Guys, Koala, and Good Pair Days as examples."
+- Then link to the guide.
+
 ## Draft Structure
 
-1. Open with a curiosity/proof angle: a big retailer can sell very expensive wine online because the page and buying journey do more than show a product.
-2. Explain that premium purchases need confidence: trust, education, reassurance, delivery clarity, reviews, and the right message at the right time.
-3. Use Good Pair Days as the softer premium-category example: they make wine feel understandable without making the customer feel dumb.
-4. Explain the big-brand irony: large retailers can feel more personable and trustworthy online because they deliberately design for reassurance.
-5. Introduce the buying cycle as the practical way to check whether the store is doing the sales job.
-6. Include the wrong-message-at-the-wrong-time point: abandoned cart emails and other flows should match the customer stage.
-7. Link to the guide/video.
-8. Ask the reader to open their own store and check where customers might be dropping out.
-9. Soft reply CTA: send John the page or a Loom if they want a second pair of eyes.
+1. Open with the subject-line promise: Dan Murphy's can sell very expensive wine online.
+2. Add the reversal: that does not happen because the bottle is simply listed on a product page.
+3. Explain the consequence: premium purchases need confidence before the customer pays.
+4. Give a partial answer: trust, education, delivery clarity, reviews, and the right message at the right time all matter.
+5. Use Good Pair Days as a softer premium-category example: they make wine understandable without making the customer feel dumb.
+6. Open the curiosity gap: those pieces only work when they happen in the right order.
+7. Name the mechanism: the ecommerce buying cycle.
+8. CTA: link to the guide/video for the full breakdown using The Good Guys, Koala, and Good Pair Days.
+9. Ask the reader to open their own store and check where customers might be dropping out.
+10. Soft reply CTA: send John the page or a Loom if they want a second pair of eyes.
 
 ## CTA
 
 Primary:
 
-- Read/watch the guide and use it as a checklist.
+- Read/watch the guide to see the full buying-cycle breakdown and use it as a checklist.
 
 Soft secondary:
 

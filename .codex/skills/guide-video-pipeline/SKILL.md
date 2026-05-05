@@ -73,6 +73,7 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 - Avoid "and then" structure. If a section is just a list of points, rewrite it so each point either creates a question, resolves tension, or leads to the next tension.
 - Make guide pages useful without requiring the viewer to watch the video.
 - Every guide should have a related relationship-building sequence email. Plan it in the packet, then implement it as MJML in `/Users/johndetlefs/repos/johndetlefs/email/rbs/` using the existing email repo patterns.
+- Relationship emails should also use a story arc. Build toward the subject-line promise, then open a curiosity gap that the guide/video resolves. The CTA should feel like the natural next step, not a pasted-on link.
 - Send paid social traffic to the guide page unless the user explicitly asks for a homepage or booking-page campaign.
 - Maintain Australian spelling and JohnDetlefs.com voice: direct, practical, experienced, and low-fluff.
 - Do not invent live performance results, client outcomes, prices, or platform settings. Mark unknowns clearly.
