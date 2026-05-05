@@ -1,0 +1,10 @@
+# Child repositories
+/email/
+/next/
+
+# Local/editor files
+.DS_Store
+.vscode/
+
+# Temporary files
+/.tmp/

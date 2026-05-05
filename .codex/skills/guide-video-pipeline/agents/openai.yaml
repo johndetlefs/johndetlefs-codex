@@ -1,0 +1,4 @@
+interface:
+  display_name: "Guide Video Pipeline"
+  short_description: "Run guide videos from idea to ads"
+  default_prompt: "Use $guide-video-pipeline to plan and track a new Shopify guide video content packet."
