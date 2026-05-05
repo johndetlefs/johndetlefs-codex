@@ -30,7 +30,7 @@ Use this as the spine for the full script:
 - **But**: The buying cycle is not only about what is on the page; the wrong email or remarketing message at the wrong time can also kill the sale.
 - **Therefore**: Store pages and messages need to match where the customer is: Find, Trust, Decide, Buy, or Come Back.
 - **But**: Fixing one stage does not automatically fix the next. A customer might find the product but not trust the store, trust the store but still have objections, or decide to buy but hit friction.
-- **Therefore**: Review the store stage by stage using real examples from The Good Guys, Koala, and a wine/alcohol/premium food store.
+- **Therefore**: Review the store stage by stage using real examples from The Good Guys, Koala, and Good Pair Days.
 - **Resolution**: The viewer leaves with a practical checklist for spotting where their Shopify store is losing customers, plus a clear Fix-It Call CTA if they want help prioritising fixes.
 
 ## Structure
@@ -62,7 +62,7 @@ An abandoned cart discount might be useful in some situations, but it is not aut
 - Show a simple diagram or notes page with the buying-cycle stages.
 - Inspect The Good Guys for trust, safety, product discovery, and purchase confidence.
 - Inspect Koala for objection handling, reassurance, and buying action.
-- Inspect one wine/alcohol/premium food store for discovery, trust, delivery, repeat purchase, and category-specific objections.
+- Inspect Good Pair Days for wine discovery, trust, product education, repeat purchase, and category-specific objections.
 - Show a checklist-style summary at the end.
 
 ## On-Screen Callouts

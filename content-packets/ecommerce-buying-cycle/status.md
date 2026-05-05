@@ -2,12 +2,12 @@
 
 Packet: `content-packets/ecommerce-buying-cycle`
 Guide page target: `next/content/guides/ecommerce-buying-cycle/index.mdx`
-Current stage: idea
+Current stage: script
 Last updated: 2026-05-05
 
 ## Checklist
 
-- [ ] Brief approved
+- [x] Brief approved
 - [x] Hook tests ready
 - [ ] Script ready
 - [ ] Recording complete
@@ -27,7 +27,7 @@ Last updated: 2026-05-05
 - The guide should match the successful mobile UX video structure: quick practical explanations, real Australian ecommerce examples, and clear store-audit takeaways.
 - Use a practical framework: Find, Trust, Decide, Buy, Come Back.
 - Use The Good Guys and Koala as proof stores.
-- Choose one wine/alcohol/premium food store after inspection. Current recommended first choice: Good Pair Days. Other strong options: Naked Wines Australia, Vinomofo, Dan Murphy's, Qantas Wine, Harris Farm Markets, and Simon Johnson.
+- Good Pair Days is the selected wine/alcohol/premium food proof store.
 - Hooks are a first-class asset for this workflow. Use `hooks.md` for the main video opening, Shorts/Reels, YouTube packaging, and Meta Ads tests.
 - Preferred hook structure: bait-and-switch. Start with an obvious agreement, then add a reversal that creates tension.
 - Preferred hook direction: people do want to buy from local brands, but they do not necessarily trust the store yet.
@@ -39,9 +39,8 @@ Last updated: 2026-05-05
 
 ## Open Questions
 
-- Confirm whether Good Pair Days is the third proof store, or whether a premium food/gifting example such as Harris Farm Markets or Simon Johnson is a better fit.
 - Do you want the CTA to be a soft "review your store against this cycle" CTA, or a stronger "book a Fix-It Call if your store is losing people between steps" CTA?
 
 ## Next Action
 
-- Inspect The Good Guys, Koala, and candidate wine/alcohol/premium food stores; choose the third proof store, then write the full script.
+- Inspect The Good Guys, Koala, and Good Pair Days for current on-site examples, then write the full script.

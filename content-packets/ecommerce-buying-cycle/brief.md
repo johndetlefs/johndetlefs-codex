@@ -164,11 +164,14 @@ Chosen proof stores:
 
 - **The Good Guys**: trust, safety, support, delivery/pickup, finance/payment confidence, product discovery, and reassurance for considered purchases. This gives us a JB Hi-Fi-like category without repeating the exact brand from the mobile video.
 - **Koala**: strong objection handling, trial/warranty/delivery confidence, sticky buying action, and clear purchase reassurance. It is fine to reuse because it does a lot of things right.
-- **Wine/alcohol/premium foodstuff brand to choose after inspection**: use this to make the guide relevant to clients in wine, alcohol, premium food, gifting, hamper, pantry, or local-producer categories.
+- **Good Pair Days**: wine discovery and repeat-purchase proof for clients in wine, alcohol, premium food, gifting, hamper, pantry, or local-producer categories.
 
-Wine/alcohol/premium food proof shortlist:
+Wine/alcohol/premium food proof store:
 
-- **Good Pair Days**: best current first-choice proof store. It makes wine discovery feel personal through a taste-profile quiz, "personal sommelier" positioning, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Decide, and Come Back.
+Good Pair Days is the selected third proof store. It makes wine discovery feel personal through a taste-profile quiz, "personal sommelier" positioning, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Decide, and Come Back.
+
+Other stores considered but not selected for this video:
+
 - **Naked Wines Australia**: strong for producer story, fairness/transparency, guarantee/credit-back reassurance, independent winemaker positioning, reviews, and membership-style repeat purchase. Useful for Trust, Decide, and Come Back.
 - **Vinomofo**: strong for simple offer framing, deal/value, curation, urgency, clubs, and a distinctive brand voice. Useful for Find, Decide, and Buy.
 - **Dan Murphy's**: strong broad-catalogue and convenience benchmark: huge range, search/category structure, same-day delivery or pickup, stores, membership, price/value cues, help centre, and compliance. Useful if the script needs a large-retailer alcohol example rather than a boutique/premium one.
@@ -177,8 +180,6 @@ Wine/alcohol/premium food proof shortlist:
 - **Simon Johnson**: strong premium food/gifting example: curated collections, premium products, producer relationships, recipes, stores, click and collect, and high-value hampers. Useful for premium positioning, gifting, provenance, and product education.
 
 Do not force every store into the video. Pick three to five strong examples that clearly prove the teaching points.
-
-Recommended third proof store for this video: **Good Pair Days**, unless we decide the guide needs a premium food/gifting example more than a wine-discovery example.
 
 ## Concept-To-Example Map
 
@@ -196,7 +197,7 @@ Good proof targets:
 Likely examples:
 
 - The Good Guys for search-led discovery and category navigation.
-- Dan Murphy's, BWS, Vinomofo, or the selected premium food/wine store for filtering, occasion-led discovery, region/type/category navigation, or product education.
+- Good Pair Days for taste-profile discovery, guided wine selection, wine education, and making a complex product category feel approachable.
 
 Practical takeaway:
 
@@ -219,7 +220,7 @@ Likely examples:
 
 - The Good Guys for trust through store presence, support paths, delivery/pickup, warranties, returns, and payment confidence.
 - Koala for trial, warranty, and delivery confidence.
-- The selected wine/alcohol/premium food store for age/compliance expectations, provenance, delivery confidence, freshness, storage, or premium-brand trust.
+- Good Pair Days for reducing wine-buying anxiety through guidance, education, taste matching, ratings, and reassurance.
 
 Practical takeaway:
 
@@ -242,7 +243,7 @@ Likely examples:
 
 - The Good Guys for considered-purchase decision support such as specs, reviews, warranty, delivery, and price confidence.
 - Koala for trial/warranty/delivery objections.
-- The selected wine/alcohol/premium food store for taste/profile, provenance, pairing, gifting, delivery timing, storage, freshness, or subscription/replenishment objections.
+- Good Pair Days for taste/profile, wine education, pairing, ratings, confidence-building, and repeat selection.
 
 Practical takeaway:
 
@@ -266,7 +267,7 @@ Likely examples:
 
 - The Good Guys for purchase action, delivery/pickup clarity, payment options, and reassurance.
 - Koala for sticky buying area and major reassurance near the CTA.
-- The selected wine/alcohol/premium food store for cart, delivery threshold, pickup/delivery choice, gifting, or compliance friction.
+- Good Pair Days for subscription/box purchase flow, account setup, and reducing hesitation around committing to wines.
 
 Practical takeaway:
 
@@ -289,7 +290,7 @@ Good proof targets:
 Likely examples:
 
 - Koala where relevant for post-purchase confidence, support, reviews, and referrals rather than frequent repeat purchase.
-- The selected wine/alcohol/premium food store for repeat purchase, replenishment, subscription, seasonal campaigns, clubs, gifting reminders, or loyalty.
+- Good Pair Days for ratings, rewards, subscriptions, wine learning, and repeat purchase.
 - The Good Guys for warranty, service, add-ons, and future category purchase rather than frequent replenishment.
 
 Practical takeaway:
