@@ -192,6 +192,10 @@ Chosen proof stores:
 - Use Good Pair Days as the wine/premium-food proof point for mobile experience, product education, and repeat purchase.
 - Their mobile experience is strong and should be inspected closely before recording.
 - Their product pages explain the wine in clear, obvious ways that customers actually want.
+- They make wine feel approachable rather than snooty. Buying wine can make customers feel dumb, judged, or inadequate, especially when they do not know the difference between a cheap bottle and a genuinely high-quality bottle.
+- They give clear indicators such as acidity and body without talking down to the customer.
+- They help customers feel informed rather than pressured into buying "the right" expensive bottle.
+- They handle a potentially intimidating premium category in a non-judgmental way.
 - They show recommended recipes/pairings.
 - They show reviews.
 - Their repeat-buying mechanisms are excellent and map well to Come Back.
@@ -199,7 +203,7 @@ Chosen proof stores:
 
 Wine/alcohol/premium food proof store:
 
-Good Pair Days is the selected third proof store. It makes wine discovery feel personal through a taste-profile quiz, "personal sommelier" positioning, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Decide, and Come Back.
+Good Pair Days is the selected third proof store. It makes wine discovery feel personal and non-judgmental through a taste-profile quiz, "personal sommelier" positioning, clear wine indicators, wine guides, app features, ratings, rewards, and ongoing learning. This is especially useful for explaining Find, Trust, Decide, and Come Back.
 
 Other stores considered but not selected for this video:
 
@@ -251,7 +255,7 @@ Likely examples:
 
 - The Good Guys for trust through store presence, support paths, delivery/pickup, warranties, returns, and payment confidence.
 - Koala for trial, warranty, and delivery confidence.
-- Good Pair Days for reducing wine-buying anxiety through guidance, education, taste matching, ratings, and reassurance.
+- Good Pair Days for reducing wine-buying anxiety through non-judgmental guidance, clear indicators, education, taste matching, ratings, and reassurance.
 
 Practical takeaway:
 
@@ -274,7 +278,7 @@ Likely examples:
 
 - The Good Guys for considered-purchase decision support such as specs, reviews, warranty, delivery, and price confidence.
 - Koala for trial/warranty/delivery objections.
-- Good Pair Days for taste/profile, wine education, pairing, ratings, confidence-building, and repeat selection.
+- Good Pair Days for taste/profile, acidity/body indicators, wine education, pairing, ratings, confidence-building, and repeat selection without making the customer feel inadequate.
 
 Practical takeaway:
 

@@ -62,7 +62,7 @@ An abandoned cart discount might be useful in some situations, but it is not aut
 - Show a simple diagram or notes page with the buying-cycle stages.
 - Inspect The Good Guys for trust, safety, search/product discovery, related product options, delivery reassurance, and proactive price-objection handling.
 - Inspect Koala for review-led trust, online-only reassurance, trial/warranty/delivery, and category-specific objection handling.
-- Inspect Good Pair Days for mobile experience, clear wine education, recipes/pairings, reviews, repeat purchase, and reducing wine-buying anxiety.
+- Inspect Good Pair Days for mobile experience, non-judgmental wine education, acidity/body indicators, recipes/pairings, reviews, repeat purchase, and reducing wine-buying anxiety.
 - Show a checklist-style summary at the end.
 
 ## On-Screen Callouts
@@ -73,6 +73,7 @@ An abandoned cart discount might be useful in some situations, but it is not aut
 - "Find the stage where people are dropping out."
 - "Wrong message, wrong time, lost sale."
 - "Do they need a discount, or do they need an answer?"
+- "Teach, don't judge."
 
 ## CTA
 
