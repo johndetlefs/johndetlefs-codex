@@ -15,6 +15,8 @@ Last updated: 2026-05-05
 - [ ] YouTube package ready
 - [ ] Shorts/Reels plan ready
 - [ ] Guide page drafted
+- [x] Relationship email planned
+- [ ] Relationship email MJML created
 - [ ] Guide page validated
 - [ ] Deployed
 - [ ] Meta Ads ready
@@ -37,6 +39,7 @@ Last updated: 2026-05-05
 - All videos should use the Trey Parker/Matt Stone "but/therefore" principle: avoid "and then" lists; each beat should create tension, consequence, or a resolution that leads naturally to the next problem.
 - John positioning: approachable translator between big-brand ecommerce practice and smaller Shopify stores. The guide should use large Australian stores as proof examples while making clear John is translating patterns from that world, not claiming to be those brands.
 - Proof notes captured from John: The Good Guys for trust/search/price/delivery/related options; Koala for review-led online-only reassurance and objection handling; Good Pair Days for mobile wine education, non-judgmental premium-category guidance, acidity/body indicators, recipes/pairings, reviews, and repeat purchase.
+- Every guide should have a related relationship-building sequence email in the `email/` repo, written in MJML, that sends subscribers to the guide page/video.
 
 ## Open Questions
 

@@ -41,6 +41,8 @@ Last updated: YYYY-MM-DD
 - [ ] YouTube package ready
 - [ ] Shorts/Reels plan ready
 - [ ] Guide page drafted
+- [ ] Relationship email planned
+- [ ] Relationship email MJML created
 - [ ] Guide page validated
 - [ ] Deployed
 - [ ] Meta Ads ready
@@ -233,6 +235,34 @@ Use bait-and-switch hooks:
 ## CTA Placement
 
 ## Internal Links
+
+## Validation
+```
+
+## email-plan.md
+
+```markdown
+# <Topic Title> Relationship Email Plan
+
+## Target Sequence
+
+## Guide URL
+
+## YouTube Video
+
+## Email Goal
+
+## Subject Line Options
+
+## Preview Text Options
+
+## Core Angle
+
+## Draft Structure
+
+## CTA
+
+## MJML Target
 
 ## Validation
 ```

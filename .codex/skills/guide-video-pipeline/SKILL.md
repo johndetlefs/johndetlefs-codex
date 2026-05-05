@@ -44,6 +44,7 @@ content-packets/<topic-slug>/
   youtube-package.md
   shorts-plan.md
   guide-page-plan.md
+  email-plan.md
   meta-ads.md
 ```
 
@@ -59,8 +60,9 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 6. **YouTube package**: produce title variants, description, chapters, tags, thumbnail concepts, pinned comment, and CTA.
 7. **Short-form plan**: choose clips for YouTube Shorts, Meta Reels, and other vertical placements with hooks, captions, and framing notes.
 8. **Guide page**: turn the transcript/script into a standalone MDX guide under `next/content/guides/<slug>/index.mdx`, with a video hero and useful written content.
-9. **Deploy support**: validate the smallest relevant checks in `next/` and summarize deploy readiness.
-10. **Meta Ads**: create traffic ads that send to the guide page, with UTM conventions, angle variants, and creative briefs.
+9. **Relationship-building email**: create a related email plan and MJML email in the `email/` repo that sends subscribers to the guide page with the YouTube video.
+10. **Deploy support**: validate the smallest relevant checks in `next/` and summarize deploy readiness.
+11. **Meta Ads**: create traffic ads that send to the guide page, with UTM conventions, angle variants, and creative briefs.
 
 ## Operating Rules
 
@@ -70,6 +72,7 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 - Build scripts with a "but/therefore" story arc: introduce a premise, create a problem or reversal, explain the consequence, offer a practical move, then reveal the next problem. Vary the wording; do not literally overuse "but" and "therefore".
 - Avoid "and then" structure. If a section is just a list of points, rewrite it so each point either creates a question, resolves tension, or leads to the next tension.
 - Make guide pages useful without requiring the viewer to watch the video.
+- Every guide should have a related relationship-building sequence email. Plan it in the packet, then implement it as MJML in `/Users/johndetlefs/repos/johndetlefs/email/rbs/` using the existing email repo patterns.
 - Send paid social traffic to the guide page unless the user explicitly asks for a homepage or booking-page campaign.
 - Maintain Australian spelling and JohnDetlefs.com voice: direct, practical, experienced, and low-fluff.
 - Do not invent live performance results, client outcomes, prices, or platform settings. Mark unknowns clearly.
