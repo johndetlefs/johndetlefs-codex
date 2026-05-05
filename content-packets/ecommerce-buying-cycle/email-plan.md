@@ -24,14 +24,20 @@ The email should build trust and relationship first. It can mention the Fix-It C
 
 ## Subject Line Options
 
-- The buying cycle most Shopify stores miss
-- Your store might be losing people before checkout
-- Why customers like your product but still do not buy
-- Local goodwill is not enough online
-- Are you sending the right message at the right time?
+- Dan Murphy's sells bottles of wine for $270. This is how they do it.
+- How do you sell a $270 bottle of wine online?
+- Why would anyone buy a $270 bottle of wine from a website?
+- Good Pair Days makes wine feel less intimidating. That's the trick.
+- The buying cycle behind expensive online purchases
+- Your product might be good. That does not mean customers feel safe buying it.
+- Local goodwill is not enough when the purchase feels risky.
+- Stop making customers feel dumb before they buy.
 
 ## Preview Text Options
 
+- Expensive online purchases need trust, education, reassurance, and timing.
+- The trick is not just the product. It is how the store helps people feel confident enough to buy.
+- Premium products need more than a nice product page.
 - People may want to support local brands, but your store still has to earn the sale.
 - Big brands spend heavily making ecommerce feel safe. Small stores can copy the useful parts.
 - If customers cannot find, trust, decide, buy, and come back, traffic will not fix the problem.
@@ -51,13 +57,15 @@ The email should introduce the buying cycle as a simple checklist:
 
 ## Draft Structure
 
-1. Open with the local goodwill/trust gap.
-2. Explain the big-brand irony: large retailers can feel more personable and trustworthy online because they deliberately design for reassurance.
-3. Introduce the buying cycle as the practical way to check whether the store is doing the sales job.
-4. Include the wrong-message-at-the-wrong-time point: abandoned cart emails and other flows should match the customer stage.
-5. Link to the guide/video.
-6. Ask the reader to open their own store and check where customers might be dropping out.
-7. Soft reply CTA: send John the page or a Loom if they want a second pair of eyes.
+1. Open with a curiosity/proof angle: a big retailer can sell very expensive wine online because the page and buying journey do more than show a product.
+2. Explain that premium purchases need confidence: trust, education, reassurance, delivery clarity, reviews, and the right message at the right time.
+3. Use Good Pair Days as the softer premium-category example: they make wine feel understandable without making the customer feel dumb.
+4. Explain the big-brand irony: large retailers can feel more personable and trustworthy online because they deliberately design for reassurance.
+5. Introduce the buying cycle as the practical way to check whether the store is doing the sales job.
+6. Include the wrong-message-at-the-wrong-time point: abandoned cart emails and other flows should match the customer stage.
+7. Link to the guide/video.
+8. Ask the reader to open their own store and check where customers might be dropping out.
+9. Soft reply CTA: send John the page or a Loom if they want a second pair of eyes.
 
 ## CTA
 
