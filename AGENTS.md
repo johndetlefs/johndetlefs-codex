@@ -6,6 +6,8 @@ Before making positioning, content, funnel, or cross-repo decisions, read `PROJE
 
 Workspace-level Codex skills live in `.codex/skills/`. Use `.codex/skills/guide-video-pipeline` when planning or producing guide videos, guide pages, short-form repurposing, YouTube packages, or Meta Ads.
 
+The `next/` repo also has component-level Codex skills. Use `next/.codex/skills/report-lead-magnet` when planning, building, auditing, or extending interactive report-style lead magnets, analyzers, calculators, signed report links, report emails, operator notifications, or report conversion tracking.
+
 ## Project Boundaries
 
 - Treat `/Users/johndetlefs/repos/johndetlefs` as the overall JohnDetlefs.com project workspace.

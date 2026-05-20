@@ -2,7 +2,7 @@
 
 This file is workspace-level memory for agents working on JohnDetlefs.com. Use it to understand the product, audience, offer, funnel, and content strategy before making positioning, content, or implementation decisions.
 
-Last reviewed from `next/` source: 2026-05-05.
+Last reviewed from `next/` source: 2026-05-20.
 
 ## Workspace Shape
 
@@ -136,6 +136,17 @@ Main customer path:
    - record a quick Loom;
    - check confirmation email/calendar invite.
 
+Report-style lead magnet path:
+
+1. Visitor lands on a specific tool/diagnostic page from content, organic, YouTube, email, or paid social.
+2. Visitor enters first name, email, store URL, and a useful segmentation field.
+3. System creates a signed report link, persists the lead in Firestore, enrolls them in Sendy where appropriate, and sends a transactional setup email.
+4. Visitor opens the report page, adds or imports the required store numbers, and submits the report.
+5. System persists the result, sends the customer a results-ready email, sends John an internal notification email with signed report/results links, and emits advertising/analytics events.
+6. Results page explains the bottleneck and points qualified users toward a Fix-It Call.
+
+The canonical implementation is `/shopify-bottleneck-analysis`, documented in `next/docs/report-lead-magnets.md`.
+
 Post-booking success experience:
 
 - Success page uses signed token links.
@@ -146,10 +157,25 @@ Operational integrations:
 
 - Stripe for payment.
 - Google Calendar for availability and event creation.
-- Firebase/Firestore for booking persistence.
+- Firebase/Firestore for booking, lead magnet, and customer profile persistence.
 - AWS SES for transactional email.
 - Sendy for newsletter/enrollment.
 - Google Tag Manager/dataLayer events for analytics.
+
+Customer identity:
+
+- Central customer profiles live in Firestore using `customerKey`, derived from normalized email.
+- Store identity uses `storeKey`, derived from normalized store hostname.
+- Bookings, lead magnets, Stripe customers/payment intents, and future coaching/product purchases should write enough references to tie the same email/store together as one customer journey.
+- Email is the current primary customer key. Store key is a secondary linkage signal, useful when one operator has multiple emails or one store has multiple contacts.
+
+Current report-style lead magnet:
+
+- Shopify Bottleneck Analysis captures name, email, store URL, and role.
+- It stores report records in the Shopify bottleneck analyses collection and upserts the central customer profile.
+- It sends customer setup/results emails through SES.
+- It sends operator notifications through the shared internal notification framework.
+- Minimum ad events are lead capture and report submitted; useful follow-up events include results viewed and booking click.
 
 ## Booking Availability
 
@@ -273,17 +299,10 @@ Preferred optimization:
 - Guide pages should be useful even without watching the video.
 - Ads should send traffic to a specific guide page, not the homepage, unless the campaign is explicitly bottom-of-funnel.
 
-Likely workspace-level skills to create later:
+Current/relevant skills and reusable patterns:
 
-- `guide-video-pipeline`
-- `guide-idea-planner`
-- `guide-script-writer`
-- `capcut-edit-brief`
-- `youtube-publisher`
-- `shorts-repurposer`
-- `guide-page-builder`
-- `meta-ads-builder`
-- `content-ops-tracker`
+- `guide-video-pipeline` in workspace `.codex/skills/` for guide videos, guide pages, short-form repurposing, YouTube packages, and Meta Ads.
+- `report-lead-magnet` in `next/.codex/skills/` for interactive report/analyzer/diagnostic lead magnets.
 
 ## Technical Stack
 
