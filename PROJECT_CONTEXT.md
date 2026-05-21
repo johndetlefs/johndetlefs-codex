@@ -9,25 +9,26 @@ Last reviewed from `next/` source: 2026-05-20.
 - Workspace root: `/Users/johndetlefs/repos/johndetlefs`.
 - `next/`: production website app for JohnDetlefs.com.
 - `email/`: separate repository for email-related project code and assets.
+- `lead-magnets/`: reusable lead-magnet frameworks plus per-lead-magnet planning and production packets.
 - Treat the workspace as one JohnDetlefs.com project, but keep Git operations scoped to the relevant child repo.
 
 ## Site Summary
 
-JohnDetlefs.com is a direct-response Shopify services site. Its primary job is to convert qualified Shopify merchants into paid "Fix-It Call" bookings. Supporting guide content educates Shopify store owners, builds trust, and can be used as landing pages for organic, YouTube, short-form, newsletter, and paid social traffic.
+JohnDetlefs.com is a direct-response Shopify services site. Its primary job is to convert qualified Shopify merchants into paid Shopify Fix-It Diagnostic bookings. Supporting guide content educates Shopify store owners, builds trust, and can be used as landing pages for organic, YouTube, short-form, newsletter, and paid social traffic.
 
 The site should feel practical, direct, experienced, and low-friction. It should not feel like a generic agency, broad marketing consultancy, or polished-but-vague service brochure.
 
 ## Primary Offer
 
-Main offer: **Shopify Fix-It Call**.
+Intended main offer: **Shopify Fix-It Diagnostic**.
 
-- Format: online screen-share session.
-- Default duration: 60 minutes.
-- Default price: `$249 AUD`, sourced from `NEXT_PUBLIC_FIXIT_CALL_PRICE_AUD=24900` / `STRIPE_AMOUNT_AUD=24900`.
-- Positioning: one focused session, one issue or a few small issues, scoped and fixed live where safe.
-- Promise: if the issue is too large to fully solve during the session, the customer leaves with a clear, prioritized plan rather than a sales pitch.
+- Format: paid online screen-share diagnostic session.
+- Intended price: `$295 AUD`.
+- Positioning: a focused site/funnel review that identifies the real bottleneck and gives the merchant a prioritized action plan.
+- Promise: the customer leaves with a clear, prioritized plan rather than a sales pitch.
 - Guarantee: 100% satisfaction guarantee, full refund if the customer emails within 48 hours.
-- Tone: "No agency nonsense", "paid problem solving", "No retainers", "No proposal unless you ask for one".
+- Tone: "No agency nonsense", "paid diagnosis", "clear next steps", "No proposal unless you ask for one".
+- Implementation note: the current app still has legacy `$249 AUD` Shopify Fix-It Call defaults in `NEXT_PUBLIC_FIXIT_CALL_PRICE_AUD=24900` / `STRIPE_AMOUNT_AUD=24900`. Update tracked in `next/.project-workflow/tasks/TASK-003-Reposition-Homepage-To-Shopify-Fix-It-Diagnostic/`.
 
 Important implementation files:
 
@@ -43,17 +44,18 @@ Secondary offer: larger scoped Shopify/ecommerce projects.
 - Intended for larger brands with custom theme builds, headless implementation, complex integrations, or similar work.
 - Projects typically start at **$40k**.
 - Intake path is email, not the booking checkout: `projects@johndetlefs.com`.
-- This offer should not dilute the main Fix-It Call path. Treat it as a fit filter for larger brands, not the core CTA.
+- This offer should not dilute the main Shopify Fix-It Diagnostic path. Treat it as a fit filter for larger brands, not the core CTA.
 
 ## Follow-On Work
 
-Existing or first-call clients can book blocks/hours of additional work after the initial Fix-It Call.
+Existing diagnostic customers can continue through the monthly mentoring/coaching program or, where appropriate, arrange scoped follow-on work.
 
 - This is not the main public conversion path.
-- Clients normally find out about this option after they have booked or completed their first call.
-- Follow-on hours are arranged by email and invoice, not through the website booking/payment flow.
+- Clients normally find out about follow-on options after they have booked or completed their diagnostic.
+- The intended structured follow-on offer is `$695/month` mentoring/coaching.
+- Other follow-on hours or scoped work may be arranged by email and invoice, not through the website booking/payment flow.
 - Treat this as an operational/customer-success path, not something to foreground in homepage or guide CTAs unless the user explicitly asks.
-- When a Fix-It Call uncovers work that is too large for the session, the practical next options are: DIY from the plan, book another Fix-It Call, request invoiced hours, or discuss a fixed-scope quote.
+- When a diagnostic uncovers work that is too large for the session, the practical next options are: DIY from the plan, join monthly mentoring/coaching, request invoiced hours, or discuss a fixed-scope quote.
 
 ## Target Audience
 
@@ -125,8 +127,8 @@ Proof points currently used:
 Main customer path:
 
 1. Visitor lands on homepage or guide content.
-2. Visitor understands the Fix-It Call offer, price, scope, and guarantee.
-3. Visitor clicks "Book your Fix-It Call".
+2. Visitor understands the Shopify Fix-It Diagnostic offer, price, scope, and guarantee.
+3. Visitor clicks to book the diagnostic.
 4. Visitor enters contact details.
 5. Visitor chooses an available Sydney time slot.
 6. Visitor pays with Stripe.
@@ -143,7 +145,7 @@ Report-style lead magnet path:
 3. System creates a signed report link, persists the lead in Firestore, enrolls them in Sendy where appropriate, and sends a transactional setup email.
 4. Visitor opens the report page, adds or imports the required store numbers, and submits the report.
 5. System persists the result, sends the customer a results-ready email, sends John an internal notification email with signed report/results links, and emits advertising/analytics events.
-6. Results page explains the bottleneck and points qualified users toward a Fix-It Call.
+6. Results page explains the bottleneck and points qualified users toward the Shopify Fix-It Diagnostic.
 
 The canonical implementation is `/shopify-bottleneck-analysis`, documented in `next/docs/report-lead-magnets.md`.
 
@@ -176,6 +178,31 @@ Current report-style lead magnet:
 - It sends customer setup/results emails through SES.
 - It sends operator notifications through the shared internal notification framework.
 - Minimum ad events are lead capture and report submitted; useful follow-up events include results viewed and booking click.
+
+Offer direction as of May 21, 2026:
+
+- JohnDetlefs.com is moving away from the `$249 AUD` "Shopify Fix-It Call" positioning.
+- The intended primary offer is now a `$295 Shopify Fix-It Diagnostic`.
+- The diagnostic call is not positioned as "get in there and fix something live"; it is positioned as a site/funnel review that produces a prioritized action plan.
+- The next commercial step after the diagnostic is a `$695/month` mentoring/coaching program where John works with the merchant monthly.
+- The homepage, pricing, booking copy, and lead-magnet CTAs need to be updated to match this new offer direction.
+
+Lead-magnet result-video direction as of May 21, 2026:
+
+- Result videos should be diagnostic videos, not generic founder-led VSLs.
+- The preferred result-video structure is: immediate reveal, diagnosis, cost of inaction, fix path, paid next step, close.
+- Each result video should focus on one bottleneck and one paid next step.
+- The target offer language for result pages is "Book your $295 Shopify Fix-It Diagnostic".
+- This is not yet fully aligned with the existing public Shopify Fix-It Call implementation, which currently uses `$249 AUD`.
+- The $695/month coaching program should be seeded as optional ongoing support after the paid diagnostic, not sold as the primary result-page CTA.
+
+Lead-magnet ad-video direction as of May 21, 2026:
+
+- Ad videos live separately from result videos. Use `lead-magnets/<lead-magnet-slug>/ads/` for acquisition ads that sell the free lead magnet before signup.
+- Reusable ad-video strategy lives in `lead-magnets/_frameworks/lead-magnet-ad-videos.md`.
+- Ad videos should sell the lead magnet outcome, not the paid diagnostic. For Shopify Bottleneck Analysis, the promise is to find the likely funnel leak before choosing what to fix.
+- Default production style is presenter-led talking head with Remotion motion-graphic overlays: lower thirds, key phrase captions, funnel diagrams, generic mockups, stage highlights, and CTA cards.
+- Ads, landing pages, report setup, and result videos should share one visual language so the user does not feel dissonance after clicking through.
 
 ## Booking Availability
 
@@ -220,7 +247,7 @@ Content style:
 - Uses examples from recognizable ecommerce sites where useful.
 - Should end with clear action steps or a checklist.
 - Avoid fluff, broad marketing claims, and generic ecommerce advice.
-- Should naturally connect back to the Fix-It Call when the reader may need expert help.
+- Should naturally connect back to the Shopify Fix-It Diagnostic when the reader may need expert help.
 
 Guide/content purpose:
 
@@ -229,7 +256,7 @@ Guide/content purpose:
 - Support YouTube videos and short-form social clips.
 - Provide landing pages for Meta Ads or other paid traffic.
 - Feed the newsletter list through practical Shopify tips.
-- Move qualified readers toward a Fix-It Call when they have a problem worth solving.
+- Move qualified readers toward a Shopify Fix-It Diagnostic when they have a problem worth solving.
 
 ## Current Content Inventory
 
@@ -265,8 +292,8 @@ Preferred voice:
 Good phrases and ideas already present:
 
 - "No agency nonsense."
-- "Paid problem-solving."
-- "Fix what is safe during the session."
+- "Paid diagnosis."
+- "Find the real bottleneck."
 - "If it is bigger than the session, leave with a clear plan."
 - "No proposal unless you ask."
 - "Small Australian Shopify stores punch above their weight."
@@ -276,7 +303,7 @@ Avoid:
 - Generic agency language.
 - Overstated guarantees that every issue will be fully solved in one session.
 - Broad claims about marketing, branding, or ecommerce growth that are not tied to practical Shopify fixes.
-- Making the Fix-It Call sound like a free consultation.
+- Making the Shopify Fix-It Diagnostic sound like a free consultation.
 
 ## Content Production Workflow Context
 
@@ -290,7 +317,7 @@ The expected recurring workflow is:
 6. Turn the video/transcript into a guide page in `next/content/guides/.../index.mdx`.
 7. Deploy the site.
 8. Create Meta Ads that send traffic to the guide page.
-9. Use the guide page to convert visitors to newsletter signups and/or Fix-It Call bookings.
+9. Use the guide page to convert visitors to newsletter signups and/or Shopify Fix-It Diagnostic bookings.
 
 Preferred optimization:
 
@@ -329,7 +356,7 @@ Important local instructions:
 
 When changing the site, content, or funnel, prefer work that:
 
-- makes the Fix-It Call easier for the right customer to understand and book;
+- makes the Shopify Fix-It Diagnostic easier for the right customer to understand and book;
 - improves trust by making scope, pricing, access, timeline, and guarantee clearer;
 - helps Shopify operators solve real, specific problems;
 - keeps the main offer focused instead of turning the site into a generic agency site;

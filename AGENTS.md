@@ -8,6 +8,8 @@ Workspace-level Codex skills live in `.codex/skills/`. Use `.codex/skills/guide-
 
 The `next/` repo also has component-level Codex skills. Use `next/.codex/skills/report-lead-magnet` when planning, building, auditing, or extending interactive report-style lead magnets, analyzers, calculators, signed report links, report emails, operator notifications, or report conversion tracking.
 
+Reusable lead-magnet frameworks and production packets live in `lead-magnets/`. Use `lead-magnets/_frameworks/` for systems that apply across multiple lead magnets, `lead-magnets/_templates/` when scaffolding a new lead magnet packet, and `lead-magnets/<lead-magnet-slug>/` for assets and decisions specific to one report.
+
 ## Project Boundaries
 
 - Treat `/Users/johndetlefs/repos/johndetlefs` as the overall JohnDetlefs.com project workspace.
