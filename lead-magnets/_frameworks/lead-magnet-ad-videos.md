@@ -121,6 +121,8 @@ Useful reusable components:
 - `LeakQuestionMark`: animated uncertainty over the funnel stage.
 - `StageRevealCards`: product page, cart, checkout, healthy.
 - `GenericStorefrontMock`: abstract storefront, product page, cart, or checkout visual.
+- `PromiseHandoffSplit`: useful when the ad itself introduces the idea that the click and destination page must feel continuous.
+- `TrustDropMeter`: simple way to visualise uncertainty reducing trust.
 - `LeadMagnetCtaCard`: "Run the free Shopify Bottleneck Analysis".
 
 ## Journey Continuity
@@ -138,6 +140,8 @@ Keep these consistent where possible:
 - colour, typography, spacing, and animation tempo.
 
 The ad can be faster and more compressed than the result video, but it should not look like a different brand or a different product.
+
+The acquisition ad should create the first promise in that journey. Be careful not to promise one thing in the ad and deliver a different-feeling landing page, because that same dissonance is one of the trust problems the result videos are teaching merchants to avoid.
 
 ## Claims To Avoid
 

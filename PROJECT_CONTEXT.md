@@ -63,6 +63,7 @@ Primary audience:
 
 - Shopify merchants, ecommerce operators, and store owners.
 - Especially Australian Shopify stores and smaller Australian brands.
+- Current strongest traction is with middle-aged women running Shopify stores; where relevant, proof points, brand examples, ads, and lead-magnet framing should lean toward brands and problems that resonate with that audience.
 - Often time-poor, practical, and frustrated by slow/expensive agency workflows.
 - They may have urgent storefront, conversion, performance, theme, app, checkout-adjacent, or workflow issues.
 

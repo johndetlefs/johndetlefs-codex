@@ -13,6 +13,10 @@
 
 ## Purpose
 
+## Reference Standard
+
+Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current quality bar for voice, pacing, Remotion notes, paid-step bridge, and close.
+
 ## Five Hook Options
 
 1.
@@ -40,6 +44,15 @@
 - Paid next step:
 - Close:
 
+## Scriptwriting Notes
+
+- Main belief/reversal:
+- Customer behaviour behind the metric:
+- One mental model for the fix path:
+- Expertise gap before the paid step:
+- Proof to use:
+- CTA wording:
+
 ## Diagnosis Notes
 
 ## Likely Causes
@@ -52,9 +65,12 @@
 - Presenter/A-roll role:
 - Core Remotion components:
 - Suggested scene flow:
+- Mental model to visualise:
 - Screen capture needs:
 - Continuity notes:
 - Avoid:
+
+Remotion should make the argument easier to understand. It should not add a second script on top of John's talking head. If a visual note becomes a long checklist, compress it into one visual idea.
 
 ## Screen Beats
 

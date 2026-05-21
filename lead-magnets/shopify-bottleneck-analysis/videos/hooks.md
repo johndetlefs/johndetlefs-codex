@@ -61,7 +61,7 @@ Purpose: explain why visitors are not becoming interested enough to add to cart.
 
 ### Hook Options
 
-1. "Before you ran this report, I would not be surprised if you thought checkout was the problem. Most store owners do. But your result is pointing earlier than checkout: people are not adding to cart in the first place. So the question is not, 'why are they not finishing?' It is, 'why are they not even starting?'"
+1. "When you got here, I bet you thought checkout was gonna be the problem. And if so, you're in good company. That's where everyone looks first. But your result isn't pointing at checkout. It's pointing earlier than that. According to the Shopify Golden Ratio, roughly 10% of sessions should become add-to-carts. But that's not happening here. So the question isn't, 'why aren't they finishing?' It's, 'why aren't they even starting?'"
 
 2. "A lot of merchants come into this thinking, 'I have a checkout problem.' But if your biggest leak is add to cart, checkout is not the first suspect. The report is pulling us back to the first moment of commitment, and that changes the investigation."
 

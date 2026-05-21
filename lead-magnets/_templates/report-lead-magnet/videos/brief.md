@@ -23,6 +23,14 @@ Each result video should follow:
 
 ## Voice
 
+- Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current quality bar.
+- Write spoken copy, not strategy notes. Use contractions, short sentences, and concrete claims.
+- Avoid hedging unless accuracy requires it.
+- Keep each section to its job in the arc. Do not let a useful idea become its own mini-video.
+- The fix path should give the viewer one clear mental model, not a long checklist.
+- The paid step should follow the emotional setup: acknowledge difficulty, make the expertise gap safe, then position John as the practical help.
+- Close with one action and a warm sign-off.
+
 ## Visual Direction
 
 - Default format: presenter-led diagnostic video with Remotion motion-graphic overlays.
@@ -31,8 +39,11 @@ Each result video should follow:
 - Use screen capture only when an exact product or platform process needs to be shown.
 - Avoid depending on real merchant examples unless explicitly approved.
 - Show the report state early, then use generated overlays and cutaways to explain the pattern.
+- Visualise the script's mental model: promise handoff, trust loss, ownership, momentum, friction, priority, or action plan.
+- Use text-only proof strips for brand/client proof unless approved logo assets exist.
 - Match the lead-generation ad and landing page visual language so the journey feels continuous.
 - Keep labels short and practical.
+- Remotion should support John's argument, not create a second explanation layer.
 
 ## Retargeting Direction
 

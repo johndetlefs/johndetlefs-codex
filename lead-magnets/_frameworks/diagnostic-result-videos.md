@@ -73,9 +73,9 @@ Use this structure for result videos:
 | Immediate reveal | 0:00-0:20 | Confirm the report is theirs and state the top-line diagnosis fast. |
 | Diagnosis | 0:20-1:20 | Explain the bottleneck in plain English. |
 | Cost of inaction | 1:20-2:10 | Translate the issue into missed revenue, wasted effort, or leakage. Keep it conservative. |
-| Fix path | 2:10-3:20 | Show that the issue is solvable and usually comes from a small number of causes. |
-| Paid next step | 3:20-4:30 | Position the paid diagnostic as the logical implementation step. |
-| Close | 4:30-5:30 | Give one specific CTA and remove ambiguity. |
+| Fix path | 2:10-3:20 | Give one clear mental model for what needs to change and what to inspect first. |
+| Paid next step | 3:20-4:30 | Position the paid diagnostic as the way to get the missing expertise on the team. |
+| Close | 4:30-5:30 | Reassure, give one specific CTA, and remove ambiguity. |
 
 The viewer should get the main reveal in the first minute. Do not meander into backstory, broad context, or founder credibility before stating the result.
 
@@ -84,13 +84,30 @@ The viewer should get the main reveal in the first minute. Do not meander into b
 The structure above should still feel like a story:
 
 1. **Immediate reveal**: "Here is the single bottleneck."
-2. **Problem**: "Here is what that means in plain English."
-3. **Recognition story**: "Here is how this usually feels inside the store."
-4. **Controlled concern**: "Here is what this may be costing or wasting."
-5. **Relief**: "Here are the likely fix categories, so this is not random."
-6. **Paid next step**: "Here is the one paid step if you want the store inspected properly."
+2. **Diagnosis**: "Here is what that means in plain English, including the customer behaviour behind it."
+3. **Controlled concern**: "Here is what this may be costing or wasting."
+4. **Relief**: "Here is the mental model for fixing this, so this is not random."
+5. **Paid next step**: "Here is how to get the needed expertise on your team."
+
+Do not add a standalone recognition-story section by default. If a viewer-recognition moment is useful, fold it into the diagnosis in one or two sharp lines. The result videos should move quickly from reveal to diagnosis to consequence.
 
 Use a but/therefore arc. Avoid list-shaped scripts where each section merely adds another point.
+
+## Current Reference Standard
+
+Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current reference for how a strong result script should feel.
+
+The useful lessons from that script:
+
+- Write for John's mouth, not for a strategy document. Use contractions, short spoken sentences, and concrete language.
+- Remove hedging unless the claim genuinely needs it. Prefer "this is costing you money" over "this might be costing you money."
+- Do not over-explain a good point. If a section starts becoming its own mini-video, compress it back to the job it needs to do in the arc.
+- Hooks need dissonance and an open loop. The hook can reveal the flagged stage, but it should not list causes or fixes.
+- The diagnosis should translate the metric into customer behaviour. Example: "People are looking, but they're not committing."
+- The cost-of-inaction section should show why the obvious tactics can make the problem worse or more expensive.
+- The fix path should name the practical mental model, not just list checks. For add-to-cart, the model is promise continuity, trust, imagined ownership, and making Add to Cart feel inevitable.
+- The paid next step should follow the emotional setup. If the script has just acknowledged that the work is hard and requires expertise, move forward into why John belongs on the team; do not loop back into explaining the report again.
+- Close with reassurance and one action. Keep it warm, specific, and low-pressure.
 
 ## Hook Rules
 
@@ -127,7 +144,7 @@ The reversal should be specific to the result state:
 Good hook shape:
 
 ```text
-Before you ran this report, I would not be surprised if you thought checkout was the problem. Most store owners do. But your result is pointing earlier than checkout: people are not adding to cart in the first place. So the question is not "why are they not finishing?" It is "why are they not even starting?"
+When you got here, I bet you thought checkout was gonna be the problem. And if so, you're in good company. That's where everyone looks first. But your result isn't pointing at checkout. It's pointing earlier than that. According to the Shopify Golden Ratio, roughly 10% of sessions should become add-to-carts. But that's not happening here. So the question isn't, "why aren't they finishing?" It's, "why aren't they even starting?"
 ```
 
 Bad hook shape:
@@ -156,6 +173,33 @@ Each result video should stay focused on one bottleneck and one next step. Do no
 
 The page below the video can show supporting details. The video should frame the result, create urgency, and make the paid step feel obvious.
 
+## Fix Path Rules
+
+The fix path should make the viewer feel relieved because the problem has a shape. It should not become a long tactical audit.
+
+For each bottleneck, find the one job that stage must do:
+
+- add-to-cart: make the buyer feel they are in the right place, trust the offer, imagine owning the product, and see Add to Cart as the natural next step;
+- reach-checkout: preserve the momentum after interest has been shown and remove cost, confidence, and friction blockers before checkout;
+- checkout completion: protect high-intent buying momentum and remove final-stage cost, payment, delivery, and trust blockers;
+- healthy funnel: move from "find the leak" to "choose the highest-return growth lever."
+
+The add-to-cart reference pattern is:
+
+```text
+Within the first few seconds, they need to understand three things:
+
+Am I in the right place?
+
+Is this what I'm after?
+
+Why should I buy this from you?
+```
+
+The first question is about continuity. There needs to be continuity between what the buyer clicked and where they ended up. Dissonance creates uncertainty, uncertainty removes trust, and once the customer loses trust, they leave.
+
+The next questions are about ownership. The product page needs to put a picture in the buyer's head of already owning the product. Images, copy, proof, delivery details, price, and every other page element should increase comfort, build trust, and make the next buying action feel inevitable.
+
 ## Length
 
 Aim for:
@@ -181,6 +225,18 @@ Default offer-language pattern:
 Do not call this a discovery call on the result page. "Discovery call" sounds sales-coded and does not name the deliverable.
 
 Keep the spoken CTA, page headline, and button text as close to verbatim as possible. The viewer should hear and see the same action.
+
+The paid next step should usually move through this sequence:
+
+1. Acknowledge the work is not trivial.
+2. Reassure the viewer that this is not expertise they are expected to already have.
+3. Explain that someone on the team still needs that expertise.
+4. Position John as that missing expertise.
+5. Use relevant proof: major ecommerce brands, agencies, and examples that resonate with the target audience.
+6. Invite them to book in a call or diagnostic.
+7. State the concrete output: what to fix first, why it matters, and how to move the relevant metric.
+
+Do not restart the report explanation in the paid-next-step section if the script has already established the expertise gap. Move forward into John's role and the booking action.
 
 Avoid:
 
@@ -238,7 +294,13 @@ Useful Remotion component families:
 - metric cards and benchmark comparisons;
 - generic storefront, cart, and checkout mockups;
 - cause-category checklist cards;
+- promise handoff split screens that compare ad/email/search/social promise with the first screen of the destination page;
+- trust meters or trust-drop moments for mismatch, friction, or surprise;
+- ownership-builder mockups that show page elements combining to make the buyer imagine owning the product;
+- text-only proof strips for brand/client names where logos are not approved;
 - final diagnostic CTA card.
+
+Remotion should make the argument easier to understand. It should not add a second script on top of John's script. If a visual note reads like a checklist, compress it into one visual idea.
 
 ## Journey Continuity
 
@@ -365,11 +427,31 @@ Each script file should use this structure:
 - Paid next step:
 - Close:
 
+## Scriptwriting Notes
+
+- Main belief/reversal:
+- Customer behaviour behind the metric:
+- One mental model for the fix path:
+- Expertise gap before the paid step:
+- Proof to use:
+- CTA wording:
+
 ## Diagnosis Notes
 
 ## Likely Causes
 
 ## First Checks
+
+## Remotion Visual Plan
+
+- Production approach:
+- Presenter/A-roll role:
+- Core Remotion components:
+- Suggested scene flow:
+- Mental model to visualise:
+- Screen capture needs:
+- Continuity notes:
+- Avoid:
 
 ## Screen Beats
 

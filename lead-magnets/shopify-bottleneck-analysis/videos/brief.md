@@ -10,6 +10,7 @@ These are diagnostic videos, not generic founder-heavy VSLs. The viewer gets a p
 
 - Shopify store owners, ecommerce managers, and operators.
 - Mostly practical Australian merchants who want plain-English help.
+- Current strongest traction is with middle-aged women running Shopify stores, so proof choices and examples should feel relevant to serious retail, apparel, health, lifestyle, and values-driven ecommerce operators where possible.
 - They have just entered their own Shopify numbers and are already primed to care about the result.
 - They may be frustrated by vague advice, agency retainers, or random app/theme tweaks that did not solve the real issue.
 
@@ -61,9 +62,9 @@ Each result video should follow:
 1. Immediate reveal: confirm the report is theirs and state the top-line diagnosis in the first 20 seconds.
 2. Diagnosis: explain what this stage leak means in plain English.
 3. Cost of inaction: translate the leak into missed revenue, wasted effort, or urgency without overclaiming.
-4. Fix path: show the likely cause categories and first practical checks.
-5. Paid next step: position the $295 Shopify Fix-It Diagnostic as the logical implementation step.
-6. Close: repeat the same CTA wording the page uses.
+4. Fix path: give the viewer one practical mental model for what needs to change, not a long checklist.
+5. Paid next step: acknowledge the expertise gap, position John as the person who can be on their team, and invite them to book the $295 Shopify Fix-It Diagnostic.
+6. Close: reassure them that the issue is fixable, then give one clear CTA.
 
 Recommended timing:
 
@@ -81,6 +82,10 @@ Recommended timing:
 - Specific enough that the viewer feels understood.
 - Avoid broad agency language and generic ecommerce growth claims.
 - Sound like an operator reading the numbers, not a marketer performing a sales script.
+- Use contractions and short spoken sentences.
+- Reduce hedging. If the pattern is clear, say it clearly.
+- Do not overcook a good concept. If a section starts becoming its own lesson, compress it back to the job it needs to do.
+- Use the add-to-cart script as the voice reference for future result scripts.
 
 ## Visual Direction
 
@@ -91,6 +96,8 @@ Recommended timing:
 - Use screen capture only where the viewer needs exact process guidance, especially the setup video and any Shopify export steps.
 - Use generic Shopify-style mockups rather than real merchant examples for result videos: abstract product pages, cart drawers, checkout screens, funnel rails, metric cards, and checklist panels.
 - Show the report state early, then use Remotion-built overlays and cutaways to explain the pattern.
+- Visualise the mental model in each section: belief/reversal, cost stacking up, promise handoff, trust loss, imagined ownership, cart momentum, checkout friction, priority choice, or action plan.
+- Use text-only proof strips for brand names unless approved logo assets are available.
 - Match the lead-generation ad and landing page visual language so the viewer feels one continuous journey from click to report to result.
 - Highlight one metric, stage, or user decision at a time.
 - Use short on-screen labels, not dense slides.
@@ -109,6 +116,10 @@ Reusable Remotion component ideas:
 - `GenericStorefrontMock`: neutral product, collection, cart, and checkout layouts.
 - `MetricCard`: stage metric, benchmark, and plain-English interpretation.
 - `CauseChecklist`: short cause-category cards revealed one at a time.
+- `PromiseHandoffSplit`: ad/email/search/social promise on one side, destination page first screen on the other.
+- `TrustDropMeter`: simple visual for uncertainty reducing trust.
+- `OwnershipBuilderMock`: product-page elements combining into "I can picture owning this."
+- `BrandProofStrip`: text-only proof chips for approved brand/client names.
 - `DiagnosticCtaCard`: final paid diagnostic offer matching the page CTA.
 
 ## Retargeting Direction

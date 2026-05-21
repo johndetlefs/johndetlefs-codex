@@ -61,8 +61,8 @@ Treat checkout as a revenue recovery problem, not just a design problem.
 
 - Production approach: presenter-led result video with Remotion motion-graphic overlays. John explains why this leak is expensive; Remotion shows how much intent has already been earned before the final drop-off.
 - Presenter/A-roll role: John should deliver the commercial urgency directly. Graphics should underline that the customer was close, without making the video feel like a spreadsheet.
-- Core Remotion components: `PresenterFrame`, `LowerThird`, `KeyPhraseCaption`, `FunnelStageRail`, `HighIntentProgressStack`, `CheckoutLeakHighlight`, `GenericCheckoutMock`, `ShippingSurpriseCard`, `PaymentOptionsPanel`, `MobileCheckoutFrame`, `RecoveryFlowCards`, `DiagnosticCtaCard`.
-- Suggested scene flow: show the user has earned visit, product interest, cart action, and checkout start; highlight the final-stage leak; show a neutral checkout mockup; reveal shipping, delivery, payment, mobile, and recovery checks as separate cards; close on the diagnostic CTA.
+- Core Remotion components: `PresenterFrame`, `LowerThird`, `KeyPhraseCaption`, `FunnelStageRail`, `HighIntentProgressStack`, `CheckoutLeakHighlight`, `GenericCheckoutMock`, `CostConfidencePaymentTriad`, `ShippingSurpriseCard`, `PaymentOptionsPanel`, `MobileCheckoutFrame`, `RecoveryFlowCards`, `DiagnosticCtaCard`.
+- Suggested scene flow: show the user has earned visit, product interest, cart action, and checkout start; highlight the final-stage leak; show a neutral checkout mockup; group the problem visually around cost, confidence, and payment friction; close on the diagnostic CTA.
 - Screen capture needs: none for the result explanation. Avoid real checkout recordings unless a later implementation walkthrough explicitly needs them.
 - Continuity notes: reuse the same funnel rail, stage-card, lower-third, key phrase caption, and CTA-card treatment from the ad and landing page.
 - Avoid: implying every Shopify checkout field can be changed, overpromising payment-method fixes, or making checkout look like a purely design-only problem.
@@ -70,10 +70,11 @@ Treat checkout as a revenue recovery problem, not just a design problem.
 ## Screen Beats
 
 - Results page with checkout-completion stage highlighted.
-- Shipping and delivery promise checks.
-- Payment option checks.
-- Mobile checkout walkthrough.
-- Abandoned checkout recovery checks.
+- Cost, confidence, and payment-friction triad.
+- Shipping and delivery promise moment.
+- Payment option moment.
+- Mobile checkout moment.
+- Abandoned checkout recovery moment.
 - Diagnostic offer section.
 
 ## On-Screen Callouts

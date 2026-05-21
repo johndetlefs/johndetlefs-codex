@@ -78,6 +78,7 @@ Use `references/packet-files.md` for the expected contents of each file. Create 
 - Maintain Australian spelling and JohnDetlefs.com voice: direct, practical, experienced, and low-fluff.
 - Do not invent live performance results, client outcomes, prices, or platform settings. Mark unknowns clearly.
 - Update `status.md` whenever a stage changes.
+- For lead-magnet diagnostic/result videos, use `lead-magnets/_frameworks/diagnostic-result-videos.md` instead of the generic guide packet model. Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current reference for voice, pacing, Remotion visual notes, paid-step bridge, and close.
 
 ## Routing To Other Skills
 

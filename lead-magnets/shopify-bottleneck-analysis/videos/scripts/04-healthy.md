@@ -62,7 +62,7 @@ Move from "find the leak" to "choose the highest-value growth lever."
 - Production approach: presenter-led result video with Remotion motion-graphic overlays. John keeps the tone positive and practical; Remotion helps shift the viewer from "no leak" to prioritisation.
 - Presenter/A-roll role: John should reassure first, then explain why a healthy result still needs a careful next decision. Graphics should make the prioritisation problem feel clear, not scary.
 - Core Remotion components: `PresenterFrame`, `LowerThird`, `KeyPhraseCaption`, `HealthyFunnelRail`, `BenchmarkBalanceCard`, `GrowthLeverDial`, `PriorityMatrix`, `LandingPageTypeBars`, `AovRepeatPurchaseCards`, `AdEconomicsPrompt`, `DiagnosticCtaCard`.
-- Suggested scene flow: show the funnel rail with no obvious red stage; shift from "leak finding" to "growth lever selection"; animate possible levers around a dial; sort them into an impact/effort matrix; end with the diagnostic as the way to choose the right lever safely.
+- Suggested scene flow: show the funnel rail with no obvious red stage; shift from "leak finding" to "growth lever selection"; animate possible levers around a dial; sort them into an impact/effort matrix; end with the diagnostic as the way to choose the right lever instead of chasing every possible improvement.
 - Screen capture needs: none for the result explanation. Optional only for showing the healthy report state.
 - Continuity notes: reuse the same funnel rail, stage-card, lower-third, key phrase caption, and CTA-card treatment from the ad and landing page, with a calmer positive result state.
 - Avoid: making a positive result feel negative, creating false urgency, or listing so many optimisation ideas that the viewer leaves less certain.
@@ -80,6 +80,7 @@ Move from "find the leak" to "choose the highest-value growth lever."
 
 - Nothing obvious is broken.
 - Now choose the highest-return lever.
+- Do not chase every lever at once.
 - Protect what is already working.
 
 ## Retargeting Cutdown Lines

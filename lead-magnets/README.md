@@ -80,3 +80,7 @@ The whole lead-magnet journey should feel like one system:
 5. Result diagnostic video.
 
 Use the same Remotion visual language across acquisition and results: presenter-led talking head, lower thirds, key phrase captions, funnel rails, stage cards, generic store mockups, metric cards, and CTA cards. The user should not feel like they clicked an ad from one product and landed in a different experience.
+
+For diagnostic result scripts, use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current quality reference. The visuals should support the same style of argument: belief reversal, customer behaviour, cost of the wrong tactics, one clear fix-path mental model, proof, and one booking action.
+
+Remotion graphics should visualise the idea behind the words, not become a second checklist. Good reusable patterns include promise handoff splits, trust-loss moments, ownership builders, funnel-stage rails, text-only proof strips, and clear CTA cards.

@@ -4,7 +4,7 @@ Packet: `lead-magnets/shopify-bottleneck-analysis/videos`
 Lead magnet: `next/app/shopify-bottleneck-analysis`
 Reusable framework: `lead-magnets/_frameworks/diagnostic-result-videos.md`
 App implementation doc: `next/docs/report-lead-magnet-videos.md`
-Current stage: script drafting
+Current stage: add-to-cart script approved; remaining result scripts drafting
 Last updated: 2026-05-21
 
 ## Checklist
@@ -44,8 +44,9 @@ Last updated: 2026-05-21
 - The $695/month coaching program should be seeded only as optional ongoing support after the paid diagnostic, not sold as the primary result-page CTA.
 - Current public CTA in the app is still the Shopify Fix-It Call booking flow at `/booking`; this needs implementation alignment before publishing the videos.
 - Approved hook selections: setup option 5, add-to-cart option 1, reach-checkout option 2, checkout-completion option 5, healthy option 2.
-- Videos should be presenter-led talking-head diagnostics composited and enhanced in Remotion. Use generic funnel, store, cart, checkout, checklist, lower-third, caption, and CTA components for support. Use screen capture mainly for the setup video or exact Shopify/report-page process moments.
+- Videos should be presenter-led talking-head diagnostics composited and enhanced in Remotion. Use generic funnel, store, cart, checkout, lower-third, caption, mental-model, proof-strip, and CTA components for support. Use screen capture mainly for the setup video or exact Shopify/report-page process moments.
 - Add-to-cart video brief approved by John and moved to full script draft on 2026-05-21.
+- Add-to-cart full script approved by John as the current reference standard on 2026-05-21. Future result scripts should follow its voice, pacing, fix-path mental model, paid-step bridge, close, and Remotion-note discipline.
 
 ## Open Questions
 
@@ -54,4 +55,4 @@ Last updated: 2026-05-21
 
 ## Next Action
 
-- Review the add-to-cart full script, then draft the reach-checkout script.
+- Draft the reach-checkout script using the approved add-to-cart script as the reference.
