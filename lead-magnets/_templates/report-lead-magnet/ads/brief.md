@@ -16,6 +16,10 @@ Default CTA pattern:
 Run the free <Lead Magnet Name>.
 ```
 
+## Tone
+
+Keep the ad positive, useful, and reality-based. Do not sell fear, shame, or doom. It is fine to name wasted effort or the cost of guessing, but the viewer should feel respected for building an ecommerce business and invited into a clearer next step.
+
 ## Format
 
 Presenter-led lead-magnet ad with Remotion motion-graphic overlays.

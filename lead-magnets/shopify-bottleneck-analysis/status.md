@@ -3,7 +3,7 @@
 Lead magnet: Shopify Bottleneck Analysis
 App route: `next/app/shopify-bottleneck-analysis`
 Current stage: live lead magnet, video sales layer in script production
-Last updated: 2026-05-21
+Last updated: 2026-05-22
 
 ## Assets
 
@@ -22,7 +22,8 @@ Last updated: 2026-05-21
 - The reusable diagnostic-video framework lives in `lead-magnets/_frameworks/`, not in this lead magnet folder.
 - The reusable ad-video framework also lives in `lead-magnets/_frameworks/`, with Bottleneck-specific ad scripts in `ads/`.
 - This lead magnet owns the Bottleneck-specific diagnosis, conversion plan, scripts, hooks, video IDs, and offer-alignment decisions.
-- The add-to-cart result video is the approved script reference for the remaining result videos and the reusable diagnostic-video framework.
+- The add-to-cart, reach-checkout, and checkout-completion result videos are the approved script references for the remaining result videos and the reusable diagnostic-video framework.
+- The healthy/no-major-bottleneck result video has a rewritten first draft ready for review. It treats a healthy funnel as a good result, then uses the business adolescence idea: momentum before full structure, owner time, scaling demands, and giving optimisation a clear lane.
 
 ## Open Questions
 
@@ -30,4 +31,4 @@ Last updated: 2026-05-21
 
 ## Next Action
 
-- Draft the reach-checkout result video using the approved add-to-cart script as the voice and structure reference.
+- Review the healthy/no-major-bottleneck first script draft with John.

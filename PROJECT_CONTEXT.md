@@ -116,6 +116,9 @@ Tone to preserve:
 - Senior enough to be trusted by big brands, but approachable enough that a small store owner feels safe asking basic questions.
 - More "let me translate what the big end of town knows" than "look how clever I am".
 - Avoid sounding like John represents big brands formally unless that is explicitly true for the specific context.
+- Positively focused, never fear-based. Starting and running an ecommerce business is a brave, difficult decision, especially without a large team or deep ecommerce background. Copy should respect that. We can name real consequences and costs, but we do not sell panic, shame, or doom.
+- The core frame is: "You chose to be here, you are here, this is understandable, every problem is fixable, and now here is what to do next." The commercial close should feel like John saying, "I'd like to be part of the journey, and here is how I can best help."
+- Do not imply merchants should already be ecommerce experts. The consistent message is that retail, ecommerce, conversion, fulfilment, stock, ads, and growth are real disciplines. It is normal for store owners to need help, structure, and trustworthy partners.
 
 Proof points currently used:
 
@@ -248,6 +251,8 @@ Content style:
 - Uses examples from recognizable ecommerce sites where useful.
 - Should end with clear action steps or a checklist.
 - Avoid fluff, broad marketing claims, and generic ecommerce advice.
+- Stay reality-based without fear-based copy. Consequences are allowed; doom, shame, and exaggerated negativity are not.
+- Keep the emotional frame constructive: the customer has taken the brave step of building a business, the current state is understandable, every problem is fixable, and the next step should feel clear.
 - Should naturally connect back to the Shopify Fix-It Diagnostic when the reader may need expert help.
 
 Guide/content purpose:

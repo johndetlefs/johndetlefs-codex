@@ -22,6 +22,10 @@ Run the free Shopify Bottleneck Analysis and see whether the likely leak is:
 - checkout completion;
 - or no obvious major funnel leak.
 
+## Tone
+
+Keep the ads positive, useful, and reality-based. Do not sell fear, shame, or doom. It is fine to say guessing wastes effort or the wrong fix can cost money, but the viewer should feel respected for building an ecommerce business and invited into a clearer next step.
+
 ## CTA
 
 Primary CTA:

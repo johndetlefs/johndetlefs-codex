@@ -30,6 +30,8 @@ The video layer lives in `lead-magnets/shopify-bottleneck-analysis/videos/` and 
 
 The goal is to make each result feel specific and useful while moving qualified merchants toward one paid diagnostic next step.
 
+Tone should stay positive and reality-based. The report can name leaks, costs, and consequences, but it should never sell fear or shame the merchant. Building an ecommerce business is brave, the current result is understandable, every problem is fixable, and the next step should be clear.
+
 ## Acquisition Ad Layer
 
 The ad layer lives in `lead-magnets/shopify-bottleneck-analysis/ads/` and follows `lead-magnets/_frameworks/lead-magnet-ad-videos.md`.

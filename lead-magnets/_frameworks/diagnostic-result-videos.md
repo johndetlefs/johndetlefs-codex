@@ -1,8 +1,10 @@
 # Report Lead Magnet Diagnostic Videos
 
-Use this pattern for videos embedded in report-style lead magnets. These are not generic founder-led VSLs. They are diagnostic videos: personal, specific, instructional, and explicit about the next paid step.
+Use this pattern for videos embedded in report-style lead magnets. These are not generic founder-led VSLs. They are diagnostic videos: personal, specific, instructional, positively focused, and explicit about the next paid step.
 
 The job of the video is to move the viewer from curiosity to recognition, then to controlled concern, then to relief, then to action. The viewer should feel, "This is exactly what is happening in my store," before they are asked to book.
+
+Do not sell fear. It is fine to explain costs, missed revenue, wasted effort, and operational consequences, but never use shame, doom, or exaggerated negativity as the sales engine. The frame is: building an ecommerce business is brave, the current situation is understandable, every problem is fixable, and now there is a clear next step.
 
 ## Where Things Live
 
@@ -87,27 +89,53 @@ The structure above should still feel like a story:
 2. **Diagnosis**: "Here is what that means in plain English, including the customer behaviour behind it."
 3. **Controlled concern**: "Here is what this may be costing or wasting."
 4. **Relief**: "Here is the mental model for fixing this, so this is not random."
-5. **Paid next step**: "Here is how to get the needed expertise on your team."
+5. **Paid next step**: "Here is the most natural next commercial step for this specific result."
 
 Do not add a standalone recognition-story section by default. If a viewer-recognition moment is useful, fold it into the diagnosis in one or two sharp lines. The result videos should move quickly from reveal to diagnosis to consequence.
 
 Use a but/therefore arc. Avoid list-shaped scripts where each section merely adds another point.
 
+## Retention Loop Discipline
+
+The video should earn attention all the way to the booking CTA by making each section resolve one question and open the next one.
+
+Use this progression:
+
+1. **Hook opens the contradiction**: "I thought the problem was X, but the result says Y."
+2. **Diagnosis answers what Y means**: translate the metric into customer behaviour.
+3. **Cost of inaction answers why it matters**: show why obvious tactics waste money or miss the real issue.
+4. **Fix path answers what the real job is**: give one practical mental model, not a checklist.
+5. **Paid next step answers what happens next**: make the diagnostic feel like the natural way to apply the mental model to their actual store, whether that means getting expertise on the team or keeping conversion sharp while the business scales.
+
+Do not let sections end flat. Each section should either create concern, resolve concern, or make the next question feel inevitable. The viewer should receive genuinely useful information, but the information should culminate in the obvious conclusion that expert inspection is the next rational step.
+
 ## Current Reference Standard
 
-Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md` as the current reference for how a strong result script should feel.
+Use these scripts as the current reference for how a strong result script should feel:
 
-The useful lessons from that script:
+- `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md`
+- `lead-magnets/shopify-bottleneck-analysis/videos/scripts/02-reach-checkout.md`
+- `lead-magnets/shopify-bottleneck-analysis/videos/scripts/03-checkout-completion.md`
+
+The useful lessons from those scripts:
 
 - Write for John's mouth, not for a strategy document. Use contractions, short spoken sentences, and concrete language.
 - Remove hedging unless the claim genuinely needs it. Prefer "this is costing you money" over "this might be costing you money."
+- Keep the tone constructive. The viewer should not feel blamed for the result or expected to already be an ecommerce expert. The cost section can create urgency, but it should never become fear-based selling.
 - Do not over-explain a good point. If a section starts becoming its own mini-video, compress it back to the job it needs to do in the arc.
 - Hooks need dissonance and an open loop. The hook can reveal the flagged stage, but it should not list causes or fixes.
 - The diagnosis should translate the metric into customer behaviour. Example: "People are looking, but they're not committing."
 - The cost-of-inaction section should show why the obvious tactics can make the problem worse or more expensive.
 - The fix path should name the practical mental model, not just list checks. For add-to-cart, the model is promise continuity, trust, imagined ownership, and making Add to Cart feel inevitable.
-- The paid next step should follow the emotional setup. If the script has just acknowledged that the work is hard and requires expertise, move forward into why John belongs on the team; do not loop back into explaining the report again.
-- Close with reassurance and one action. Keep it warm, specific, and low-pressure.
+- The fix path must match the stage psychology. For add-to-cart, the buyer is still deciding whether they want the product from this store. For reach-checkout, product desire is already solved; the buyer is now judging the vendor and looking for risk reversal.
+- Checkout completion is a different stage again. Do not re-run the reach-checkout delivery/returns risk-reversal script. By checkout, Shopify has done much of the heavy technical work; the useful diagnosis is what the merchant, settings, or apps are doing to get in the way of the final payment step.
+- Avoid social-post cadence in spoken scripts. Do not stack repeated lines like "X creates risk, Y creates risk, Z creates risk" unless John explicitly asks for that rhythm. Prefer one clean spoken idea that names the job and why it matters.
+- Do not turn planning notes into spoken inventory. Sections like "Likely Causes", "First Checks", and "Likely Growth Levers" are for thinking, not phrasing. Avoid comparison ladders such as "if add-to-cart is weak...", "if reach-checkout is weak...", or "you could work on..." unless John explicitly asks for that structure. They read like a strategy memo or LinkedIn post, not a result video.
+- Cost-of-inaction should not loop back through the same metaphor repeatedly. It should show why obvious tactics are short-term or band-aid fixes, then create a clean reason to move into the fix path.
+- For checkout completion, be honest that the immediate settings fixes are simple. Do not inflate complexity. The commercial bridge is that a store with checkout completion as the main leak is probably starting to work, so the next value is optimisation, scale, and keeping conversion sharp while the operator focuses on growth.
+- For healthy/no-major-bottleneck scripts, do not force the "problem" section to feel negative. This result should feel positive and fun. Use the business adolescence idea: the store has momentum and is big enough to need structure before all the structure exists. The tension is not panic or failure; it is owner attention. The store is moving into optimisation and scale, so conversion becomes one important lane among stock, fulfilment, hiring, customer service, cash flow, ads, margins, and other growth work.
+- The paid next step should follow the emotional setup. If the section has already established the expertise gap, move into why John belongs on the team. If the section has established that the store is already working, move into conversion oversight while the business scales. Do not leave old generic paid-step scaffolding in a script after the premise changes.
+- Close with one action. Keep it warm, specific, and matched to the result state; do not add broad reassurance if the viewer's result suggests the business is already working.
 
 ## Hook Rules
 
@@ -139,7 +167,7 @@ The reversal should be specific to the result state:
 - "But your biggest issue is earlier than checkout."
 - "But these shoppers already showed interest and still did not continue."
 - "But checkout is where high-intent shoppers are falling away."
-- "But a healthy funnel changes the question from fixing a leak to choosing the best growth lever."
+- "But a healthy funnel changes the question from fixing a leak to business adolescence, owner time, optimisation, and scale."
 
 Good hook shape:
 
@@ -180,9 +208,11 @@ The fix path should make the viewer feel relieved because the problem has a shap
 For each bottleneck, find the one job that stage must do:
 
 - add-to-cart: make the buyer feel they are in the right place, trust the offer, imagine owning the product, and see Add to Cart as the natural next step;
-- reach-checkout: preserve the momentum after interest has been shown and remove cost, confidence, and friction blockers before checkout;
-- checkout completion: protect high-intent buying momentum and remove final-stage cost, payment, delivery, and trust blockers;
-- healthy funnel: move from "find the leak" to "choose the highest-return growth lever."
+- reach-checkout: recognise that product desire is already there, then remove vendor risk: delivery fees, delivery timing, returns, refunds, total price clarity, and any visibility or layout issue that makes the checkout path less obvious;
+- checkout completion: protect the final payment step after high intent is already there; for most Shopify stores, focus on the few checkout levers that matter most: guest checkout, trusted single-click payment methods, and an app-friction check. Treat abandoned checkout emails as recovery that can feed shoppers back into the same stuck point, not as the fix;
+- healthy funnel: move from "find the leak" to business adolescence: momentum before full structure, with conversion as one lane inside the scaling business.
+
+For healthy/no-major-bottleneck scripts, do not recap the other bottleneck videos as a list. The viewer does not need "if add-to-cart, then product page; if reach-checkout, then cart; if checkout, then payment." Start from the actual result state: this is good news, the store is broadly working, and the work now shifts into business adolescence, owner attention, trustworthy partners, optimisation, and scale.
 
 The add-to-cart reference pattern is:
 
@@ -199,6 +229,36 @@ Why should I buy this from you?
 The first question is about continuity. There needs to be continuity between what the buyer clicked and where they ended up. Dissonance creates uncertainty, uncertainty removes trust, and once the customer loses trust, they leave.
 
 The next questions are about ownership. The product page needs to put a picture in the buyer's head of already owning the product. Images, copy, proof, delivery details, price, and every other page element should increase comfort, build trust, and make the next buying action feel inevitable.
+
+The reach-checkout reference pattern is:
+
+```text
+Because at this point, the customer has already said, "yes."
+
+They've made it clear they want to own the product.
+
+And this is where they start judging you, the vendor.
+```
+
+For reach-checkout, do not keep selling product desire. The product page has already moved the buyer toward ownership. The cart must now answer the vendor-trust question: "Am I going to get what I ordered, when I expect it, without hidden costs or hassle if something goes wrong?"
+
+That is why risk reversal is the main fix-path idea. Delivery fees, delivery timing, returns, refunds, and total price clarity are not random cart checks; they are the evidence that the vendor can be trusted. The technical note comes after that: the checkout button must be clear, simple, obvious, and unambiguous.
+
+The checkout-completion reference pattern is:
+
+```text
+At this stage, checkout issues generally fall into one of two buckets: technical failure or added friction.
+
+Technical failure is the form not working, the button not pressing, or the payment option failing.
+
+This is where Shopify is different.
+```
+
+For checkout completion, the product and cart have already done their jobs. Do not make the fix path about product desire, cart trust, or broad reassurance. Shopify has spent years making checkout secure, reliable, and hard to break, so the script should focus on the places merchants still get in the way: forced account creation, missing single-click payment options, mobile card-entry friction, and apps that add friction.
+
+Single-click payments should be framed in two layers: they remove mobile friction, and they reduce the customer's perceived credit-card risk because sensitive card details stay inside a trusted payment system. Be careful not to claim fraud is impossible or that the merchant has no PCI obligations.
+
+The paid step for checkout completion is not "this is all complicated." It is: these fixes are pretty simple, the store is probably starting to work, and now the merchant needs to keep conversion sharp while scaling into new markets, stock, 3PL, hiring, and team expansion.
 
 ## Length
 
@@ -302,6 +362,14 @@ Useful Remotion component families:
 
 Remotion should make the argument easier to understand. It should not add a second script on top of John's script. If a visual note reads like a checklist, compress it into one visual idea.
 
+For result scripts, keep Remotion notes tied to the current spoken mental model:
+
+- add-to-cart visuals should show promise continuity, trust, imagined ownership, and Add to Cart becoming inevitable;
+- reach-checkout visuals should show the cart bridge, band-aid fixes that miss the real issue, vendor judgement, risk reversal, and a clear checkout path;
+- checkout-completion visuals should not automatically reuse reach-checkout risk reversal; use a final-payment model where Shopify checkout is deliberately constrained, so guest checkout, trusted single-click payments, app-friction checks, and the post-fix scale opportunity become the highest-leverage visuals.
+
+Do not use Remotion to introduce causes John has not spoken about. Do not turn the visual plan into a parallel audit checklist. The strongest visual notes usually name one object, one transformation, and one takeaway.
+
 ## Journey Continuity
 
 Result videos should feel like the natural continuation of the lead-generation ad and landing page. Use the same visual system, but slow it down and make it more diagnostic.
@@ -400,6 +468,10 @@ Each script file should use this structure:
 
 ## Purpose
 
+## Reference Standard
+
+Use `lead-magnets/shopify-bottleneck-analysis/videos/scripts/01-add-to-cart.md`, `lead-magnets/shopify-bottleneck-analysis/videos/scripts/02-reach-checkout.md`, and `lead-magnets/shopify-bottleneck-analysis/videos/scripts/03-checkout-completion.md` as the current quality bar for voice, stage psychology, Remotion notes, paid-step bridge, and close.
+
 ## Five Hook Options
 
 1.
@@ -427,12 +499,22 @@ Each script file should use this structure:
 - Paid next step:
 - Close:
 
+## Retention Loop Notes
+
+- Hook opens:
+- Diagnosis answers:
+- Cost section creates:
+- Fix path resolves:
+- Paid step converts by:
+
 ## Scriptwriting Notes
 
 - Main belief/reversal:
 - Customer behaviour behind the metric:
+- Stage psychology:
 - One mental model for the fix path:
-- Expertise gap before the paid step:
+- Obvious tactics that are only band-aid fixes:
+- Paid-step bridge / expertise gap:
 - Proof to use:
 - CTA wording:
 
@@ -452,6 +534,8 @@ Each script file should use this structure:
 - Screen capture needs:
 - Continuity notes:
 - Avoid:
+
+Remotion should make the argument easier to understand. It should not add a second script on top of John's talking head. If a visual note becomes a long checklist, compress it into one visual idea: one object, one transformation, and one takeaway.
 
 ## Screen Beats
 

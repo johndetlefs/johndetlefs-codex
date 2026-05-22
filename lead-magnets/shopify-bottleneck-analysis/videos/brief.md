@@ -48,12 +48,12 @@ The current app CTA is `/booking` with legacy "Book a Shopify Fix-It Call" langu
 4. **Checkout Completion Bottleneck**
    - Variant key: `checkoutCompletion`
    - Purpose: explain why high-intent shoppers reach checkout but do not complete the purchase.
-   - Core message: "These people were close to buying. Small checkout fixes can have a very direct revenue impact."
+   - Core message: "The store is getting shoppers right to the edge of buying. The fixes are simple: make payment familiar, fast, safe, and low-friction, then move into optimisation and scale."
 
 5. **Healthy / No Major Bottleneck**
    - Variant key: `healthy`
-   - Purpose: explain that the top-line funnel is broadly okay, then shift the question to the highest-value growth lever.
-   - Core message: "Nothing is obviously broken, so now we prioritise the highest-return improvement."
+   - Purpose: explain that the top-line funnel is broadly okay, then shift the question to business adolescence, owner time, optimisation, and scale.
+   - Core message: "This is a good result. The core funnel is broadly doing its job, so now the business is moving into adolescence: momentum before full structure. The job is to keep conversion sharp while the owner moves into optimisation and scale."
 
 ## Sales Letter Arc
 
@@ -63,8 +63,8 @@ Each result video should follow:
 2. Diagnosis: explain what this stage leak means in plain English.
 3. Cost of inaction: translate the leak into missed revenue, wasted effort, or urgency without overclaiming.
 4. Fix path: give the viewer one practical mental model for what needs to change, not a long checklist.
-5. Paid next step: acknowledge the expertise gap, position John as the person who can be on their team, and invite them to book the $295 Shopify Fix-It Diagnostic.
-6. Close: reassure them that the issue is fixable, then give one clear CTA.
+5. Paid next step: match the result state, position John as the person who can help apply the mental model to their actual store, and invite them to book the $295 Shopify Fix-It Diagnostic.
+6. Close: give one clear CTA with a warm sign-off.
 
 Recommended timing:
 
@@ -85,7 +85,9 @@ Recommended timing:
 - Use contractions and short spoken sentences.
 - Reduce hedging. If the pattern is clear, say it clearly.
 - Do not overcook a good concept. If a section starts becoming its own lesson, compress it back to the job it needs to do.
-- Use the add-to-cart script as the voice reference for future result scripts.
+- Keep the tone positively focused and reality-based, not fear-based. The viewer should feel respected for building an ecommerce business. Cost sections can name consequences, but they should not create shame, doom, or panic.
+- The repeated frame is: this is understandable, every problem is fixable, and here is the next step.
+- Use the approved add-to-cart, reach-checkout, and checkout-completion scripts as the voice and structure references for future result scripts.
 
 ## Visual Direction
 
@@ -96,7 +98,7 @@ Recommended timing:
 - Use screen capture only where the viewer needs exact process guidance, especially the setup video and any Shopify export steps.
 - Use generic Shopify-style mockups rather than real merchant examples for result videos: abstract product pages, cart drawers, checkout screens, funnel rails, metric cards, and checklist panels.
 - Show the report state early, then use Remotion-built overlays and cutaways to explain the pattern.
-- Visualise the mental model in each section: belief/reversal, cost stacking up, promise handoff, trust loss, imagined ownership, cart momentum, checkout friction, priority choice, or action plan.
+- Visualise the mental model in each section: belief/reversal, cost stacking up, promise handoff, trust loss, imagined ownership, vendor judgement, risk reversal, checkout friction, trusted payment systems, scale opportunity, priority choice, or action plan.
 - Use text-only proof strips for brand names unless approved logo assets are available.
 - Match the lead-generation ad and landing page visual language so the viewer feels one continuous journey from click to report to result.
 - Highlight one metric, stage, or user decision at a time.
@@ -134,6 +136,6 @@ Reusable Remotion component ideas:
 - Do not guarantee the estimated revenue gap is recoverable.
 - Do not imply John has inspected the store before the call.
 - Do not pretend the pre-recorded video knows exact numbers beyond the result state.
-- Do not make checkout changes sound trivial when plan, app, payment, and platform constraints may apply.
+- Do not inflate simple checkout fixes. Be clear about plan, app, payment, and platform constraints, but if the fix is mainly guest checkout, single-click payments, and app-friction checks, say that plainly and use the paid step to move into optimisation, scale, and conversion oversight.
 - Do not sell the $695/month coaching program as the primary result-page CTA.
 - Do not introduce large scoped project positioning unless the user has signalled that path.

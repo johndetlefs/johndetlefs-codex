@@ -85,7 +85,7 @@ Purpose: explain why people add to cart but do not continue to checkout.
 
 1. "You might look at add-to-carts and think, 'Good, the product page is working.' And partly, it is. But your report is showing too many shoppers add to cart and then do not even reach checkout. So what happens in those few seconds between interest and the next step?"
 
-2. "Most people treat cart abandonment like the customer simply changed their mind. But if shoppers add to cart and do not reach checkout, the report is pointing to a much smaller moment. They said 'maybe', then stopped before the next step. Why?"
+2. "When you got here, I bet you thought this was an abandoned checkout problem. That would make sense. That's where most people look when carts don't become orders. But your result isn't pointing at checkout. It's pointing to the step before checkout. People are adding to cart, then not even reaching checkout. So the question isn't, 'why didn't they finish?' It's, 'what made the next click feel harder than leaving?'"
 
 3. "You might have expected the checkout to be the weak point. But this result says many shoppers are not even getting there. They showed interest, then stalled before checkout, which means the interesting question sits in the handoff."
 
@@ -97,7 +97,7 @@ Purpose: explain why people add to cart but do not continue to checkout.
 
 Option 2.
 
-Why: it challenges the idea that cart abandonment is just the customer changing their mind, then opens the question around the cart moment.
+Why: it challenges the abandoned-checkout assumption, then opens the question around the smaller cart-to-checkout handoff without explaining the cause too early.
 
 ## 4. Checkout Completion Bottleneck
 
@@ -113,7 +113,7 @@ Purpose: explain why people reach checkout but do not complete the purchase.
 
 4. "It is easy to blame abandoned checkout on people being distracted. Sometimes they are. But when checkout completion is the main bottleneck, we cannot just write it off as distraction. We need to know what the final step is doing to the decision."
 
-5. "Most funnel leaks are frustrating, but this one is especially expensive. You already earned the visit, the product interest, the cart action, and the checkout start. So why does the funnel lose people when buying intent should be highest?"
+5. "Most funnel leaks are frustrating, but this one is especially expensive. You already earned the visit, the product interest, the cart action, and the checkout start. But your result says too many shoppers are still walking away at the finish line. So now we have to ask, what are we doing that's getting in the way of that final payment step?"
 
 ### Recommended Hook
 
@@ -127,21 +127,21 @@ Purpose: explain that the funnel is broadly okay, but there is still room to imp
 
 ### Hook Options
 
-1. "You might expect a healthy result to mean, 'Great, there is nothing to fix.' But that is not quite right. It means the obvious leak is not showing up in the core funnel. So the question changes from 'what is broken?' to 'what is actually worth improving?'"
+1. "First up, this is a good result. Your report isn't showing any obvious major leak in the core funnel, which means shoppers are moving through that main journey in roughly the way we'd expect. So that's a win. A lot of stores don't get this result. In fact, I'll be very surprised if anybody ever ends up watching this video. So if you're seeing this, you're in rarefied air. And being here means we're no longer diagnosing a leak. We get to move into the fun stuff: optimisation and scale. And our next question to answer is, 'where can you, as the owner, most profitably spend your time?'"
 
-2. "This is the result most people want, but it creates a different problem. If nothing obvious is broken, random optimisation gets dangerous. So what do you touch when the main funnel is already doing its job?"
+2. "A healthy result is not a warning sign. It's the opposite. It means the core funnel is broadly doing its job. But once the obvious leak is gone, the next question gets more interesting: which part of the business deserves attention first?"
 
-3. "You might have come into this expecting the report to find a leak. But if the funnel is broadly healthy, the report is telling us something else. The opportunity may not be a dramatic fix, which means the next move is less obvious."
+3. "You might have expected this report to find a big ugly leak. But it hasn't. That's good news. So now we move from repair mode into growth mode, and the job becomes choosing the next lever with a bit of discipline."
 
-4. "A healthy funnel can feel like the end of the analysis. But it is actually the start of a prioritisation question. If the core funnel is not obviously broken, where should the next hour or dollar go?"
+4. "When the funnel looks healthy, the temptation is to say, 'Right, job done.' But this is usually where the better question starts. If the store is already moving, where does the next smart improvement come from?"
 
-5. "The trap with a healthy result is thinking every optimisation idea is equally valid. It is not. If the funnel is broadly working, the wrong change can waste time or break something. So the next question is which lever has earned attention."
+5. "This is the result a lot of store owners hope for. No obvious major leak. But that does not mean we switch our brains off. It means we protect what's working, then decide which growth lever has earned attention."
 
 ### Recommended Hook
 
-Option 2.
+Option 1.
 
-Why: it keeps the result positive, but opens a useful prioritisation question instead of implying there is nothing to do.
+Why: it starts with the good news, gives the viewer the win, then opens the useful next question without making the result feel negative or self-serving.
 
 ## Review Checklist
 
@@ -160,4 +160,4 @@ Please review:
 - Product Page / Add-To-Cart Bottleneck: Option 1
 - Cart / Reach-Checkout Bottleneck: Option 2
 - Checkout Completion Bottleneck: Option 5
-- Healthy / No Major Bottleneck: Option 2
+- Healthy / No Major Bottleneck: Option 1

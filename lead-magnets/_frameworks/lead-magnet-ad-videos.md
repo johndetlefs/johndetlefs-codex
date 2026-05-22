@@ -34,6 +34,8 @@ The ad does not need to explain the whole report. It needs to sell one click:
 - find the likely leak;
 - stop guessing which part of the funnel to fix first.
 
+Keep the ad positive and useful. Do not sell fear, shame, or doom. It is acceptable to say guessing wastes effort or that the wrong fix can cost money, but the emotional frame should be: the merchant is doing a brave, difficult thing, the uncertainty is understandable, and the free report gives them a clearer next move.
+
 ## Default Format
 
 Default format: presenter-led lead-magnet ad with Remotion motion-graphic overlays.
