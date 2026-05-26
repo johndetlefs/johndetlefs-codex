@@ -8,3 +8,7 @@
 
 # Temporary files
 /.tmp/
+
+# Generated caches
+__pycache__/
+.swift-cache/

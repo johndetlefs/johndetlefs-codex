@@ -1,0 +1,879 @@
+{
+  "version": 1,
+  "storageKey": "grdb-meta-ad-editor-v16",
+  "savedAt": "2026-05-26T00:19:39.714Z",
+  "project": {
+    "elements": [
+      {
+        "id": "titlePanel",
+        "name": "Headline panel",
+        "type": "rect",
+        "locked": false,
+        "fill": "#0d2d5b",
+        "opacity": 0.96,
+        "radius": 17,
+        "layouts": {
+          "story": {
+            "x": 65,
+            "y": 318,
+            "w": 950,
+            "h": 126,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 58.5301513671875,
+            "y": 211.7128620147705,
+            "w": 965.9063720703125,
+            "h": 121.09174728393555,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 58.5301513671875,
+            "y": 77.42572402954102,
+            "w": 965.9063720703125,
+            "h": 121.09174728393555,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 78,
+            "y": 38,
+            "w": 1044,
+            "h": 88,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "headline",
+        "name": "Headline",
+        "type": "text",
+        "text": "Muscle Support Without The Junk",
+        "fill": "#ffffff",
+        "fontFamily": "Georgia, 'Times New Roman', serif",
+        "align": "center",
+        "weight": 700,
+        "lineHeight": 1.05,
+        "layouts": {
+          "story": {
+            "x": 88,
+            "y": 352,
+            "w": 904,
+            "h": 58,
+            "fontSize": 50,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 85.15838623046875,
+            "y": 237.035551071167,
+            "w": 916,
+            "h": 58,
+            "fontSize": 50,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 85.15838623046875,
+            "y": 102.7484130859375,
+            "w": 916,
+            "h": 58,
+            "fontSize": 50,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 110.46380615234375,
+            "y": 56.266448974609375,
+            "w": 980,
+            "h": 46,
+            "fontSize": 46,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "subPanel",
+        "name": "Subhead panel",
+        "type": "rect",
+        "fill": "#ffe35c",
+        "stroke": "rgba(12,27,48,0.22)",
+        "strokeWidth": 2,
+        "radius": 8,
+        "layouts": {
+          "story": {
+            "x": 165,
+            "y": 432,
+            "w": 750,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 190.72918701171875,
+            "y": 318.361234664917,
+            "w": 686.5960083007812,
+            "h": 74.24632263183594,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 190.72918701171875,
+            "y": 184.0740966796875,
+            "w": 686.5960083007812,
+            "h": 74.24632263183594,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 300,
+            "y": 114,
+            "w": 600,
+            "h": 48.828948974609375,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "subhead",
+        "name": "Subhead",
+        "type": "text",
+        "text": "A simple protein habit when appetite drops.",
+        "fill": "#10213a",
+        "fontFamily": "Arial, sans-serif",
+        "align": "center",
+        "weight": 800,
+        "lineHeight": 1,
+        "layouts": {
+          "story": {
+            "x": 190,
+            "y": 451,
+            "w": 700,
+            "h": 26,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 231.2025146484375,
+            "y": 339.00179862976074,
+            "w": 613.3084716796875,
+            "h": 31.738632202148438,
+            "fontSize": 31.738632202148438,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 231.2025146484375,
+            "y": 204.71466064453125,
+            "w": 613.3084716796875,
+            "h": 31.738632202148438,
+            "fontSize": 31.738632202148438,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 329.74017333984375,
+            "y": 124.70066833496094,
+            "w": 536,
+            "h": 25,
+            "fontSize": 26,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "shadow",
+        "name": "Product shadow",
+        "type": "shadow",
+        "fill": "#071a33",
+        "opacity": 0.26,
+        "blur": 22,
+        "layouts": {
+          "story": {
+            "x": 345,
+            "y": 1230,
+            "w": 350,
+            "h": 46,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 345,
+            "y": 1092.2871379852295,
+            "w": 350,
+            "h": 46,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 345,
+            "y": 958,
+            "w": 350,
+            "h": 46,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 482,
+            "y": 560,
+            "w": 235,
+            "h": 28,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "product",
+        "name": "Protein bag",
+        "type": "image",
+        "src": "generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png",
+        "layouts": {
+          "story": {
+            "x": 325,
+            "y": 600,
+            "w": 430,
+            "h": 645,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 325,
+            "y": 462.2871379852295,
+            "w": 430,
+            "h": 645,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 325,
+            "y": 328,
+            "w": 430,
+            "h": 645,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 466.875,
+            "y": 180.006591796875,
+            "w": 270,
+            "h": 405,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinArrow",
+        "name": "Protein arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-curve-up-right",
+        "src": "generated/assets/icons/feature-benefit-v1/arrow-curve-up-right.png",
+        "layouts": {
+          "story": {
+            "x": 200.32800927734374,
+            "y": 618.9888809480015,
+            "w": 119.81893920898438,
+            "h": 82.88844424731111,
+            "rotation": 16.2060001409397,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 200.328,
+            "y": 481.27613798522947,
+            "w": 119.819,
+            "h": 82.888,
+            "rotation": 16.206,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 200.328,
+            "y": 346.989,
+            "w": 119.819,
+            "h": 82.888,
+            "rotation": 16.206,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 366.6644592285156,
+            "y": 201.73025512695312,
+            "w": 96,
+            "h": 64,
+            "rotation": 34.9080258709455,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinIcon",
+        "name": "Protein icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "protein-flex-bicep",
+        "src": "generated/assets/icons/feature-benefit-v2/protein-flex-bicep.png",
+        "layouts": {
+          "story": {
+            "x": 171.97618103027344,
+            "y": 699.5964925514078,
+            "w": 84.19560241699219,
+            "h": 79.42981360093601,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 171.976,
+            "y": 561.8831379852295,
+            "w": 84.196,
+            "h": 79.43,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 171.976,
+            "y": 427.596,
+            "w": 84.196,
+            "h": 79.43,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 322.4506530761719,
+            "y": 239.54608154296875,
+            "w": 70,
+            "h": 66,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinText",
+        "name": "Protein text",
+        "type": "text",
+        "text": "31G\nPROTEIN",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 107.58230590820312,
+            "y": 791.9546508789062,
+            "w": 204.29470825195312,
+            "h": 70.9161376953125,
+            "fontSize": 30.912162585136215,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 107.582,
+            "y": 654.2421379852294,
+            "w": 204.295,
+            "h": 70.916,
+            "fontSize": 30.912,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 107.582,
+            "y": 519.9549999999999,
+            "w": 204.295,
+            "h": 70.916,
+            "fontSize": 30.912,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 280.9769592285156,
+            "y": 320.3552551269531,
+            "w": 156,
+            "h": 54,
+            "fontSize": 24,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "sugarIcon",
+        "name": "Low sugar icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "low-sugar-cube-circle-slash",
+        "src": "generated/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png",
+        "layouts": {
+          "story": {
+            "x": 814.8844604492188,
+            "y": 631.531494140625,
+            "w": 109.32983114553052,
+            "h": 111.93292236328125,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 814.884,
+            "y": 493.8181379852295,
+            "w": 109.33,
+            "h": 111.933,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 814.884,
+            "y": 359.531,
+            "w": 109.33,
+            "h": 111.933,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 808.1315307617188,
+            "y": 191.1447296142578,
+            "w": 82,
+            "h": 84,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "sugarText",
+        "name": "Low sugar text",
+        "type": "text",
+        "text": "LOW SUGAR\nCHOCOLATE",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 768.2196044921875,
+            "y": 751.965576171875,
+            "w": 210,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 768.22,
+            "y": 614.2531379852295,
+            "w": 210,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 768.22,
+            "y": 479.966,
+            "w": 210,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 762.2302856445312,
+            "y": 279.6217041015625,
+            "w": 178,
+            "h": 54,
+            "fontSize": 24,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "sugarArrow",
+        "name": "Low sugar arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-left-curve-a",
+        "src": "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+        "layouts": {
+          "story": {
+            "x": 769.0383940429688,
+            "y": 819.2043859401393,
+            "w": 126.90625,
+            "h": 84.0325168918919,
+            "rotation": -68.474,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 769.038,
+            "y": 681.4911379852294,
+            "w": 126.906,
+            "h": 84.033,
+            "rotation": -68.474,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 769.038,
+            "y": 547.204,
+            "w": 126.906,
+            "h": 84.033,
+            "rotation": -68.474,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 771.855224609375,
+            "y": 330.6875,
+            "w": 104,
+            "h": 68,
+            "rotation": -65,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      },
+      {
+        "id": "leafIcon",
+        "name": "Grass fed icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "grass-leaf",
+        "src": "generated/assets/icons/feature-benefit-v2/grass-leaf.png",
+        "layouts": {
+          "story": {
+            "x": 152.60487365722656,
+            "y": 950.7267456054688,
+            "w": 106,
+            "h": 90,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 152.605,
+            "y": 813.0141379852295,
+            "w": 106,
+            "h": 90,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 152.605,
+            "y": 678.727,
+            "w": 106,
+            "h": 90,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 307.319091796875,
+            "y": 416.2039489746094,
+            "w": 82,
+            "h": 70,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "leafText",
+        "name": "Grass fed text",
+        "type": "text",
+        "text": "GRASS FED\nWHEY",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 87.22174072265625,
+            "y": 1050.179931640625,
+            "w": 218,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 87.222,
+            "y": 912.4671379852294,
+            "w": 218,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 87.222,
+            "y": 778.18,
+            "w": 218,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 259.3618469238281,
+            "y": 493.54278564453125,
+            "w": 166,
+            "h": 54,
+            "fontSize": 23,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "leafArrow",
+        "name": "Grass fed arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-right-curve-b",
+        "src": "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png",
+        "layouts": {
+          "story": {
+            "x": 180.4368846435547,
+            "y": 1126.0425234375,
+            "w": 118.536,
+            "h": 72.083,
+            "rotation": 56.477,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 180.437,
+            "y": 988.3301379852295,
+            "w": 118.536,
+            "h": 72.083,
+            "rotation": 56.477,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 180.437,
+            "y": 854.043,
+            "w": 118.536,
+            "h": 72.083,
+            "rotation": 56.477,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 380.5493469238281,
+            "y": 521.2302856445312,
+            "w": 96,
+            "h": 58,
+            "rotation": 35.814372327426526,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      },
+      {
+        "id": "prepIcon",
+        "name": "Prep icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "prep-shaker-check",
+        "src": "generated/assets/icons/feature-benefit-v2/prep-shaker-check.png",
+        "layouts": {
+          "story": {
+            "x": 836.962646484375,
+            "y": 946.3800659179688,
+            "w": 86,
+            "h": 102,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 836.963,
+            "y": 808.6671379852295,
+            "w": 86,
+            "h": 102,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 836.963,
+            "y": 674.38,
+            "w": 86,
+            "h": 102,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 837.6480712890625,
+            "y": 411.7927551269531,
+            "w": 70,
+            "h": 84,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "prepText",
+        "name": "Prep text",
+        "type": "text",
+        "text": "NO MESSY\nPREP",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 777.6507568359375,
+            "y": 1060.01611328125,
+            "w": 200,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 777.651,
+            "y": 922.3031379852295,
+            "w": 200,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 777.651,
+            "y": 788.016,
+            "w": 200,
+            "h": 70,
+            "fontSize": 28,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 791.7039184570312,
+            "y": 506.582275390625,
+            "w": 160,
+            "h": 52,
+            "fontSize": 23,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "prepArrow",
+        "name": "Prep arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-left-curve-a",
+        "src": "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+        "layouts": {
+          "story": {
+            "x": 781.3048349609375,
+            "y": 1129.2220052325274,
+            "w": 126.66937255859375,
+            "h": 77.02867250184755,
+            "rotation": -62.42251517892154,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 781.305,
+            "y": 991.5091379852295,
+            "w": 126.669,
+            "h": 77.029,
+            "rotation": -62.423,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 781.305,
+            "y": 857.222,
+            "w": 126.669,
+            "h": 77.029,
+            "rotation": -62.423,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 746.625,
+            "y": 531.0328979492188,
+            "w": 100,
+            "h": 60,
+            "rotation": -28.510079660556972,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      }
+    ]
+  }
+}

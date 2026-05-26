@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Rid Of Dad Bod - Meta Image Ad Template Gallery</title>
+    <style>
+      :root {
+        --blue: #193f76;
+        --blue-dark: #102c56;
+        --yellow: #ffce18;
+        --cream: #f7f4ed;
+        --paper: #fffdf8;
+        --charcoal: #171717;
+        --muted: #666257;
+        --line: rgba(23, 23, 23, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f2f0ea;
+        color: var(--charcoal);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 32px 20px 20px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+        line-height: 1.1;
+      }
+
+      .intro {
+        margin: 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .editor-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        margin-top: 16px;
+        border-radius: 7px;
+        padding: 0 14px;
+        background: var(--blue);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .template {
+        min-width: 0;
+      }
+
+      .template-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 42px;
+        margin-bottom: 10px;
+        color: #312f2a;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .template-label span:last-child {
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .ad {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        box-shadow: 0 18px 44px rgba(21, 19, 12, 0.12);
+      }
+
+      .final-ad {
+        aspect-ratio: 9 / 16;
+        background: #194c94;
+      }
+
+      .final-ad img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product {
+        position: absolute;
+        z-index: 2;
+        width: 34%;
+        filter: drop-shadow(0 24px 28px rgba(18, 18, 18, 0.24));
+      }
+
+      .product img {
+        display: block;
+        width: 100%;
+      }
+
+      .product.small {
+        width: 27%;
+      }
+
+      .product.large {
+        width: 40%;
+      }
+
+      .claim-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0.35em 0.7em;
+        background: var(--yellow);
+        color: var(--blue);
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .headline {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        color: var(--charcoal);
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 0.95;
+      }
+
+      .subcopy {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        color: #403c34;
+        font-size: clamp(13px, 3.3vw, 22px);
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .logo-chip {
+        position: absolute;
+        z-index: 4;
+        left: 7%;
+        top: 6%;
+        display: inline-grid;
+        gap: 2px;
+        transform: rotate(-1deg);
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .logo-chip span {
+        display: block;
+        border-radius: 9px;
+        padding: 7px 12px;
+        font-size: clamp(15px, 4vw, 24px);
+      }
+
+      .logo-chip span:first-child {
+        background: var(--yellow);
+        color: var(--blue);
+      }
+
+      .logo-chip span:last-child {
+        background: var(--blue);
+        color: var(--yellow);
+      }
+
+      .macro-card {
+        position: relative;
+        z-index: 3;
+        display: grid;
+        gap: 8px;
+        padding: 18px;
+        background: #ffffff;
+        border: 2px solid rgba(25, 63, 118, 0.18);
+        box-shadow: 0 10px 24px rgba(20, 20, 20, 0.09);
+      }
+
+      .macro-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding-bottom: 6px;
+        font-size: clamp(14px, 3.6vw, 22px);
+        font-weight: 800;
+      }
+
+      .macro-row:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .macro-row strong {
+        color: var(--blue);
+      }
+
+      .ad-01 {
+        background:
+          linear-gradient(150deg, rgba(255, 206, 24, 0.9) 0 35%, transparent 35%),
+          radial-gradient(circle at 12% 86%, rgba(25, 63, 118, 0.18), transparent 35%),
+          var(--cream);
+      }
+
+      .ad-01 .product {
+        right: 4%;
+        bottom: 4%;
+      }
+
+      .ad-01 .headline {
+        width: 68%;
+        padding: 33% 0 0 7%;
+        font-size: clamp(34px, 11vw, 76px);
+      }
+
+      .ad-01 .subcopy {
+        width: 52%;
+        padding: 18px 0 0 7%;
+      }
+
+      .ad-02 {
+        background: var(--blue);
+      }
+
+      .ad-02::before {
+        content: "";
+        position: absolute;
+        inset: 9%;
+        border: 2px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .ad-02 .product {
+        right: 2%;
+        bottom: 3%;
+      }
+
+      .ad-02 .headline {
+        padding: 18% 7% 0;
+        color: white;
+        font-size: clamp(42px, 8vw, 88px);
+      }
+
+      .ad-02 .headline span {
+        color: var(--yellow);
+      }
+
+      .ad-02 .subcopy {
+        width: 56%;
+        padding: 14px 0 0 7%;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .ad-03 {
+        background:
+          linear-gradient(180deg, #fbf7ef 0 58%, #ffffff 58%),
+          var(--paper);
+      }
+
+      .ad-03::before {
+        content: "";
+        position: absolute;
+        left: 8%;
+        top: 18%;
+        width: 52%;
+        height: 28%;
+        border-radius: 999px;
+        background: rgba(255, 206, 24, 0.55);
+      }
+
+      .ad-03 .product {
+        right: 5%;
+        bottom: 6%;
+      }
+
+      .ad-03 .headline {
+        width: 82%;
+        padding: 10% 7% 0;
+        color: var(--blue-dark);
+        font-size: clamp(34px, 7vw, 58px);
+      }
+
+      .ad-03 .subcopy {
+        width: 55%;
+        padding: 20px 0 0 7%;
+      }
+
+      .ad-04 {
+        background:
+          linear-gradient(90deg, rgba(25, 63, 118, 0.94) 0 48%, transparent 48%),
+          #f9f6ef;
+      }
+
+      .ad-04 .product {
+        right: 5%;
+        bottom: 8%;
+      }
+
+      .ad-04 .headline {
+        width: 48%;
+        padding: 26% 0 0 7%;
+        color: white;
+        font-size: clamp(30px, 5.8vw, 46px);
+      }
+
+      .ad-04 .subcopy {
+        width: 43%;
+        padding: 18px 0 0 7%;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .ad-05 {
+        background:
+          linear-gradient(180deg, rgba(25, 63, 118, 0.08), transparent 46%),
+          #fffdf8;
+      }
+
+      .ad-05::after {
+        content: "";
+        position: absolute;
+        left: 7%;
+        right: 7%;
+        bottom: 8%;
+        height: 20%;
+        border-radius: 0;
+        background: linear-gradient(90deg, rgba(25, 63, 118, 0.12), rgba(255, 206, 24, 0.26));
+      }
+
+      .ad-05 .product {
+        right: 9%;
+        bottom: 9%;
+      }
+
+      .ad-05 .headline {
+        width: 84%;
+        padding: 24% 7% 0;
+        color: var(--blue);
+        font-size: clamp(36px, 7vw, 62px);
+      }
+
+      .ad-05 .subcopy {
+        width: 56%;
+        padding: 20px 0 0 7%;
+      }
+
+      .ad-06 {
+        background: #171717;
+      }
+
+      .ad-06 .product {
+        right: 3%;
+        bottom: 4%;
+      }
+
+      .ad-06 .headline {
+        width: 86%;
+        padding: 24% 7% 0;
+        color: white;
+        font-size: clamp(38px, 7vw, 64px);
+      }
+
+      .ad-06 .headline span {
+        color: var(--yellow);
+      }
+
+      .ad-06 .subcopy {
+        width: 50%;
+        padding: 18px 0 0 7%;
+        color: rgba(255, 255, 255, 0.86);
+      }
+
+      .ad-07 {
+        background:
+          linear-gradient(180deg, #ffffff 0 52%, #f4efe3 52%),
+          var(--paper);
+      }
+
+      .ad-07 .product {
+        right: 4%;
+        bottom: 4%;
+      }
+
+      .ad-07 .headline {
+        width: 84%;
+        padding: 13% 7% 0;
+        color: var(--blue-dark);
+        font-size: clamp(34px, 7vw, 58px);
+      }
+
+      .ad-07 .subcopy {
+        width: 56%;
+        padding: 16px 0 0 7%;
+      }
+
+      .ad-07 .macro-card {
+        position: absolute;
+        left: 7%;
+        bottom: 9%;
+        width: 48%;
+      }
+
+      .ad-08 {
+        background:
+          radial-gradient(circle at 88% 26%, rgba(255, 206, 24, 0.58), transparent 30%),
+          linear-gradient(180deg, #fefbf4, #ffffff);
+      }
+
+      .ad-08 .product {
+        right: 2%;
+        bottom: 2%;
+      }
+
+      .ad-08 .headline {
+        width: 62%;
+        padding: 13% 0 0 7%;
+        color: var(--blue);
+        font-size: clamp(34px, 7vw, 58px);
+      }
+
+      .ad-08 .macro-card {
+        position: absolute;
+        left: 7%;
+        bottom: 10%;
+        width: 52%;
+      }
+
+      .reference-template {
+        aspect-ratio: 9 / 16;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .reference-template .safe-copy {
+        position: absolute;
+        z-index: 6;
+        left: 6%;
+        right: 6%;
+        top: 14%;
+        height: 51%;
+      }
+
+      .reference-template .safe-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30px;
+        border-radius: 999px;
+        padding: 0 14px;
+        background: var(--yellow);
+        color: var(--blue-dark);
+        font-size: clamp(11px, 2.8vw, 17px);
+        font-weight: 900;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .reference-template .ref-pack {
+        position: absolute;
+        z-index: 4;
+        filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.22));
+      }
+
+      .reference-template .ref-pack img {
+        display: block;
+        width: 100%;
+      }
+
+      .ref-notes {
+        background: #fff;
+      }
+
+      .ref-notes .note-chrome {
+        position: absolute;
+        left: 7%;
+        right: 7%;
+        top: 5%;
+        display: flex;
+        justify-content: space-between;
+        color: #f07c18;
+        font-size: clamp(12px, 3vw, 18px);
+        font-weight: 700;
+      }
+
+      .ref-notes h2 {
+        margin: 0;
+        padding-top: 3%;
+        color: #343434;
+        font-size: clamp(25px, 6vw, 42px);
+        line-height: 1.08;
+      }
+
+      .ref-notes ul {
+        display: grid;
+        gap: 8px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+        color: #444;
+        font-size: clamp(13px, 3vw, 19px);
+        line-height: 1.2;
+      }
+
+      .ref-notes li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .ref-notes li::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #ff7d18;
+        box-shadow: inset 0 0 0 6px #ff7d18;
+      }
+
+      .ref-notes li span {
+        position: relative;
+        margin-left: -26px;
+        width: 22px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .ref-notes .ref-pack {
+        left: 32%;
+        top: 46%;
+        width: 36%;
+      }
+
+      .ref-lifestyle {
+        background:
+          radial-gradient(circle at 82% 31%, rgba(255, 206, 24, 0.24), transparent 24%),
+          linear-gradient(180deg, #112b50 0 47%, #245b91 47% 100%);
+        color: #fff;
+      }
+
+      .ref-lifestyle .tiny-logo {
+        display: block;
+        margin: 0 auto 28px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(10px, 2.4vw, 15px);
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .ref-lifestyle h2 {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(28px, 7vw, 52px);
+        font-weight: 900;
+        line-height: 0.95;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .ref-lifestyle h2 span {
+        color: var(--yellow);
+      }
+
+      .ref-lifestyle .benefit-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 9px;
+        margin-top: 22px;
+      }
+
+      .ref-lifestyle .benefit-row span {
+        border: 1.5px solid rgba(255, 206, 24, 0.78);
+        border-radius: 999px;
+        padding: 8px 13px;
+        background: rgba(9, 46, 99, 0.94);
+        color: #fff;
+        font-size: clamp(10px, 2.5vw, 15px);
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .ref-lifestyle .ref-pack {
+        left: 33%;
+        top: 58%;
+        width: 34%;
+      }
+
+      .ref-lifestyle .bench {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 35%;
+        background: linear-gradient(180deg, #3b86a8, #72bed2);
+      }
+
+      .ref-formal-comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(90deg, #f4dfb8 0 50%, #efecea 50%);
+      }
+
+      .ref-formal-comparison .side {
+        position: relative;
+        z-index: 2;
+        padding: 16% 6% 0;
+      }
+
+      .ref-formal-comparison .side.good {
+        background: rgba(255, 206, 24, 0.18);
+      }
+
+      .ref-formal-comparison h2 {
+        margin: 0;
+        min-height: 15%;
+        color: var(--blue-dark);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(19px, 4.3vw, 31px);
+        font-weight: 700;
+        line-height: 1.08;
+        text-align: center;
+      }
+
+      .ref-formal-comparison .side.bad h2 {
+        color: #5d5d5d;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+      }
+
+      .ref-formal-comparison .mini-pack {
+        position: relative;
+        width: 58%;
+        margin: 9% auto 0;
+        filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.18));
+      }
+
+      .ref-formal-comparison .mini-pack img {
+        display: block;
+        width: 100%;
+      }
+
+      .ref-formal-comparison .jar-shape {
+        width: 48%;
+        aspect-ratio: 1 / 1.08;
+        margin: 16% auto 0;
+        border-radius: 9px 9px 20px 20px;
+        background: linear-gradient(100deg, #202020, #0f0f0f 46%, #555, #191919 76%);
+        filter: blur(0.2px) drop-shadow(0 12px 16px rgba(0, 0, 0, 0.16));
+      }
+
+      .ref-formal-comparison .rows {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        right: 0;
+        top: 42%;
+        bottom: 36%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+      }
+
+      .ref-formal-comparison .rows div {
+        display: grid;
+        place-items: center;
+        min-height: 0;
+        padding: 4px 8px;
+        border-top: 3px solid rgba(255, 255, 255, 0.88);
+        color: #6b6b6b;
+        font-size: clamp(13px, 3vw, 20px);
+        font-weight: 900;
+        line-height: 1.15;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .ref-formal-comparison .rows div:nth-child(odd) {
+        color: #7b2c3e;
+      }
+
+      .ref-quote-proof {
+        background: linear-gradient(180deg, #fbf8f1, #ebe7dd);
+      }
+
+      .ref-quote-proof blockquote {
+        margin: 0;
+        color: #29332e;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(23px, 5.6vw, 39px);
+        line-height: 1.13;
+        text-align: center;
+      }
+
+      .ref-quote-proof cite {
+        display: block;
+        margin-top: 14px;
+        color: #36463d;
+        font-size: clamp(10px, 2.5vw, 15px);
+        font-style: normal;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .ref-quote-proof .ref-pack {
+        left: 36%;
+        top: 45%;
+        width: 28%;
+      }
+
+      .ref-quote-proof .proof-line {
+        position: absolute;
+        z-index: 8;
+        left: 9%;
+        right: 9%;
+        top: 73%;
+        color: rgba(36, 47, 41, 0.76);
+        font-size: clamp(10px, 2.6vw, 15px);
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .ref-editorial {
+        background: linear-gradient(180deg, #e9f5c9, #f9fff1);
+      }
+
+      .ref-editorial h2 {
+        margin: 0 auto;
+        max-width: 92%;
+        color: #123f2d;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(22px, 4.8vw, 34px);
+        font-style: italic;
+        line-height: 1.08;
+        text-align: center;
+      }
+
+      .ref-editorial .subline {
+        margin: 18px 0 0;
+        color: #123f2d;
+        font-size: clamp(14px, 3.2vw, 20px);
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .ref-editorial .macro-stack {
+        position: absolute;
+        z-index: 4;
+        left: 11%;
+        top: 43%;
+        display: grid;
+        gap: 8px;
+        width: 34%;
+      }
+
+      .ref-editorial .macro-stack span {
+        border-radius: 7px;
+        padding: 8px 9px;
+        background: #fff;
+        color: var(--blue-dark);
+        font-size: clamp(10px, 2.5vw, 15px);
+        font-weight: 900;
+        text-align: center;
+        box-shadow: 0 8px 18px rgba(40, 80, 40, 0.12);
+      }
+
+      .ref-editorial .ref-pack {
+        left: 57%;
+        top: 43%;
+        width: 26%;
+      }
+
+      .ref-editorial .safe-pill {
+        position: absolute;
+        z-index: 7;
+        left: 32%;
+        top: 65%;
+      }
+
+      .ref-dm {
+        background: #fff;
+      }
+
+      .ref-dm .story-card {
+        position: absolute;
+        z-index: 3;
+        left: 14%;
+        top: 18%;
+        width: 35%;
+        aspect-ratio: 0.75;
+        border-radius: 16px;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.68)),
+          radial-gradient(circle at 44% 40%, #ffe256 0 18%, #184c94 19% 48%, #f6f0df 49%);
+        box-shadow: -20px 0 0 #eff0f2;
+      }
+
+      .ref-dm .story-card .mini-pack {
+        position: absolute;
+        left: 25%;
+        bottom: 8%;
+        width: 50%;
+      }
+
+      .ref-dm .story-card img {
+        display: block;
+        width: 100%;
+      }
+
+      .ref-dm .reply-label {
+        position: absolute;
+        left: 14%;
+        top: 15%;
+        color: #b9b9b9;
+        font-size: clamp(12px, 3vw, 19px);
+        font-weight: 900;
+      }
+
+      .ref-dm .bubble {
+        position: absolute;
+        z-index: 6;
+        border-radius: 22px;
+        padding: 12px 15px;
+        font-size: clamp(13px, 2.8vw, 17px);
+        line-height: 1.2;
+      }
+
+      .ref-dm .incoming {
+        left: 13%;
+        right: 14%;
+        top: 36.5%;
+        background: #ededed;
+        color: #132033;
+      }
+
+      .ref-dm .outgoing {
+        left: 18%;
+        right: 9%;
+        top: 52%;
+        background: var(--blue);
+        color: #fff;
+      }
+
+      .ref-dm .seen {
+        position: absolute;
+        right: 10%;
+        top: 62.5%;
+        color: #aaa;
+        font-size: clamp(9px, 2.3vw, 13px);
+        font-weight: 900;
+      }
+
+      .ref-hand {
+        background:
+          radial-gradient(circle at 16% 58%, rgba(255, 206, 24, 0.86), transparent 26%),
+          radial-gradient(circle at 86% 24%, rgba(90, 104, 245, 0.72), transparent 33%),
+          linear-gradient(160deg, #16244b, #49a9c5 52%, #f6e38a);
+        color: #fff;
+      }
+
+      .ref-hand h2 {
+        margin: 0;
+        color: #fff;
+        font-size: clamp(25px, 5.3vw, 38px);
+        font-weight: 900;
+        line-height: 1.08;
+        text-align: center;
+      }
+
+      .ref-hand h2 em {
+        display: block;
+        margin-top: 4px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 0.92em;
+        font-weight: 400;
+      }
+
+      .ref-hand .subline {
+        margin-top: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(12px, 2.6vw, 16px);
+        font-weight: 800;
+        line-height: 1.3;
+        text-align: center;
+      }
+
+      .ref-hand .ref-pack {
+        left: 41%;
+        top: 47%;
+        width: 23%;
+        transform: rotate(-9deg);
+      }
+
+      .ref-hand .hand-cue {
+        position: absolute;
+        z-index: 3;
+        left: 30%;
+        top: 56%;
+        width: 33%;
+        height: 20%;
+        border-radius: 999px 999px 80px 80px;
+        background: linear-gradient(160deg, #d99669, #f0b98c);
+        transform: rotate(-18deg);
+        filter: blur(0.2px);
+      }
+
+      .ref-sensory {
+        background:
+          radial-gradient(circle at 52% 52%, rgba(255, 206, 24, 0.22), transparent 24%),
+          linear-gradient(180deg, #0f7181, #19a3b2 74%, #83d9d7);
+      }
+
+      .ref-sensory h2 {
+        margin: 0;
+        color: #fff;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(27px, 6.3vw, 43px);
+        font-weight: 700;
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .ref-sensory .ref-pack {
+        left: 40%;
+        top: 47%;
+        width: 20%;
+      }
+
+      .ref-sensory .support {
+        position: absolute;
+        z-index: 8;
+        left: 20%;
+        right: 20%;
+        top: 69%;
+        color: #fff;
+        font-size: clamp(12px, 2.9vw, 18px);
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .ref-sensory .ribbon {
+        position: absolute;
+        left: 3%;
+        bottom: 10%;
+        width: 45%;
+        transform: rotate(-13deg);
+        background: var(--yellow);
+        color: var(--blue-dark);
+        font-size: clamp(9px, 2.3vw, 14px);
+        font-weight: 900;
+        line-height: 2.2;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .ref-collection {
+        background: linear-gradient(180deg, #fff4b5, #fffdf8 42%, #f4f1e9);
+      }
+
+      .ref-collection h2 {
+        margin: 0;
+        color: var(--blue-dark);
+        font-size: clamp(28px, 7vw, 50px);
+        font-weight: 900;
+        line-height: 0.98;
+        text-align: center;
+      }
+
+      .ref-collection .subline {
+        margin: 16px 0 0;
+        color: #101010;
+        font-size: clamp(16px, 3.8vw, 26px);
+        font-weight: 900;
+        line-height: 1.08;
+        text-align: center;
+      }
+
+      .ref-collection .subline span {
+        border-bottom: 4px solid var(--yellow);
+      }
+
+      .ref-collection .kit {
+        position: absolute;
+        z-index: 3;
+        left: 8%;
+        right: 8%;
+        top: 41%;
+        height: 16%;
+      }
+
+      .ref-collection .kit::before,
+      .ref-collection .kit::after {
+        content: "";
+        position: absolute;
+        bottom: 12%;
+        width: 26%;
+        height: 54%;
+        border-radius: 10px 10px 18px 18px;
+        background: linear-gradient(135deg, #184c94, #ffe256);
+        opacity: 0.86;
+      }
+
+      .ref-collection .kit::before {
+        left: 0;
+      }
+
+      .ref-collection .kit::after {
+        right: 0;
+      }
+
+      .ref-collection .ref-pack {
+        left: 41%;
+        top: 42%;
+        width: 16%;
+      }
+
+      .ref-collection .cta-button {
+        position: absolute;
+        z-index: 8;
+        left: 19%;
+        right: 19%;
+        top: 64%;
+        min-height: 38px;
+        border-radius: 7px;
+        background: linear-gradient(100deg, #111, var(--blue), var(--yellow));
+        color: #fff;
+        font-size: clamp(14px, 3.2vw, 20px);
+        font-weight: 900;
+        line-height: 19px;
+        padding: 5px 8px;
+        text-align: center;
+      }
+
+      .ref-collection .proof {
+        position: absolute;
+        z-index: 8;
+        left: 10%;
+        right: 10%;
+        top: 60%;
+        color: #111;
+        font-size: clamp(12px, 3vw, 18px);
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .ref-playful {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: linear-gradient(90deg, #e4e4e4 0 50%, #f6d454 50%);
+      }
+
+      .ref-playful .split-label {
+        position: absolute;
+        z-index: 7;
+        left: 0;
+        right: 0;
+        top: 25%;
+        color: #030303;
+        font-size: clamp(22px, 5.8vw, 42px);
+        font-weight: 900;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .ref-playful .split-label span {
+        color: var(--blue);
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+      }
+
+      .ref-playful .mini-product-left {
+        position: absolute;
+        left: 16%;
+        top: 35%;
+        width: 18%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 9px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .ref-playful .ref-pack {
+        left: 70%;
+        top: 35%;
+        width: 13%;
+      }
+
+      .ref-playful .card-list {
+        position: absolute;
+        z-index: 7;
+        top: 52%;
+        bottom: 28%;
+        display: grid;
+        gap: 9px;
+        grid-template-rows: repeat(3, 1fr);
+        width: 40%;
+      }
+
+      .ref-playful .card-list.left {
+        left: 5%;
+      }
+
+      .ref-playful .card-list.right {
+        right: 5%;
+      }
+
+      .ref-playful .card-list span {
+        display: grid;
+        place-items: center;
+        min-height: 0;
+        border-radius: 8px;
+        padding: 6px 10px;
+        background: #fff;
+        color: #111;
+        font-size: clamp(11px, 2.8vw, 18px);
+        font-weight: 900;
+        line-height: 1.1;
+        text-align: center;
+        box-shadow: 0 7px 14px rgba(0, 0, 0, 0.08);
+      }
+
+      .ref-playful .card-list.left span:nth-child(1) {
+        transform: rotate(-3deg);
+      }
+
+      .ref-playful .card-list.left span:nth-child(2) {
+        transform: rotate(4deg);
+      }
+
+      .ref-playful .card-list.left span:nth-child(3) {
+        transform: rotate(-2deg);
+      }
+
+      .caption {
+        position: absolute;
+        z-index: 5;
+        left: 7%;
+        bottom: 4.5%;
+        font-size: clamp(11px, 2.8vw, 17px);
+        color: rgba(23, 23, 23, 0.62);
+        font-weight: 700;
+      }
+
+      .ad-02 .caption,
+      .ad-04 .caption,
+      .ad-06 .caption {
+        color: rgba(255, 255, 255, 0.64);
+      }
+
+      @media (max-width: 420px) {
+        header {
+          padding: 24px 14px 12px;
+        }
+
+        .gallery {
+          padding: 14px;
+          gap: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Get Rid Of Dad Bod - Meta Image Template Gallery</h1>
+      <p class="intro">
+        Template 01 is the production-ready feature/benefit render. The 9:16 reference templates below use the transparent product layer and adapt the supplied ad formats with product-safe copy and Reels-safe placement. CSS-only backgrounds and props are layout scaffolds until the GPT Image 2.0 assets documented in the reference asset manifest are generated.
+      </p>
+      <a class="editor-link" href="meta-image-ad-editor.html?v=16">Open editable template 01</a>
+    </header>
+
+    <main class="gallery">
+      <section class="template">
+        <div class="template-label"><span>01 - Feature / Benefit Product Hero</span><span>Final 9:16</span></div>
+        <div class="ad final-ad">
+          <img src="generated/9x16/001-feature-benefit-product-hero.png" alt="Get Rid Of Dad Bod feature benefit product hero ad" />
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>02 - 31g Per Serve Hero</span><span>Cold</span></div>
+        <div class="ad ad-02">
+          <h2 class="headline"><span>31g</span><br />protein</h2>
+          <p class="subcopy">Per 40g serve. Grass fed whey protein concentrate.</p>
+          <div class="product large">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="caption">Chocolate / 1kg / 25 serves</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>03 - Appetite Down, Protein Up</span><span>Cold</span></div>
+        <div class="ad ad-03">
+          <h2 class="headline">Appetite down? Protein still matters.</h2>
+          <p class="subcopy">A simple scoop can keep the basics easier.</p>
+          <div class="product">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="caption">No medical claims. No weight-loss promise.</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>04 - Muscle Maintenance</span><span>Cold</span></div>
+        <div class="ad ad-04">
+          <h2 class="headline">Support muscle maintenance.</h2>
+          <p class="subcopy">Protein contributes to the maintenance of muscle mass.</p>
+          <div class="product">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="caption">30.8g protein per serve</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>05 - Dad Routine</span><span>Cold</span></div>
+        <div class="ad ad-05">
+          <h2 class="headline">For the dad routine.</h2>
+          <p class="subcopy">A scoop, a shaker, and one less nutrition decision.</p>
+          <div class="product small">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="caption">Made in Australia</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>06 - Plain English Protein</span><span>Cold</span></div>
+        <div class="ad ad-06">
+          <h2 class="headline">No hype <span>stack.</span></h2>
+          <p class="subcopy">Just practical chocolate whey for the routine you can repeat.</p>
+          <div class="product">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="caption">Grass fed whey protein concentrate</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>07 - Low Sugar Proof Point</span><span>Cold</span></div>
+        <div class="ad ad-07">
+          <h2 class="headline">High protein. Low sugar.</h2>
+          <p class="subcopy">Chocolate whey with a clear macro profile.</p>
+          <div class="macro-card">
+            <div class="macro-row"><span>Protein</span><strong>30.8g</strong></div>
+            <div class="macro-row"><span>Sugar</span><strong>1.2g</strong></div>
+          </div>
+          <div class="product">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>08 - The 40g Serve</span><span>Warm</span></div>
+        <div class="ad ad-08">
+          <h2 class="headline">Per 40g serve.</h2>
+          <div class="macro-card">
+            <div class="macro-row"><span>Protein</span><strong>30.8g</strong></div>
+            <div class="macro-row"><span>Fat</span><strong>2.3g</strong></div>
+            <div class="macro-row"><span>Carbs</span><strong>3.2g</strong></div>
+            <div class="macro-row"><span>Sugar</span><strong>1.2g</strong></div>
+          </div>
+          <div class="product small">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R02 - Notes / Personal Switch</span><span>Cold</span></div>
+        <div class="ad reference-template ref-notes">
+          <div class="note-chrome"><span>&lt; All iCloud</span><span>undo share more</span></div>
+          <div class="safe-copy">
+            <h2>Why this made protein easier</h2>
+            <ul>
+              <li><span>&#10003;</span>31g protein per serve</li>
+              <li><span>&#10003;</span>Low sugar chocolate</li>
+              <li><span>&#10003;</span>No mystery stack</li>
+              <li><span>&#10003;</span>One scoop I can repeat</li>
+            </ul>
+          </div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R03 - Lifestyle Benefit Scene</span><span>Cold</span></div>
+        <div class="ad reference-template ref-lifestyle">
+          <div class="bench"></div>
+          <div class="safe-copy">
+            <span class="tiny-logo">Get Rid Of Dad Bod</span>
+            <h2><span>Less thinking.</span><br />More protein.</h2>
+            <div class="benefit-row">
+              <span>31g protein</span>
+              <span>Low sugar choc</span>
+              <span>Grass fed WPC</span>
+            </div>
+          </div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R04 - Measured Serve Comparison</span><span>Cold</span></div>
+        <div class="ad reference-template ref-formal-comparison">
+          <div class="side good">
+            <h2>Measured scoop</h2>
+            <div class="mini-pack">
+              <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+            </div>
+          </div>
+          <div class="side bad">
+            <h2>Whatever's handy</h2>
+            <div class="jar-shape"></div>
+          </div>
+          <div class="rows">
+            <div>30.8g<br />protein</div>
+            <div>Hard to<br />track</div>
+            <div>1.2g<br />sugar</div>
+            <div>Easy to<br />skip</div>
+            <div>40g<br />serve</div>
+            <div>Changes<br />daily</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R05 - Quote Proof Product Hero</span><span>Warm</span></div>
+        <div class="ad reference-template ref-quote-proof">
+          <div class="safe-copy">
+            <blockquote>"Not magic. Just a measured 31g protein serve."</blockquote>
+            <cite>Get Rid Of Dad Bod</cite>
+          </div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="proof-line">30.8g protein / 1.2g sugar / 40g serve</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R06 - Editorial Ingredient Hero</span><span>Cold</span></div>
+        <div class="ad reference-template ref-editorial">
+          <div class="safe-copy">
+            <h2>Protein basics for dads keeping training in the plan</h2>
+            <p class="subline">It's in the scoop.</p>
+          </div>
+          <div class="macro-stack">
+            <span>Grass fed WPC</span>
+            <span>Chocolate</span>
+            <span>Low sugar</span>
+          </div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="safe-pill">31g protein per serve</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R07 - DM Routine Reply</span><span>Cold</span></div>
+        <div class="ad reference-template ref-dm">
+          <div class="reply-label">Replied to your story</div>
+          <div class="story-card">
+            <div class="mini-pack">
+              <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+            </div>
+          </div>
+          <div class="bubble incoming">How are you keeping protein consistent when meals get chaotic?</div>
+          <div class="bubble outgoing">One chocolate whey serve. 31g protein. Done before the day gets loud.</div>
+          <div class="seen">Seen just now</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R08 - Hand-Held Product Desire</span><span>Cold</span></div>
+        <div class="ad reference-template ref-hand">
+          <div class="safe-copy">
+            <h2>Keep protein in the routine <em>without the drama</em></h2>
+            <p class="subline">Grass fed chocolate WPC. 31g protein per serve.</p>
+          </div>
+          <div class="hand-cue"></div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R09 - Chocolate Sensory Hero</span><span>Cold</span></div>
+        <div class="ad reference-template ref-sensory">
+          <div class="safe-copy">
+            <h2>Chocolate that earns its spot</h2>
+          </div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="support">31g protein per serve</div>
+          <div class="ribbon">Chocolate WPC</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R10 - Protein Routine Kit</span><span>Cold</span></div>
+        <div class="ad reference-template ref-collection">
+          <div class="safe-copy">
+            <h2>Trying to keep protein simple?</h2>
+            <p class="subline">Start with <span>chocolate whey</span></p>
+          </div>
+          <div class="kit"></div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="cta-button">Shop chocolate WPC</div>
+          <div class="proof">31g protein / 1.2g sugar</div>
+        </div>
+      </section>
+
+      <section class="template">
+        <div class="template-label"><span>R11 - Wing It VS One Scoop</span><span>Cold</span></div>
+        <div class="ad reference-template ref-playful">
+          <div class="split-label">Wing it <strong>VS</strong> <span>one scoop</span></div>
+          <div class="mini-product-left"></div>
+          <div class="ref-pack">
+            <img src="generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png" alt="" />
+          </div>
+          <div class="card-list left">
+            <span>Protein maths</span>
+            <span>Fridge roulette</span>
+            <span>Good intentions</span>
+          </div>
+          <div class="card-list right">
+            <span>31g protein</span>
+            <span>Low sugar choc</span>
+            <span>No messy prep</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

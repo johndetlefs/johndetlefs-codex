@@ -1,0 +1,2498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Rid Of Dad Bod - Meta Ad Editor</title>
+    <style>
+      :root {
+        --chrome: #101722;
+        --chrome-2: #151f2e;
+        --panel: #f7f8fb;
+        --panel-2: #ffffff;
+        --line: #d9deea;
+        --muted: #657083;
+        --text: #172033;
+        --blue: #184c94;
+        --yellow: #ffe256;
+        --focus: #2c7be5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #e9edf5;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button {
+        border: 0;
+        cursor: pointer;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 54px;
+        padding: 8px 14px;
+        background: var(--chrome);
+        color: #fff;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      .brand p {
+        margin: 3px 0 0;
+        color: #aeb8c8;
+        font-size: 11px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .btn,
+      .link-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 34px;
+        border-radius: 7px;
+        padding: 0 12px;
+        border: 0;
+        background: #253246;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 750;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 160ms ease, color 160ms ease, transform 160ms ease, opacity 160ms ease;
+      }
+
+      .icon-sprite {
+        display: none;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .icon-btn {
+        width: 36px;
+        min-width: 36px;
+        min-height: 34px;
+        padding: 0;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      .btn:disabled {
+        cursor: wait;
+        opacity: 0.9;
+      }
+
+      .save-btn[data-state="saving"] {
+        background: #315b98;
+      }
+
+      .save-btn[data-state="saving"] .icon {
+        display: none;
+      }
+
+      .save-btn[data-state="saving"]::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 2px solid rgba(255, 255, 255, 0.42);
+        border-top-color: #fff;
+        border-radius: 999px;
+        animation: save-spin 720ms linear infinite;
+      }
+
+      .save-btn[data-state="success"] {
+        background: #247347;
+        transform: translateY(-1px);
+      }
+
+      .save-btn[data-state="error"] {
+        background: #99313b;
+        transform: translateY(-1px);
+      }
+
+      @keyframes save-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .btn.primary {
+        background: var(--yellow);
+        color: #16223a;
+      }
+
+      .btn.ghost {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: 260px minmax(560px, 1fr) 228px;
+        height: calc(100vh - 54px);
+        min-height: 720px;
+        overflow: hidden;
+      }
+
+      .panel {
+        overflow: auto;
+        border-right: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .panel.right {
+        border-right: 0;
+        border-left: 1px solid var(--line);
+      }
+
+      .panel-section {
+        padding: 12px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin: 0 0 10px;
+        color: #273145;
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .ratio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .ratio-btn {
+        min-height: 48px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        color: var(--text);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .ratio-btn span {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 650;
+      }
+
+      .ratio-btn.active {
+        border-color: var(--focus);
+        background: #eaf3ff;
+        color: #0f4f9f;
+      }
+
+      .reference {
+        display: block;
+        width: 100%;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .small-note {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .layers {
+        display: grid;
+        gap: 6px;
+      }
+
+      .layer-row {
+        display: grid;
+        grid-template-columns: 28px 28px minmax(0, 1fr) 28px;
+        align-items: center;
+        gap: 6px;
+        min-height: 34px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 4px;
+        background: #fff;
+      }
+
+      .layer-row.selected {
+        border-color: var(--focus);
+        background: #eaf3ff;
+      }
+
+      .layer-row button {
+        display: inline-grid;
+        place-items: center;
+        height: 25px;
+        border-radius: 6px;
+        background: #edf1f7;
+        color: #293449;
+        font-size: 0;
+      }
+
+      .layer-row button .icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      .layer-name {
+        overflow: hidden;
+        font-size: 12px;
+        font-weight: 750;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .workspace {
+        position: relative;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-width: 0;
+        min-height: 0;
+        background:
+          linear-gradient(90deg, rgba(20, 28, 42, 0.055) 1px, transparent 1px),
+          linear-gradient(rgba(20, 28, 42, 0.055) 1px, transparent 1px),
+          #dfe5ef;
+        background-size: 32px 32px;
+      }
+
+      .stagebar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 44px;
+        padding: 6px 12px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.84);
+        backdrop-filter: blur(10px);
+      }
+
+      .stagebar label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #38445b;
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .stagebar input[type="range"] {
+        width: 150px;
+      }
+
+      .safe-zone-controls {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .safe-zone-controls label {
+        min-height: 28px;
+        border: 1px solid rgba(16, 23, 34, 0.12);
+        border-radius: 7px;
+        padding: 0 8px;
+        background: rgba(255, 255, 255, 0.72);
+        color: #2f3a50;
+      }
+
+      .stage-wrap {
+        display: grid;
+        place-items: center;
+        min-width: 0;
+        min-height: 0;
+        overflow: auto;
+        padding: 6px;
+      }
+
+      .stage-frame {
+        line-height: 0;
+        box-shadow: 0 24px 70px rgba(23, 31, 45, 0.28);
+      }
+
+      #stage {
+        display: block;
+        width: var(--stage-w, 360px);
+        height: var(--stage-h, 640px);
+        background: #184c94;
+        user-select: none;
+        touch-action: none;
+      }
+
+      .statusbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 34px;
+        padding: 7px 14px;
+        border-top: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.88);
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .export-tray {
+        position: absolute;
+        right: 16px;
+        bottom: 44px;
+        width: 250px;
+        border: 1px solid rgba(23, 31, 45, 0.16);
+        border-radius: 8px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 18px 48px rgba(23, 31, 45, 0.24);
+        backdrop-filter: blur(10px);
+      }
+
+      .export-tray[hidden] {
+        display: none;
+      }
+
+      .export-tray strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #253145;
+        font-size: 12px;
+      }
+
+      .export-tray img {
+        display: block;
+        width: 100%;
+        max-height: 220px;
+        object-fit: contain;
+        border: 1px solid var(--line);
+        background: #dde6f2;
+      }
+
+      .export-tray .btn {
+        width: 100%;
+        margin-top: 8px;
+        background: var(--chrome-2);
+      }
+
+      .inspector-empty {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+      }
+
+      .field {
+        display: grid;
+        gap: 5px;
+      }
+
+      .field.wide {
+        grid-column: 1 / -1;
+      }
+
+      .field label {
+        color: #48556c;
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        min-height: 32px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 6px 7px;
+        background: #fff;
+        color: var(--text);
+        font-size: 12px;
+      }
+
+      .field textarea {
+        min-height: 68px;
+        resize: vertical;
+      }
+
+      .mini-actions {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .mini-actions .btn {
+        min-height: 34px;
+        padding: 0;
+        background: #e7ecf4;
+        color: #263248;
+      }
+
+      .mini-actions .btn.danger {
+        background: #ffe9e9;
+        color: #9a1b1b;
+      }
+
+      .toggle-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 8px 0 0;
+        color: #46536a;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .selected-outline {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-dasharray: 8 6;
+        pointer-events: none;
+      }
+
+      .selected-outline-shadow {
+        fill: none;
+        stroke: #166cff;
+        stroke-width: 5;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      .handle {
+        fill: #ffffff;
+        stroke: #166cff;
+        stroke-width: 2;
+        cursor: nwse-resize;
+      }
+
+      .handle[data-handle="e"],
+      .handle[data-handle="w"] {
+        cursor: ew-resize;
+      }
+
+      .handle[data-handle="n"],
+      .handle[data-handle="s"] {
+        cursor: ns-resize;
+      }
+
+      .rotate-handle {
+        fill: #ffe256;
+        stroke: #0e4ea4;
+        stroke-width: 2;
+        cursor: grab;
+      }
+
+      .editable {
+        cursor: move;
+      }
+
+      .safe-zone-overlay {
+        pointer-events: none;
+      }
+
+      @media (max-width: 1120px) {
+        .shell {
+          grid-template-columns: 240px minmax(360px, 1fr);
+        }
+
+        .panel.right {
+          grid-column: 1 / -1;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+          max-height: 360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-alert-triangle" viewBox="0 0 24 24">
+        <path d="M10.3 3.9 1.8 18.2A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z" />
+        <path d="M12 9v4" />
+        <path d="M12 17h.01" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m20 6-11 11-5-5" />
+      </symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24">
+        <rect x="9" y="9" width="11" height="11" rx="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+      </symbol>
+      <symbol id="icon-crosshair" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="7" />
+        <path d="M12 2v4" />
+        <path d="M12 18v4" />
+        <path d="M2 12h4" />
+        <path d="M18 12h4" />
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24">
+        <path d="M12 3v12" />
+        <path d="m7 10 5 5 5-5" />
+        <path d="M5 21h14" />
+      </symbol>
+      <symbol id="icon-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="icon-eye-off" viewBox="0 0 24 24">
+        <path d="m3 3 18 18" />
+        <path d="M10.6 10.6A3 3 0 0 0 13.4 13.4" />
+        <path d="M9.9 5.2A9.4 9.4 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-2.1 3.2" />
+        <path d="M6.6 6.6C3.7 8.4 2 12 2 12s3.5 7 10 7a9.7 9.7 0 0 0 4.1-.9" />
+      </symbol>
+      <symbol id="icon-flip-horizontal" viewBox="0 0 24 24">
+        <path d="M3 12h18" />
+        <path d="M7 5v14" />
+        <path d="m7 5 6 7-6 7" />
+        <path d="M17 5v14" />
+        <path d="m17 5-6 7 6 7" />
+      </symbol>
+      <symbol id="icon-flip-vertical" viewBox="0 0 24 24">
+        <path d="M12 3v18" />
+        <path d="M5 7h14" />
+        <path d="m5 7 7 6 7-6" />
+        <path d="M5 17h14" />
+        <path d="m5 17 7-6 7 6" />
+      </symbol>
+      <symbol id="icon-front" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="10" height="10" rx="2" />
+        <path d="M6 16H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+      </symbol>
+      <symbol id="icon-gallery" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </symbol>
+      <symbol id="icon-image-down" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <circle cx="8" cy="10" r="2" />
+        <path d="m21 15-5-5L5 19" />
+        <path d="M12 9v8" />
+        <path d="m9 14 3 3 3-3" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="2" />
+        <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+      </symbol>
+      <symbol id="icon-maximize" viewBox="0 0 24 24">
+        <path d="M8 3H3v5" />
+        <path d="M16 3h5v5" />
+        <path d="M8 21H3v-5" />
+        <path d="M16 21h5v-5" />
+      </symbol>
+      <symbol id="icon-reset" viewBox="0 0 24 24">
+        <path d="M3 12a9 9 0 1 0 3-6.7" />
+        <path d="M3 3v6h6" />
+      </symbol>
+      <symbol id="icon-save" viewBox="0 0 24 24">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z" />
+        <path d="M17 21v-8H7v8" />
+        <path d="M7 3v5h8" />
+      </symbol>
+      <symbol id="icon-send-back" viewBox="0 0 24 24">
+        <rect x="6" y="6" width="10" height="10" rx="2" />
+        <path d="M8 18h11a2 2 0 0 0 2-2V5" />
+      </symbol>
+      <symbol id="icon-trash" viewBox="0 0 24 24">
+        <path d="M3 6h18" />
+        <path d="M8 6V4h8v2" />
+        <path d="M19 6l-1 15H6L5 6" />
+        <path d="M10 11v6" />
+        <path d="M14 11v6" />
+      </symbol>
+      <symbol id="icon-unlock" viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="2" />
+        <path d="M8 11V7a4 4 0 0 1 7.5-2" />
+      </symbol>
+    </svg>
+    <header class="topbar">
+      <div class="brand">
+        <h1>Get Rid Of Dad Bod - Meta Ad Editor</h1>
+        <p>Edit the master creative, tune each ratio, then export all finished ad formats.</p>
+      </div>
+      <div class="actions">
+        <button class="btn icon-btn ghost" id="resetBtn" type="button" title="Reset" aria-label="Reset">
+          <svg class="icon" aria-hidden="true"><use href="#icon-reset"></use></svg>
+          <span class="sr-only">Reset</span>
+        </button>
+        <button class="btn icon-btn save-btn" id="saveBtn" type="button" data-state="idle" aria-live="polite" title="Save" aria-label="Save">
+          <svg class="icon" aria-hidden="true"><use href="#icon-save"></use></svg>
+          <span class="sr-only" data-button-label>Save</span>
+        </button>
+        <button class="btn icon-btn" id="exportBtn" type="button" title="Export current PNG" aria-label="Export current PNG">
+          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+          <span class="sr-only">Export current PNG</span>
+        </button>
+        <button class="btn icon-btn primary" id="exportAllBtn" type="button" title="Export all PNGs" aria-label="Export all PNGs">
+          <svg class="icon" aria-hidden="true"><use href="#icon-image-down"></use></svg>
+          <span class="sr-only">Export all PNGs</span>
+        </button>
+        <a class="link-btn icon-btn" href="meta-image-ad-template-gallery.html" title="Gallery" aria-label="Gallery">
+          <svg class="icon" aria-hidden="true"><use href="#icon-gallery"></use></svg>
+          <span class="sr-only">Gallery</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="panel">
+        <section class="panel-section">
+          <h2 class="panel-title">Format</h2>
+          <div class="ratio-grid" id="ratioGrid"></div>
+          <p class="small-note">Each format has its own tuned layout. Use the safe-zone overlays before exporting.</p>
+        </section>
+
+        <section class="panel-section">
+          <h2 class="panel-title">Reference</h2>
+          <img class="reference" src="reference-ads/001-features-benefits/original.webp" alt="Reference feature benefit ad" />
+          <p class="small-note">This is the Grüns reference image for arrow style, callout placement, product hero hierarchy, and benefit layout.</p>
+        </section>
+
+        <section class="panel-section">
+          <h2 class="panel-title">Layers</h2>
+          <div class="layers" id="layers"></div>
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <div class="stagebar">
+          <label>
+            Zoom
+            <input id="zoomRange" type="range" min="20" max="160" value="52" />
+          </label>
+          <div class="safe-zone-controls" aria-label="Safe zone overlays">
+            <label><input id="storySafeToggle" type="checkbox" /> Stories safe</label>
+            <label><input id="reelsSafeToggle" type="checkbox" checked /> Reels safe</label>
+            <label><input id="edgeSafeToggle" type="checkbox" /> Edge guard</label>
+          </div>
+          <div class="actions">
+            <button class="btn icon-btn" id="fitBtn" type="button" title="Fit canvas" aria-label="Fit canvas">
+              <svg class="icon" aria-hidden="true"><use href="#icon-maximize"></use></svg>
+              <span class="sr-only">Fit canvas</span>
+            </button>
+          </div>
+        </div>
+        <div class="stage-wrap" id="stageWrap">
+          <div class="stage-frame">
+            <svg id="stage" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Editable Meta ad canvas"></svg>
+          </div>
+        </div>
+        <div class="statusbar">
+          <span id="status" role="status" aria-live="polite">Ready</span>
+          <span id="canvasInfo">9:16 - 1080 x 1920</span>
+        </div>
+        <div class="export-tray" id="exportTray" hidden>
+          <strong id="exportName">Export ready</strong>
+          <img id="exportPreview" alt="Latest exported ad preview" />
+          <a class="btn" id="downloadLink" href="#" download>
+            <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+            Download PNG
+          </a>
+        </div>
+      </section>
+
+      <aside class="panel right">
+        <section class="panel-section">
+          <h2 class="panel-title">Inspector</h2>
+          <div id="inspector"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script>
+      const SVG_NS = "http://www.w3.org/2000/svg";
+      const STORAGE_KEY = "grdb-meta-ad-editor-v16";
+      const PROJECT_ENDPOINT = "/api/meta-image-ad-editor/project";
+      const PRODUCT_SRC = "generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png";
+
+      const ratios = {
+        story: { label: "9:16", use: "Stories", w: 1080, h: 1920 },
+        portrait: { label: "4:5", use: "Feed", w: 1080, h: 1350 },
+        square: { label: "1:1", use: "Feed", w: 1080, h: 1080 },
+        landscape: { label: "1.91:1", use: "Link", w: 1200, h: 628 }
+      };
+
+      const ratioOrder = ["story", "portrait", "square", "landscape"];
+
+      const safeZoneConfigs = {
+        stories: {
+          label: "Stories",
+          verticalOnly: true,
+          top: 0.14,
+          bottom: 0.20,
+          side: 0.06,
+          fill: "rgba(255, 212, 82, 0.18)",
+          stroke: "#ffe08a"
+        },
+        reels: {
+          label: "Reels",
+          verticalOnly: true,
+          top: 0.14,
+          bottom: 0.35,
+          side: 0.06,
+          fill: "rgba(255, 82, 82, 0.18)",
+          stroke: "#ffb0a8"
+        },
+        edge: {
+          label: "Edge guard",
+          top: 0.05,
+          bottom: 0.05,
+          side: 0.05,
+          fill: "rgba(113, 238, 255, 0.12)",
+          stroke: "#95f3ff"
+        }
+      };
+
+      const lineIconAssets = {
+        flexArm: {
+          label: "Flexed arm",
+          rough: false,
+          paths: [
+            { d: "M18 74 C28 75 39 72 48 64" },
+            { d: "M27 72 C30 58 36 44 46 34 C52 28 60 30 62 38 C64 48 57 57 48 64" },
+            { d: "M46 34 C55 20 74 22 84 34 C91 43 85 55 72 57 C62 59 55 55 51 48" },
+            { d: "M61 35 C67 24 82 25 87 35 C91 43 84 50 75 52 C66 53 60 48 58 41" },
+            { d: "M21 76 L44 76", scale: 0.75 },
+            { d: "M62 27 C65 34 64 42 59 49", scale: 0.74 }
+          ]
+        },
+        sugarCube: {
+          label: "Sugar cube slash",
+          rough: false,
+          paths: [
+            { d: "M26 35 C31 25 45 20 58 22 C71 24 78 33 76 47 C74 61 63 72 47 73 C33 74 24 66 22 53 C21 47 23 40 26 35" },
+            { d: "M34 31 C41 39 54 39 68 33" },
+            { d: "M34 66 C38 55 39 44 36 34", scale: 0.82 },
+            { d: "M58 72 C58 59 61 47 69 35", scale: 0.82 },
+            { d: "M13 86 C34 63 58 38 88 11", scale: 1.08 },
+            { d: "M21 28 L24 28", scale: 0.65 },
+            { d: "M76 70 L79 70", scale: 0.65 }
+          ]
+        },
+        leaf: {
+          label: "Leaf",
+          rough: false,
+          paths: [
+            { d: "M13 62 C24 29 57 14 84 27 C82 48 65 73 39 77 C26 79 16 73 13 62" },
+            { d: "M24 66 C41 55 58 41 78 27", scale: 0.82 },
+            { d: "M42 52 C38 46 35 42 29 39", scale: 0.62 },
+            { d: "M54 43 C50 36 48 31 43 28", scale: 0.62 }
+          ]
+        },
+        shaker: {
+          label: "Shaker check",
+          rough: false,
+          paths: [
+            { d: "M28 27 C41 25 60 25 73 27" },
+            { d: "M32 21 C43 18 59 18 70 21", scale: 0.88 },
+            { d: "M29 31 C31 48 34 67 37 84 C47 88 60 88 70 84 C73 66 76 48 78 31" },
+            { d: "M39 55 C45 62 49 66 54 70 C61 61 66 55 73 48" },
+            { d: "M34 43 C46 46 61 45 74 41", scale: 0.56 }
+          ]
+        }
+      };
+
+      const lineArrowAssets = {
+        curveRight: {
+          label: "Curl right",
+          paths: [
+            { d: "M8 78 C10 49 31 27 62 29 C74 30 84 36 92 47" },
+            { d: "M76 44 L92 47 L84 31" }
+          ]
+        },
+        curveRightLow: {
+          label: "Curl right low",
+          paths: [
+            { d: "M12 16 C17 43 31 68 58 77 C71 81 84 73 92 57" },
+            { d: "M74 58 L92 57 L82 72" }
+          ]
+        },
+        curveLeft: {
+          label: "Curl left",
+          paths: [
+            { d: "M92 21 C86 49 68 68 40 66 C27 65 18 59 10 50" },
+            { d: "M26 39 L10 50 L28 58" }
+          ]
+        },
+        curveLeftLow: {
+          label: "Curl left low",
+          paths: [
+            { d: "M92 16 C86 44 70 68 43 77 C29 82 17 72 9 55" },
+            { d: "M27 57 L9 55 L19 72" }
+          ]
+        },
+        hookRight: {
+          label: "Hook right",
+          paths: [
+            { d: "M17 76 C18 47 33 25 62 22 C73 21 84 26 92 36" },
+            { d: "M76 34 L92 36 L84 20" }
+          ]
+        },
+        hookLeft: {
+          label: "Hook left",
+          paths: [
+            { d: "M86 76 C84 47 68 25 39 22 C28 21 17 26 9 36" },
+            { d: "M25 34 L9 36 L17 20" }
+          ]
+        }
+      };
+
+      const generatedAssetGroups = {
+        arrows: {
+          "arrow-corner-up-left": {
+            label: "Corner up-left",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-corner-up-left.png"
+          },
+          "arrow-corner-up-right": {
+            label: "Corner up-right",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-corner-up-right.png"
+          },
+          "arrow-curve-down-left-a": {
+            label: "Curve down-left A",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-left-a.png"
+          },
+          "arrow-curve-down-left-b": {
+            label: "Curve down-left B",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-left-b.png"
+          },
+          "arrow-curve-down-right-a": {
+            label: "Curve down-right A",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-right-a.png"
+          },
+          "arrow-curve-down-right-b": {
+            label: "Curve down-right B",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-right-b.png"
+          },
+          "arrow-curve-up-left": {
+            label: "Curve up-left",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-left.png"
+          },
+          "arrow-curve-up-right": {
+            label: "Curve up-right",
+            category: "V1 arrows",
+            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-right.png"
+          },
+          "arrow-up-right-corner-a": {
+            label: "Up-right corner A",
+            category: "Up-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-right-corner-a.png"
+          },
+          "arrow-up-right-corner-b": {
+            label: "Up-right corner B",
+            category: "Up-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-right-corner-b.png"
+          },
+          "arrow-down-right-curve-a": {
+            label: "Down-right curve A",
+            category: "Down-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-a.png"
+          },
+          "arrow-down-right-curve-b": {
+            label: "Down-right curve B",
+            category: "Down-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png"
+          },
+          "arrow-down-right-curve-c": {
+            label: "Down-right curve C",
+            category: "Down-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-c.png"
+          },
+          "arrow-down-right-curve-d": {
+            label: "Down-right curve D",
+            category: "Down-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-d.png"
+          },
+          "arrow-down-right-corner-a": {
+            label: "Down-right corner A",
+            category: "Down-right arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-corner-a.png"
+          },
+          "arrow-up-left-corner-a": {
+            label: "Up-left corner A",
+            category: "Up-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-a.png"
+          },
+          "arrow-up-left-corner-b": {
+            label: "Up-left corner B",
+            category: "Up-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-b.png"
+          },
+          "arrow-up-left-corner-c": {
+            label: "Up-left corner C",
+            category: "Up-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-c.png"
+          },
+          "arrow-up-left-corner-d": {
+            label: "Up-left corner D",
+            category: "Up-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-d.png"
+          },
+          "arrow-up-left-curve-a": {
+            label: "Up-left curve A",
+            category: "Up-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-curve-a.png"
+          },
+          "arrow-down-left-curve-a": {
+            label: "Down-left curve A",
+            category: "Down-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png"
+          },
+          "arrow-down-left-corner-a": {
+            label: "Down-left corner A",
+            category: "Down-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-corner-a.png"
+          },
+          "arrow-down-left-curve-b": {
+            label: "Down-left curve B",
+            category: "Down-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-b.png"
+          },
+          "arrow-down-left-curve-c": {
+            label: "Down-left curve C",
+            category: "Down-left arrows",
+            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-c.png"
+          }
+        },
+        icons: {
+          "icon-check": {
+            label: "Check",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-check.png"
+          },
+          "icon-flex-bicep": {
+            label: "Flex bicep",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-flex-bicep.png"
+          },
+          "icon-leaf": {
+            label: "Leaf",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-leaf.png"
+          },
+          "icon-low-sugar": {
+            label: "Low sugar",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-low-sugar.png"
+          },
+          "icon-scoop": {
+            label: "Protein scoop",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-scoop.png"
+          },
+          "icon-shaker-check": {
+            label: "Shaker check",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-shaker-check.png"
+          },
+          "icon-sparkles": {
+            label: "Sparkles",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-sparkles.png"
+          },
+          "icon-sprout": {
+            label: "Sprout",
+            category: "V1 mixed icons",
+            src: "generated/assets/icons/feature-benefit-v1/icon-sprout.png"
+          },
+          "protein-flex-bicep": {
+            label: "Flex bicep",
+            category: "Protein icons",
+            src: "generated/assets/icons/feature-benefit-v2/protein-flex-bicep.png"
+          },
+          "protein-dumbbell": {
+            label: "Dumbbell",
+            category: "Protein icons",
+            src: "generated/assets/icons/feature-benefit-v2/protein-dumbbell.png"
+          },
+          "protein-muscle-shield": {
+            label: "Muscle shield",
+            category: "Protein icons",
+            src: "generated/assets/icons/feature-benefit-v2/protein-muscle-shield.png"
+          },
+          "protein-scoop-arm": {
+            label: "Scoop arm",
+            category: "Protein icons",
+            src: "generated/assets/icons/feature-benefit-v2/protein-scoop-arm.png"
+          },
+          "low-sugar-cubes-slash": {
+            label: "Cubes slash",
+            category: "Low sugar icons",
+            src: "generated/assets/icons/feature-benefit-v2/low-sugar-cubes-slash.png"
+          },
+          "low-sugar-cube-circle-slash": {
+            label: "Cube circle slash",
+            category: "Low sugar icons",
+            src: "generated/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png"
+          },
+          "low-sugar-chocolate-slash": {
+            label: "Chocolate slash",
+            category: "Low sugar icons",
+            src: "generated/assets/icons/feature-benefit-v2/low-sugar-chocolate-slash.png"
+          },
+          "low-sugar-spoon-slash": {
+            label: "Spoon slash",
+            category: "Low sugar icons",
+            src: "generated/assets/icons/feature-benefit-v2/low-sugar-spoon-slash.png"
+          },
+          "grass-leaf": {
+            label: "Leaf",
+            category: "Grass-fed icons",
+            src: "generated/assets/icons/feature-benefit-v2/grass-leaf.png"
+          },
+          "grass-sprout": {
+            label: "Sprout",
+            category: "Grass-fed icons",
+            src: "generated/assets/icons/feature-benefit-v2/grass-sprout.png"
+          },
+          "grass-tuft": {
+            label: "Grass tuft",
+            category: "Grass-fed icons",
+            src: "generated/assets/icons/feature-benefit-v2/grass-tuft.png"
+          },
+          "grass-cow-outline": {
+            label: "Cow outline",
+            category: "Grass-fed icons",
+            src: "generated/assets/icons/feature-benefit-v2/grass-cow-outline.png"
+          },
+          "prep-shaker-check": {
+            label: "Shaker check",
+            category: "Prep icons",
+            src: "generated/assets/icons/feature-benefit-v2/prep-shaker-check.png"
+          },
+          "prep-scoop-cup": {
+            label: "Scoop cup",
+            category: "Prep icons",
+            src: "generated/assets/icons/feature-benefit-v2/prep-scoop-cup.png"
+          },
+          "prep-cup-check": {
+            label: "Cup check",
+            category: "Prep icons",
+            src: "generated/assets/icons/feature-benefit-v2/prep-cup-check.png"
+          },
+          "prep-droplet-shaker": {
+            label: "Droplet shaker",
+            category: "Prep icons",
+            src: "generated/assets/icons/feature-benefit-v2/prep-droplet-shaker.png"
+          }
+        }
+      };
+
+      const seedElements = [
+        {
+          id: "titlePanel",
+          name: "Headline panel",
+          type: "rect",
+          locked: false,
+          fill: "#0d2d5b",
+          opacity: 0.96,
+          radius: 17,
+          layouts: {
+            story: { x: 65, y: 318, w: 950, h: 126, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 58.5301513671875, y: 211.7128620147705, w: 965.9063720703125, h: 121.09174728393555, rotation: 0, flipX: false, flipY: false },
+            square: { x: 58.5301513671875, y: 77.42572402954102, w: 965.9063720703125, h: 121.09174728393555, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 78, y: 38, w: 1044, h: 88, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "headline",
+          name: "Headline",
+          type: "text",
+          text: "Muscle Support Without The Junk",
+          fill: "#ffffff",
+          fontFamily: "Georgia, 'Times New Roman', serif",
+          align: "center",
+          weight: 700,
+          lineHeight: 1.05,
+          layouts: {
+            story: { x: 88, y: 352, w: 904, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 85.15838623046875, y: 237.035551071167, w: 916, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
+            square: { x: 85.15838623046875, y: 102.7484130859375, w: 916, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 110.464, y: 56.266, w: 980, h: 46, fontSize: 46, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "subPanel",
+          name: "Subhead panel",
+          type: "rect",
+          fill: "#ffe35c",
+          stroke: "rgba(12,27,48,0.22)",
+          strokeWidth: 2,
+          radius: 8,
+          layouts: {
+            story: { x: 165, y: 432, w: 750, h: 58, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 190.72918701171875, y: 318.361234664917, w: 686.5960083007812, h: 74.24632263183594, rotation: 0, flipX: false, flipY: false },
+            square: { x: 190.72918701171875, y: 184.0740966796875, w: 686.5960083007812, h: 74.24632263183594, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 300, y: 114, w: 600, h: 48.829, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "subhead",
+          name: "Subhead",
+          type: "text",
+          text: "A simple protein habit when appetite drops.",
+          fill: "#10213a",
+          fontFamily: "Arial, sans-serif",
+          align: "center",
+          weight: 800,
+          lineHeight: 1,
+          layouts: {
+            story: { x: 190, y: 451, w: 700, h: 26, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 231.2025146484375, y: 339.00179862976074, w: 613.3084716796875, h: 31.738632202148438, fontSize: 31.738632202148438, rotation: 0, flipX: false, flipY: false },
+            square: { x: 231.2025146484375, y: 204.71466064453125, w: 613.3084716796875, h: 31.738632202148438, fontSize: 31.738632202148438, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 329.74, y: 124.701, w: 536, h: 25, fontSize: 26, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "shadow",
+          name: "Product shadow",
+          type: "shadow",
+          fill: "#071a33",
+          opacity: 0.26,
+          blur: 22,
+          layouts: {
+            story: { x: 345, y: 1230, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
+            portrait: { x: 345, y: 1092.2871379852295, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
+            square: { x: 345, y: 958, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
+            landscape: { x: 482, y: 560, w: 235, h: 28, rotation: -2, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "product",
+          name: "Protein bag",
+          type: "image",
+          src: PRODUCT_SRC,
+          layouts: {
+            story: { x: 325, y: 600, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 325, y: 462.2871379852295, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
+            square: { x: 325, y: 328, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 466.875, y: 180.007, w: 270, h: 405, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "proteinArrow",
+          name: "Protein arrow",
+          type: "image",
+          assetGroup: "arrows",
+          assetKey: "arrow-curve-up-right",
+          src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-right.png",
+          layouts: {
+            story: { x: 200.328, y: 618.989, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
+            portrait: { x: 200.328, y: 481.2761379852295, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
+            square: { x: 200.328, y: 346.989, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
+            landscape: { x: 366.664, y: 201.73, w: 96, h: 64, rotation: 34.9080258709455, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "proteinIcon",
+          name: "Protein icon",
+          type: "image",
+          assetGroup: "icons",
+          assetKey: "protein-flex-bicep",
+          src: "generated/assets/icons/feature-benefit-v2/protein-flex-bicep.png",
+          layouts: {
+            story: { x: 171.976, y: 699.596, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
+            portrait: { x: 171.976, y: 561.8831379852295, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
+            square: { x: 171.976, y: 427.596, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
+            landscape: { x: 322.451, y: 239.546, w: 70, h: 66, rotation: -2, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "proteinText",
+          name: "Protein text",
+          type: "text",
+          text: "31G\nPROTEIN",
+          fill: "#ffffff",
+          fontFamily: "Arial Black, Arial, sans-serif",
+          align: "center",
+          weight: 900,
+          lineHeight: 0.98,
+          layouts: {
+            story: { x: 107.582, y: 791.955, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 107.582, y: 654.2421379852295, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
+            square: { x: 107.582, y: 519.955, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 280.977, y: 320.355, w: 156, h: 54, fontSize: 24, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "sugarIcon",
+          name: "Low sugar icon",
+          type: "image",
+          assetGroup: "icons",
+          assetKey: "low-sugar-cube-circle-slash",
+          src: "generated/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png",
+          layouts: {
+            story: { x: 814.884, y: 631.531, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 814.884, y: 493.8181379852295, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
+            square: { x: 814.884, y: 359.531, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 808.132, y: 191.145, w: 82, h: 84, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "sugarText",
+          name: "Low sugar text",
+          type: "text",
+          text: "LOW SUGAR\nCHOCOLATE",
+          fill: "#ffffff",
+          fontFamily: "Arial Black, Arial, sans-serif",
+          align: "center",
+          weight: 900,
+          lineHeight: 0.98,
+          layouts: {
+            story: { x: 768.22, y: 751.966, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 768.22, y: 614.2531379852295, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            square: { x: 768.22, y: 479.966, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 762.23, y: 279.622, w: 178, h: 54, fontSize: 24, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "sugarArrow",
+          name: "Low sugar arrow",
+          type: "image",
+          assetGroup: "arrows",
+          assetKey: "arrow-down-left-curve-a",
+          src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+          layouts: {
+            story: { x: 769.038, y: 819.204, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
+            portrait: { x: 769.038, y: 681.4911379852295, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
+            square: { x: 769.038, y: 547.204, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
+            landscape: { x: 771.855, y: 330.688, w: 104, h: 68, rotation: -65, flipX: false, flipY: true }
+          }
+        },
+        {
+          id: "leafIcon",
+          name: "Grass fed icon",
+          type: "image",
+          assetGroup: "icons",
+          assetKey: "grass-leaf",
+          src: "generated/assets/icons/feature-benefit-v2/grass-leaf.png",
+          layouts: {
+            story: { x: 152.605, y: 950.727, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
+            portrait: { x: 152.605, y: 813.0141379852295, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
+            square: { x: 152.605, y: 678.727, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
+            landscape: { x: 307.319, y: 416.204, w: 82, h: 70, rotation: -5, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "leafText",
+          name: "Grass fed text",
+          type: "text",
+          text: "GRASS FED\nWHEY",
+          fill: "#ffffff",
+          fontFamily: "Arial Black, Arial, sans-serif",
+          align: "center",
+          weight: 900,
+          lineHeight: 0.98,
+          layouts: {
+            story: { x: 87.222, y: 1050.18, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 87.222, y: 912.4671379852295, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            square: { x: 87.222, y: 778.18, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 259.362, y: 493.543, w: 166, h: 54, fontSize: 23, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "leafArrow",
+          name: "Grass fed arrow",
+          type: "image",
+          assetGroup: "arrows",
+          assetKey: "arrow-down-right-curve-b",
+          src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png",
+          layouts: {
+            story: { x: 180.437, y: 1126.043, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
+            portrait: { x: 180.437, y: 988.3301379852295, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
+            square: { x: 180.437, y: 854.043, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
+            landscape: { x: 380.549, y: 521.23, w: 96, h: 58, rotation: 35.814372327426526, flipX: false, flipY: true }
+          }
+        },
+        {
+          id: "prepIcon",
+          name: "Prep icon",
+          type: "image",
+          assetGroup: "icons",
+          assetKey: "prep-shaker-check",
+          src: "generated/assets/icons/feature-benefit-v2/prep-shaker-check.png",
+          layouts: {
+            story: { x: 836.963, y: 946.38, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 836.963, y: 808.6671379852295, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
+            square: { x: 836.963, y: 674.38, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 837.648, y: 411.793, w: 70, h: 84, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "prepText",
+          name: "Prep text",
+          type: "text",
+          text: "NO MESSY\nPREP",
+          fill: "#ffffff",
+          fontFamily: "Arial Black, Arial, sans-serif",
+          align: "center",
+          weight: 900,
+          lineHeight: 0.98,
+          layouts: {
+            story: { x: 777.651, y: 1060.016, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            portrait: { x: 777.651, y: 922.3031379852295, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            square: { x: 777.651, y: 788.016, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
+            landscape: { x: 791.704, y: 506.582, w: 160, h: 52, fontSize: 23, rotation: 0, flipX: false, flipY: false }
+          }
+        },
+        {
+          id: "prepArrow",
+          name: "Prep arrow",
+          type: "image",
+          assetGroup: "arrows",
+          assetKey: "arrow-down-left-curve-a",
+          src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+          layouts: {
+            story: { x: 781.305, y: 1129.222, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
+            portrait: { x: 781.305, y: 991.5091379852295, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
+            square: { x: 781.305, y: 857.222, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
+            landscape: { x: 746.625, y: 531.033, w: 100, h: 60, rotation: -28.510079660556972, flipX: false, flipY: true }
+          }
+        }
+      ];
+
+      let project = { elements: clone(seedElements) };
+      let currentRatio = "story";
+      let selectedId = "product";
+      let action = null;
+      let zoom = 52;
+      let saveSequence = 0;
+
+      const stage = document.getElementById("stage");
+      const ratioGrid = document.getElementById("ratioGrid");
+      const layersEl = document.getElementById("layers");
+      const inspectorEl = document.getElementById("inspector");
+      const statusEl = document.getElementById("status");
+      const saveBtn = document.getElementById("saveBtn");
+      const canvasInfoEl = document.getElementById("canvasInfo");
+      const zoomRange = document.getElementById("zoomRange");
+      let saveFeedbackTimer = null;
+      const safeZoneToggles = {
+        stories: document.getElementById("storySafeToggle"),
+        reels: document.getElementById("reelsSafeToggle"),
+        edge: document.getElementById("edgeSafeToggle")
+      };
+      const safeZoneState = {
+        stories: safeZoneToggles.stories.checked,
+        reels: safeZoneToggles.reels.checked,
+        edge: safeZoneToggles.edge.checked
+      };
+
+      function clone(value) {
+        return JSON.parse(JSON.stringify(value));
+      }
+
+      function normaliseProjectPayload(payload) {
+        if (payload?.project?.elements && Array.isArray(payload.project.elements)) return payload.project;
+        if (payload?.elements && Array.isArray(payload.elements)) return payload;
+        return null;
+      }
+
+      async function loadProject() {
+        try {
+          const response = await fetch(`${PROJECT_ENDPOINT}?storageKey=${encodeURIComponent(STORAGE_KEY)}`, {
+            cache: "no-store"
+          });
+          if (response.ok) {
+            const diskPayload = await response.json();
+            const diskProject = normaliseProjectPayload(diskPayload);
+            if (diskProject) return { project: diskProject, source: "project file" };
+          }
+        } catch (error) {
+          // Static-file mode cannot load project files. Fall back to local browser storage.
+        }
+
+        try {
+          const saved = window.localStorage.getItem(STORAGE_KEY);
+          if (saved) {
+            const browserProject = normaliseProjectPayload(JSON.parse(saved));
+            if (browserProject) return { project: browserProject, source: "browser fallback" };
+          }
+        } catch (error) {
+          // Corrupt local browser data should not prevent the seeded editor from opening.
+        }
+        return { project: { elements: clone(seedElements) }, source: "seed layout" };
+      }
+
+      async function hydrateProject() {
+        const loaded = await loadProject();
+        project = loaded.project;
+        if (!selectedElement()) selectedId = project.elements[0]?.id || null;
+        render();
+        setStatus(`Loaded ${loaded.source}`);
+      }
+
+      async function saveProject() {
+        const snapshot = clone(project);
+        const payload = {
+          version: 1,
+          storageKey: STORAGE_KEY,
+          savedAt: new Date().toISOString(),
+          project: snapshot
+        };
+        const currentSave = ++saveSequence;
+
+        setStatus("Saving project...");
+        setSaveButtonState("saving");
+
+        try {
+          window.localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
+        } catch (error) {
+          // The project file save below is still the source of truth.
+        }
+
+        try {
+          const response = await fetch(PROJECT_ENDPOINT, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) throw new Error(`Save failed with ${response.status}`);
+          if (currentSave === saveSequence) {
+            setStatus("Saved to project file");
+            setSaveButtonState("success");
+          }
+          return true;
+        } catch (error) {
+          if (currentSave === saveSequence) {
+            setStatus("Save failed - browser fallback only");
+            setSaveButtonState("error");
+          }
+          return false;
+        }
+      }
+
+      function selectedElement() {
+        return project.elements.find((element) => element.id === selectedId) || null;
+      }
+
+      function layoutFor(element, ratioKey = currentRatio) {
+        if (!element.layouts[ratioKey]) {
+          element.layouts[ratioKey] = clone(element.layouts.story);
+        }
+        return element.layouts[ratioKey];
+      }
+
+      function isAspectLocked(element) {
+        return element.type === "image" && element.lockAspect !== false;
+      }
+
+      function setStatus(message) {
+        statusEl.textContent = message;
+      }
+
+      function setSaveButtonState(state) {
+        const labels = {
+          idle: "Save",
+          saving: "Saving...",
+          success: "Saved",
+          error: "Save failed"
+        };
+        const stateIcons = {
+          idle: "save",
+          saving: "save",
+          success: "check",
+          error: "alert-triangle"
+        };
+        window.clearTimeout(saveFeedbackTimer);
+        saveBtn.dataset.state = state;
+        const label = labels[state] || labels.idle;
+        const iconUse = saveBtn.querySelector("use");
+        const buttonLabel = saveBtn.querySelector("[data-button-label]");
+        if (iconUse) iconUse.setAttribute("href", `#icon-${stateIcons[state] || "save"}`);
+        if (buttonLabel) buttonLabel.textContent = label;
+        saveBtn.setAttribute("aria-label", label);
+        saveBtn.title = label;
+        saveBtn.disabled = state === "saving";
+        saveBtn.setAttribute("aria-busy", state === "saving" ? "true" : "false");
+        if (state === "success" || state === "error") {
+          saveFeedbackTimer = window.setTimeout(() => setSaveButtonState("idle"), 2200);
+        }
+      }
+
+      function createSvgElement(tag, attrs = {}) {
+        const node = document.createElementNS(SVG_NS, tag);
+        Object.entries(attrs).forEach(([key, value]) => {
+          if (value === undefined || value === null) return;
+          node.setAttribute(key, String(value));
+        });
+        return node;
+      }
+
+      function transformFor(layout) {
+        const cx = layout.x + layout.w / 2;
+        const cy = layout.y + layout.h / 2;
+        const sx = layout.flipX ? -1 : 1;
+        const sy = layout.flipY ? -1 : 1;
+        return `translate(${cx} ${cy}) rotate(${layout.rotation || 0}) scale(${sx} ${sy}) translate(${-layout.w / 2} ${-layout.h / 2})`;
+      }
+
+      function render() {
+        const ratio = ratios[currentRatio];
+        stage.setAttribute("viewBox", `0 0 ${ratio.w} ${ratio.h}`);
+        stage.setAttribute("width", ratio.w);
+        stage.setAttribute("height", ratio.h);
+        stage.replaceChildren(buildDefs(), buildBackground(ratio));
+
+        project.elements.forEach((element) => {
+          if (element.visible === false) return;
+          stage.appendChild(renderElement(element, currentRatio, true));
+        });
+
+        const safeZones = renderSafeZoneOverlays(ratio, currentRatio);
+        if (safeZones) stage.appendChild(safeZones);
+
+        const selected = selectedElement();
+        if (selected && selected.visible !== false) {
+          stage.appendChild(renderSelection(selected));
+        }
+
+        renderRatioButtons();
+        renderLayers();
+        renderInspector();
+        syncSafeZoneControlAvailability();
+        updateStageSize();
+        canvasInfoEl.textContent = `${ratio.label} - ${ratio.w} x ${ratio.h}`;
+      }
+
+      function buildDefs() {
+        const defs = createSvgElement("defs");
+        const gradient = createSvgElement("linearGradient", { id: "blueBg", x1: "0", y1: "0", x2: "0", y2: "1" });
+        gradient.append(
+          createSvgElement("stop", { offset: "0%", "stop-color": "#2079b8" }),
+          createSvgElement("stop", { offset: "48%", "stop-color": "#184c94" }),
+          createSvgElement("stop", { offset: "100%", "stop-color": "#123861" })
+        );
+        const shadowBlur = createSvgElement("filter", { id: "softShadow", x: "-50%", y: "-80%", width: "200%", height: "240%" });
+        shadowBlur.appendChild(createSvgElement("feGaussianBlur", { stdDeviation: "18" }));
+        defs.append(gradient, shadowBlur);
+        return defs;
+      }
+
+      function buildBackground(ratio) {
+        const group = createSvgElement("g");
+        group.appendChild(createSvgElement("rect", { x: 0, y: 0, width: ratio.w, height: ratio.h, fill: "url(#blueBg)" }));
+        for (let y = 0; y < ratio.h; y += 70) {
+          group.appendChild(createSvgElement("rect", {
+            x: -20,
+            y,
+            width: ratio.w + 40,
+            height: 2,
+            fill: "rgba(255,255,255,0.018)"
+          }));
+        }
+        return group;
+      }
+
+      function renderSafeZoneOverlays(ratio, ratioKey) {
+        const enabledKeys = Object.keys(safeZoneState).filter((key) => {
+          const config = safeZoneConfigs[key];
+          if (!safeZoneState[key]) return false;
+          if (config.verticalOnly && ratioKey !== "story") return false;
+          return true;
+        });
+        if (!enabledKeys.length) return null;
+
+        const group = createSvgElement("g", {
+          class: "safe-zone-overlay",
+          "data-safe-zone-overlay": "true"
+        });
+
+        enabledKeys.forEach((key) => {
+          appendSafeZoneOverlay(group, ratio, safeZoneConfigs[key]);
+        });
+
+        return group;
+      }
+
+      function syncSafeZoneControlAvailability() {
+        const isVerticalPlacement = currentRatio === "story";
+        ["stories", "reels"].forEach((key) => {
+          safeZoneToggles[key].disabled = !isVerticalPlacement;
+          safeZoneToggles[key].closest("label").title = isVerticalPlacement
+            ? ""
+            : "Stories and Reels overlays apply to 9:16 exports.";
+        });
+      }
+
+      function appendSafeZoneOverlay(group, ratio, config) {
+        const top = Math.round(ratio.h * config.top);
+        const bottom = Math.round(ratio.h * config.bottom);
+        const side = Math.round(ratio.w * config.side);
+        const safeX = side;
+        const safeY = top;
+        const safeW = Math.max(0, ratio.w - side * 2);
+        const safeH = Math.max(0, ratio.h - top - bottom);
+        const labelSize = Math.max(18, Math.min(30, Math.round(ratio.w * 0.026)));
+        const labelY = Math.max(safeY + labelSize + 12, top + labelSize + 12);
+
+        [
+          { x: 0, y: 0, width: ratio.w, height: top },
+          { x: 0, y: ratio.h - bottom, width: ratio.w, height: bottom },
+          { x: 0, y: top, width: side, height: Math.max(0, ratio.h - top - bottom) },
+          { x: ratio.w - side, y: top, width: side, height: Math.max(0, ratio.h - top - bottom) }
+        ].forEach((band) => {
+          if (band.width <= 0 || band.height <= 0) return;
+          group.appendChild(createSvgElement("rect", {
+            ...band,
+            fill: config.fill
+          }));
+        });
+
+        group.appendChild(createSvgElement("rect", {
+          x: safeX,
+          y: safeY,
+          width: safeW,
+          height: safeH,
+          fill: "none",
+          stroke: config.stroke,
+          "stroke-width": Math.max(3, Math.round(ratio.w * 0.004)),
+          "stroke-dasharray": "18 12"
+        }));
+
+        const label = createSvgElement("text", {
+          x: safeX + 18,
+          y: labelY,
+          fill: config.stroke,
+          "font-family": "Arial, sans-serif",
+          "font-size": labelSize,
+          "font-weight": 800
+        });
+        label.textContent = `${config.label} safe: top ${Math.round(config.top * 100)}%, bottom ${Math.round(config.bottom * 100)}%, sides ${Math.round(config.side * 100)}%`;
+        group.appendChild(label);
+
+        const pixelLabel = createSvgElement("text", {
+          x: safeX + 18,
+          y: labelY + labelSize * 1.25,
+          fill: config.stroke,
+          opacity: 0.86,
+          "font-family": "Arial, sans-serif",
+          "font-size": Math.max(14, Math.round(labelSize * 0.64)),
+          "font-weight": 700
+        });
+        pixelLabel.textContent = `Safe rect: x${safeX} y${safeY} ${safeW} x ${safeH}px`;
+        group.appendChild(pixelLabel);
+      }
+
+      function renderElement(element, ratioKey, interactive) {
+        const layout = layoutFor(element, ratioKey);
+        const group = createSvgElement("g", {
+          transform: transformFor(layout),
+          opacity: element.opacity ?? 1
+        });
+        group.dataset.id = element.id;
+        if (interactive && !element.locked) {
+          group.classList.add("editable");
+        }
+
+        if (element.type === "rect") {
+          group.appendChild(createSvgElement("rect", {
+            x: 0,
+            y: 0,
+            width: layout.w,
+            height: layout.h,
+            rx: element.radius || 0,
+            fill: element.fill || "#ffffff",
+            stroke: element.stroke || "none",
+            "stroke-width": element.strokeWidth || 0
+          }));
+        }
+
+        if (element.type === "shadow") {
+          group.appendChild(createSvgElement("ellipse", {
+            cx: layout.w / 2,
+            cy: layout.h / 2,
+            rx: layout.w / 2,
+            ry: layout.h / 2,
+            fill: element.fill || "#000",
+            opacity: element.opacity ?? 0.25,
+            filter: "url(#softShadow)"
+          }));
+        }
+
+        if (element.type === "image") {
+          group.appendChild(createSvgElement("image", {
+            href: element.src,
+            x: 0,
+            y: 0,
+            width: layout.w,
+            height: layout.h,
+            preserveAspectRatio: "xMidYMid meet"
+          }));
+        }
+
+        if (element.type === "text") {
+          renderText(group, element, layout);
+        }
+
+        if (element.type === "emoji") {
+          const text = createSvgElement("text", {
+            x: layout.w / 2,
+            y: layout.h * 0.76,
+            "font-size": Math.min(layout.w, layout.h) * 0.86,
+            "text-anchor": "middle",
+            "font-family": '"Apple Color Emoji", "Segoe UI Emoji", sans-serif'
+          });
+          text.textContent = element.text;
+          group.appendChild(text);
+        }
+
+        if (element.type === "vector") {
+          renderVector(group, element, layout);
+        }
+
+        if (element.type === "arrow") {
+          renderArrow(group, element, layout);
+        }
+
+        return group;
+      }
+
+      function renderText(group, element, layout) {
+        const lines = String(element.text || "").split("\n");
+        const size = layout.fontSize || 32;
+        const lineHeight = size * (element.lineHeight || 1.08);
+        const totalHeight = lineHeight * lines.length;
+        const startY = layout.h / 2 - totalHeight / 2 + size * 0.86;
+        const x = element.align === "center" ? layout.w / 2 : element.align === "right" ? layout.w : 0;
+        const anchor = element.align === "center" ? "middle" : element.align === "right" ? "end" : "start";
+        const text = createSvgElement("text", {
+          x,
+          y: startY,
+          fill: element.fill || "#ffffff",
+          "font-family": element.fontFamily || "Arial, sans-serif",
+          "font-size": size,
+          "font-weight": element.weight || 700,
+          "text-anchor": anchor
+        });
+        lines.forEach((line, index) => {
+          const tspan = createSvgElement("tspan", {
+            x,
+            dy: index === 0 ? 0 : lineHeight
+          });
+          tspan.textContent = line;
+          text.appendChild(tspan);
+        });
+        group.appendChild(text);
+      }
+
+      function renderVector(group, element, layout) {
+        const vector = createSvgElement("g", { transform: `scale(${layout.w / 100} ${layout.h / 100})` });
+        const stroke = element.stroke || "#ffffff";
+        const strokeWidth = Number(element.strokeWidth) || 6.6;
+        appendLineAsset(vector, lineIconAssets[element.vector] || lineIconAssets.leaf, stroke, strokeWidth);
+        group.appendChild(vector);
+      }
+
+      function renderArrow(group, element, layout) {
+        const arrow = createSvgElement("g", { transform: `scale(${layout.w / 100} ${layout.h / 100})` });
+        const strokeWidth = Number(element.strokeWidth) || 7;
+        appendLineAsset(arrow, lineArrowAssets[element.arrow] || lineArrowAssets.curveRight, element.stroke || "#ffffff", strokeWidth);
+        group.appendChild(arrow);
+      }
+
+      function appendLineAsset(group, asset, stroke, strokeWidth) {
+        const paths = asset.paths || [];
+        paths.forEach((pathData) => {
+          const width = strokeWidth * (pathData.scale || 1);
+          const path = createSvgElement("path", {
+            d: pathData.d,
+            fill: "none",
+            stroke,
+            "stroke-width": width,
+            "stroke-linecap": "round",
+            "stroke-linejoin": "round",
+            "vector-effect": "non-scaling-stroke"
+          });
+          if (asset.rough !== false) {
+            group.appendChild(createSvgElement("path", {
+              d: pathData.d,
+              fill: "none",
+              stroke,
+              "stroke-width": width * 1.18,
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "vector-effect": "non-scaling-stroke",
+              opacity: 0.2,
+              transform: "translate(0.9 -0.7)"
+            }));
+          }
+          group.appendChild(path);
+        });
+      }
+
+      function renderSelection(element) {
+        const layout = layoutFor(element);
+        const group = createSvgElement("g", { transform: transformFor(layout), "data-selection": element.id });
+        group.appendChild(createSvgElement("rect", { x: 0, y: 0, width: layout.w, height: layout.h, class: "selected-outline-shadow" }));
+        group.appendChild(createSvgElement("rect", { x: 0, y: 0, width: layout.w, height: layout.h, class: "selected-outline" }));
+
+        const handles = [
+          ["nw", 0, 0],
+          ["n", layout.w / 2, 0],
+          ["ne", layout.w, 0],
+          ["e", layout.w, layout.h / 2],
+          ["se", layout.w, layout.h],
+          ["s", layout.w / 2, layout.h],
+          ["sw", 0, layout.h],
+          ["w", 0, layout.h / 2]
+        ];
+
+        handles.forEach(([name, x, y]) => {
+          group.appendChild(createSvgElement("circle", { class: "handle", "data-handle": name, cx: x, cy: y, r: 9 }));
+        });
+
+        group.appendChild(createSvgElement("line", {
+          x1: layout.w / 2,
+          y1: -40,
+          x2: layout.w / 2,
+          y2: 0,
+          stroke: "#166cff",
+          "stroke-width": 2
+        }));
+        group.appendChild(createSvgElement("circle", { class: "rotate-handle", "data-handle": "rotate", cx: layout.w / 2, cy: -48, r: 11 }));
+        return group;
+      }
+
+      function renderRatioButtons() {
+        ratioGrid.replaceChildren();
+        ratioOrder.forEach((key) => {
+          const ratio = ratios[key];
+          const button = document.createElement("button");
+          button.className = `ratio-btn${key === currentRatio ? " active" : ""}`;
+          button.type = "button";
+          button.innerHTML = `${ratio.label}<span>${ratio.use}</span>`;
+          button.addEventListener("click", () => {
+            currentRatio = key;
+            render();
+            fitStageToWorkspace();
+          });
+          ratioGrid.appendChild(button);
+        });
+      }
+
+      function renderLayers() {
+        layersEl.replaceChildren();
+        [...project.elements].reverse().forEach((element) => {
+          const row = document.createElement("div");
+          row.className = `layer-row${element.id === selectedId ? " selected" : ""}`;
+          const visibleLabel = element.visible === false ? "Show layer" : "Hide layer";
+          const lockLabel = element.locked ? "Unlock layer" : "Lock layer";
+          row.innerHTML = `
+            <button type="button" data-action="visible" title="${visibleLabel}" aria-label="${visibleLabel}">${icon(element.visible === false ? "eye-off" : "eye")}<span class="sr-only">${visibleLabel}</span></button>
+            <button type="button" data-action="lock" title="${lockLabel}" aria-label="${lockLabel}">${icon(element.locked ? "lock" : "unlock")}<span class="sr-only">${lockLabel}</span></button>
+            <span class="layer-name">${element.name}</span>
+            <button type="button" data-action="select" title="Select layer" aria-label="Select layer">${icon("crosshair")}<span class="sr-only">Select layer</span></button>
+          `;
+          row.addEventListener("click", (event) => {
+            const actionName = event.target?.closest("[data-action]")?.dataset?.action;
+            if (actionName === "visible") {
+              element.visible = element.visible === false;
+              render();
+              return;
+            }
+            if (actionName === "lock") {
+              element.locked = !element.locked;
+              render();
+              return;
+            }
+            selectedId = element.id;
+            render();
+          });
+          layersEl.appendChild(row);
+        });
+      }
+
+      function renderInspector() {
+        const element = selectedElement();
+        if (!element) {
+          inspectorEl.innerHTML = `<p class="inspector-empty">Select a layer on the canvas or in the layer list.</p>`;
+          return;
+        }
+        const l = layoutFor(element);
+        const canEditText = element.type === "text" || element.type === "emoji";
+        const canEditStroke = element.type === "arrow" || element.type === "vector";
+        inspectorEl.innerHTML = `
+          <div class="field-grid">
+            <div class="field wide">
+              <label>Name</label>
+              <input data-field="name" type="text" value="${escapeAttr(element.name)}" />
+            </div>
+            ${canEditText ? `
+              <div class="field wide">
+                <label>Text</label>
+                <textarea data-field="text">${escapeHtml(element.text || "")}</textarea>
+              </div>
+            ` : ""}
+            <div class="field"><label>X</label><input data-layout="x" type="number" value="${round(l.x)}" /></div>
+            <div class="field"><label>Y</label><input data-layout="y" type="number" value="${round(l.y)}" /></div>
+            <div class="field"><label>Width</label><input data-layout="w" type="number" min="8" value="${round(l.w)}" /></div>
+            <div class="field"><label>Height</label><input data-layout="h" type="number" min="8" value="${round(l.h)}" /></div>
+            <div class="field"><label>Rotate</label><input data-layout="rotation" type="number" value="${round(l.rotation || 0)}" /></div>
+            ${element.type === "text" ? `<div class="field"><label>Font</label><input data-layout="fontSize" type="number" min="8" value="${round(l.fontSize || 32)}" /></div>` : `<div class="field"><label>Layer</label><input readonly value="${element.type}" /></div>`}
+            ${element.assetGroup ? `<div class="field wide"><label>Generated asset</label><select data-field="assetKey">${generatedAssetOptions(element.assetGroup, element.assetKey)}</select></div>` : ""}
+            ${element.type === "arrow" ? `<div class="field wide"><label>Arrow asset</label><select data-field="arrow">${assetOptions(lineArrowAssets, element.arrow)}</select></div>` : ""}
+            ${element.type === "vector" ? `<div class="field wide"><label>Icon asset</label><select data-field="vector">${assetOptions(lineIconAssets, element.vector)}</select></div>` : ""}
+            ${canEditStroke ? `<div class="field"><label>Stroke width</label><input data-field="strokeWidth" type="number" min="1" max="30" step="0.5" value="${round(element.strokeWidth || (element.type === "arrow" ? 7 : 6.6))}" /></div>` : ""}
+            ${canEditStroke ? `<div class="field"><label>Stroke colour</label><input data-field="stroke" type="text" value="${escapeAttr(element.stroke || "#ffffff")}" /></div>` : ""}
+            ${(element.type === "text" || element.type === "rect") ? `<div class="field"><label>Colour</label><input data-field="${element.type === "text" ? "fill" : "fill"}" type="text" value="${escapeAttr(element.fill || "#ffffff")}" /></div>` : ""}
+          </div>
+          <div class="mini-actions">
+            <button class="btn" type="button" data-tool="flipX" title="Mirror horizontal" aria-label="Mirror horizontal">${icon("flip-horizontal")}<span class="sr-only">Mirror horizontal</span></button>
+            <button class="btn" type="button" data-tool="flipY" title="Mirror vertical" aria-label="Mirror vertical">${icon("flip-vertical")}<span class="sr-only">Mirror vertical</span></button>
+            <button class="btn" type="button" data-tool="front" title="Bring forward" aria-label="Bring forward">${icon("front")}<span class="sr-only">Bring forward</span></button>
+            <button class="btn" type="button" data-tool="back" title="Send backward" aria-label="Send backward">${icon("send-back")}<span class="sr-only">Send backward</span></button>
+            <button class="btn" type="button" data-tool="duplicate" title="Duplicate" aria-label="Duplicate">${icon("copy")}<span class="sr-only">Duplicate</span></button>
+            <button class="btn danger" type="button" data-tool="delete" title="Delete" aria-label="Delete">${icon("trash")}<span class="sr-only">Delete</span></button>
+          </div>
+          <label class="toggle-row"><input type="checkbox" data-field="visible" ${element.visible === false ? "" : "checked"} /> Visible</label>
+          <label class="toggle-row"><input type="checkbox" data-field="locked" ${element.locked ? "checked" : ""} /> Locked</label>
+          ${element.type === "image" ? `<label class="toggle-row"><input type="checkbox" data-field="lockAspect" ${isAspectLocked(element) ? "checked" : ""} /> Lock image ratio</label>` : ""}
+        `;
+      }
+
+      function assetOptions(collection, selected) {
+        return Object.entries(collection).map(([value, asset]) => {
+          const isSelected = value === selected ? " selected" : "";
+          return `<option value="${escapeAttr(value)}"${isSelected}>${escapeHtml(asset.label)}</option>`;
+        }).join("");
+      }
+
+      function generatedAssetOptions(groupName, selected) {
+        const collection = generatedAssetGroups[groupName] || {};
+        const grouped = new Map();
+        Object.entries(collection).forEach(([value, asset]) => {
+          const category = asset.category || "Assets";
+          if (!grouped.has(category)) grouped.set(category, []);
+          grouped.get(category).push([value, asset]);
+        });
+        return [...grouped.entries()].map(([category, entries]) => `
+          <optgroup label="${escapeAttr(category)}">
+            ${entries.map(([value, asset]) => {
+              const isSelected = value === selected ? " selected" : "";
+              return `<option value="${escapeAttr(value)}"${isSelected}>${escapeHtml(asset.label)}</option>`;
+            }).join("")}
+          </optgroup>
+        `).join("");
+      }
+
+      function round(value) {
+        return Math.round((Number(value) || 0) * 10) / 10;
+      }
+
+      function icon(name) {
+        return `<svg class="icon" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        })[char]);
+      }
+
+      function escapeAttr(value) {
+        return escapeHtml(value).replace(/\n/g, " ");
+      }
+
+      function updateStageSize() {
+        const ratio = ratios[currentRatio];
+        const scale = zoom / 100;
+        const base = 720;
+        const stageW = Math.round(base * scale * Math.min(1, ratio.w / ratio.h * 1.78));
+        const stageH = Math.round(stageW * ratio.h / ratio.w);
+        stage.style.setProperty("--stage-w", `${stageW}px`);
+        stage.style.setProperty("--stage-h", `${stageH}px`);
+      }
+
+      function fitStageToWorkspace() {
+        const ratio = ratios[currentRatio];
+        const wrap = stageWrap.getBoundingClientRect();
+        const styles = window.getComputedStyle(stageWrap);
+        const availableW = Math.max(120, wrap.width - parseFloat(styles.paddingLeft) - parseFloat(styles.paddingRight) - 4);
+        const availableH = Math.max(120, wrap.height - parseFloat(styles.paddingTop) - parseFloat(styles.paddingBottom) - 4);
+        const targetScale = Math.min(availableW / ratio.w, availableH / ratio.h);
+        const base = 720;
+        const widthFactor = Math.min(1, ratio.w / ratio.h * 1.78);
+        zoom = Math.max(20, Math.min(160, targetScale * 100 * ratio.w / (base * widthFactor)));
+        zoomRange.value = Math.round(zoom);
+        updateStageSize();
+        stageWrap.scrollLeft = 0;
+        stageWrap.scrollTop = 0;
+      }
+
+      function svgPoint(event) {
+        const point = stage.createSVGPoint();
+        point.x = event.clientX;
+        point.y = event.clientY;
+        return point.matrixTransform(stage.getScreenCTM().inverse());
+      }
+
+      function applyAspectLockedResize(element, next, original, handle) {
+        if (!isAspectLocked(element) || !original.w || !original.h) return next;
+
+        const minSize = 16;
+        const aspect = original.w / original.h;
+        const changedX = handle.includes("e") || handle.includes("w");
+        const changedY = handle.includes("n") || handle.includes("s");
+        const centerX = original.x + original.w / 2;
+        const centerY = original.y + original.h / 2;
+
+        if (changedX && changedY) {
+          const widthDelta = Math.abs(next.w - original.w);
+          const heightDelta = Math.abs(next.h - original.h);
+          if (widthDelta >= heightDelta) {
+            next.h = Math.max(minSize, next.w / aspect);
+          } else {
+            next.w = Math.max(minSize, next.h * aspect);
+          }
+          if (handle.includes("w")) next.x = original.x + original.w - next.w;
+          if (handle.includes("n")) next.y = original.y + original.h - next.h;
+          return next;
+        }
+
+        if (changedX) {
+          next.h = Math.max(minSize, next.w / aspect);
+          next.y = centerY - next.h / 2;
+          if (handle.includes("w")) next.x = original.x + original.w - next.w;
+          return next;
+        }
+
+        if (changedY) {
+          next.w = Math.max(minSize, next.h * aspect);
+          next.x = centerX - next.w / 2;
+          if (handle.includes("n")) next.y = original.y + original.h - next.h;
+        }
+
+        return next;
+      }
+
+      stage.addEventListener("pointerdown", (event) => {
+        const handle = event.target.closest("[data-handle]");
+        const editable = event.target.closest(".editable");
+        if (handle && selectedElement() && !selectedElement().locked) {
+          event.preventDefault();
+          const element = selectedElement();
+          action = {
+            type: handle.dataset.handle === "rotate" ? "rotate" : "resize",
+            handle: handle.dataset.handle,
+            start: svgPoint(event),
+            layout: clone(layoutFor(element)),
+            id: element.id
+          };
+          stage.setPointerCapture(event.pointerId);
+          return;
+        }
+        if (editable) {
+          const id = editable.dataset.id;
+          selectedId = id;
+          const element = selectedElement();
+          if (!element || element.locked) {
+            render();
+            return;
+          }
+          event.preventDefault();
+          action = {
+            type: "drag",
+            start: svgPoint(event),
+            layout: clone(layoutFor(element)),
+            id
+          };
+          stage.setPointerCapture(event.pointerId);
+          render();
+          return;
+        }
+
+        if (selectedId) {
+          selectedId = null;
+          action = null;
+          render();
+        }
+      });
+
+      stage.addEventListener("pointermove", (event) => {
+        if (!action) return;
+        const element = project.elements.find((item) => item.id === action.id);
+        if (!element) return;
+        const current = svgPoint(event);
+        const l = layoutFor(element);
+        const dx = current.x - action.start.x;
+        const dy = current.y - action.start.y;
+
+        if (action.type === "drag") {
+          l.x = action.layout.x + dx;
+          l.y = action.layout.y + dy;
+        }
+
+        if (action.type === "resize") {
+          const minSize = element.type === "text" ? 24 : 16;
+          let next = clone(action.layout);
+          if (action.handle.includes("e")) next.w = Math.max(minSize, action.layout.w + dx);
+          if (action.handle.includes("s")) next.h = Math.max(minSize, action.layout.h + dy);
+          if (action.handle.includes("w")) {
+            next.x = action.layout.x + dx;
+            next.w = Math.max(minSize, action.layout.w - dx);
+          }
+          if (action.handle.includes("n")) {
+            next.y = action.layout.y + dy;
+            next.h = Math.max(minSize, action.layout.h - dy);
+          }
+          if (element.type === "text" && action.layout.fontSize) {
+            next.fontSize = Math.max(8, action.layout.fontSize * (next.h / Math.max(1, action.layout.h)));
+          }
+          next = applyAspectLockedResize(element, next, action.layout, action.handle);
+          Object.assign(l, next);
+        }
+
+        if (action.type === "rotate") {
+          const cx = action.layout.x + action.layout.w / 2;
+          const cy = action.layout.y + action.layout.h / 2;
+          const startAngle = Math.atan2(action.start.y - cy, action.start.x - cx) * 180 / Math.PI;
+          const currentAngle = Math.atan2(current.y - cy, current.x - cx) * 180 / Math.PI;
+          l.rotation = action.layout.rotation + currentAngle - startAngle;
+        }
+
+        render();
+      });
+
+      stage.addEventListener("pointerup", (event) => {
+        if (action) {
+          try {
+            stage.releasePointerCapture(event.pointerId);
+          } catch (error) {
+            console.warn(error);
+          }
+          action = null;
+          saveProject();
+        }
+      });
+
+      inspectorEl.addEventListener("input", (event) => {
+        const element = selectedElement();
+        if (!element) return;
+        if (event.target.dataset.layout) {
+          const key = event.target.dataset.layout;
+          const value = Number(event.target.value);
+          const layout = layoutFor(element);
+          const previous = clone(layout);
+          layout[key] = Number.isFinite(value) ? value : 0;
+          if (isAspectLocked(element) && (key === "w" || key === "h") && previous.w && previous.h) {
+            const aspect = previous.w / previous.h;
+            if (key === "w") {
+              layout.h = Math.max(16, layout.w / aspect);
+            }
+            if (key === "h") {
+              layout.w = Math.max(16, layout.h * aspect);
+            }
+          }
+        }
+        if (event.target.dataset.field) {
+          const key = event.target.dataset.field;
+          if (event.target.type === "checkbox") {
+            element[key] = event.target.checked;
+          } else if (key === "strokeWidth") {
+            const value = Number(event.target.value);
+            element[key] = Number.isFinite(value) ? value : element[key];
+          } else if (key === "assetKey") {
+            element.assetKey = event.target.value;
+            const asset = generatedAssetGroups[element.assetGroup]?.[element.assetKey];
+            if (asset) {
+              element.src = asset.src;
+            }
+          } else {
+            element[key] = event.target.value;
+          }
+        }
+        render();
+      });
+
+      inspectorEl.addEventListener("click", (event) => {
+        const tool = event.target?.closest("[data-tool]")?.dataset?.tool;
+        const element = selectedElement();
+        if (!tool || !element) return;
+        const l = layoutFor(element);
+        if (tool === "flipX") l.flipX = !l.flipX;
+        if (tool === "flipY") l.flipY = !l.flipY;
+        if (tool === "front") moveLayer(element.id, 1);
+        if (tool === "back") moveLayer(element.id, -1);
+        if (tool === "duplicate") duplicateElement(element);
+        if (tool === "delete") deleteElement(element.id);
+        saveProject();
+        render();
+      });
+
+      function moveLayer(id, direction) {
+        const index = project.elements.findIndex((element) => element.id === id);
+        const nextIndex = index + direction;
+        if (index < 0 || nextIndex < 0 || nextIndex >= project.elements.length) return;
+        const [element] = project.elements.splice(index, 1);
+        project.elements.splice(nextIndex, 0, element);
+      }
+
+      function duplicateElement(element) {
+        const copy = clone(element);
+        copy.id = `${element.id}-${Date.now()}`;
+        copy.name = `${element.name} copy`;
+        Object.values(copy.layouts).forEach((layout) => {
+          layout.x += 24;
+          layout.y += 24;
+        });
+        project.elements.push(copy);
+        selectedId = copy.id;
+      }
+
+      function deleteElement(id) {
+        const index = project.elements.findIndex((element) => element.id === id);
+        if (index < 0) return;
+        project.elements.splice(index, 1);
+        selectedId = project.elements[Math.max(0, index - 1)]?.id || null;
+      }
+
+      saveBtn.addEventListener("click", saveProject);
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        if (!window.confirm("Reset this editor to the seeded ad layout?")) return;
+        project = { elements: clone(seedElements) };
+        selectedId = "product";
+        saveProject();
+        render();
+      });
+      document.getElementById("fitBtn").addEventListener("click", () => {
+        fitStageToWorkspace();
+      });
+      zoomRange.addEventListener("input", () => {
+        zoom = Number(zoomRange.value);
+        updateStageSize();
+      });
+      document.getElementById("syncSelectedBtn")?.addEventListener("click", () => {
+        const element = selectedElement();
+        if (!element) return;
+        syncElementToAllRatios(element, currentRatio);
+        saveProject();
+        render();
+      });
+      document.getElementById("syncAllBtn")?.addEventListener("click", () => {
+        project.elements.forEach((element) => syncElementToAllRatios(element, "story"));
+        saveProject();
+        render();
+      });
+      document.getElementById("exportBtn").addEventListener("click", () => exportPng(currentRatio));
+      document.getElementById("exportAllBtn").addEventListener("click", exportAllPngs);
+      Object.entries(safeZoneToggles).forEach(([key, toggle]) => {
+        toggle.addEventListener("change", () => {
+          safeZoneState[key] = toggle.checked;
+          render();
+        });
+      });
+
+      function syncElementToAllRatios(element, sourceRatio) {
+        const source = clone(layoutFor(element, sourceRatio));
+        const sourceCanvas = ratios[sourceRatio];
+        const sourceCx = (source.x + source.w / 2) / sourceCanvas.w;
+        const sourceCy = (source.y + source.h / 2) / sourceCanvas.h;
+        const sourceW = source.w / sourceCanvas.w;
+        const sourceH = source.h / sourceCanvas.h;
+        ratioOrder.forEach((key) => {
+          if (key === sourceRatio) return;
+          const target = ratios[key];
+          const next = layoutFor(element, key);
+          next.w = sourceW * target.w;
+          next.h = sourceH * target.h;
+          next.x = sourceCx * target.w - next.w / 2;
+          next.y = sourceCy * target.h - next.h / 2;
+          next.rotation = source.rotation || 0;
+          next.flipX = !!source.flipX;
+          next.flipY = !!source.flipY;
+          if (source.fontSize) {
+            next.fontSize = source.fontSize * Math.min(target.w / sourceCanvas.w, target.h / sourceCanvas.h);
+          }
+        });
+        setStatus(`Synced ${element.name} from ${ratios[sourceRatio].label}`);
+      }
+
+      async function exportAllPngs() {
+        const original = currentRatio;
+        for (const key of ratioOrder) {
+          await exportPng(key, false);
+        }
+        currentRatio = original;
+        render();
+        setStatus("Exported all PNGs");
+      }
+
+      async function exportPng(ratioKey, restore = true) {
+        const ratio = ratios[ratioKey];
+        const svg = buildExportSvg(ratioKey);
+        await inlineImages(svg);
+        const serialized = new XMLSerializer().serializeToString(svg);
+        const blob = new Blob([serialized], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const image = new Image();
+        image.decoding = "async";
+        image.src = url;
+        await image.decode();
+        const canvas = document.createElement("canvas");
+        canvas.width = ratio.w;
+        canvas.height = ratio.h;
+        const context = canvas.getContext("2d");
+        context.drawImage(image, 0, 0, ratio.w, ratio.h);
+        URL.revokeObjectURL(url);
+        const png = canvas.toDataURL("image/png");
+        const link = document.getElementById("downloadLink");
+        const exportTray = document.getElementById("exportTray");
+        const exportPreview = document.getElementById("exportPreview");
+        const exportName = document.getElementById("exportName");
+        const filename = `get-rid-of-dad-bod-template-001-${ratio.label.replace(/[:.]/g, "-")}.png`;
+        exportPreview.src = png;
+        exportName.textContent = `${ratio.label} PNG ready`;
+        link.href = png;
+        link.download = filename;
+        exportTray.hidden = false;
+        link.click();
+        if (restore) setStatus(`Exported ${ratio.label} PNG`);
+      }
+
+      function buildExportSvg(ratioKey) {
+        const ratio = ratios[ratioKey];
+        const svg = createSvgElement("svg", {
+          xmlns: SVG_NS,
+          width: ratio.w,
+          height: ratio.h,
+          viewBox: `0 0 ${ratio.w} ${ratio.h}`
+        });
+        svg.append(buildDefs(), buildBackground(ratio));
+        project.elements.forEach((element) => {
+          if (element.visible === false) return;
+          svg.appendChild(renderElement(element, ratioKey, false));
+        });
+        return svg;
+      }
+
+      async function inlineImages(svg) {
+        const images = [...svg.querySelectorAll("image")];
+        await Promise.all(images.map(async (image) => {
+          const href = image.getAttribute("href");
+          if (!href || href.startsWith("data:")) return;
+          const response = await fetch(href);
+          const blob = await response.blob();
+          const dataUrl = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.readAsDataURL(blob);
+          });
+          image.setAttribute("href", dataUrl);
+        }));
+      }
+
+      window.adEditor = {
+        get currentRatio() {
+          return currentRatio;
+        },
+        get project() {
+          return project;
+        },
+        buildExportSvg,
+        inlineImages,
+        hydrateProject,
+        saveProject,
+        syncElementToAllRatios,
+        syncSelectedToAllRatios() {
+          const element = selectedElement();
+          if (!element) return false;
+          syncElementToAllRatios(element, currentRatio);
+          saveProject();
+          render();
+          return true;
+        },
+        autoLayoutAllFromStory() {
+          project.elements.forEach((element) => syncElementToAllRatios(element, "story"));
+          saveProject();
+          render();
+          return true;
+        },
+        exportPng,
+        exportAllPngs,
+        reset() {
+          project = { elements: clone(seedElements) };
+          selectedId = "product";
+          render();
+        }
+      };
+
+      render();
+      hydrateProject();
+    </script>
+  </body>
+</html>
