@@ -1,5 +1,27 @@
 {
   "name": "Get Rid Of Dad Bod",
   "slug": "get-rid-of-dad-bod",
+  "brandColors": [
+    {
+      "name": "Brand blue",
+      "value": "#184c94"
+    },
+    {
+      "name": "Sky blue",
+      "value": "#2079b8"
+    },
+    {
+      "name": "Deep navy",
+      "value": "#123861"
+    },
+    {
+      "name": "Energy yellow",
+      "value": "#ffe256"
+    },
+    {
+      "name": "Ink",
+      "value": "#10213a"
+    }
+  ],
   "brandAssets": {}
 }

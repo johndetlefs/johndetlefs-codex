@@ -245,6 +245,86 @@
         color: #0f4f9f;
       }
 
+      .background-presets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .background-preset {
+        display: grid;
+        gap: 5px;
+        min-height: 76px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 6px;
+        background: #fff;
+        color: #263248;
+        text-align: left;
+      }
+
+      .background-preset.active {
+        border-color: var(--focus);
+        background: #eaf3ff;
+      }
+
+      .background-swatch {
+        display: block;
+        height: 42px;
+        border: 1px solid rgba(23, 31, 45, 0.14);
+        border-radius: 6px;
+        background: var(--gradient-preview);
+      }
+
+      .background-preset span:last-child {
+        overflow: hidden;
+        font-size: 11px;
+        font-weight: 800;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .background-custom {
+        display: grid;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .background-custom .field-grid {
+        gap: 6px;
+      }
+
+      .colour-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .colour-grid .field input {
+        min-height: 34px;
+        padding: 3px;
+      }
+
+      .colour-grid .field input[data-bg-active="true"] {
+        border-color: var(--focus);
+        box-shadow: 0 0 0 2px rgba(44, 123, 229, 0.18);
+      }
+
+      .brand-colour-palette {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .brand-colour-swatch {
+        height: 28px;
+        border: 1px solid rgba(23, 31, 45, 0.16);
+        border-radius: 7px;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 42%),
+          var(--swatch);
+      }
+
       .reference {
         display: block;
         width: 100%;
@@ -815,6 +895,11 @@
         </section>
 
         <section class="panel-section">
+          <h2 class="panel-title">Background</h2>
+          <div id="backgroundPanel"></div>
+        </section>
+
+        <section class="panel-section">
           <h2 class="panel-title">Reference</h2>
           <img class="reference" id="referenceImage" src="/templates/r01-feature-benefit-product-hero/reference/original.webp" alt="Reference feature benefit ad" />
           <p class="small-note" id="referenceNote">Source reference for arrow style, callout placement, product hero hierarchy, and benefit layout.</p>
@@ -896,7 +981,10 @@
         referenceImage: "/templates/r01-feature-benefit-product-hero/reference/original.webp",
         referenceNote: "Source reference for arrow style, callout placement, product hero hierarchy, and benefit layout.",
         exportPrefix: "product-ad",
-        backgroundStops: ["#2079b8", "#184c94", "#123861"]
+        backgroundStops: ["#2079b8", "#184c94", "#123861"],
+        background: null,
+        backgroundPresets: [],
+        brandColors: []
       };
 
       const ratios = {
@@ -1033,16 +1121,19 @@
 
       let generatedAssetGroups = { arrows: {}, icons: {} };
       let seedElements = [];
+      let seedBackground = null;
 
-      let project = { elements: clone(seedElements) };
+      let project = { background: null, elements: clone(seedElements) };
       let currentRatio = "story";
       let selectedId = "product";
       let action = null;
       let zoom = 52;
       let saveSequence = 0;
+      let activeBackgroundStopIndex = 0;
 
       const stage = document.getElementById("stage");
       const ratioGrid = document.getElementById("ratioGrid");
+      const backgroundPanel = document.getElementById("backgroundPanel");
       const layersEl = document.getElementById("layers");
       const inspectorEl = document.getElementById("inspector");
       const statusEl = document.getElementById("status");
@@ -1069,10 +1160,160 @@
         return JSON.parse(JSON.stringify(value));
       }
 
+      function getConfigBackgroundStops() {
+        const stops = Array.isArray(editorConfig.backgroundStops) && editorConfig.backgroundStops.length
+          ? editorConfig.backgroundStops
+          : ["#2079b8", "#184c94", "#123861"];
+        return stops.map((color, index) => normaliseColor(color, ["#2079b8", "#184c94", "#123861"][index] || "#184c94"));
+      }
+
+      function normaliseColor(value, fallback = "#184c94") {
+        const text = String(value || "").trim();
+        if (/^#[0-9a-f]{6}$/i.test(text)) return text.toLowerCase();
+        if (/^#[0-9a-f]{3}$/i.test(text)) {
+          return `#${text.slice(1).split("").map((char) => char + char).join("")}`.toLowerCase();
+        }
+        return fallback;
+      }
+
+      function normaliseStops(stops) {
+        const fallback = getConfigBackgroundStops();
+        const source = Array.isArray(stops) && stops.length ? stops : fallback;
+        return [0, 1, 2].map((index) => normaliseColor(source[index], fallback[index] || fallback[fallback.length - 1] || "#184c94"));
+      }
+
+      function clampNumber(value, min, max, fallback) {
+        const number = Number(value);
+        if (!Number.isFinite(number)) return fallback;
+        return Math.max(min, Math.min(max, number));
+      }
+
+      function normaliseBackground(value) {
+        const source = value && typeof value === "object" ? value : {};
+        const id = source.presetId || source.id || "custom";
+        return {
+          presetId: id,
+          sourcePresetId: source.sourcePresetId || (id === "custom" ? null : id),
+          name: source.name || source.label || (id === "custom" ? "Custom" : "Suggested"),
+          type: source.type === "radial" ? "radial" : "linear",
+          angle: clampNumber(source.angle, 0, 360, 180),
+          positionX: clampNumber(source.positionX ?? source.x ?? source.position?.x, 0, 100, 50),
+          positionY: clampNumber(source.positionY ?? source.y ?? source.position?.y, 0, 100, 50),
+          stops: normaliseStops(source.stops || source.backgroundStops)
+        };
+      }
+
+      function getBrandColors() {
+        const configured = Array.isArray(editorConfig.brandColors) ? editorConfig.brandColors : [];
+        const colors = configured.map((color, index) => {
+          const value = normaliseColor(typeof color === "string" ? color : color.value);
+          return {
+            name: typeof color === "string" ? `Brand ${index + 1}` : (color.name || color.label || `Brand ${index + 1}`),
+            value
+          };
+        });
+
+        if (colors.length) return uniqueBrandColors(colors);
+
+        return uniqueBrandColors(getConfigBackgroundStops().map((value, index) => ({
+          name: `Brand ${index + 1}`,
+          value
+        })));
+      }
+
+      function uniqueBrandColors(colors) {
+        const seen = new Set();
+        return colors.filter((color) => {
+          if (seen.has(color.value)) return false;
+          seen.add(color.value);
+          return true;
+        });
+      }
+
+      function adjustHexColor(color, amount) {
+        const hex = normaliseColor(color).slice(1);
+        const channels = [0, 2, 4].map((start) => parseInt(hex.slice(start, start + 2), 16));
+        const adjusted = channels.map((channel) => {
+          const next = amount >= 0
+            ? channel + (255 - channel) * amount
+            : channel * (1 + amount);
+          return Math.round(Math.max(0, Math.min(255, next))).toString(16).padStart(2, "0");
+        });
+        return `#${adjusted.join("")}`;
+      }
+
+      function getBackgroundPresets() {
+        const configured = Array.isArray(editorConfig.backgroundPresets) ? editorConfig.backgroundPresets : [];
+        if (configured.length) {
+          return configured.map((preset, index) => {
+            const normalised = normaliseBackground({ ...preset, presetId: preset.id || `preset-${index}` });
+            normalised.presetId = preset.id || `preset-${index}`;
+            normalised.sourcePresetId = normalised.presetId;
+            normalised.name = preset.name || preset.label || `Preset ${index + 1}`;
+            return normalised;
+          });
+        }
+
+        const stops = getConfigBackgroundStops();
+        return [
+          {
+            presetId: "brand-depth",
+            name: "Brand depth",
+            type: "linear",
+            angle: 180,
+            positionX: 50,
+            positionY: 50,
+            stops
+          },
+          {
+            presetId: "top-glow",
+            name: "Top glow",
+            type: "radial",
+            angle: 180,
+            positionX: 50,
+            positionY: 24,
+            stops: [adjustHexColor(stops[0], 0.18), stops[1], adjustHexColor(stops[2], -0.2)]
+          },
+          {
+            presetId: "diagonal-sweep",
+            name: "Diagonal sweep",
+            type: "linear",
+            angle: 145,
+            positionX: 50,
+            positionY: 50,
+            stops: [adjustHexColor(stops[0], 0.12), stops[1], adjustHexColor(stops[2], -0.12)]
+          },
+          {
+            presetId: "product-halo",
+            name: "Product halo",
+            type: "radial",
+            angle: 180,
+            positionX: 50,
+            positionY: 58,
+            stops: [adjustHexColor(stops[0], 0.22), stops[1], stops[2]]
+          }
+        ].map(normaliseBackground);
+      }
+
+      function backgroundCss(background) {
+        const bg = normaliseBackground(background);
+        const stops = bg.stops.join(", ");
+        if (bg.type === "radial") {
+          return `radial-gradient(circle at ${bg.positionX}% ${bg.positionY}%, ${stops})`;
+        }
+        return `linear-gradient(${bg.angle}deg, ${stops})`;
+      }
+
+      function currentBackground() {
+        project.background = normaliseBackground(project.background || editorConfig.background);
+        return project.background;
+      }
+
       function applyEditorConfig(config) {
         editorConfig = { ...editorConfig, ...config };
         STORAGE_KEY = editorConfig.storageKey || STORAGE_KEY;
         generatedAssetGroups = editorConfig.generatedAssetGroups || generatedAssetGroups;
+        editorConfig.background = normaliseBackground(editorConfig.background || { stops: editorConfig.backgroundStops });
 
         document.title = editorConfig.title;
         document.getElementById("editorTitle").textContent = editorConfig.title;
@@ -1103,6 +1344,13 @@
         return null;
       }
 
+      function normaliseProject(projectValue) {
+        const next = projectValue && typeof projectValue === "object" ? clone(projectValue) : {};
+        next.elements = Array.isArray(next.elements) ? next.elements : [];
+        next.background = normaliseBackground(next.background || editorConfig.background || { stops: editorConfig.backgroundStops });
+        return next;
+      }
+
       async function loadProject() {
         try {
           const response = await fetch(`${PROJECT_ENDPOINT}?storageKey=${encodeURIComponent(STORAGE_KEY)}`, {
@@ -1126,14 +1374,15 @@
         } catch (error) {
           // Corrupt local browser data should not prevent the seeded editor from opening.
         }
-        return { project: { elements: clone(seedElements) }, source: "seed layout" };
+        return { project: { background: normaliseBackground(editorConfig.background), elements: clone(seedElements) }, source: "seed layout" };
       }
 
       async function hydrateProject() {
         await loadEditorConfig();
         const loaded = await loadProject();
-        project = loaded.project;
+        project = normaliseProject(loaded.project);
         seedElements = clone(project.elements);
+        seedBackground = clone(project.background);
         if (!selectedElement()) selectedId = project.elements[0]?.id || null;
         render();
         setStatus(`Loaded ${loaded.source}`);
@@ -1244,7 +1493,7 @@
         return `translate(${cx} ${cy}) rotate(${layout.rotation || 0}) scale(${sx} ${sy}) translate(${-layout.w / 2} ${-layout.h / 2})`;
       }
 
-      function render() {
+      function render(options = {}) {
         const ratio = ratios[currentRatio];
         stage.setAttribute("viewBox", `0 0 ${ratio.w} ${ratio.h}`);
         stage.setAttribute("width", ratio.w);
@@ -1265,6 +1514,7 @@
         }
 
         renderRatioButtons();
+        if (!options.skipBackgroundPanel) renderBackgroundPanel();
         renderLayers();
         renderInspector();
         syncSafeZoneControlAvailability();
@@ -1274,8 +1524,18 @@
 
       function buildDefs() {
         const defs = createSvgElement("defs");
-        const gradient = createSvgElement("linearGradient", { id: "blueBg", x1: "0", y1: "0", x2: "0", y2: "1" });
-        const stops = editorConfig.backgroundStops?.length ? editorConfig.backgroundStops : ["#2079b8", "#184c94", "#123861"];
+        const background = currentBackground();
+        const gradient = background.type === "radial"
+          ? createSvgElement("radialGradient", {
+              id: "adBg",
+              cx: `${background.positionX}%`,
+              cy: `${background.positionY}%`,
+              fx: `${background.positionX}%`,
+              fy: `${background.positionY}%`,
+              r: "86%"
+            })
+          : createSvgElement("linearGradient", { id: "adBg", ...linearGradientCoords(background) });
+        const stops = background.stops;
         const lastIndex = Math.max(stops.length - 1, 1);
         stops.forEach((color, index) => {
           const offset = `${Math.round((index / lastIndex) * 100)}%`;
@@ -1287,9 +1547,24 @@
         return defs;
       }
 
+      function linearGradientCoords(background) {
+        const angle = ((background.angle || 180) - 90) * Math.PI / 180;
+        const dx = Math.cos(angle);
+        const dy = Math.sin(angle);
+        const span = 0.5 / Math.max(Math.abs(dx), Math.abs(dy), 0.001);
+        const cx = (background.positionX || 50) / 100;
+        const cy = (background.positionY || 50) / 100;
+        return {
+          x1: cx - dx * span,
+          y1: cy - dy * span,
+          x2: cx + dx * span,
+          y2: cy + dy * span
+        };
+      }
+
       function buildBackground(ratio) {
         const group = createSvgElement("g");
-        group.appendChild(createSvgElement("rect", { x: 0, y: 0, width: ratio.w, height: ratio.h, fill: "url(#blueBg)" }));
+        group.appendChild(createSvgElement("rect", { x: 0, y: 0, width: ratio.w, height: ratio.h, fill: "url(#adBg)" }));
         for (let y = 0; y < ratio.h; y += 70) {
           group.appendChild(createSvgElement("rect", {
             x: -20,
@@ -1587,6 +1862,71 @@
           });
           ratioGrid.appendChild(button);
         });
+      }
+
+      function renderBackgroundPanel() {
+        const background = currentBackground();
+        const presets = getBackgroundPresets();
+        const brandColors = getBrandColors();
+        const brandColorOptions = brandColors.map((color) => `<option value="${escapeAttr(color.value)}">${escapeHtml(color.name)}</option>`).join("");
+        const brandSwatches = brandColors.map((color) => `
+          <button class="brand-colour-swatch" type="button" data-bg-colour="${escapeAttr(color.value)}" title="${escapeAttr(color.name)}" aria-label="Use ${escapeAttr(color.name)}" style="--swatch: ${escapeAttr(color.value)}"></button>
+        `).join("");
+        const presetButtons = presets.map((preset) => {
+          const isActive = background.presetId === preset.presetId;
+          return `
+            <button class="background-preset${isActive ? " active" : ""}" type="button" data-bg-preset="${escapeAttr(preset.presetId)}" title="${escapeAttr(preset.name)}">
+              <span class="background-swatch" style="--gradient-preview: ${escapeAttr(backgroundCss(preset))}"></span>
+              <span>${escapeHtml(preset.name)}</span>
+            </button>
+          `;
+        }).join("");
+        backgroundPanel.innerHTML = `
+          <div class="background-presets">
+            ${presetButtons}
+          </div>
+          <div class="background-custom">
+            <div class="field-grid">
+              <div class="field">
+                <label>Type</label>
+                <select data-bg-field="type">
+                  <option value="linear"${background.type === "linear" ? " selected" : ""}>Linear</option>
+                  <option value="radial"${background.type === "radial" ? " selected" : ""}>Radial</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Angle</label>
+                <input data-bg-field="angle" type="number" min="0" max="360" step="1" value="${round(background.angle)}" />
+              </div>
+              <div class="field">
+                <label>Position X</label>
+                <input data-bg-field="positionX" type="number" min="0" max="100" step="1" value="${round(background.positionX)}" />
+              </div>
+              <div class="field">
+                <label>Position Y</label>
+                <input data-bg-field="positionY" type="number" min="0" max="100" step="1" value="${round(background.positionY)}" />
+              </div>
+            </div>
+            <div class="colour-grid">
+              ${background.stops.map((color, index) => `
+                <div class="field">
+                  <label>${index === 0 ? "Start" : index === 1 ? "Middle" : "End"}</label>
+                  <input data-bg-stop="${index}" data-bg-active="${activeBackgroundStopIndex === index ? "true" : "false"}" list="brandColourList" type="color" value="${escapeAttr(color)}" />
+                </div>
+              `).join("")}
+            </div>
+            <datalist id="brandColourList">
+              ${brandColorOptions}
+            </datalist>
+            <div class="field wide">
+              <label>Brand colours</label>
+              <div class="brand-colour-palette">
+                ${brandSwatches}
+              </div>
+            </div>
+          </div>
+          <p class="small-note">Click a suggestion to seed the custom controls, then tune colour, gradient type, angle, and focal position.</p>
+        `;
       }
 
       function renderLayers() {
@@ -1927,6 +2267,81 @@
         render();
       });
 
+      function markBackgroundAsCustom(background) {
+        const previousPresetId = background.presetId === "custom" ? background.sourcePresetId : background.presetId;
+        background.presetId = "custom";
+        background.sourcePresetId = previousPresetId || background.sourcePresetId;
+        background.name = "Custom";
+        backgroundPanel.querySelectorAll(".background-preset.active").forEach((button) => button.classList.remove("active"));
+      }
+
+      function setActiveBackgroundStop(index) {
+        if (!Number.isInteger(index) || index < 0 || index > 2) return;
+        activeBackgroundStopIndex = index;
+        backgroundPanel.querySelectorAll("[data-bg-stop]").forEach((input) => {
+          input.dataset.bgActive = Number(input.dataset.bgStop) === activeBackgroundStopIndex ? "true" : "false";
+        });
+      }
+
+      backgroundPanel.addEventListener("focusin", (event) => {
+        if (event.target.dataset.bgStop === undefined) return;
+        setActiveBackgroundStop(Number(event.target.dataset.bgStop));
+      });
+
+      backgroundPanel.addEventListener("click", (event) => {
+        if (event.target.dataset.bgStop !== undefined) {
+          setActiveBackgroundStop(Number(event.target.dataset.bgStop));
+          return;
+        }
+
+        const brandColour = event.target?.closest("[data-bg-colour]");
+        if (brandColour) {
+          const background = currentBackground();
+          markBackgroundAsCustom(background);
+          background.stops[activeBackgroundStopIndex] = normaliseColor(brandColour.dataset.bgColour, background.stops[activeBackgroundStopIndex]);
+          setStatus(`Applied ${brandColour.title || "brand colour"} - press Save`);
+          render();
+          return;
+        }
+
+        const presetId = event.target?.closest("[data-bg-preset]")?.dataset?.bgPreset;
+        if (!presetId) return;
+        const preset = getBackgroundPresets().find((item) => item.presetId === presetId);
+        if (!preset) return;
+        project.background = {
+          ...clone(preset),
+          presetId,
+          sourcePresetId: presetId,
+          name: preset.name
+        };
+        setStatus(`Background set to ${preset.name} - press Save`);
+        render();
+      });
+
+      backgroundPanel.addEventListener("input", (event) => {
+        const background = currentBackground();
+        markBackgroundAsCustom(background);
+
+        if (event.target.dataset.bgStop !== undefined) {
+          const index = Number(event.target.dataset.bgStop);
+          if (Number.isInteger(index) && index >= 0 && index < background.stops.length) {
+            setActiveBackgroundStop(index);
+            background.stops[index] = normaliseColor(event.target.value, background.stops[index]);
+          }
+        }
+
+        if (event.target.dataset.bgField) {
+          const key = event.target.dataset.bgField;
+          if (key === "type") background.type = event.target.value === "radial" ? "radial" : "linear";
+          if (key === "angle") background.angle = clampNumber(event.target.value, 0, 360, background.angle);
+          if (key === "positionX") background.positionX = clampNumber(event.target.value, 0, 100, background.positionX);
+          if (key === "positionY") background.positionY = clampNumber(event.target.value, 0, 100, background.positionY);
+        }
+
+        setStatus("Background updated - press Save");
+        render({ skipBackgroundPanel: true });
+      });
+
       inspectorEl.addEventListener("click", (event) => {
         const tool = event.target?.closest("[data-tool]")?.dataset?.tool;
         const element = selectedElement();
@@ -1972,7 +2387,7 @@
       saveBtn.addEventListener("click", saveProject);
       document.getElementById("resetBtn").addEventListener("click", () => {
         if (!window.confirm("Reset this editor to the seeded ad layout?")) return;
-        project = { elements: clone(seedElements) };
+        project = { background: clone(seedBackground), elements: clone(seedElements) };
         selectedId = "product";
         saveProject();
         render();
@@ -2197,7 +2612,7 @@
         exportAllPngs,
         openAllFormatPreview,
         reset() {
-          project = { elements: clone(seedElements) };
+          project = { background: clone(seedBackground), elements: clone(seedElements) };
           selectedId = "product";
           render();
         }

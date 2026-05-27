@@ -54,6 +54,14 @@ http://127.0.0.1:8765/core/editor/meta-image-ad-editor.html
 
 The editor calls `/api/meta-image-ad-editor/config` to load the selected product's title, background, reference image, export prefix, and merged asset groups. Saves go to the selected product's `ads/<template>/editor-state.json`.
 
+Backgrounds are part of the saved editor project. Product configs can provide:
+
+- `background`: the default gradient object for new or legacy editor states.
+- `backgroundPresets`: suggested gradient starting points shown in the editor.
+- `brandColors` in `clients/<client>/brand.json`: reusable brand palette swatches shown beside the custom gradient colour stops.
+
+Clicking a suggested background copies it into the project's editable custom background. The custom controls then save colour stops, gradient type, angle, and focal position with the rest of the editor state, so exports and previews use the same gradient as the canvas.
+
 For a specific audience or offer angle, pass `--angle <angle-slug>`. The state path becomes:
 
 ```text

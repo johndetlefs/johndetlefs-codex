@@ -9,6 +9,71 @@
     "#d8cfaa",
     "#7f8969"
   ],
+  "background": {
+    "type": "linear",
+    "angle": 180,
+    "positionX": 50,
+    "positionY": 50,
+    "stops": [
+      "#f4efe1",
+      "#d8cfaa",
+      "#7f8969"
+    ]
+  },
+  "backgroundPresets": [
+    {
+      "id": "alessa-cellar-olive",
+      "name": "Cellar olive",
+      "type": "linear",
+      "angle": 180,
+      "positionX": 50,
+      "positionY": 50,
+      "stops": [
+        "#f4efe1",
+        "#d8cfaa",
+        "#7f8969"
+      ]
+    },
+    {
+      "id": "alessa-cherry-spotlight",
+      "name": "Cherry spotlight",
+      "type": "radial",
+      "angle": 180,
+      "positionX": 50,
+      "positionY": 56,
+      "stops": [
+        "#ead7b1",
+        "#8d2f38",
+        "#2a302d"
+      ]
+    },
+    {
+      "id": "alessa-cream-paper",
+      "name": "Cream paper",
+      "type": "linear",
+      "angle": 155,
+      "positionX": 50,
+      "positionY": 50,
+      "stops": [
+        "#fff8e9",
+        "#dfd1a7",
+        "#8a8f67"
+      ]
+    },
+    {
+      "id": "alessa-rosso-depth",
+      "name": "Rosso depth",
+      "type": "radial",
+      "angle": 180,
+      "positionX": 46,
+      "positionY": 28,
+      "stops": [
+        "#cfa071",
+        "#6f2330",
+        "#202621"
+      ]
+    }
+  ],
   "primaryProductImage": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/product-shots/visner-di-pergola-cutout.png",
   "sourceAnalysis": "/clients/alessa-vino/products/visner-di-pergola-2024/source/product-page-analysis.md"
 }

@@ -38,6 +38,18 @@ def merge_asset_groups(*groups: dict[str, Any]) -> dict[str, Any]:
     return merged
 
 
+def background_from_stops(stops: Any) -> dict[str, Any]:
+    if not isinstance(stops, list) or not stops:
+        stops = ["#2079b8", "#184c94", "#123861"]
+    return {
+        "type": "linear",
+        "angle": 180,
+        "positionX": 50,
+        "positionY": 50,
+        "stops": stops,
+    }
+
+
 def build_context(args: argparse.Namespace) -> dict[str, Any]:
     template_dir = PRODUCT_ADS_ROOT / "templates" / args.template
     client_dir = PRODUCT_ADS_ROOT / "clients" / args.client
@@ -52,6 +64,8 @@ def build_context(args: argparse.Namespace) -> dict[str, Any]:
     template_assets = load_json(template_dir / "asset-groups.json", {})
     base_ad_assets = load_json(base_ad_dir / "asset-groups.json", {})
     ad_assets = load_json(ad_dir / "asset-groups.json", {})
+    background_stops = product.get("backgroundStops") or template.get("defaultBackgroundStops") or ["#2079b8", "#184c94", "#123861"]
+    background = product.get("background") or template.get("defaultBackground") or background_from_stops(background_stops)
 
     storage_key = f"{args.client}:{args.product}:{args.template}"
     if args.angle:
@@ -67,7 +81,10 @@ def build_context(args: argparse.Namespace) -> dict[str, Any]:
         "referenceImage": template.get("referenceImage", ""),
         "referenceNote": template.get("referenceNote", ""),
         "exportPrefix": product.get("exportPrefix") or f"{args.client}-{args.product}-{args.template}",
-        "backgroundStops": product.get("backgroundStops") or template.get("defaultBackgroundStops") or ["#2079b8", "#184c94", "#123861"],
+        "backgroundStops": background_stops,
+        "background": background,
+        "backgroundPresets": product.get("backgroundPresets") or template.get("backgroundPresets") or [],
+        "brandColors": product.get("brandColors") or brand.get("brandColors") or [],
         "generatedAssetGroups": merge_asset_groups(template_assets, base_ad_assets, ad_assets),
         "paths": {
             "stateFile": str(state_file.relative_to(PRODUCT_ADS_ROOT)),

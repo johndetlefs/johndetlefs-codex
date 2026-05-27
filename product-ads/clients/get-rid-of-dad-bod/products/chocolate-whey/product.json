@@ -9,6 +9,71 @@
     "#184c94",
     "#123861"
   ],
+  "background": {
+    "type": "linear",
+    "angle": 180,
+    "positionX": 50,
+    "positionY": 50,
+    "stops": [
+      "#2079b8",
+      "#184c94",
+      "#123861"
+    ]
+  },
+  "backgroundPresets": [
+    {
+      "id": "grdb-brand-blue",
+      "name": "Brand blue",
+      "type": "linear",
+      "angle": 180,
+      "positionX": 50,
+      "positionY": 50,
+      "stops": [
+        "#2079b8",
+        "#184c94",
+        "#123861"
+      ]
+    },
+    {
+      "id": "grdb-blue-glow",
+      "name": "Blue glow",
+      "type": "radial",
+      "angle": 180,
+      "positionX": 52,
+      "positionY": 34,
+      "stops": [
+        "#3aa0d8",
+        "#184c94",
+        "#0d2d5b"
+      ]
+    },
+    {
+      "id": "grdb-yellow-energy",
+      "name": "Yellow energy",
+      "type": "linear",
+      "angle": 145,
+      "positionX": 48,
+      "positionY": 52,
+      "stops": [
+        "#ffe256",
+        "#2079b8",
+        "#123861"
+      ]
+    },
+    {
+      "id": "grdb-source-green",
+      "name": "Source green",
+      "type": "radial",
+      "angle": 180,
+      "positionX": 50,
+      "positionY": 45,
+      "stops": [
+        "#67c551",
+        "#269743",
+        "#0b5c34"
+      ]
+    }
+  ],
   "primaryProductImage": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/product-shots/generated-ai/whey-pack-3quarter-ai-transparent.png",
   "sourceAnalysis": null
 }

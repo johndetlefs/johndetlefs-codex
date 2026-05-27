@@ -1,6 +1,28 @@
 {
   "name": "Alessa Vino",
   "slug": "alessa-vino",
+  "brandColors": [
+    {
+      "name": "Cream",
+      "value": "#f4efe1"
+    },
+    {
+      "name": "Cellar gold",
+      "value": "#d8cfaa"
+    },
+    {
+      "name": "Olive",
+      "value": "#7f8969"
+    },
+    {
+      "name": "Bottle charcoal",
+      "value": "#2a302d"
+    },
+    {
+      "name": "Cherry wine",
+      "value": "#8d2f38"
+    }
+  ],
   "brandAssets": {
     "logoOlive": "/clients/alessa-vino/brand-assets/alessa-vino-logo-olive.png"
   }
