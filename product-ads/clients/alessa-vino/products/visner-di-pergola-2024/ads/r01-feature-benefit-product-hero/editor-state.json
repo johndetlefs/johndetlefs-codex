@@ -296,7 +296,7 @@
       },
       {
         "id": "proteinArrow",
-        "name": "Protein arrow",
+        "name": "Sour cherry arrow",
         "type": "image",
         "assetGroup": "arrows",
         "assetKey": "arrow-curve-up-right",
@@ -345,8 +345,8 @@
         "name": "Sour cherry icon",
         "type": "image",
         "assetGroup": "icons",
-        "assetKey": "sour-cherry",
-        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/sour-cherry.png",
+        "assetKey": "sour-cherry-01",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-01.png",
         "layouts": {
           "story": {
             "x": 155.27877807617188,
@@ -384,7 +384,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "sour-cherry"
       },
       {
         "id": "proteinText",
@@ -444,8 +445,8 @@
         "name": "Wildflower icon",
         "type": "image",
         "assetGroup": "icons",
-        "assetKey": "wildflower",
-        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/wildflower.png",
+        "assetKey": "wildflowers-01",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-01.png",
         "layouts": {
           "story": {
             "x": 820,
@@ -483,7 +484,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "wildflowers"
       },
       {
         "id": "sugarText",
@@ -540,7 +542,7 @@
       },
       {
         "id": "sugarArrow",
-        "name": "Low sugar arrow",
+        "name": "Wildflower arrow",
         "type": "image",
         "assetGroup": "arrows",
         "assetKey": "arrow-down-left-curve-a",
@@ -589,8 +591,8 @@
         "name": "Marche ritual icon",
         "type": "image",
         "assetGroup": "icons",
-        "assetKey": "dessert-pairing",
-        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/dessert-pairing.png",
+        "assetKey": "marche-ritual-01",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-01.png",
         "layouts": {
           "story": {
             "x": 154,
@@ -628,7 +630,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "marche-ritual"
       },
       {
         "id": "leafText",
@@ -685,7 +688,7 @@
       },
       {
         "id": "leafArrow",
-        "name": "Grass fed arrow",
+        "name": "Marche ritual arrow",
         "type": "image",
         "assetGroup": "arrows",
         "assetKey": "arrow-down-right-curve-b",
@@ -734,8 +737,8 @@
         "name": "Chocolate pairing icon",
         "type": "image",
         "assetGroup": "icons",
-        "assetKey": "chocolate-pairing",
-        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/chocolate-pairing.png",
+        "assetKey": "chocolate-pairing-01",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-01.png",
         "layouts": {
           "story": {
             "x": 828,
@@ -773,7 +776,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "chocolate-pairing"
       },
       {
         "id": "prepText",
@@ -830,7 +834,7 @@
       },
       {
         "id": "prepArrow",
-        "name": "Prep arrow",
+        "name": "Chocolate pairing arrow",
         "type": "image",
         "assetGroup": "arrows",
         "assetKey": "arrow-down-left-curve-a",

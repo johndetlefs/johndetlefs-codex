@@ -346,7 +346,7 @@
         "type": "image",
         "assetGroup": "icons",
         "assetKey": "protein-flex-bicep",
-        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/protein-flex-bicep.png",
+        "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/protein-flex-bicep.png",
         "layouts": {
           "story": {
             "x": 171.97618103027344,
@@ -384,7 +384,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "protein"
       },
       {
         "id": "proteinText",
@@ -445,7 +446,7 @@
         "type": "image",
         "assetGroup": "icons",
         "assetKey": "low-sugar-cube-circle-slash",
-        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png",
+        "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/low-sugar-cube-circle-slash.png",
         "layouts": {
           "story": {
             "x": 814.8844604492188,
@@ -483,7 +484,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "low-sugar"
       },
       {
         "id": "sugarText",
@@ -590,7 +592,7 @@
         "type": "image",
         "assetGroup": "icons",
         "assetKey": "grass-leaf",
-        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/grass-leaf.png",
+        "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/grass-leaf.png",
         "layouts": {
           "story": {
             "x": 152.60487365722656,
@@ -628,7 +630,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "grass-fed"
       },
       {
         "id": "leafText",
@@ -735,7 +738,7 @@
         "type": "image",
         "assetGroup": "icons",
         "assetKey": "prep-shaker-check",
-        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/prep-shaker-check.png",
+        "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/prep-shaker-check.png",
         "layouts": {
           "story": {
             "x": 836.962646484375,
@@ -773,7 +776,8 @@
             "flipX": false,
             "flipY": false
           }
-        }
+        },
+        "assetSet": "prep"
       },
       {
         "id": "prepText",

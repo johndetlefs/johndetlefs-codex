@@ -34,11 +34,16 @@ Headline/subhead:
 
 Support icons:
 
-- Product-page icons converted into transparent white line assets:
-  - `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/sour-cherry.png`
-  - `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/wildflower.png`
-  - `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/dessert-pairing.png`
-  - `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/chocolate-pairing.png`
+- GPT Image 2.0 generated white monoline icon system, cut into transparent PNGs:
+  - Source sheet: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/gpt-image-2-r01-icon-sheet-v1-source.png`
+  - Contact sheet: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/gpt-image-2-r01-icons-contact-sheet-v1.png`
+  - Prompt/audit notes: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/gpt-image-2-r01-icon-sheet-v1-prompt.md`
+- Four variants are required for each callout:
+  - `sour-cherry-01.png` through `sour-cherry-04.png`
+  - `wildflowers-01.png` through `wildflowers-04.png`
+  - `marche-ritual-01.png` through `marche-ritual-04.png`
+  - `chocolate-pairing-01.png` through `chocolate-pairing-04.png`
+- Icons must stay in the product's R01 asset folder and be exposed through this ad's `asset-groups.json`; do not add them to the shared template asset group.
 
 Arrows:
 
@@ -47,7 +52,6 @@ Arrows:
   - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png`
   - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png`
 
-Future polish:
+Quality rule:
 
-- Generate a wine-specific white line icon sheet if the product-page icons feel too generic at final export size.
-- Useful additions: cherries, wine glass, Marche hill/crest cue, chocolate square, cheese wedge, dried herb sprig.
+- Do not use mixed product-page icon captures or hand-coded substitutes for this R01. The icon set must feel like one premium, commercially usable wine-ad system with consistent stroke weight, visual density, padding, and metaphor style.

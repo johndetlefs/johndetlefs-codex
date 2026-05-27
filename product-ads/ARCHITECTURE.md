@@ -5,7 +5,7 @@ The product ad system is split by ownership so templates can be reused across br
 ## Folder Ownership
 
 - `core/`: shared editor UI, persistence server, and reusable tooling.
-- `templates/`: source-ad templates, forensic teardowns, shared arrows/icons, and template-level asset manifests.
+- `templates/`: source-ad templates, forensic teardowns, shared structural assets such as arrows, and template-level asset manifests.
 - `clients/`: brand, product, product-page analysis, product images, client-specific icons, editor states, and exports.
 - `templates/legacy-reference-asset-requirements.md`: preserved first-pass notes for the wider R02-R11 template set until those templates are migrated into individual folders.
 
@@ -16,8 +16,8 @@ The product ad system is split by ownership so templates can be reused across br
 - `template.json`: editor-facing template metadata.
 - `forensic-teardown.md`: source-ad teardown and layout rules.
 - `asset-requirements.md`: reusable R01 asset requirements.
-- `asset-groups.json`: shared arrow/icon library for the editor.
-- `assets/`: shared generated arrows, icons, and icon sheets.
+- `asset-groups.json`: shared arrow library for the editor.
+- `assets/`: shared generated arrows and other source-format assets.
 - `reference/`: source reference image and URL.
 
 ## Current Clients
@@ -70,6 +70,8 @@ clients/<client>/products/<product>/ads/<template>/angles/<angle>/editor-state.j
 
 Angle-level `asset-groups.json` files are merged after template and base-ad asset groups, so an angle can add or override icons without duplicating the template library.
 
+Icon assets are filtered in the editor by `assetSet`. Each callout icon element should declare the specific set it belongs to, such as `sour-cherry`, `wildflowers`, `marche-ritual`, or `chocolate-pairing`. That keeps the inspector focused on valid variants for the selected callout instead of exposing every client or template icon.
+
 ## Preview Model
 
 Preview should be layered the same way the files are layered:
@@ -87,4 +89,5 @@ Do not make one flat gallery of every image once angles exist. It will become ha
 - Brand/product-specific assets live in `clients/`.
 - Client product images must be no-background production layers unless a specific template calls for a generated scene or hand-held hero shot.
 - Client-specific generated icons should be stored with the product, then exposed through that ad's `asset-groups.json`.
+- Production icon libraries should be generated as cohesive GPT Image 2.0 sheets, then cut into transparent PNGs and documented beside the final assets. Avoid one-off hand-coded or mixed-source icons for client callouts because inconsistent stroke, scale, and metaphor quality make the ad feel cheap.
 - Do not copy the shared editor, server, arrows, or common icon library into client folders.

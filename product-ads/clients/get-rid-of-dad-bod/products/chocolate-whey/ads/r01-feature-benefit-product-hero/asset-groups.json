@@ -1,0 +1,116 @@
+{
+  "icons": {
+    "protein-flex-bicep": {
+      "label": "Flex bicep",
+      "category": "Protein icons",
+      "set": "protein",
+      "callout": "Protein",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/protein-flex-bicep.png"
+    },
+    "protein-dumbbell": {
+      "label": "Dumbbell",
+      "category": "Protein icons",
+      "set": "protein",
+      "callout": "Protein",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/protein-dumbbell.png"
+    },
+    "protein-muscle-shield": {
+      "label": "Muscle shield",
+      "category": "Protein icons",
+      "set": "protein",
+      "callout": "Protein",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/protein-muscle-shield.png"
+    },
+    "protein-scoop-arm": {
+      "label": "Scoop arm",
+      "category": "Protein icons",
+      "set": "protein",
+      "callout": "Protein",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/protein-scoop-arm.png"
+    },
+    "low-sugar-cubes-slash": {
+      "label": "Cubes slash",
+      "category": "Low sugar icons",
+      "set": "low-sugar",
+      "callout": "Low sugar",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/low-sugar-cubes-slash.png"
+    },
+    "low-sugar-cube-circle-slash": {
+      "label": "Cube circle slash",
+      "category": "Low sugar icons",
+      "set": "low-sugar",
+      "callout": "Low sugar",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/low-sugar-cube-circle-slash.png"
+    },
+    "low-sugar-chocolate-slash": {
+      "label": "Chocolate slash",
+      "category": "Low sugar icons",
+      "set": "low-sugar",
+      "callout": "Low sugar",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/low-sugar-chocolate-slash.png"
+    },
+    "low-sugar-spoon-slash": {
+      "label": "Spoon slash",
+      "category": "Low sugar icons",
+      "set": "low-sugar",
+      "callout": "Low sugar",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/low-sugar-spoon-slash.png"
+    },
+    "grass-leaf": {
+      "label": "Leaf",
+      "category": "Grass-fed icons",
+      "set": "grass-fed",
+      "callout": "Grass fed",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/grass-leaf.png"
+    },
+    "grass-sprout": {
+      "label": "Sprout",
+      "category": "Grass-fed icons",
+      "set": "grass-fed",
+      "callout": "Grass fed",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/grass-sprout.png"
+    },
+    "grass-tuft": {
+      "label": "Grass tuft",
+      "category": "Grass-fed icons",
+      "set": "grass-fed",
+      "callout": "Grass fed",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/grass-tuft.png"
+    },
+    "grass-cow-outline": {
+      "label": "Cow outline",
+      "category": "Grass-fed icons",
+      "set": "grass-fed",
+      "callout": "Grass fed",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/grass-cow-outline.png"
+    },
+    "prep-shaker-check": {
+      "label": "Shaker check",
+      "category": "Prep icons",
+      "set": "prep",
+      "callout": "Prep",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/prep-shaker-check.png"
+    },
+    "prep-scoop-cup": {
+      "label": "Scoop cup",
+      "category": "Prep icons",
+      "set": "prep",
+      "callout": "Prep",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/prep-scoop-cup.png"
+    },
+    "prep-cup-check": {
+      "label": "Cup check",
+      "category": "Prep icons",
+      "set": "prep",
+      "callout": "Prep",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/prep-cup-check.png"
+    },
+    "prep-droplet-shaker": {
+      "label": "Droplet shaker",
+      "category": "Prep icons",
+      "set": "prep",
+      "callout": "Prep",
+      "src": "/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/prep-droplet-shaker.png"
+    }
+  }
+}

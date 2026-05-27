@@ -1,34 +1,116 @@
 {
   "icons": {
-    "sour-cherry": {
-      "label": "Sour cherry",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/sour-cherry.png"
+    "sour-cherry-01": {
+      "label": "Sour cherry cluster",
+      "category": "Sour cherry nectar icons",
+      "set": "sour-cherry",
+      "callout": "Sour cherry nectar",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-01.png"
     },
-    "wildflower": {
-      "label": "Wildflower",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/wildflower.png"
+    "sour-cherry-02": {
+      "label": "Sour cherry pair",
+      "category": "Sour cherry nectar icons",
+      "set": "sour-cherry",
+      "callout": "Sour cherry nectar",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-02.png"
     },
-    "dessert-pairing": {
-      "label": "Dessert pairing",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/dessert-pairing.png"
+    "sour-cherry-03": {
+      "label": "Sour cherry nectar drop",
+      "category": "Sour cherry nectar icons",
+      "set": "sour-cherry",
+      "callout": "Sour cherry nectar",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-03.png"
     },
-    "chocolate-pairing": {
-      "label": "Chocolate pairing",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/chocolate-pairing.png"
+    "sour-cherry-04": {
+      "label": "Sour cherry goblet",
+      "category": "Sour cherry nectar icons",
+      "set": "sour-cherry",
+      "callout": "Sour cherry nectar",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-04.png"
     },
-    "red-fruit": {
-      "label": "Red fruit",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/red-fruit.png"
+    "wildflowers-01": {
+      "label": "Wildflower sprig",
+      "category": "Wildflowers / dried herbs icons",
+      "set": "wildflowers",
+      "callout": "Wildflowers / dried herbs",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-01.png"
     },
-    "cheese-pairing": {
-      "label": "Cheese pairing",
-      "category": "Alessa Vino icons",
-      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/cheese-pairing.png"
+    "wildflowers-02": {
+      "label": "Wildflower bouquet",
+      "category": "Wildflowers / dried herbs icons",
+      "set": "wildflowers",
+      "callout": "Wildflowers / dried herbs",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-02.png"
+    },
+    "wildflowers-03": {
+      "label": "Dried herb leaves",
+      "category": "Wildflowers / dried herbs icons",
+      "set": "wildflowers",
+      "callout": "Wildflowers / dried herbs",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-03.png"
+    },
+    "wildflowers-04": {
+      "label": "Petal stem",
+      "category": "Wildflowers / dried herbs icons",
+      "set": "wildflowers",
+      "callout": "Wildflowers / dried herbs",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-04.png"
+    },
+    "marche-ritual-01": {
+      "label": "Marche ritual hills",
+      "category": "Marche ritual icons",
+      "set": "marche-ritual",
+      "callout": "Marche ritual",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-01.png"
+    },
+    "marche-ritual-02": {
+      "label": "Marche archway",
+      "category": "Marche ritual icons",
+      "set": "marche-ritual",
+      "callout": "Marche ritual",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-02.png"
+    },
+    "marche-ritual-03": {
+      "label": "Marche village",
+      "category": "Marche ritual icons",
+      "set": "marche-ritual",
+      "callout": "Marche ritual",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-03.png"
+    },
+    "marche-ritual-04": {
+      "label": "Ritual glass",
+      "category": "Marche ritual icons",
+      "set": "marche-ritual",
+      "callout": "Marche ritual",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-04.png"
+    },
+    "chocolate-pairing-01": {
+      "label": "Chocolate grid",
+      "category": "Chocolate pairing icons",
+      "set": "chocolate-pairing",
+      "callout": "Chocolate pairing",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-01.png"
+    },
+    "chocolate-pairing-02": {
+      "label": "Chocolate stack",
+      "category": "Chocolate pairing icons",
+      "set": "chocolate-pairing",
+      "callout": "Chocolate pairing",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-02.png"
+    },
+    "chocolate-pairing-03": {
+      "label": "Cocoa pairing",
+      "category": "Chocolate pairing icons",
+      "set": "chocolate-pairing",
+      "callout": "Chocolate pairing",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-03.png"
+    },
+    "chocolate-pairing-04": {
+      "label": "Dessert plate",
+      "category": "Chocolate pairing icons",
+      "set": "chocolate-pairing",
+      "callout": "Chocolate pairing",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-04.png"
     }
   }
 }

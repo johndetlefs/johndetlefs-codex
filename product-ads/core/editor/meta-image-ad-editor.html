@@ -1988,7 +1988,7 @@
             <div class="field"><label>Height</label><input data-layout="h" type="number" min="8" value="${round(l.h)}" /></div>
             <div class="field"><label>Rotate</label><input data-layout="rotation" type="number" value="${round(l.rotation || 0)}" /></div>
             ${element.type === "text" ? `<div class="field"><label>Font</label><input data-layout="fontSize" type="number" min="8" value="${round(l.fontSize || 32)}" /></div>` : `<div class="field"><label>Layer</label><input readonly value="${element.type}" /></div>`}
-            ${element.assetGroup ? `<div class="field wide"><label>Generated asset</label><select data-field="assetKey">${generatedAssetOptions(element.assetGroup, element.assetKey)}</select></div>` : ""}
+            ${element.assetGroup ? `<div class="field wide"><label>${element.assetGroup === "icons" ? "Icon variant" : "Generated asset"}</label><select data-field="assetKey">${generatedAssetOptions(element)}</select></div>` : ""}
             ${element.type === "arrow" ? `<div class="field wide"><label>Arrow asset</label><select data-field="arrow">${assetOptions(lineArrowAssets, element.arrow)}</select></div>` : ""}
             ${element.type === "vector" ? `<div class="field wide"><label>Icon asset</label><select data-field="vector">${assetOptions(lineIconAssets, element.vector)}</select></div>` : ""}
             ${canEditStroke ? `<div class="field"><label>Stroke width</label><input data-field="strokeWidth" type="number" min="1" max="30" step="0.5" value="${round(element.strokeWidth || (element.type === "arrow" ? 7 : 6.6))}" /></div>` : ""}
@@ -2016,10 +2016,21 @@
         }).join("");
       }
 
-      function generatedAssetOptions(groupName, selected) {
-        const collection = generatedAssetGroups[groupName] || {};
+      function generatedAssetOptions(element) {
+        const collection = generatedAssetGroups[element.assetGroup] || {};
+        const selected = element.assetKey;
+        const assetSet = element.assetSet;
+        let collectionEntries = Object.entries(collection);
+        if (assetSet) {
+          const selectedEntry = collectionEntries.find(([value]) => value === selected);
+          const filteredEntries = collectionEntries.filter(([, asset]) => asset.set === assetSet);
+          if (selectedEntry && !filteredEntries.some(([value]) => value === selected)) {
+            filteredEntries.unshift(selectedEntry);
+          }
+          collectionEntries = filteredEntries.length ? filteredEntries : collectionEntries;
+        }
         const grouped = new Map();
-        Object.entries(collection).forEach(([value, asset]) => {
+        collectionEntries.forEach(([value, asset]) => {
           const category = asset.category || "Assets";
           if (!grouped.has(category)) grouped.set(category, []);
           grouped.get(category).push([value, asset]);

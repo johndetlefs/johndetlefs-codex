@@ -62,7 +62,7 @@ Adapt for Alessa:
 - Headline plaque uses Alessa's dark olive/ink.
 - Subhead pill uses the store's gold accent.
 - Product layer uses the cut-out wine bottle: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/product-shots/visner-di-pergola-cutout.png`.
-- Icon support uses Alessa product-page assets cut to transparent white line art where available.
+- Icon support uses a GPT Image 2.0 generated white monoline set, cut into transparent PNG variants for each callout.
 
 ## Current R01 Implementation Lock
 
@@ -75,10 +75,13 @@ Product layer:
 
 Icon set:
 
-- `sour-cherry.png`
-- `wildflower.png`
-- `dessert-pairing.png`
-- `chocolate-pairing.png`
+- Source sheet: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/gpt-image-2-r01-icon-sheet-v1-source.png`
+- Contact sheet: `/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/gpt-image-2-r01-icons-contact-sheet-v1.png`
+- The editor exposes four variants per callout through `assetSet`:
+  - `sour-cherry`
+  - `wildflowers`
+  - `marche-ritual`
+  - `chocolate-pairing`
 
 Arrow set:
 
