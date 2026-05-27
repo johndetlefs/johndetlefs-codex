@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:python": "python3 -c \"from PIL import Image; print('Pillow', Image.__version__)\"",
+    "check:node": "node -e \"console.log('Node', process.version); console.log('Sharp', require('sharp').versions.sharp)\"",
+    "editor:grdb": "python3 core/editor/editor-server.py --client get-rid-of-dad-bod --product chocolate-whey --template r01-feature-benefit-product-hero --port 8765",
+    "editor:alessa": "python3 core/editor/editor-server.py --client alessa-vino --product visner-di-pergola-2024 --template r01-feature-benefit-product-hero --port 8765"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

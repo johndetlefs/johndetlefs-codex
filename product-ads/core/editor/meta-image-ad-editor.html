@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get Rid Of Dad Bod - Meta Ad Editor</title>
+    <title>Product Ads - Meta Ad Editor</title>
     <style>
       :root {
         --chrome: #101722;
@@ -20,6 +20,10 @@
 
       * {
         box-sizing: border-box;
+      }
+
+      [hidden] {
+        display: none !important;
       }
 
       body {
@@ -429,6 +433,96 @@
         background: var(--chrome-2);
       }
 
+      .preview-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        background: rgba(13, 20, 32, 0.86);
+        color: #ffffff;
+      }
+
+      .preview-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 58px;
+        padding: 12px 16px;
+        background: rgba(16, 23, 34, 0.94);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .preview-modal-header h2 {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+
+      .preview-modal-header p {
+        margin: 4px 0 0;
+        color: #aeb8c8;
+        font-size: 12px;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(210px, 1fr));
+        gap: 16px;
+        align-items: start;
+        overflow: auto;
+        padding: 18px;
+      }
+
+      .preview-card {
+        display: grid;
+        gap: 10px;
+        min-height: 240px;
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 8px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .preview-card header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .preview-card header span {
+        color: #aeb8c8;
+        font-weight: 700;
+      }
+
+      .preview-card img {
+        display: block;
+        width: 100%;
+        height: min(62vh, 520px);
+        object-fit: contain;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        background: #dfe6f0;
+      }
+
+      .preview-card.is-loading {
+        place-items: center;
+        min-height: 320px;
+        color: #c2ccdc;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .preview-card.is-error {
+        color: #ffd0d5;
+      }
+
       .inspector-empty {
         color: var(--muted);
         font-size: 13px;
@@ -564,6 +658,16 @@
           border-left: 0;
           max-height: 360px;
         }
+
+        .preview-grid {
+          grid-template-columns: repeat(2, minmax(220px, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .preview-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -627,6 +731,10 @@
         <rect x="3" y="14" width="7" height="7" rx="1" />
         <rect x="14" y="14" width="7" height="7" rx="1" />
       </symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18" />
+        <path d="M6 6l12 12" />
+      </symbol>
       <symbol id="icon-image-down" viewBox="0 0 24 24">
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <circle cx="8" cy="10" r="2" />
@@ -671,8 +779,8 @@
     </svg>
     <header class="topbar">
       <div class="brand">
-        <h1>Get Rid Of Dad Bod - Meta Ad Editor</h1>
-        <p>Edit the master creative, tune each ratio, then export all finished ad formats.</p>
+        <h1 id="editorTitle">Product Ads - Meta Ad Editor</h1>
+        <p id="editorSubtitle">Edit the master creative, tune each ratio, then export all finished ad formats.</p>
       </div>
       <div class="actions">
         <button class="btn icon-btn ghost" id="resetBtn" type="button" title="Reset" aria-label="Reset">
@@ -691,10 +799,10 @@
           <svg class="icon" aria-hidden="true"><use href="#icon-image-down"></use></svg>
           <span class="sr-only">Export all PNGs</span>
         </button>
-        <a class="link-btn icon-btn" href="meta-image-ad-template-gallery.html" title="Gallery" aria-label="Gallery">
+        <button class="btn icon-btn" id="previewAllBtn" type="button" title="Preview all formats" aria-label="Preview all formats">
           <svg class="icon" aria-hidden="true"><use href="#icon-gallery"></use></svg>
-          <span class="sr-only">Gallery</span>
-        </a>
+          <span class="sr-only">Preview all formats</span>
+        </button>
       </div>
     </header>
 
@@ -708,8 +816,8 @@
 
         <section class="panel-section">
           <h2 class="panel-title">Reference</h2>
-          <img class="reference" src="reference-ads/001-features-benefits/original.webp" alt="Reference feature benefit ad" />
-          <p class="small-note">This is the Grüns reference image for arrow style, callout placement, product hero hierarchy, and benefit layout.</p>
+          <img class="reference" id="referenceImage" src="/templates/r01-feature-benefit-product-hero/reference/original.webp" alt="Reference feature benefit ad" />
+          <p class="small-note" id="referenceNote">Source reference for arrow style, callout placement, product hero hierarchy, and benefit layout.</p>
         </section>
 
         <section class="panel-section">
@@ -763,11 +871,33 @@
       </aside>
     </main>
 
+    <section class="preview-modal" id="previewModal" aria-modal="true" aria-labelledby="previewTitle" role="dialog" hidden>
+      <header class="preview-modal-header">
+        <div>
+          <h2 id="previewTitle">All format previews</h2>
+          <p id="previewSubtitle">Rendering current saved layout across every Meta ratio.</p>
+        </div>
+        <button class="btn icon-btn ghost" id="closePreviewBtn" type="button" title="Close preview" aria-label="Close preview">
+          <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+          <span class="sr-only">Close preview</span>
+        </button>
+      </header>
+      <div class="preview-grid" id="previewGrid"></div>
+    </section>
+
     <script>
       const SVG_NS = "http://www.w3.org/2000/svg";
-      const STORAGE_KEY = "grdb-meta-ad-editor-v16";
+      const CONFIG_ENDPOINT = "/api/meta-image-ad-editor/config";
       const PROJECT_ENDPOINT = "/api/meta-image-ad-editor/project";
-      const PRODUCT_SRC = "generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png";
+      let STORAGE_KEY = "product-ads-editor";
+      let editorConfig = {
+        title: "Product Ads - Meta Ad Editor",
+        subtitle: "Edit the master creative, tune each ratio, then export all finished ad formats.",
+        referenceImage: "/templates/r01-feature-benefit-product-hero/reference/original.webp",
+        referenceNote: "Source reference for arrow style, callout placement, product hero hierarchy, and benefit layout.",
+        exportPrefix: "product-ad",
+        backgroundStops: ["#2079b8", "#184c94", "#123861"]
+      };
 
       const ratios = {
         story: { label: "9:16", use: "Stories", w: 1080, h: 1920 },
@@ -901,525 +1031,8 @@
         }
       };
 
-      const generatedAssetGroups = {
-        arrows: {
-          "arrow-corner-up-left": {
-            label: "Corner up-left",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-corner-up-left.png"
-          },
-          "arrow-corner-up-right": {
-            label: "Corner up-right",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-corner-up-right.png"
-          },
-          "arrow-curve-down-left-a": {
-            label: "Curve down-left A",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-left-a.png"
-          },
-          "arrow-curve-down-left-b": {
-            label: "Curve down-left B",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-left-b.png"
-          },
-          "arrow-curve-down-right-a": {
-            label: "Curve down-right A",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-right-a.png"
-          },
-          "arrow-curve-down-right-b": {
-            label: "Curve down-right B",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-down-right-b.png"
-          },
-          "arrow-curve-up-left": {
-            label: "Curve up-left",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-left.png"
-          },
-          "arrow-curve-up-right": {
-            label: "Curve up-right",
-            category: "V1 arrows",
-            src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-right.png"
-          },
-          "arrow-up-right-corner-a": {
-            label: "Up-right corner A",
-            category: "Up-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-right-corner-a.png"
-          },
-          "arrow-up-right-corner-b": {
-            label: "Up-right corner B",
-            category: "Up-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-right-corner-b.png"
-          },
-          "arrow-down-right-curve-a": {
-            label: "Down-right curve A",
-            category: "Down-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-a.png"
-          },
-          "arrow-down-right-curve-b": {
-            label: "Down-right curve B",
-            category: "Down-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png"
-          },
-          "arrow-down-right-curve-c": {
-            label: "Down-right curve C",
-            category: "Down-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-c.png"
-          },
-          "arrow-down-right-curve-d": {
-            label: "Down-right curve D",
-            category: "Down-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-d.png"
-          },
-          "arrow-down-right-corner-a": {
-            label: "Down-right corner A",
-            category: "Down-right arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-corner-a.png"
-          },
-          "arrow-up-left-corner-a": {
-            label: "Up-left corner A",
-            category: "Up-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-a.png"
-          },
-          "arrow-up-left-corner-b": {
-            label: "Up-left corner B",
-            category: "Up-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-b.png"
-          },
-          "arrow-up-left-corner-c": {
-            label: "Up-left corner C",
-            category: "Up-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-c.png"
-          },
-          "arrow-up-left-corner-d": {
-            label: "Up-left corner D",
-            category: "Up-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-corner-d.png"
-          },
-          "arrow-up-left-curve-a": {
-            label: "Up-left curve A",
-            category: "Up-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-up-left-curve-a.png"
-          },
-          "arrow-down-left-curve-a": {
-            label: "Down-left curve A",
-            category: "Down-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png"
-          },
-          "arrow-down-left-corner-a": {
-            label: "Down-left corner A",
-            category: "Down-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-corner-a.png"
-          },
-          "arrow-down-left-curve-b": {
-            label: "Down-left curve B",
-            category: "Down-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-b.png"
-          },
-          "arrow-down-left-curve-c": {
-            label: "Down-left curve C",
-            category: "Down-left arrows",
-            src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-c.png"
-          }
-        },
-        icons: {
-          "icon-check": {
-            label: "Check",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-check.png"
-          },
-          "icon-flex-bicep": {
-            label: "Flex bicep",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-flex-bicep.png"
-          },
-          "icon-leaf": {
-            label: "Leaf",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-leaf.png"
-          },
-          "icon-low-sugar": {
-            label: "Low sugar",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-low-sugar.png"
-          },
-          "icon-scoop": {
-            label: "Protein scoop",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-scoop.png"
-          },
-          "icon-shaker-check": {
-            label: "Shaker check",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-shaker-check.png"
-          },
-          "icon-sparkles": {
-            label: "Sparkles",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-sparkles.png"
-          },
-          "icon-sprout": {
-            label: "Sprout",
-            category: "V1 mixed icons",
-            src: "generated/assets/icons/feature-benefit-v1/icon-sprout.png"
-          },
-          "protein-flex-bicep": {
-            label: "Flex bicep",
-            category: "Protein icons",
-            src: "generated/assets/icons/feature-benefit-v2/protein-flex-bicep.png"
-          },
-          "protein-dumbbell": {
-            label: "Dumbbell",
-            category: "Protein icons",
-            src: "generated/assets/icons/feature-benefit-v2/protein-dumbbell.png"
-          },
-          "protein-muscle-shield": {
-            label: "Muscle shield",
-            category: "Protein icons",
-            src: "generated/assets/icons/feature-benefit-v2/protein-muscle-shield.png"
-          },
-          "protein-scoop-arm": {
-            label: "Scoop arm",
-            category: "Protein icons",
-            src: "generated/assets/icons/feature-benefit-v2/protein-scoop-arm.png"
-          },
-          "low-sugar-cubes-slash": {
-            label: "Cubes slash",
-            category: "Low sugar icons",
-            src: "generated/assets/icons/feature-benefit-v2/low-sugar-cubes-slash.png"
-          },
-          "low-sugar-cube-circle-slash": {
-            label: "Cube circle slash",
-            category: "Low sugar icons",
-            src: "generated/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png"
-          },
-          "low-sugar-chocolate-slash": {
-            label: "Chocolate slash",
-            category: "Low sugar icons",
-            src: "generated/assets/icons/feature-benefit-v2/low-sugar-chocolate-slash.png"
-          },
-          "low-sugar-spoon-slash": {
-            label: "Spoon slash",
-            category: "Low sugar icons",
-            src: "generated/assets/icons/feature-benefit-v2/low-sugar-spoon-slash.png"
-          },
-          "grass-leaf": {
-            label: "Leaf",
-            category: "Grass-fed icons",
-            src: "generated/assets/icons/feature-benefit-v2/grass-leaf.png"
-          },
-          "grass-sprout": {
-            label: "Sprout",
-            category: "Grass-fed icons",
-            src: "generated/assets/icons/feature-benefit-v2/grass-sprout.png"
-          },
-          "grass-tuft": {
-            label: "Grass tuft",
-            category: "Grass-fed icons",
-            src: "generated/assets/icons/feature-benefit-v2/grass-tuft.png"
-          },
-          "grass-cow-outline": {
-            label: "Cow outline",
-            category: "Grass-fed icons",
-            src: "generated/assets/icons/feature-benefit-v2/grass-cow-outline.png"
-          },
-          "prep-shaker-check": {
-            label: "Shaker check",
-            category: "Prep icons",
-            src: "generated/assets/icons/feature-benefit-v2/prep-shaker-check.png"
-          },
-          "prep-scoop-cup": {
-            label: "Scoop cup",
-            category: "Prep icons",
-            src: "generated/assets/icons/feature-benefit-v2/prep-scoop-cup.png"
-          },
-          "prep-cup-check": {
-            label: "Cup check",
-            category: "Prep icons",
-            src: "generated/assets/icons/feature-benefit-v2/prep-cup-check.png"
-          },
-          "prep-droplet-shaker": {
-            label: "Droplet shaker",
-            category: "Prep icons",
-            src: "generated/assets/icons/feature-benefit-v2/prep-droplet-shaker.png"
-          }
-        }
-      };
-
-      const seedElements = [
-        {
-          id: "titlePanel",
-          name: "Headline panel",
-          type: "rect",
-          locked: false,
-          fill: "#0d2d5b",
-          opacity: 0.96,
-          radius: 17,
-          layouts: {
-            story: { x: 65, y: 318, w: 950, h: 126, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 58.5301513671875, y: 211.7128620147705, w: 965.9063720703125, h: 121.09174728393555, rotation: 0, flipX: false, flipY: false },
-            square: { x: 58.5301513671875, y: 77.42572402954102, w: 965.9063720703125, h: 121.09174728393555, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 78, y: 38, w: 1044, h: 88, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "headline",
-          name: "Headline",
-          type: "text",
-          text: "Muscle Support Without The Junk",
-          fill: "#ffffff",
-          fontFamily: "Georgia, 'Times New Roman', serif",
-          align: "center",
-          weight: 700,
-          lineHeight: 1.05,
-          layouts: {
-            story: { x: 88, y: 352, w: 904, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 85.15838623046875, y: 237.035551071167, w: 916, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
-            square: { x: 85.15838623046875, y: 102.7484130859375, w: 916, h: 58, fontSize: 50, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 110.464, y: 56.266, w: 980, h: 46, fontSize: 46, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "subPanel",
-          name: "Subhead panel",
-          type: "rect",
-          fill: "#ffe35c",
-          stroke: "rgba(12,27,48,0.22)",
-          strokeWidth: 2,
-          radius: 8,
-          layouts: {
-            story: { x: 165, y: 432, w: 750, h: 58, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 190.72918701171875, y: 318.361234664917, w: 686.5960083007812, h: 74.24632263183594, rotation: 0, flipX: false, flipY: false },
-            square: { x: 190.72918701171875, y: 184.0740966796875, w: 686.5960083007812, h: 74.24632263183594, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 300, y: 114, w: 600, h: 48.829, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "subhead",
-          name: "Subhead",
-          type: "text",
-          text: "A simple protein habit when appetite drops.",
-          fill: "#10213a",
-          fontFamily: "Arial, sans-serif",
-          align: "center",
-          weight: 800,
-          lineHeight: 1,
-          layouts: {
-            story: { x: 190, y: 451, w: 700, h: 26, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 231.2025146484375, y: 339.00179862976074, w: 613.3084716796875, h: 31.738632202148438, fontSize: 31.738632202148438, rotation: 0, flipX: false, flipY: false },
-            square: { x: 231.2025146484375, y: 204.71466064453125, w: 613.3084716796875, h: 31.738632202148438, fontSize: 31.738632202148438, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 329.74, y: 124.701, w: 536, h: 25, fontSize: 26, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "shadow",
-          name: "Product shadow",
-          type: "shadow",
-          fill: "#071a33",
-          opacity: 0.26,
-          blur: 22,
-          layouts: {
-            story: { x: 345, y: 1230, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
-            portrait: { x: 345, y: 1092.2871379852295, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
-            square: { x: 345, y: 958, w: 350, h: 46, rotation: -2, flipX: false, flipY: false },
-            landscape: { x: 482, y: 560, w: 235, h: 28, rotation: -2, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "product",
-          name: "Protein bag",
-          type: "image",
-          src: PRODUCT_SRC,
-          layouts: {
-            story: { x: 325, y: 600, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 325, y: 462.2871379852295, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
-            square: { x: 325, y: 328, w: 430, h: 645, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 466.875, y: 180.007, w: 270, h: 405, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "proteinArrow",
-          name: "Protein arrow",
-          type: "image",
-          assetGroup: "arrows",
-          assetKey: "arrow-curve-up-right",
-          src: "generated/assets/icons/feature-benefit-v1/arrow-curve-up-right.png",
-          layouts: {
-            story: { x: 200.328, y: 618.989, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
-            portrait: { x: 200.328, y: 481.2761379852295, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
-            square: { x: 200.328, y: 346.989, w: 119.819, h: 82.888, rotation: 16.206, flipX: false, flipY: false },
-            landscape: { x: 366.664, y: 201.73, w: 96, h: 64, rotation: 34.9080258709455, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "proteinIcon",
-          name: "Protein icon",
-          type: "image",
-          assetGroup: "icons",
-          assetKey: "protein-flex-bicep",
-          src: "generated/assets/icons/feature-benefit-v2/protein-flex-bicep.png",
-          layouts: {
-            story: { x: 171.976, y: 699.596, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
-            portrait: { x: 171.976, y: 561.8831379852295, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
-            square: { x: 171.976, y: 427.596, w: 84.196, h: 79.43, rotation: -2, flipX: false, flipY: false },
-            landscape: { x: 322.451, y: 239.546, w: 70, h: 66, rotation: -2, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "proteinText",
-          name: "Protein text",
-          type: "text",
-          text: "31G\nPROTEIN",
-          fill: "#ffffff",
-          fontFamily: "Arial Black, Arial, sans-serif",
-          align: "center",
-          weight: 900,
-          lineHeight: 0.98,
-          layouts: {
-            story: { x: 107.582, y: 791.955, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 107.582, y: 654.2421379852295, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
-            square: { x: 107.582, y: 519.955, w: 204.295, h: 70.916, fontSize: 30.912, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 280.977, y: 320.355, w: 156, h: 54, fontSize: 24, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "sugarIcon",
-          name: "Low sugar icon",
-          type: "image",
-          assetGroup: "icons",
-          assetKey: "low-sugar-cube-circle-slash",
-          src: "generated/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png",
-          layouts: {
-            story: { x: 814.884, y: 631.531, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 814.884, y: 493.8181379852295, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
-            square: { x: 814.884, y: 359.531, w: 109.33, h: 111.933, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 808.132, y: 191.145, w: 82, h: 84, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "sugarText",
-          name: "Low sugar text",
-          type: "text",
-          text: "LOW SUGAR\nCHOCOLATE",
-          fill: "#ffffff",
-          fontFamily: "Arial Black, Arial, sans-serif",
-          align: "center",
-          weight: 900,
-          lineHeight: 0.98,
-          layouts: {
-            story: { x: 768.22, y: 751.966, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 768.22, y: 614.2531379852295, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            square: { x: 768.22, y: 479.966, w: 210, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 762.23, y: 279.622, w: 178, h: 54, fontSize: 24, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "sugarArrow",
-          name: "Low sugar arrow",
-          type: "image",
-          assetGroup: "arrows",
-          assetKey: "arrow-down-left-curve-a",
-          src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
-          layouts: {
-            story: { x: 769.038, y: 819.204, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
-            portrait: { x: 769.038, y: 681.4911379852295, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
-            square: { x: 769.038, y: 547.204, w: 126.906, h: 84.033, rotation: -68.474, flipX: false, flipY: true },
-            landscape: { x: 771.855, y: 330.688, w: 104, h: 68, rotation: -65, flipX: false, flipY: true }
-          }
-        },
-        {
-          id: "leafIcon",
-          name: "Grass fed icon",
-          type: "image",
-          assetGroup: "icons",
-          assetKey: "grass-leaf",
-          src: "generated/assets/icons/feature-benefit-v2/grass-leaf.png",
-          layouts: {
-            story: { x: 152.605, y: 950.727, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
-            portrait: { x: 152.605, y: 813.0141379852295, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
-            square: { x: 152.605, y: 678.727, w: 106, h: 90, rotation: -5, flipX: false, flipY: false },
-            landscape: { x: 307.319, y: 416.204, w: 82, h: 70, rotation: -5, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "leafText",
-          name: "Grass fed text",
-          type: "text",
-          text: "GRASS FED\nWHEY",
-          fill: "#ffffff",
-          fontFamily: "Arial Black, Arial, sans-serif",
-          align: "center",
-          weight: 900,
-          lineHeight: 0.98,
-          layouts: {
-            story: { x: 87.222, y: 1050.18, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 87.222, y: 912.4671379852295, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            square: { x: 87.222, y: 778.18, w: 218, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 259.362, y: 493.543, w: 166, h: 54, fontSize: 23, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "leafArrow",
-          name: "Grass fed arrow",
-          type: "image",
-          assetGroup: "arrows",
-          assetKey: "arrow-down-right-curve-b",
-          src: "generated/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png",
-          layouts: {
-            story: { x: 180.437, y: 1126.043, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
-            portrait: { x: 180.437, y: 988.3301379852295, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
-            square: { x: 180.437, y: 854.043, w: 118.536, h: 72.083, rotation: 56.477, flipX: false, flipY: true },
-            landscape: { x: 380.549, y: 521.23, w: 96, h: 58, rotation: 35.814372327426526, flipX: false, flipY: true }
-          }
-        },
-        {
-          id: "prepIcon",
-          name: "Prep icon",
-          type: "image",
-          assetGroup: "icons",
-          assetKey: "prep-shaker-check",
-          src: "generated/assets/icons/feature-benefit-v2/prep-shaker-check.png",
-          layouts: {
-            story: { x: 836.963, y: 946.38, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 836.963, y: 808.6671379852295, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
-            square: { x: 836.963, y: 674.38, w: 86, h: 102, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 837.648, y: 411.793, w: 70, h: 84, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "prepText",
-          name: "Prep text",
-          type: "text",
-          text: "NO MESSY\nPREP",
-          fill: "#ffffff",
-          fontFamily: "Arial Black, Arial, sans-serif",
-          align: "center",
-          weight: 900,
-          lineHeight: 0.98,
-          layouts: {
-            story: { x: 777.651, y: 1060.016, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            portrait: { x: 777.651, y: 922.3031379852295, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            square: { x: 777.651, y: 788.016, w: 200, h: 70, fontSize: 28, rotation: 0, flipX: false, flipY: false },
-            landscape: { x: 791.704, y: 506.582, w: 160, h: 52, fontSize: 23, rotation: 0, flipX: false, flipY: false }
-          }
-        },
-        {
-          id: "prepArrow",
-          name: "Prep arrow",
-          type: "image",
-          assetGroup: "arrows",
-          assetKey: "arrow-down-left-curve-a",
-          src: "generated/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
-          layouts: {
-            story: { x: 781.305, y: 1129.222, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
-            portrait: { x: 781.305, y: 991.5091379852295, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
-            square: { x: 781.305, y: 857.222, w: 126.669, h: 77.029, rotation: -62.423, flipX: false, flipY: true },
-            landscape: { x: 746.625, y: 531.033, w: 100, h: 60, rotation: -28.510079660556972, flipX: false, flipY: true }
-          }
-        }
-      ];
+      let generatedAssetGroups = { arrows: {}, icons: {} };
+      let seedElements = [];
 
       let project = { elements: clone(seedElements) };
       let currentRatio = "story";
@@ -1436,7 +1049,11 @@
       const saveBtn = document.getElementById("saveBtn");
       const canvasInfoEl = document.getElementById("canvasInfo");
       const zoomRange = document.getElementById("zoomRange");
+      const previewModal = document.getElementById("previewModal");
+      const previewGrid = document.getElementById("previewGrid");
+      const previewSubtitle = document.getElementById("previewSubtitle");
       let saveFeedbackTimer = null;
+      let previewUrls = [];
       const safeZoneToggles = {
         stories: document.getElementById("storySafeToggle"),
         reels: document.getElementById("reelsSafeToggle"),
@@ -1450,6 +1067,34 @@
 
       function clone(value) {
         return JSON.parse(JSON.stringify(value));
+      }
+
+      function applyEditorConfig(config) {
+        editorConfig = { ...editorConfig, ...config };
+        STORAGE_KEY = editorConfig.storageKey || STORAGE_KEY;
+        generatedAssetGroups = editorConfig.generatedAssetGroups || generatedAssetGroups;
+
+        document.title = editorConfig.title;
+        document.getElementById("editorTitle").textContent = editorConfig.title;
+        document.getElementById("editorSubtitle").textContent = editorConfig.subtitle;
+        document.getElementById("referenceImage").src = editorConfig.referenceImage;
+        document.getElementById("referenceNote").textContent = editorConfig.referenceNote;
+
+        const contextParts = [editorConfig.client, editorConfig.product, editorConfig.angle, editorConfig.template].filter(Boolean);
+        previewSubtitle.textContent = contextParts.length
+          ? `${contextParts.join(" / ")} - current editor state across every Meta ratio.`
+          : "Current editor state across every Meta ratio.";
+      }
+
+      async function loadEditorConfig() {
+        try {
+          const response = await fetch(CONFIG_ENDPOINT, { cache: "no-store" });
+          if (!response.ok) throw new Error(`Config failed with ${response.status}`);
+          applyEditorConfig(await response.json());
+        } catch (error) {
+          applyEditorConfig(editorConfig);
+          setStatus("Using default editor config");
+        }
       }
 
       function normaliseProjectPayload(payload) {
@@ -1485,8 +1130,10 @@
       }
 
       async function hydrateProject() {
+        await loadEditorConfig();
         const loaded = await loadProject();
         project = loaded.project;
+        seedElements = clone(project.elements);
         if (!selectedElement()) selectedId = project.elements[0]?.id || null;
         render();
         setStatus(`Loaded ${loaded.source}`);
@@ -1628,11 +1275,12 @@
       function buildDefs() {
         const defs = createSvgElement("defs");
         const gradient = createSvgElement("linearGradient", { id: "blueBg", x1: "0", y1: "0", x2: "0", y2: "1" });
-        gradient.append(
-          createSvgElement("stop", { offset: "0%", "stop-color": "#2079b8" }),
-          createSvgElement("stop", { offset: "48%", "stop-color": "#184c94" }),
-          createSvgElement("stop", { offset: "100%", "stop-color": "#123861" })
-        );
+        const stops = editorConfig.backgroundStops?.length ? editorConfig.backgroundStops : ["#2079b8", "#184c94", "#123861"];
+        const lastIndex = Math.max(stops.length - 1, 1);
+        stops.forEach((color, index) => {
+          const offset = `${Math.round((index / lastIndex) * 100)}%`;
+          gradient.appendChild(createSvgElement("stop", { offset, "stop-color": color }));
+        });
         const shadowBlur = createSvgElement("filter", { id: "softShadow", x: "-50%", y: "-80%", width: "200%", height: "240%" });
         shadowBlur.appendChild(createSvgElement("feGaussianBlur", { stdDeviation: "18" }));
         defs.append(gradient, shadowBlur);
@@ -2350,6 +1998,11 @@
       });
       document.getElementById("exportBtn").addEventListener("click", () => exportPng(currentRatio));
       document.getElementById("exportAllBtn").addEventListener("click", exportAllPngs);
+      document.getElementById("previewAllBtn").addEventListener("click", openAllFormatPreview);
+      document.getElementById("closePreviewBtn").addEventListener("click", closeAllFormatPreview);
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !previewModal.hidden) closeAllFormatPreview();
+      });
       Object.entries(safeZoneToggles).forEach(([key, toggle]) => {
         toggle.addEventListener("change", () => {
           safeZoneState[key] = toggle.checked;
@@ -2380,6 +2033,64 @@
           }
         });
         setStatus(`Synced ${element.name} from ${ratios[sourceRatio].label}`);
+      }
+
+      function clearPreviewUrls() {
+        previewUrls.forEach((url) => URL.revokeObjectURL(url));
+        previewUrls = [];
+      }
+
+      function closeAllFormatPreview() {
+        previewModal.hidden = true;
+        previewGrid.replaceChildren();
+        clearPreviewUrls();
+        setStatus("Closed all-format preview");
+      }
+
+      async function renderPreviewCard(ratioKey) {
+        const ratio = ratios[ratioKey];
+        const card = document.createElement("article");
+        card.className = "preview-card is-loading";
+        card.textContent = `Rendering ${ratio.label}`;
+        previewGrid.appendChild(card);
+
+        try {
+          const svg = buildExportSvg(ratioKey);
+          await inlineImages(svg);
+          const serialized = new XMLSerializer().serializeToString(svg);
+          const url = URL.createObjectURL(new Blob([serialized], { type: "image/svg+xml;charset=utf-8" }));
+          previewUrls.push(url);
+          card.className = "preview-card";
+          card.replaceChildren();
+
+          const header = document.createElement("header");
+          const label = document.createElement("strong");
+          label.textContent = ratio.label;
+          const use = document.createElement("span");
+          use.textContent = `${ratio.use} - ${ratio.w} x ${ratio.h}`;
+          header.append(label, use);
+
+          const image = document.createElement("img");
+          image.src = url;
+          image.alt = `${ratio.label} ${ratio.use} preview`;
+          card.append(header, image);
+        } catch (error) {
+          card.className = "preview-card is-error";
+          card.textContent = `Could not render ${ratio.label}`;
+        }
+      }
+
+      async function openAllFormatPreview() {
+        clearPreviewUrls();
+        previewGrid.replaceChildren();
+        previewModal.hidden = false;
+        setStatus("Rendering all format previews...");
+
+        for (const key of ratioOrder) {
+          await renderPreviewCard(key);
+        }
+
+        setStatus("Showing all format previews");
       }
 
       async function exportAllPngs() {
@@ -2414,7 +2125,7 @@
         const exportTray = document.getElementById("exportTray");
         const exportPreview = document.getElementById("exportPreview");
         const exportName = document.getElementById("exportName");
-        const filename = `get-rid-of-dad-bod-template-001-${ratio.label.replace(/[:.]/g, "-")}.png`;
+        const filename = `${editorConfig.exportPrefix}-${ratio.label.replace(/[:.]/g, "-")}.png`;
         exportPreview.src = png;
         exportName.textContent = `${ratio.label} PNG ready`;
         link.href = png;
@@ -2484,6 +2195,7 @@
         },
         exportPng,
         exportAllPngs,
+        openAllFormatPreview,
         reset() {
           project = { elements: clone(seedElements) };
           selectedId = "product";
@@ -2491,7 +2203,6 @@
         }
       };
 
-      render();
       hydrateProject();
     </script>
   </body>

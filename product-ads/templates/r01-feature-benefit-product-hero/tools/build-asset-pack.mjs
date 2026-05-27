@@ -16,8 +16,8 @@ const sharpPath = require.resolve("sharp", {
 });
 const sharp = require(sharpPath);
 
-const source = path.join(packetDir, "generated/assets/icon-sheets/feature-benefit-line-icons-v2-green.png");
-const outDir = path.join(packetDir, "generated/assets/icons/feature-benefit-v2");
+const source = path.join(packetDir, "assets/icon-sheets/feature-benefit-line-icons-v2-green.png");
+const outDir = path.join(packetDir, "assets/icons/feature-benefit-v2");
 const contactSheetOut = path.join(outDir, "asset-contact-sheet-blue.png");
 const transparentSheetOut = path.join(outDir, "feature-benefit-line-icons-v2-transparent-sheet.png");
 

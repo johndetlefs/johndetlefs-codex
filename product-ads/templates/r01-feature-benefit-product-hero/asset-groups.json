@@ -1,0 +1,246 @@
+{
+  "arrows": {
+    "arrow-corner-up-left": {
+      "label": "Corner up-left",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-corner-up-left.png"
+    },
+    "arrow-corner-up-right": {
+      "label": "Corner up-right",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-corner-up-right.png"
+    },
+    "arrow-curve-down-left-a": {
+      "label": "Curve down-left A",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-down-left-a.png"
+    },
+    "arrow-curve-down-left-b": {
+      "label": "Curve down-left B",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-down-left-b.png"
+    },
+    "arrow-curve-down-right-a": {
+      "label": "Curve down-right A",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-down-right-a.png"
+    },
+    "arrow-curve-down-right-b": {
+      "label": "Curve down-right B",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-down-right-b.png"
+    },
+    "arrow-curve-up-left": {
+      "label": "Curve up-left",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-up-left.png"
+    },
+    "arrow-curve-up-right": {
+      "label": "Curve up-right",
+      "category": "V1 arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-up-right.png"
+    },
+    "arrow-up-right-corner-a": {
+      "label": "Up-right corner A",
+      "category": "Up-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-right-corner-a.png"
+    },
+    "arrow-up-right-corner-b": {
+      "label": "Up-right corner B",
+      "category": "Up-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-right-corner-b.png"
+    },
+    "arrow-down-right-curve-a": {
+      "label": "Down-right curve A",
+      "category": "Down-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-a.png"
+    },
+    "arrow-down-right-curve-b": {
+      "label": "Down-right curve B",
+      "category": "Down-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png"
+    },
+    "arrow-down-right-curve-c": {
+      "label": "Down-right curve C",
+      "category": "Down-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-c.png"
+    },
+    "arrow-down-right-curve-d": {
+      "label": "Down-right curve D",
+      "category": "Down-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-d.png"
+    },
+    "arrow-down-right-corner-a": {
+      "label": "Down-right corner A",
+      "category": "Down-right arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-corner-a.png"
+    },
+    "arrow-up-left-corner-a": {
+      "label": "Up-left corner A",
+      "category": "Up-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-left-corner-a.png"
+    },
+    "arrow-up-left-corner-b": {
+      "label": "Up-left corner B",
+      "category": "Up-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-left-corner-b.png"
+    },
+    "arrow-up-left-corner-c": {
+      "label": "Up-left corner C",
+      "category": "Up-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-left-corner-c.png"
+    },
+    "arrow-up-left-corner-d": {
+      "label": "Up-left corner D",
+      "category": "Up-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-left-corner-d.png"
+    },
+    "arrow-up-left-curve-a": {
+      "label": "Up-left curve A",
+      "category": "Up-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-up-left-curve-a.png"
+    },
+    "arrow-down-left-curve-a": {
+      "label": "Down-left curve A",
+      "category": "Down-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png"
+    },
+    "arrow-down-left-corner-a": {
+      "label": "Down-left corner A",
+      "category": "Down-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-corner-a.png"
+    },
+    "arrow-down-left-curve-b": {
+      "label": "Down-left curve B",
+      "category": "Down-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-b.png"
+    },
+    "arrow-down-left-curve-c": {
+      "label": "Down-left curve C",
+      "category": "Down-left arrows",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-c.png"
+    }
+  },
+  "icons": {
+    "icon-check": {
+      "label": "Check",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-check.png"
+    },
+    "icon-flex-bicep": {
+      "label": "Flex bicep",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-flex-bicep.png"
+    },
+    "icon-leaf": {
+      "label": "Leaf",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-leaf.png"
+    },
+    "icon-low-sugar": {
+      "label": "Low sugar",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-low-sugar.png"
+    },
+    "icon-scoop": {
+      "label": "Protein scoop",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-scoop.png"
+    },
+    "icon-shaker-check": {
+      "label": "Shaker check",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-shaker-check.png"
+    },
+    "icon-sparkles": {
+      "label": "Sparkles",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-sparkles.png"
+    },
+    "icon-sprout": {
+      "label": "Sprout",
+      "category": "V1 mixed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/icon-sprout.png"
+    },
+    "protein-flex-bicep": {
+      "label": "Flex bicep",
+      "category": "Protein icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/protein-flex-bicep.png"
+    },
+    "protein-dumbbell": {
+      "label": "Dumbbell",
+      "category": "Protein icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/protein-dumbbell.png"
+    },
+    "protein-muscle-shield": {
+      "label": "Muscle shield",
+      "category": "Protein icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/protein-muscle-shield.png"
+    },
+    "protein-scoop-arm": {
+      "label": "Scoop arm",
+      "category": "Protein icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/protein-scoop-arm.png"
+    },
+    "low-sugar-cubes-slash": {
+      "label": "Cubes slash",
+      "category": "Low sugar icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/low-sugar-cubes-slash.png"
+    },
+    "low-sugar-cube-circle-slash": {
+      "label": "Cube circle slash",
+      "category": "Low sugar icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/low-sugar-cube-circle-slash.png"
+    },
+    "low-sugar-chocolate-slash": {
+      "label": "Chocolate slash",
+      "category": "Low sugar icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/low-sugar-chocolate-slash.png"
+    },
+    "low-sugar-spoon-slash": {
+      "label": "Spoon slash",
+      "category": "Low sugar icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/low-sugar-spoon-slash.png"
+    },
+    "grass-leaf": {
+      "label": "Leaf",
+      "category": "Grass-fed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/grass-leaf.png"
+    },
+    "grass-sprout": {
+      "label": "Sprout",
+      "category": "Grass-fed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/grass-sprout.png"
+    },
+    "grass-tuft": {
+      "label": "Grass tuft",
+      "category": "Grass-fed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/grass-tuft.png"
+    },
+    "grass-cow-outline": {
+      "label": "Cow outline",
+      "category": "Grass-fed icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/grass-cow-outline.png"
+    },
+    "prep-shaker-check": {
+      "label": "Shaker check",
+      "category": "Prep icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/prep-shaker-check.png"
+    },
+    "prep-scoop-cup": {
+      "label": "Scoop cup",
+      "category": "Prep icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/prep-scoop-cup.png"
+    },
+    "prep-cup-check": {
+      "label": "Cup check",
+      "category": "Prep icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/prep-cup-check.png"
+    },
+    "prep-droplet-shaker": {
+      "label": "Droplet shaker",
+      "category": "Prep icons",
+      "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/prep-droplet-shaker.png"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "r01-feature-benefit-product-hero",
+  "name": "R01 - Feature / Benefit Product Hero",
+  "referenceImage": "/templates/r01-feature-benefit-product-hero/reference/original.webp",
+  "referenceNote": "Source reference for arrow style, callout placement, product hero hierarchy, and benefit layout.",
+  "defaultBackgroundStops": [
+    "#2079b8",
+    "#184c94",
+    "#123861"
+  ],
+  "forensicTeardown": "/templates/r01-feature-benefit-product-hero/forensic-teardown.md",
+  "assetRequirements": "/templates/r01-feature-benefit-product-hero/asset-requirements.md"
+}

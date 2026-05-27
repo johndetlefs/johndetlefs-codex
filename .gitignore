@@ -5,6 +5,8 @@
 # Local/editor files
 .DS_Store
 .vscode/
+.venv/
+node_modules/
 
 # Temporary files
 /.tmp/

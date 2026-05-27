@@ -2,6 +2,8 @@
 
 This file is the production asset manifest for the `9:16` reference-format templates.
 
+Legacy note: this document preserves the pre-refactor R01-R11 asset planning language. Paths inside it are historical packet-local paths until each reference ad is promoted into its own `templates/<template-slug>/` folder.
+
 The gallery HTML can use native CSS shapes while a template is still being roughed in, but production ads should follow the asset requirements below. The target is to get as close as practical to each supplied source advertisement while keeping product accuracy, claim safety, and Meta safe zones intact.
 
 Asset requirements should be derived from the source forensic teardown, not guessed during layout. Each reference folder should use `forensic-teardown.md` to identify mandatory source elements before this manifest is treated as final.

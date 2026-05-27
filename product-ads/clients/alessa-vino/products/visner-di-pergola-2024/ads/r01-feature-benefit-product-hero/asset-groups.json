@@ -1,0 +1,34 @@
+{
+  "icons": {
+    "sour-cherry": {
+      "label": "Sour cherry",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/sour-cherry.png"
+    },
+    "wildflower": {
+      "label": "Wildflower",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/wildflower.png"
+    },
+    "dessert-pairing": {
+      "label": "Dessert pairing",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/dessert-pairing.png"
+    },
+    "chocolate-pairing": {
+      "label": "Chocolate pairing",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/chocolate-pairing.png"
+    },
+    "red-fruit": {
+      "label": "Red fruit",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/red-fruit.png"
+    },
+    "cheese-pairing": {
+      "label": "Cheese pairing",
+      "category": "Alessa Vino icons",
+      "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/cheese-pairing.png"
+    }
+  }
+}

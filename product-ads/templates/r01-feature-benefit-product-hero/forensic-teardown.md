@@ -366,8 +366,9 @@ Shadows/depth:
 
 Product asset:
 
-- Use `../../generated/assets/product-shots/whey-pack-3quarter-ai-transparent.png`.
-- Add source-matched drop shadow and green ambient colour in the renderer/editor.
+- Use the selected client's no-background product image from `product-ads/clients/<client>/products/<product>/assets/product-shots/`.
+- The GRDB seed uses `/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/product-shots/generated-ai/whey-pack-3quarter-ai-transparent.png`.
+- Add source-matched drop shadow and ambient colour in the renderer/editor.
 
 Background asset:
 
@@ -386,7 +387,7 @@ Prop assets:
 Icon/sticker/arrow set:
 
 - Required: source-style white hand-drawn icons and arrows.
-- Existing `feature-benefit-v2` assets can be reused only if they visually match the source's white, casual, rounded linework. If they read as generic UI icons, regenerate a source-matched set.
+- Existing `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/` assets can be reused only if they visually match the source's white, casual, rounded linework. If they read as generic UI icons, regenerate a source-matched set.
 - Required families:
   - protein icon variants;
   - low-sugar/chocolate icon variants;

@@ -1,0 +1,879 @@
+{
+  "version": 1,
+  "storageKey": "alessa-vino:visner-di-pergola-2024:r01-feature-benefit-product-hero",
+  "savedAt": "2026-05-26T23:56:29.132Z",
+  "project": {
+    "elements": [
+      {
+        "id": "titlePanel",
+        "name": "Headline panel",
+        "type": "rect",
+        "locked": false,
+        "fill": "#2a302d",
+        "opacity": 0.95,
+        "radius": 16,
+        "layouts": {
+          "story": {
+            "x": 65,
+            "y": 318,
+            "w": 950,
+            "h": 126,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 58.53,
+            "y": 211.71,
+            "w": 965.91,
+            "h": 121.09,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 58.53,
+            "y": 77.43,
+            "w": 965.91,
+            "h": 121.09,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 78,
+            "y": 38,
+            "w": 1044,
+            "h": 88,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "headline",
+        "name": "Headline",
+        "type": "text",
+        "text": "Cherry Wine Reimagined",
+        "fill": "#ffffff",
+        "fontFamily": "Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif",
+        "align": "center",
+        "weight": 700,
+        "lineHeight": 1.05,
+        "layouts": {
+          "story": {
+            "x": 95,
+            "y": 352,
+            "w": 890,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 55
+          },
+          "portrait": {
+            "x": 82,
+            "y": 237,
+            "w": 916,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 53
+          },
+          "square": {
+            "x": 82,
+            "y": 103,
+            "w": 916,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 53
+          },
+          "landscape": {
+            "x": 108,
+            "y": 56,
+            "w": 984,
+            "h": 46,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 46
+          }
+        }
+      },
+      {
+        "id": "subPanel",
+        "name": "Subhead panel",
+        "type": "rect",
+        "fill": "#c8a24a",
+        "stroke": "rgba(42,48,45,0.28)",
+        "strokeWidth": 2,
+        "radius": 8,
+        "layouts": {
+          "story": {
+            "x": 150,
+            "y": 432,
+            "w": 780,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 162,
+            "y": 318,
+            "w": 756,
+            "h": 70,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 162,
+            "y": 184,
+            "w": 756,
+            "h": 70,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 280,
+            "y": 114,
+            "w": 640,
+            "h": 48,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "subhead",
+        "name": "Subhead",
+        "type": "text",
+        "text": "Not just dessert - a rare Italian ritual.",
+        "fill": "#2a302d",
+        "fontFamily": "Arial, sans-serif",
+        "align": "center",
+        "weight": 800,
+        "lineHeight": 1,
+        "layouts": {
+          "story": {
+            "x": 188,
+            "y": 451,
+            "w": 704,
+            "h": 26,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 28
+          },
+          "portrait": {
+            "x": 205,
+            "y": 338,
+            "w": 670,
+            "h": 32,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 30
+          },
+          "square": {
+            "x": 205,
+            "y": 204,
+            "w": 670,
+            "h": 32,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 30
+          },
+          "landscape": {
+            "x": 310,
+            "y": 125,
+            "w": 580,
+            "h": 25,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 25
+          }
+        }
+      },
+      {
+        "id": "shadow",
+        "name": "Product shadow",
+        "type": "shadow",
+        "fill": "#130b0b",
+        "opacity": 0.3,
+        "blur": 22,
+        "layouts": {
+          "story": {
+            "x": 390,
+            "y": 1308,
+            "w": 300,
+            "h": 42,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 398,
+            "y": 1155,
+            "w": 284,
+            "h": 38,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 410,
+            "y": 994,
+            "w": 260,
+            "h": 34,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 487,
+            "y": 563,
+            "w": 226,
+            "h": 26,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "product",
+        "name": "Visner bottle",
+        "type": "image",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/product-shots/visner-di-pergola-cutout.png",
+        "layouts": {
+          "story": {
+            "x": 390,
+            "y": 500,
+            "w": 300,
+            "h": 830,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 398,
+            "y": 412,
+            "w": 284,
+            "h": 760,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 410,
+            "y": 292,
+            "w": 260,
+            "h": 720,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 485,
+            "y": 155,
+            "w": 230,
+            "h": 430,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinArrow",
+        "name": "Protein arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-curve-up-right",
+        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-up-right.png",
+        "layouts": {
+          "story": {
+            "x": 278,
+            "y": 590,
+            "w": 118,
+            "h": 80,
+            "rotation": 14,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 276,
+            "y": 505,
+            "w": 110,
+            "h": 76,
+            "rotation": 14,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 286,
+            "y": 378,
+            "w": 102,
+            "h": 70,
+            "rotation": 14,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 372,
+            "y": 205,
+            "w": 90,
+            "h": 60,
+            "rotation": 32,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinIcon",
+        "name": "Sour cherry icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "sour-cherry",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/sour-cherry.png",
+        "layouts": {
+          "story": {
+            "x": 154,
+            "y": 666,
+            "w": 96,
+            "h": 100,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 158,
+            "y": 590,
+            "w": 88,
+            "h": 92,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 168,
+            "y": 456,
+            "w": 84,
+            "h": 88,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 312,
+            "y": 242,
+            "w": 78,
+            "h": 80,
+            "rotation": -2,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "proteinText",
+        "name": "Sour cherry text",
+        "type": "text",
+        "text": "SOUR CHERRY\nNECTAR",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 72,
+            "y": 772,
+            "w": 250,
+            "h": 78,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 30
+          },
+          "portrait": {
+            "x": 80,
+            "y": 688,
+            "w": 238,
+            "h": 74,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 29
+          },
+          "square": {
+            "x": 88,
+            "y": 552,
+            "w": 230,
+            "h": 72,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 28
+          },
+          "landscape": {
+            "x": 252,
+            "y": 326,
+            "w": 186,
+            "h": 56,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 23
+          }
+        }
+      },
+      {
+        "id": "sugarIcon",
+        "name": "Wildflower icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "wildflower",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/wildflower.png",
+        "layouts": {
+          "story": {
+            "x": 820,
+            "y": 660,
+            "w": 92,
+            "h": 92,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 818,
+            "y": 580,
+            "w": 86,
+            "h": 86,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 808,
+            "y": 444,
+            "w": 84,
+            "h": 84,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 810,
+            "y": 194,
+            "w": 78,
+            "h": 78,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "sugarText",
+        "name": "Wildflower text",
+        "type": "text",
+        "text": "WILDFLOWERS\nDRIED HERBS",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 738,
+            "y": 762,
+            "w": 270,
+            "h": 76,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 27
+          },
+          "portrait": {
+            "x": 734,
+            "y": 672,
+            "w": 270,
+            "h": 74,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 26
+          },
+          "square": {
+            "x": 724,
+            "y": 536,
+            "w": 270,
+            "h": 74,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 26
+          },
+          "landscape": {
+            "x": 748,
+            "y": 280,
+            "w": 206,
+            "h": 58,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 22
+          }
+        }
+      },
+      {
+        "id": "sugarArrow",
+        "name": "Low sugar arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-left-curve-a",
+        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+        "layouts": {
+          "story": {
+            "x": 720,
+            "y": 835,
+            "w": 130,
+            "h": 86,
+            "rotation": -68.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 720,
+            "y": 748,
+            "w": 124,
+            "h": 82,
+            "rotation": -68.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 720,
+            "y": 612,
+            "w": 118,
+            "h": 78,
+            "rotation": -68.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 770,
+            "y": 334,
+            "w": 104,
+            "h": 68,
+            "rotation": -65,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      },
+      {
+        "id": "leafIcon",
+        "name": "Marche ritual icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "dessert-pairing",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/dessert-pairing.png",
+        "layouts": {
+          "story": {
+            "x": 154,
+            "y": 970,
+            "w": 96,
+            "h": 96,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 158,
+            "y": 878,
+            "w": 90,
+            "h": 90,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 168,
+            "y": 730,
+            "w": 86,
+            "h": 86,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 304,
+            "y": 414,
+            "w": 82,
+            "h": 82,
+            "rotation": -5,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "leafText",
+        "name": "Marche ritual text",
+        "type": "text",
+        "text": "MARCHE\nRITUAL",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 82,
+            "y": 1075,
+            "w": 230,
+            "h": 76,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 29
+          },
+          "portrait": {
+            "x": 88,
+            "y": 976,
+            "w": 220,
+            "h": 72,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 27
+          },
+          "square": {
+            "x": 96,
+            "y": 826,
+            "w": 210,
+            "h": 70,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 26
+          },
+          "landscape": {
+            "x": 255,
+            "y": 500,
+            "w": 170,
+            "h": 54,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 23
+          }
+        }
+      },
+      {
+        "id": "leafArrow",
+        "name": "Grass fed arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-right-curve-b",
+        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png",
+        "layouts": {
+          "story": {
+            "x": 230,
+            "y": 1148,
+            "w": 118,
+            "h": 72,
+            "rotation": 56,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 230,
+            "y": 1048,
+            "w": 112,
+            "h": 70,
+            "rotation": 56,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 238,
+            "y": 900,
+            "w": 106,
+            "h": 66,
+            "rotation": 56,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 380,
+            "y": 522,
+            "w": 96,
+            "h": 58,
+            "rotation": 36,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      },
+      {
+        "id": "prepIcon",
+        "name": "Chocolate pairing icon",
+        "type": "image",
+        "assetGroup": "icons",
+        "assetKey": "chocolate-pairing",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/chocolate-pairing.png",
+        "layouts": {
+          "story": {
+            "x": 828,
+            "y": 970,
+            "w": 92,
+            "h": 92,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "portrait": {
+            "x": 830,
+            "y": 878,
+            "w": 86,
+            "h": 86,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "square": {
+            "x": 820,
+            "y": 730,
+            "w": 84,
+            "h": 84,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          },
+          "landscape": {
+            "x": 835,
+            "y": 414,
+            "w": 76,
+            "h": 76,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false
+          }
+        }
+      },
+      {
+        "id": "prepText",
+        "name": "Chocolate pairing text",
+        "type": "text",
+        "text": "CHOCOLATE\nPAIRING",
+        "fill": "#ffffff",
+        "fontFamily": "Arial Black, Arial, sans-serif",
+        "align": "center",
+        "weight": 900,
+        "lineHeight": 0.98,
+        "layouts": {
+          "story": {
+            "x": 738,
+            "y": 1075,
+            "w": 270,
+            "h": 76,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 28
+          },
+          "portrait": {
+            "x": 736,
+            "y": 976,
+            "w": 266,
+            "h": 72,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 27
+          },
+          "square": {
+            "x": 728,
+            "y": 826,
+            "w": 260,
+            "h": 70,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 26
+          },
+          "landscape": {
+            "x": 775,
+            "y": 504,
+            "w": 188,
+            "h": 54,
+            "rotation": 0,
+            "flipX": false,
+            "flipY": false,
+            "fontSize": 22
+          }
+        }
+      },
+      {
+        "id": "prepArrow",
+        "name": "Prep arrow",
+        "type": "image",
+        "assetGroup": "arrows",
+        "assetKey": "arrow-down-left-curve-a",
+        "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
+        "layouts": {
+          "story": {
+            "x": 728,
+            "y": 1148,
+            "w": 130,
+            "h": 78,
+            "rotation": -62.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "portrait": {
+            "x": 728,
+            "y": 1048,
+            "w": 124,
+            "h": 74,
+            "rotation": -62.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "square": {
+            "x": 728,
+            "y": 900,
+            "w": 118,
+            "h": 70,
+            "rotation": -62.5,
+            "flipX": false,
+            "flipY": true
+          },
+          "landscape": {
+            "x": 746,
+            "y": 532,
+            "w": 100,
+            "h": 60,
+            "rotation": -28.5,
+            "flipX": false,
+            "flipY": true
+          }
+        }
+      }
+    ]
+  }
+}
