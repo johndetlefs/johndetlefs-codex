@@ -46,14 +46,21 @@ Presenter-led lead-magnet ad with Remotion motion-graphic overlays.
 
 - John speaks directly to camera.
 - Remotion adds lower thirds, key phrase captions, funnel rails, stage highlights, simple generic store visuals, and CTA cards.
-- Keep scripts around 20-45 seconds.
+- Aim primary scripts at 45-75 seconds. Do not exceed 120 seconds.
+- Later cutdowns can be 15-30 seconds once the strongest angle is clear.
 - Use plain operator language, not agency language.
 
-## Initial Ad Angles
+## Three-Ad Set
 
-1. **Checkout myth:** most owners assume checkout is the problem, but the leak may start earlier.
-2. **More traffic trap:** more traffic can amplify the same leak if the funnel stage is unclear.
-3. **Quick first read:** a short report gives a clearer starting point before changing the store.
+1. **Checkout myth / belief reversal**
+   - Job: stop the scroll by challenging the obvious assumption.
+   - Promise: before touching checkout, find out whether shoppers are even getting that far.
+2. **More traffic trap / wasted effort**
+   - Job: show why spending more can amplify the same leak.
+   - Promise: find the weak stage before buying more traffic, discounting, or redesigning.
+3. **Quick first read / fast useful result**
+   - Job: make the analysis feel useful, concrete, and low-friction.
+   - Promise: use the core funnel numbers to get a clearer starting point.
 
 ## Remotion Visual Direction
 
@@ -63,6 +70,14 @@ Presenter-led lead-magnet ad with Remotion motion-graphic overlays.
 - Use generic storefront/cart/checkout mockups only as quick cutaways.
 - End with a clean CTA card: "Run the free Shopify Bottleneck Analysis."
 - Match the landing page and result-video visual language: same funnel rail, stage-card, lower-third, key phrase caption, and CTA-card treatment.
+
+## Alignment Checks
+
+- The ad promise must match the landing page promise: find the likely Shopify funnel leak before choosing what to fix.
+- The ad should say "likely leak", "weak stage", or "where to look first", not exact root cause.
+- The ad should sell the free analysis only. The $295 diagnostic is for the result-page videos.
+- The same four result states should appear across ad, landing page, report page, and result videos: product page, cart, checkout, and no obvious major leak.
+- Remotion should make the funnel-stage idea instantly recognisable so the result videos feel like the continuation of the same journey.
 
 ## Claims To Avoid
 

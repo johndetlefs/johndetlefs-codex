@@ -4,6 +4,12 @@
 
 These hooks sell the free analysis before signup. They should create enough tension for the viewer to run the report.
 
+Default structure is three Meta acquisition videos:
+
+1. checkout myth / belief reversal;
+2. more traffic trap / wasted effort;
+3. quick first read / fast useful result.
+
 The curiosity gap is:
 
 ```text

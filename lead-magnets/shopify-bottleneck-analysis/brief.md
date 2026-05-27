@@ -38,6 +38,14 @@ The ad layer lives in `lead-magnets/shopify-bottleneck-analysis/ads/` and follow
 
 The goal is to sell the free Shopify Bottleneck Analysis before signup. These videos should create enough curiosity and urgency for the viewer to run the report, not try to sell the paid diagnostic directly.
 
+Default Meta ad set:
+
+1. Checkout myth / belief reversal.
+2. More traffic trap / wasted effort.
+3. Quick first read / fast useful result.
+
+Each ad should point to the same promise: find the likely weak funnel stage before choosing what to fix.
+
 ## Conversion Layer
 
 The conversion plan lives in `lead-magnets/shopify-bottleneck-analysis/conversion-plan.md` because offer name, pricing, CTA copy, booking path, and the coaching bridge affect the whole lead magnet, not only the videos.

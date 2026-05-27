@@ -79,6 +79,8 @@ Use this structure for result videos:
 | Paid next step | 3:20-4:30 | Position the paid diagnostic as the way to get the missing expertise on the team. |
 | Close | 4:30-5:30 | Reassure, give one specific CTA, and remove ambiguity. |
 
+Healthy/no-major-bottleneck result videos can compress this structure. If the diagnosis already lands the useful idea, such as "conversion is now one important lane inside a growing business", do not force separate cost-of-inaction or fix-path sections. Move directly into the paid next step.
+
 The viewer should get the main reveal in the first minute. Do not meander into backstory, broad context, or founder credibility before stating the result.
 
 ## Sales Letter Arc
@@ -133,7 +135,7 @@ The useful lessons from those scripts:
 - Do not turn planning notes into spoken inventory. Sections like "Likely Causes", "First Checks", and "Likely Growth Levers" are for thinking, not phrasing. Avoid comparison ladders such as "if add-to-cart is weak...", "if reach-checkout is weak...", or "you could work on..." unless John explicitly asks for that structure. They read like a strategy memo or LinkedIn post, not a result video.
 - Cost-of-inaction should not loop back through the same metaphor repeatedly. It should show why obvious tactics are short-term or band-aid fixes, then create a clean reason to move into the fix path.
 - For checkout completion, be honest that the immediate settings fixes are simple. Do not inflate complexity. The commercial bridge is that a store with checkout completion as the main leak is probably starting to work, so the next value is optimisation, scale, and keeping conversion sharp while the operator focuses on growth.
-- For healthy/no-major-bottleneck scripts, do not force the "problem" section to feel negative. This result should feel positive and fun. Use the business adolescence idea: the store has momentum and is big enough to need structure before all the structure exists. The tension is not panic or failure; it is owner attention. The store is moving into optimisation and scale, so conversion becomes one important lane among stock, fulfilment, hiring, customer service, cash flow, ads, margins, and other growth work.
+- For healthy/no-major-bottleneck scripts, do not force the "problem" section to feel negative. This result should feel positive and fun. Use the business adolescence idea, explicitly referencing Michael Gerber's `The E-Myth` where useful: the store has momentum and is big enough to need structure before all the structure exists. The tension is not panic or failure; it is owner attention. The store is moving into optimisation and scale, so conversion becomes one important lane among stock, fulfilment, hiring, customer service, cash flow, ads, margins, and other growth work.
 - The paid next step should follow the emotional setup. If the section has already established the expertise gap, move into why John belongs on the team. If the section has established that the store is already working, move into conversion oversight while the business scales. Do not leave old generic paid-step scaffolding in a script after the premise changes.
 - Close with one action. Keep it warm, specific, and matched to the result state; do not add broad reassurance if the viewer's result suggests the business is already working.
 
@@ -210,9 +212,11 @@ For each bottleneck, find the one job that stage must do:
 - add-to-cart: make the buyer feel they are in the right place, trust the offer, imagine owning the product, and see Add to Cart as the natural next step;
 - reach-checkout: recognise that product desire is already there, then remove vendor risk: delivery fees, delivery timing, returns, refunds, total price clarity, and any visibility or layout issue that makes the checkout path less obvious;
 - checkout completion: protect the final payment step after high intent is already there; for most Shopify stores, focus on the few checkout levers that matter most: guest checkout, trusted single-click payment methods, and an app-friction check. Treat abandoned checkout emails as recovery that can feed shoppers back into the same stuck point, not as the fix;
-- healthy funnel: move from "find the leak" to business adolescence: momentum before full structure, with conversion as one lane inside the scaling business.
+- healthy funnel: move from "find the leak" to business adolescence: momentum before full structure, with conversion as one lane inside the scaling business. This variant may not need standalone cost-of-inaction or fix-path sections if the diagnosis already lands on "conversion is now one important lane inside a growing business."
 
 For healthy/no-major-bottleneck scripts, do not recap the other bottleneck videos as a list. The viewer does not need "if add-to-cart, then product page; if reach-checkout, then cart; if checkout, then payment." Start from the actual result state: this is good news, the store is broadly working, and the work now shifts into business adolescence, owner attention, trustworthy partners, optimisation, and scale.
+
+For healthy scripts, avoid strategy-document phrasing such as "baseline", "constraint", and repeated "one lever / one reason / one number" beats in the spoken script. If separate cost-of-inaction or fix-path sections start feeling forced, remove them and move directly into the paid step: conversion is now one important lane inside a growing business, and John can own that lane while the merchant focuses on scale.
 
 The add-to-cart reference pattern is:
 
@@ -265,7 +269,8 @@ The paid step for checkout completion is not "this is all complicated." It is: t
 Aim for:
 
 - setup video: 2-4 minutes;
-- result videos: 4-6 minutes;
+- bottleneck result videos: 4-6 minutes;
+- healthy/no-major-bottleneck result videos: roughly 3 minutes if the diagnosis flows directly into the paid step;
 - retargeting cutdowns: 15-30 seconds.
 
 Result videos can be longer than a normal explainer because the viewer is warm, self-selected, and waiting for their result. The first minute still has to carry the reveal and value proposition.
@@ -352,6 +357,8 @@ Useful Remotion component families:
 - animated leak highlight;
 - visitor dots moving through or dropping out of the funnel;
 - metric cards and benchmark comparisons;
+- business lifecycle and owner-focus maps for healthy/no-major-bottleneck results;
+- conversion-lane and optimisation-partner visuals for scale-stage results;
 - generic storefront, cart, and checkout mockups;
 - cause-category checklist cards;
 - promise handoff split screens that compare ad/email/search/social promise with the first screen of the destination page;
@@ -367,6 +374,7 @@ For result scripts, keep Remotion notes tied to the current spoken mental model:
 - add-to-cart visuals should show promise continuity, trust, imagined ownership, and Add to Cart becoming inevitable;
 - reach-checkout visuals should show the cart bridge, band-aid fixes that miss the real issue, vendor judgement, risk reversal, and a clear checkout path;
 - checkout-completion visuals should not automatically reuse reach-checkout risk reversal; use a final-payment model where Shopify checkout is deliberately constrained, so guest checkout, trusted single-click payments, app-friction checks, and the post-fix scale opportunity become the highest-leverage visuals.
+- healthy/no-major-bottleneck visuals should stay calm and positive: healthy funnel state, good-result card, `The E-Myth` lifecycle, business adolescence, owner focus map, conversion lane, optimisation partner lane, proof strip, and CTA. Do not add red leak graphics, band-aid fix stacks, baseline/test-loop graphics, or a parallel growth-tactics audit.
 
 Do not use Remotion to introduce causes John has not spoken about. Do not turn the visual plan into a parallel audit checklist. The strongest visual notes usually name one object, one transformation, and one takeaway.
 

@@ -8,12 +8,21 @@
 - Placement:
 - Destination: `/shopify-bottleneck-analysis`
 - CTA: "Run the free Shopify Bottleneck Analysis."
+- Target viewer state:
 
 ## Hook
 
 ## Purpose
 
 Sell the free analysis before signup.
+
+## Alignment Checks
+
+- This ad promise matches the landing page promise: find the likely Shopify funnel leak before choosing what to fix.
+- The script says "likely leak", "weak stage", or "where to look first", not exact root cause.
+- The CTA points to the free analysis, not the paid diagnostic.
+- The same four result states are visible or implied: product page, cart, checkout, and no obvious major leak.
+- Remotion visuals match the landing page and result-video visual system.
 
 ## Spoken Script
 
@@ -25,6 +34,7 @@ Sell the free analysis before signup.
 - Visual cutaways:
 - CTA card:
 - Continuity notes:
+- Avoid:
 
 ## Shot Notes
 

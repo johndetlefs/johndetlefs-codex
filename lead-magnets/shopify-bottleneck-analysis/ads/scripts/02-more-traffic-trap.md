@@ -4,10 +4,12 @@
 
 - Lead magnet: Shopify Bottleneck Analysis
 - Angle: wasted effort
-- Target length: 25-35 seconds
+- Target length: 45-75 seconds
 - Placement: Meta/Instagram
 - Destination: `/shopify-bottleneck-analysis`
 - CTA: "Run the free Shopify Bottleneck Analysis."
+- Script status: first pass; rewrite next against approved result-video voice
+- Target viewer state: tempted to buy more traffic but unsure whether the store is ready to convert it
 
 ## Hook
 
@@ -16,6 +18,14 @@
 ## Purpose
 
 Reframe the merchant's growth problem from "get more visitors" to "find the stage that is wasting the visitors you already have."
+
+## Alignment Checks
+
+- Ad promise: find the likely weak stage before spending more on traffic.
+- Landing page promise: run the free Shopify Bottleneck Analysis to find the likely weak funnel stage.
+- Report output: product page, cart, checkout, or no obvious major leak.
+- CTA: free analysis only, not the paid diagnostic.
+- Remotion continuity: same visitor-dot, funnel rail, stage-card, lower-third, and CTA-card treatment as the landing page and result videos.
 
 ## Spoken Script
 

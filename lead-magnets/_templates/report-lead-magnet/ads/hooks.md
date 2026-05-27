@@ -13,12 +13,15 @@ Use this pattern:
 
 ## Hook Options
 
-Draft by angle:
+Draft the default three-ad set first:
 
-- Myth reversal:
+- Belief reversal:
 - Wasted effort:
-- Diagnosis before fixes:
 - Fast useful result:
+
+Add only if needed:
+
+- Diagnosis before fixes:
 - Operator relief:
 - Retargeting nudge:
 

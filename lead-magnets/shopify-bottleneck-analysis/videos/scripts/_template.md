@@ -56,6 +56,8 @@ Reference lessons:
 - Paid next step:
 - Close:
 
+For healthy/no-major-bottleneck variants, omit standalone cost-of-inaction or fix-path bullets if the diagnosis already creates the bridge into the paid step.
+
 ## Retention Loop Notes
 
 - Hook opens:
@@ -63,6 +65,8 @@ Reference lessons:
 - Cost section creates:
 - Fix path resolves:
 - Paid step converts by:
+
+For compressed healthy/no-major-bottleneck scripts, replace the cost/fix loop with: "Diagnosis creates and resolves", then move directly into "Paid step converts by".
 
 ## Scriptwriting Notes
 

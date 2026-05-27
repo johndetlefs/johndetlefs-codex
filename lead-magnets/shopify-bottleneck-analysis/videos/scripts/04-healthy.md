@@ -5,7 +5,7 @@
 - Lead magnet: Shopify Bottleneck Analysis
 - Variant key: `healthy`
 - App location: `next/app/shopify-bottleneck-analysis/results/ShopifyBottleneckResultsExperience.tsx`
-- Target length: 4-6 minutes
+- Target length: 3 minutes
 - Primary viewer state: relieved because the core funnel is broadly working, but unsure where to focus next
 - Offer: $295 Shopify Fix-It Diagnostic
 - CTA: "Book my $295 Shopify Fix-It Diagnostic"
@@ -39,25 +39,22 @@ Draft in `../hooks.md`.
 - Hook: this is a genuinely good result, and the focus moves from what's broken to where the owner should most profitably spend their time.
 - Immediate reveal: the core funnel is not showing one obvious major leak against the Shopify Golden Ratio.
 - Diagnosis: this is where things start getting fun; the store is moving into business adolescence, where it is big enough to need structure before all the structure exists.
-- Cost of inaction: this is less the cost of inaction and more the cost of adolescence; if structure does not catch up with momentum, plates start hitting the floor and conversion can drift.
-- Fix path: give optimisation a clear lane, protect the baseline, choose one growth lever, run one clean test, and make improvements controlled and reversible.
-- Paid next step: position John as the optimisation and conversion partner while the merchant focuses on the rest of the scaling business.
+- Paid next step: jump straight from business adolescence and conversion becoming one of many pillars to John as the optimisation and conversion partner while the merchant focuses on the rest of the scaling business.
 - Close: one clear booking action.
 
 ## Retention Loop Notes
 
 - Hook opens: if the result is good, where should the owner spend their time?
 - Diagnosis answers: the business is moving into adolescence: exciting momentum, more complexity, and a growing need for structure.
-- Cost section creates: concern that momentum without enough structure stretches the owner and lets conversion drift.
-- Fix path resolves: give optimisation a clear lane, protect the baseline, choose one lever, and test it cleanly.
-- Paid step converts by: showing that John can own the optimisation and conversion lane while the merchant focuses on scaling the business.
+- Diagnosis creates and resolves: the store is moving into business adolescence, and conversion is now one important lane inside a growing business.
+- Paid step converts by: showing that John can own that optimisation and conversion lane while the merchant focuses on scaling the business.
 
 ## Scriptwriting Notes
 
 - Main belief/reversal: "healthy means there is nothing to do" versus "healthy means the obvious leak is gone, so the owner's time becomes the scarce resource."
 - Customer behaviour behind the metric: shoppers are moving through the core funnel at broadly acceptable rates; the store has earned the right to improve from a stronger base.
 - Stage psychology: the merchant should feel reassured first, then excited by the scale opportunity while recognising that business adolescence needs structure and trustworthy partners.
-- One mental model for the fix path: business adolescence needs lanes and partners; give optimisation a clear lane, protect what is working, then improve one lever at a time.
+- Script shape: this variant does not need standalone cost-of-inaction or fix-path sections. The business adolescence section already creates the bridge: conversion is now one important lane inside a growing business. Move directly from there into John owning that lane.
 - Obvious mistakes to avoid: changing five things at once, installing random apps, discounting without a margin reason, scaling traffic before understanding economics, or refusing to touch the store because it is already working.
 - Paid-step bridge / expertise gap: this is a good result; the value is having John own the optimisation and conversion lane while the merchant deals with the wider scaling business.
 - Proof to use: Modibodi, Guess Australia, Camilla, University of Technology Sydney, Mission Australia, plus agency trust.
@@ -91,25 +88,23 @@ Move from "find the leak" to "protect the owner's time and give optimisation a c
 
 - Production approach: presenter-led result video with Remotion motion-graphic overlays. John should make the viewer feel that this is a good result, then show business adolescence as the stage where momentum is exciting but structure has to catch up.
 - Presenter/A-roll role: John carries the positive reassurance and the commercial judgement. Remotion should make business adolescence visible without turning the video into a generic growth lecture.
-- Core Remotion components: `PresenterFrame`, `LowerThird`, `KeyPhraseCaption`, `HealthyFunnelRail`, `NoMajorLeakBadge`, `TakeTheWinCard`, `BusinessLifecycle`, `BusinessAdolescenceStage`, `OwnerFocusMap`, `ConversionLane`, `BaselineGuard`, `OneLeverSelector`, `CleanTestLoop`, `ScaleOpportunityMap`, `BrandProofStrip`, `DiagnosticCtaCard`, `EndCard`.
-- Suggested scene flow: show the funnel rail with all stages broadly inside the benchmark band; show a calm "good result" card; move from leak-finding to a simple lifecycle visual: young, adolescent, mature; highlight adolescence as "momentum before full structure"; show the owner surrounded by stock, 3PL, fulfilment, hiring, customer service, cash flow, ads, margins, and conversion; give conversion its own lane; place a guard around the baseline metrics; select one lever; animate a clean test loop: choose, test, measure, build or roll back; pivot into John as the optimisation partner while the merchant focuses on scale.
-- Mental model to visualise: business adolescence needs lanes, structure, and trustworthy partners; give optimisation a lane, then scale with conversion still watched.
+- Core Remotion components: `PresenterFrame`, `LowerThird`, `KeyPhraseCaption`, `HealthyFunnelRail`, `NoMajorLeakBadge`, `TakeTheWinCard`, `BusinessLifecycle`, `BusinessAdolescenceStage`, `OwnerFocusMap`, `ConversionLane`, `OptimisationPartnerLane`, `DiagnosticScopeCards`, `BrandProofStrip`, `DiagnosticCtaCard`, `EndCard`.
+- Suggested scene flow: show the funnel rail with all stages broadly inside the benchmark band; show a calm "good result" card; switch from leak-finding to owner time; move into a simple story cue for Michael Gerber's `The E-Myth`, then a lifecycle visual: infancy, adolescence, maturity; highlight adolescence as "momentum before full structure"; show the owner focus map around stock, 3PL, fulfilment, hiring, customer service, cash flow, ads, margins, and conversion; separate conversion into its own lane; connect that lane to John as the optimisation partner; show diagnostic scope cards for the areas John will review; end on proof chips and the booking CTA.
+- Mental model to visualise: this is not a red-alert leak video. The funnel is broadly working, the business is entering adolescence, and conversion becomes one important lane that needs an owner.
 - Screen capture needs: none for the result explanation. Optional only for showing the healthy report state.
 - Continuity notes: reuse the same funnel rail, visitor-dot, lower-third, key phrase caption, stage-card, proof-strip, and CTA-card treatment from the approved result videos, but use a calmer positive state.
-- Avoid: making a good result feel bad, inventing urgency, implying the store is fully optimised, showing a chaotic wall of tactics, or making the paid step feel like a solution in search of a problem.
+- Avoid: making a good result feel bad, inventing urgency, implying the store is fully optimised, showing a chaotic wall of tactics, showing testing-framework graphics from the removed section, or making the paid step feel like a solution in search of a problem.
 
 ## Screen Beats
 
 - Funnel rail with no major bottleneck highlighted.
 - Good result card: "No obvious major leak."
 - Leak-finding mode switches to business adolescence.
-- Business lifecycle: young, adolescent, mature.
+- Business lifecycle: infancy, adolescence, maturity.
 - Owner focus map: stock, fulfilment, 3PL, hiring, customer service, cash flow, ads, margins, conversion.
 - Conversion lane separates from the other scaling demands.
-- Baseline guard: funnel, AOV, repeat purchase, margin, ad economics.
-- One lever selector.
-- Clean test loop: one change, one reason, one number.
-- Scale opportunity map: new markets, stock, 3PL, hiring, team.
+- Optimisation partner lane connects John to conversion.
+- Diagnostic scope cards: funnel, high-traffic pages, AOV, repeat purchase, paid ads economics.
 - Text-only brand proof strip for Modibodi, Guess Australia, Camilla, University of Technology Sydney, and Mission Australia.
 - Diagnostic CTA card and simple end card.
 
@@ -118,14 +113,10 @@ Move from "find the leak" to "protect the owner's time and give optimisation a c
 - This is a good result.
 - No obvious major leak.
 - Take the win.
-- The owner's time is now the constraint.
-- Protect the baseline.
 - Business adolescence.
-- Momentum needs structure.
-- Optimisation is one part of the job.
-- Scale brings its own complications.
-- Give conversion a lane.
-- One lever. One reason. One number.
+- Momentum before full structure.
+- Your time is becoming scarce.
+- Conversion is one important lane.
 - Keep conversion sharp while you scale.
 - If you want me on your team, book in a call.
 
@@ -163,9 +154,11 @@ And our next question to answer is,
 
 And this is where things start getting fun.
 
-There's a business idea I like called business adolescence.
+Back in the day, there was a very popular business book called The E-Myth, written by Michael Gerber.
 
-A young business is usually fairly narrow.
+And in it, Gerber talks about businesses moving through three stages.
+
+In infancy, an ecommerce business is fairly narrow.
 
 Build the site.
 
@@ -173,125 +166,25 @@ Source the product.
 
 Get the orders out.
 
-Prove people actually want what you're selling.
+Essentially, prove the business has legs.
 
 A mature business has systems, people, processes, and structure.
 
-But adolescence is the bit in the middle.
+Adolescence is that bit in the middle.
 
-The business is big enough to need structure, but it doesn't have all of that structure yet.
+And from the data we're getting, that's probably the direction in which you're heading.
 
-And that's where this result can put you.
+Your store is big enough to need, but doesn't yet have, all of the structure that a mature business has.
 
-The funnel is broadly working.
+As you scale and move into adolescence, more of your time is going to be spent maintaining the business: stock, fulfilment, maybe 3PL, hiring, customer service, cash flow, ads, margins, and all of the other moving parts that come with growth.
 
-Momentum is starting.
+And ultimately, all of this means very soon, your time is going to become a very scarce resource.
 
-And now your time becomes a very valuable resource.
+And while previously you had plenty of time to spend on store maintenance, conversion, and sales optimisation, now conversion is just one of the many pillars of your business that's going to require your attention.
 
-You're thinking about stock, fulfilment, maybe 3PL, hiring, customer service, cash flow, ads, margins, and all the other moving parts that come with growth.
+[Remotion: the funnel rail stays steady. A simple story cue appears: "Michael Gerber / The E-Myth". Then a lifecycle appears: "Infancy", "Adolescence", "Maturity". The adolescent stage highlights with "Momentum before full structure". Owner focus map appears with growth demands around the store, then "Conversion" separates into its own lane.]
 
-So conversion and optimisation don't disappear.
-
-They become one important lane inside a business that's starting to grow up.
-
-[Remotion: the funnel rail stays steady. A simple lifecycle appears: "Young", "Adolescent", "Mature". The adolescent stage highlights with "Momentum before full structure". Owner focus map appears with growth demands around the store, then "Conversion" separates into its own lane.]
-
-### 1:25-2:20 - Cost Of Inaction
-
-So I don't even love calling this the cost of inaction.
-
-This is more like the cost of business adolescence.
-
-The business has momentum now.
-
-That's good.
-
-But momentum needs structure.
-
-The quicker you move into a structure that supports that momentum, the better.
-
-Because otherwise, plates start hitting the floor.
-
-Stock runs short.
-
-Customer service gets reactive.
-
-Fulfilment gets messy.
-
-Ads keep spending, but nobody has time to read the numbers properly.
-
-And conversion drifts.
-
-The product pages stop getting sharper.
-
-The offer stops improving.
-
-The numbers stop getting watched.
-
-And none of that means you're doing a bad job.
-
-It just means the business has outgrown doing everything through you.
-
-So the move now is to start building structure and finding trustworthy partners where it makes sense.
-
-Because the store can be growing while still leaving money on the table, if nobody is properly owning the optimisation lane.
-
-[Remotion: the adolescent business visual gains momentum lines, then a few plates wobble: "Stock", "Support", "Fulfilment", "Ads", "Conversion". The "Conversion" lane dims, then locks into a dedicated lane labelled "Optimisation partner".]
-
-### 2:20-3:30 - Fix Path
-
-So the fix path here is not to add another thing to your plate.
-
-The fix path is to give optimisation a lane.
-
-First, decide what we need to protect.
-
-The core funnel, average order value, returning customer rate, margin, and ad economics.
-
-That's the baseline.
-
-Then find the constraint the numbers are actually pointing to: how people arrive, what they spend, whether they come back, or whether the paid ads leave enough room.
-
-But we don't pick the lever because it sounds clever.
-
-We pick it because the numbers point there.
-
-Then we run one clean change.
-
-One lever.
-
-One reason.
-
-One number we're trying to move.
-
-If it works, we build on it.
-
-If it doesn't, we roll it back or move to the next lever.
-
-That's how you stop optimisation feeling risky.
-
-You're not being reckless.
-
-You're making controlled, reversible improvements to a store that's already showing signs of life.
-
-[Remotion: baseline guard wraps around the funnel metrics: "Funnel", "AOV", "Repeat purchase", "Margin", "Ad economics". A selector chooses one growth lever. A clean test loop animates: "Choose", "Test", "Measure", "Build or roll back".]
-
-### 3:30-4:50 - Paid Next Step
-
-Now I know, that's a lot of moving parts.
-
-And this is exactly why this result changes the conversation.
-
-You do not need someone to come in and panic about a broken funnel.
-
-That's not what this is.
-
-You need trustworthy partners who can own parts of the business as it moves through adolescence.
-
-For me, that lane is optimisation and conversion.
-
-You focus on building the structure around the business.
+### 1:25-2:45 - Paid Next Step
 
 And that's where I come in.
 
@@ -299,7 +192,7 @@ My job is to make sure conversion does not get ignored while that happens.
 
 I've worked with some of the biggest ecommerce brands and agencies in Australia, such as Modibodi, Guess Australia, Camilla, University of Technology Sydney, and Mission Australia, to name a few.
 
-[Remotion: scale opportunity map expands from the working funnel into "Landing pages", "AOV", "Repeat purchase", "Ads", "New markets", "3PL", "Stock", "Team". Then a "Conversion oversight" line stays connected to the funnel. Text-only brand proof strip appears: "Modibodi", "Guess Australia", "Camilla", "UTS", "Mission Australia".]
+[Remotion: the "Conversion" lane connects to an "Optimisation partner" lane. Diagnostic scope cards appear one at a time: "Funnel", "High-traffic pages", "AOV", "Repeat purchase", "Paid ads economics". Text-only brand proof strip appears: "Modibodi", "Guess Australia", "Camilla", "UTS", "Mission Australia".]
 
 And agencies bring me in because they trust me to take good care of their biggest clients.
 
@@ -311,7 +204,7 @@ Then we'll turn that into a clear action plan: what to protect, what to improve 
 
 [Remotion: diagnostic CTA card. "Book your $295 Shopify Fix-It Diagnostic" with bullets: "Store review", "Optimisation partner", "Conversion action plan".]
 
-### 4:50-5:05 - Close
+### 2:45-3:00 - Close
 
 So if all of that works for you, click the button below this video, book in a call, and I am looking forward to working with you.
 
@@ -323,9 +216,7 @@ All the best. I genuinely hope this has been useful for you. And with any luck, 
 
 - "This is a good result. Your funnel is not showing one obvious major leak."
 - "A healthy funnel can mean the business is moving into adolescence: momentum before full structure."
-- "Scale brings a lot of moving parts. Conversion still needs an owner."
-- "One lever. One reason. One number we're trying to move."
-- "Protect what is working, then give optimisation a clear lane."
+- "Conversion is now one important lane inside a growing business."
 
 ## Claims To Avoid
 

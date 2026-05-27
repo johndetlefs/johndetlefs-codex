@@ -43,23 +43,44 @@ Default format: presenter-led lead-magnet ad with Remotion motion-graphic overla
 - Talking head is the A-roll.
 - Remotion provides lower thirds, key phrase captions, funnel diagrams, simple mockups, stage highlights, and CTA cards.
 - Use direct-to-camera energy. The ad should feel like a useful operator insight, not a polished explainer.
-- Keep most ads between 20 and 45 seconds.
+- Aim most primary scripts at 45-75 seconds. Keep 120 seconds as the hard ceiling.
+- Later cutdowns can be 15-30 seconds once the main angle works.
 - Make the first 3 seconds work without context.
 - Assume mobile-first, sound-on and sound-off versions.
 
+## Default Three-Ad Set
+
+Every report lead magnet should start with three acquisition videos. They should feel like three angles on the same promise, not three different products.
+
+1. **Belief reversal ad**
+   - Job: stop the scroll by turning over a common assumption.
+   - Pattern: "You probably think X. But the report may show Y."
+   - For Shopify Bottleneck Analysis: "Most Shopify owners look at checkout first, but the leak may start earlier."
+2. **Wasted-effort ad**
+   - Job: show why guessing creates wasted time, spend, or margin.
+   - Pattern: "Before you spend more on X, find out where the leak actually starts."
+   - For Shopify Bottleneck Analysis: "More traffic, discounts, or redesigns can all miss the actual weak stage."
+3. **Fast useful-result ad**
+   - Job: make the lead magnet feel low-friction and tangibly useful.
+   - Pattern: "Give us the key inputs, get a useful first read, then decide where to look first."
+   - For Shopify Bottleneck Analysis: "Use the core funnel numbers to see whether the likely issue is product page, cart, checkout, or no obvious major leak."
+
+Once those three exist, create additional scripts only when the angle is genuinely different: retargeting nudge, seasonal push, category-specific version, founder-story proof, or objection handling.
+
 ## Ad Structure
 
-Use this structure for most ads:
+Use this structure for most primary ads:
 
 | Segment | Timing | Job |
 | --- | ---: | --- |
 | Hook | 0:00-0:03 | State a belief and turn it over. |
-| Problem | 0:03-0:10 | Name the expensive guessing problem. |
-| Lead magnet promise | 0:10-0:20 | Show what the free report helps them find. |
-| Specificity | 0:20-0:30 | Name the funnel stages or input/output so it feels tangible. |
-| CTA | 0:30-0:45 | Tell them to run the free analysis. |
+| Problem | 0:03-0:15 | Name the guessing problem in the viewer's language. |
+| Lead magnet promise | 0:15-0:35 | Show what the free report helps them find. |
+| Specificity | 0:35-0:55 | Name the inputs, outputs, stages, or result states so it feels tangible. |
+| Reassurance | 0:55-1:05 | Make the process feel achievable and useful, not technical or intimidating. |
+| CTA | 1:05-1:15 | Tell them to run the free analysis. |
 
-Shorter variants can compress this into hook, promise, CTA.
+Shorter variants can compress this into hook, promise, CTA. Do not stretch a short ad just to fill time.
 
 ## Hook Rules
 
@@ -111,6 +132,20 @@ Sell the lead magnet outcome:
 - "Get a more useful starting point before changing the store."
 
 Do not lead with the paid diagnostic. The paid diagnostic can be lightly implied as the deeper next step after the report, but the ad CTA should stay focused on the free analysis.
+
+## Alignment Rules
+
+The ad creates the first promise in the lead-magnet journey. The landing page, setup flow, result page, and result videos must pay that promise off.
+
+Before approving an ad script, check:
+
+- the hook matches a belief the target merchant already has;
+- the ad sells the same outcome the landing page can immediately repeat;
+- the report can actually deliver the promised output;
+- the wording says "likely leak", "weak stage", or "where to look first" rather than pretending to find the exact root cause;
+- the CTA is to run the free lead magnet, not book the paid diagnostic;
+- the visual language matches the landing page and result videos: same presenter-led style, funnel rail, stage cards, captions, and CTA treatment;
+- the result videos will feel like the natural continuation of the ad, not a different offer.
 
 ## Remotion Overlay Pattern
 
@@ -166,7 +201,9 @@ lead-magnets/<lead-magnet-slug>/ads/
   video-manifest.md
   scripts/
     _template.md
-    01-<angle>.md
+    01-belief-reversal.md
+    02-wasted-effort.md
+    03-fast-useful-result.md
 ```
 
 Create more ad scripts only when the angle is meaningfully different.

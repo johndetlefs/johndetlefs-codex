@@ -75,6 +75,14 @@ Lead magnets have two different video jobs:
 
 Keep these separate. Ad videos create the click and lead capture. Result videos interpret the report and move qualified users toward the Shopify Fix-It Diagnostic.
 
+Each new report lead magnet should start with a three-ad acquisition set:
+
+1. **Belief reversal**: turn over the viewer's obvious assumption.
+2. **Wasted effort**: show why guessing can waste time, spend, or margin.
+3. **Fast useful result**: make the report feel low-friction and tangibly useful.
+
+Keep primary ad scripts around 45-75 seconds, with 120 seconds as the hard ceiling. Create 15-30 second cutdowns after the main angles are working.
+
 ## Visual Continuity
 
 The whole lead-magnet journey should feel like one system:

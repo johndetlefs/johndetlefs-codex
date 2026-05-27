@@ -8,6 +8,7 @@ Last updated:
 
 ## Checklist
 
+- [ ] Three-ad acquisition set confirmed
 - [ ] Ad angles selected
 - [ ] Hooks drafted
 - [ ] Primary scripts drafted
@@ -20,6 +21,10 @@ Last updated:
 - [ ] Ads launched or scheduled
 
 ## Decisions
+
+- Default three-ad set: belief reversal, wasted effort, and fast useful result.
+- Primary scripts should aim for 45-75 seconds and stay under 120 seconds.
+- Ads sell the free lead magnet before signup; they do not sell the paid diagnostic.
 
 ## Open Questions
 

@@ -57,7 +57,7 @@ The current app CTA is `/booking` with legacy "Book a Shopify Fix-It Call" langu
 
 ## Sales Letter Arc
 
-Each result video should follow:
+Most bottleneck result videos should follow:
 
 1. Immediate reveal: confirm the report is theirs and state the top-line diagnosis in the first 20 seconds.
 2. Diagnosis: explain what this stage leak means in plain English.
@@ -65,6 +65,8 @@ Each result video should follow:
 4. Fix path: give the viewer one practical mental model for what needs to change, not a long checklist.
 5. Paid next step: match the result state, position John as the person who can help apply the mental model to their actual store, and invite them to book the $295 Shopify Fix-It Diagnostic.
 6. Close: give one clear CTA with a warm sign-off.
+
+Healthy/no-major-bottleneck is the exception. If the diagnosis already creates the bridge into the paid step, keep the video shorter and move directly from business adolescence into John owning the optimisation lane.
 
 Recommended timing:
 
@@ -98,7 +100,7 @@ Recommended timing:
 - Use screen capture only where the viewer needs exact process guidance, especially the setup video and any Shopify export steps.
 - Use generic Shopify-style mockups rather than real merchant examples for result videos: abstract product pages, cart drawers, checkout screens, funnel rails, metric cards, and checklist panels.
 - Show the report state early, then use Remotion-built overlays and cutaways to explain the pattern.
-- Visualise the mental model in each section: belief/reversal, cost stacking up, promise handoff, trust loss, imagined ownership, vendor judgement, risk reversal, checkout friction, trusted payment systems, scale opportunity, priority choice, or action plan.
+- Visualise the mental model in each section: belief/reversal, cost stacking up, promise handoff, trust loss, imagined ownership, vendor judgement, risk reversal, checkout friction, trusted payment systems, business adolescence, owner focus, conversion lane, optimisation partner, or action plan.
 - Use text-only proof strips for brand names unless approved logo assets are available.
 - Match the lead-generation ad and landing page visual language so the viewer feels one continuous journey from click to report to result.
 - Highlight one metric, stage, or user decision at a time.

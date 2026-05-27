@@ -4,8 +4,8 @@ Packet: `lead-magnets/shopify-bottleneck-analysis/videos`
 Lead magnet: `next/app/shopify-bottleneck-analysis`
 Reusable framework: `lead-magnets/_frameworks/diagnostic-result-videos.md`
 App implementation doc: `next/docs/report-lead-magnet-videos.md`
-Current stage: add-to-cart, reach-checkout, and checkout-completion scripts approved; healthy rewritten first draft ready
-Last updated: 2026-05-22
+Current stage: add-to-cart, reach-checkout, and checkout-completion scripts approved; healthy compressed draft with updated Remotion notes ready for review
+Last updated: 2026-05-25
 
 ## Checklist
 
@@ -29,8 +29,8 @@ Last updated: 2026-05-22
 
 - Source strategy note: `/Users/johndetlefs/Desktop/sales-video-structure.md`.
 - These videos are diagnostic videos, not generic founder-heavy VSLs.
-- The setup video can be more instructional; the result videos should follow immediate reveal, diagnosis, cost of inaction, fix path, paid next step, close.
-- Result videos should be roughly 4-6 minutes.
+- The setup video can be more instructional; bottleneck result videos should generally follow immediate reveal, diagnosis, cost of inaction, fix path, paid next step, close. Healthy/no-major-bottleneck can compress the structure when the diagnosis already creates the bridge into the paid step.
+- Bottleneck result videos should be roughly 4-6 minutes. Healthy/no-major-bottleneck can be shorter when the script lands cleanly.
 - Result videos should give real diagnostic value before the booking pitch.
 - Each result video should focus on one bottleneck and one next step.
 - Exact customer numbers should stay on the page. The pre-recorded videos should reference the pattern and tell the viewer how to interpret the report.
@@ -50,7 +50,7 @@ Last updated: 2026-05-22
 - Reach-checkout full script approved by John on 2026-05-22. Future result scripts should also follow its stage-psychology discipline: product desire may already be solved, so the fix path must identify the new buyer question instead of reusing a generic checklist.
 - Current approved references are `scripts/01-add-to-cart.md`, `scripts/02-reach-checkout.md`, and `scripts/03-checkout-completion.md`.
 - Checkout-completion script approved by John on 2026-05-22. Future result scripts should follow its lesson that the paid next step must match the result state: if the simple fix puts the business into optimisation and scale mode, sell conversion oversight and the next growth lever rather than inflating the complexity of settings changes.
-- Healthy/no-major-bottleneck script draft rewritten on 2026-05-22. It starts from the good result, then moves into business adolescence, owner time, scaling demands, and giving optimisation a clear lane.
+- Healthy/no-major-bottleneck script rewritten and compressed on 2026-05-25. It starts from the good result, moves into business adolescence and owner time, then jumps directly into John owning the optimisation lane.
 - Drafting guardrail added on 2026-05-22: do not turn planning notes into spoken inventory. Avoid repeated "if X..." or "you could..." ladders; compress likely causes, first checks, and growth levers into one spoken mental model.
 
 ## Open Questions

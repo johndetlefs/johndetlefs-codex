@@ -2,8 +2,8 @@
 
 Lead magnet: Shopify Bottleneck Analysis
 App route: `next/app/shopify-bottleneck-analysis`
-Current stage: live lead magnet, video sales layer in script production
-Last updated: 2026-05-22
+Current stage: live lead magnet, result scripts completed, Meta ad-video structure ready for script rewrite
+Last updated: 2026-05-25
 
 ## Assets
 
@@ -22,13 +22,15 @@ Last updated: 2026-05-22
 - The reusable diagnostic-video framework lives in `lead-magnets/_frameworks/`, not in this lead magnet folder.
 - The reusable ad-video framework also lives in `lead-magnets/_frameworks/`, with Bottleneck-specific ad scripts in `ads/`.
 - This lead magnet owns the Bottleneck-specific diagnosis, conversion plan, scripts, hooks, video IDs, and offer-alignment decisions.
-- The add-to-cart, reach-checkout, and checkout-completion result videos are the approved script references for the remaining result videos and the reusable diagnostic-video framework.
-- The healthy/no-major-bottleneck result video has a rewritten first draft ready for review. It treats a healthy funnel as a good result, then uses the business adolescence idea: momentum before full structure, owner time, scaling demands, and giving optimisation a clear lane.
+- The add-to-cart, reach-checkout, checkout-completion, and healthy/no-major-bottleneck result scripts are complete enough to move into the acquisition ad-video layer.
+- The Meta ad-video layer uses a three-ad set: checkout myth / belief reversal, more traffic trap / wasted effort, and quick first read / fast useful result.
+- Ad scripts should sell the free analysis before signup, stay aligned to the same funnel-stage promise, and not sell the $295 diagnostic directly.
 
 ## Open Questions
 
-- Which video host will be used for the result videos?
+- Which video host will be used for the result and ad videos?
+- What UTM naming convention should be used for Meta ads?
 
 ## Next Action
 
-- Review the healthy/no-major-bottleneck first script draft with John.
+- Rewrite the three Meta ad scripts using the approved result-video voice and the updated 45-75 second ad structure.
