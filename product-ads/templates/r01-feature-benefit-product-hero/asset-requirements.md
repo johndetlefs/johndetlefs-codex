@@ -13,14 +13,14 @@ Reference:
 - `/templates/r01-feature-benefit-product-hero/reference/original.webp`
 - `/templates/r01-feature-benefit-product-hero/forensic-teardown.md`
 
-Shared arrows and icons:
+Shared arrows:
 
 - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/`
 - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/`
 - `/templates/r01-feature-benefit-product-hero/assets/icon-sheets/`
 - `/templates/r01-feature-benefit-product-hero/asset-groups.json`
 
-These assets are shared across brands. Do not copy them into client folders unless a client-specific variant is generated.
+These assets are shared across brands only when they are structural source-format assets such as arrows. Product/category callout icons belong in client folders and must follow `/product-ads/CALLOUT_AND_ICON_PROCESS.md`.
 
 ## Required Client Assets
 
@@ -30,7 +30,9 @@ Each product using R01 must provide:
 - `product.json`
 - `ads/r01-feature-benefit-product-hero/editor-state.json`
 - A no-background product image under `assets/product-shots/`
-- Product/client-specific icons under `assets/icons/` only when the shared icon set does not match the product category.
+- Product/client-specific GPT Image 2.0 icons under `assets/icons/<template-slug>/`.
+- `ads/r01-feature-benefit-product-hero/callout-strategy.md` before icon generation.
+- `ads/r01-feature-benefit-product-hero/asset-groups.json` exposing icon variants with `assetSet`.
 - Product-page or claim analysis under `source/` when the copy/claims need audit support.
 
 ## Layout Requirements
@@ -39,6 +41,8 @@ Each product using R01 must provide:
 - Arrows must start near the callout/icon they represent and end by pointing to the product feature/area being described.
 - Arrow curvature, endpoint, and spacing must be part of teardown, not guessed during layout.
 - Icon, arrow, text, and product spacing must be measured as a group so arrows do not crowd text or float too far from the callout.
+- Icon size must be judged by visible artwork after transparent padding is considered, not by the editor frame alone.
+- If a generated icon reads as tiny, thin, or ambiguous at thumbnail size, enlarge the placement, crop/normalize the transparent slice, or regenerate the icon with stronger visual density.
 - Callout lockups should cluster around the product differently per ratio while preserving the original source vibe.
 - Safe zones must be checked for 9:16, 4:5, 1:1, and 1.91:1.
 

@@ -387,7 +387,9 @@ Prop assets:
 Icon/sticker/arrow set:
 
 - Required: source-style white hand-drawn icons and arrows.
-- Existing `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/` assets can be reused only if they visually match the source's white, casual, rounded linework. If they read as generic UI icons, regenerate a source-matched set.
+- Shared template assets should only cover structural source-format pieces, primarily arrows.
+- Product/category callout icons must live under the client/product folder and follow `/product-ads/CALLOUT_AND_ICON_PROCESS.md`.
+- Existing client icon assets can be reused only if they visually match the source's white, casual, rounded linework and semantically match the approved callout strategy. If they read as generic UI icons or say the wrong thing, regenerate a source-matched GPT Image 2.0 set.
 - Required families:
   - protein icon variants;
   - low-sugar/chocolate icon variants;

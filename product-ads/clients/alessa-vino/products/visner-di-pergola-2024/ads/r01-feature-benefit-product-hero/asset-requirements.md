@@ -44,6 +44,7 @@ Support icons:
   - `marche-ritual-01.png` through `marche-ritual-04.png`
   - `chocolate-pairing-01.png` through `chocolate-pairing-04.png`
 - Icons must stay in the product's R01 asset folder and be exposed through this ad's `asset-groups.json`; do not add them to the shared template asset group.
+- Callout strategy and icon fit audit: `/clients/alessa-vino/products/visner-di-pergola-2024/ads/r01-feature-benefit-product-hero/callout-strategy.md`
 
 Arrows:
 
@@ -55,3 +56,5 @@ Arrows:
 Quality rule:
 
 - Do not use mixed product-page icon captures or hand-coded substitutes for this R01. The icon set must feel like one premium, commercially usable wine-ad system with consistent stroke weight, visual density, padding, and metaphor style.
+- The selected icon must be semantically correct for the callout. Ban coffee/cocoa-plant imagery for `Chocolate pairing`, water-drop imagery for `Sour cherry nectar`, and landscape-only imagery for `Marche ritual` unless the copy is changed to an origin/provenance callout.
+- Icon placement must be size-checked by visible alpha artwork at final export scale. If an icon reads as tiny, crop/normalize the transparent slice, enlarge the editor placement, or regenerate the icon with stronger visual density.

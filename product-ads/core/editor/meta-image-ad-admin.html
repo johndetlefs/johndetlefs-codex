@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Ads Admin</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #151d2a;
+        --panel-2: #1b2534;
+        --line: rgba(255, 255, 255, 0.1);
+        --muted: #9ba7ba;
+        --text: #eef3fb;
+        --accent: #ffd451;
+        --green: #46c479;
+        --red: #f07078;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .icon-sprite {
+        display: none;
+      }
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 58px;
+        padding: 10px 18px;
+        border-bottom: 1px solid var(--line);
+        background: #111824;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.2;
+      }
+
+      .brand p {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .top-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .btn,
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 34px;
+        border: 0;
+        border-radius: 7px;
+        background: #263348;
+        color: #fff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 750;
+        line-height: 1;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+
+      .icon-btn {
+        width: 36px;
+        padding: 0;
+      }
+
+      .btn.primary {
+        background: var(--accent);
+        color: #162033;
+      }
+
+      .btn.ghost,
+      .icon-btn.ghost {
+        border: 1px solid var(--line);
+        background: transparent;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 250px minmax(640px, 1fr) 300px;
+        height: calc(100vh - 58px);
+        min-height: 720px;
+        overflow: hidden;
+      }
+
+      .panel {
+        min-width: 0;
+        overflow: auto;
+        border-right: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .detail {
+        border-right: 0;
+        border-left: 1px solid var(--line);
+      }
+
+      .panel-section {
+        padding: 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .panel-title {
+        margin: 0 0 10px;
+        color: #d7dfec;
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+
+      .field label {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .input-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: #111824;
+      }
+
+      input,
+      select {
+        width: 100%;
+        min-width: 0;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--text);
+        font: inherit;
+        font-size: 13px;
+      }
+
+      select {
+        min-height: 34px;
+        padding: 0 10px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: #111824;
+      }
+
+      .main {
+        min-width: 0;
+        overflow: auto;
+        padding: 16px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .stat span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .stat strong {
+        display: block;
+        margin-top: 5px;
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .tabs {
+        display: inline-flex;
+        gap: 4px;
+        margin-bottom: 12px;
+        padding: 4px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #111824;
+      }
+
+      .tab {
+        min-height: 30px;
+        padding: 0 12px;
+        border: 0;
+        border-radius: 6px;
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: 13px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .tab.active {
+        background: #2a3950;
+        color: #fff;
+      }
+
+      .list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .ad-row,
+      .template-row,
+      .client-row {
+        display: grid;
+        grid-template-columns: 84px minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        min-width: 0;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .ad-row.selected,
+      .template-row.selected,
+      .client-row.selected {
+        border-color: rgba(255, 212, 81, 0.68);
+        box-shadow: inset 0 0 0 1px rgba(255, 212, 81, 0.18);
+      }
+
+      .thumb {
+        display: grid;
+        place-items: center;
+        width: 84px;
+        height: 84px;
+        overflow: hidden;
+        border-radius: 7px;
+        background: #0d1320;
+      }
+
+      .thumb img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .fallback {
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+      }
+
+      .row-copy {
+        min-width: 0;
+      }
+
+      .row-copy h2 {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 1.25;
+      }
+
+      .row-copy p {
+        margin: 4px 0 0;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.35;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 22px;
+        max-width: 100%;
+        padding: 0 7px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: #cdd6e5;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .chip.saved {
+        border-color: rgba(70, 196, 121, 0.42);
+        color: #9be6b9;
+      }
+
+      .chip.warn {
+        border-color: rgba(240, 112, 120, 0.38);
+        color: #ffb1b7;
+      }
+
+      .row-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .empty {
+        padding: 28px;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .detail-preview {
+        display: grid;
+        place-items: center;
+        min-height: 220px;
+        margin-bottom: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #0d1320;
+      }
+
+      .detail-preview img {
+        max-width: 100%;
+        max-height: 260px;
+        object-fit: contain;
+      }
+
+      .detail h2 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .detail p {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .detail-links {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .detail-links .btn {
+        justify-content: flex-start;
+      }
+
+      .swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .swatch {
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+      }
+
+      .status {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 1100px) {
+        .layout {
+          grid-template-columns: 220px minmax(0, 1fr);
+        }
+
+        .detail {
+          display: none;
+        }
+      }
+
+      @media (max-width: 780px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .layout {
+          display: block;
+          height: auto;
+          min-height: 0;
+          overflow: visible;
+        }
+
+        .panel,
+        .main {
+          overflow: visible;
+        }
+
+        .stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .ad-row,
+        .template-row,
+        .client-row {
+          grid-template-columns: 64px minmax(0, 1fr);
+        }
+
+        .thumb {
+          width: 64px;
+          height: 64px;
+        }
+
+        .row-actions {
+          grid-column: 1 / -1;
+          justify-content: flex-end;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m20 20-4-4" />
+      </symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24">
+        <path d="M21 12a9 9 0 0 1-15.2 6.5" />
+        <path d="M3 12A9 9 0 0 1 18.2 5.5" />
+        <path d="M18 2v4h4" />
+        <path d="M6 22v-4H2" />
+      </symbol>
+      <symbol id="icon-edit" viewBox="0 0 24 24">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+        <path d="M14 2v6h6" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M15 3h6v6" />
+        <path d="m10 14 11-11" />
+        <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5" />
+      </symbol>
+      <symbol id="icon-grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </symbol>
+    </svg>
+
+    <header class="topbar">
+      <div class="brand">
+        <h1>Product Ads Admin</h1>
+        <p>Browse clients, products, templates, angles, and saved editor states.</p>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn ghost" id="refreshBtn" type="button" title="Refresh inventory" aria-label="Refresh inventory">
+          <svg class="icon" aria-hidden="true"><use href="#icon-refresh"></use></svg>
+        </button>
+        <a class="btn primary" id="defaultEditorLink" href="/meta-image-ad-editor.html">
+          <svg class="icon" aria-hidden="true"><use href="#icon-edit"></use></svg>
+          Editor
+        </a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel">
+        <section class="panel-section">
+          <h2 class="panel-title">Filters</h2>
+          <div class="field">
+            <label for="searchInput">Search</label>
+            <div class="input-wrap">
+              <svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg>
+              <input id="searchInput" type="search" placeholder="Client, product, template..." autocomplete="off" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="clientFilter">Client</label>
+            <select id="clientFilter"></select>
+          </div>
+          <div class="field">
+            <label for="templateFilter">Template</label>
+            <select id="templateFilter"></select>
+          </div>
+          <div class="field">
+            <label for="statusFilter">Status</label>
+            <select id="statusFilter">
+              <option value="">All statuses</option>
+              <option value="Saved project">Saved project</option>
+              <option value="Needs setup">Needs setup</option>
+            </select>
+          </div>
+          <button class="btn ghost" id="clearFiltersBtn" type="button">All</button>
+        </section>
+        <section class="panel-section">
+          <h2 class="panel-title">Workflow</h2>
+          <p class="status">Use this screen as the account-level index. Open an ad to tune copy, layout, background, icons, safe zones, and exports in the editor.</p>
+        </section>
+      </aside>
+
+      <section class="main">
+        <div class="stats" id="statsGrid"></div>
+        <div class="tabs" role="tablist" aria-label="Admin view">
+          <button class="tab active" type="button" data-view="ads">Ads</button>
+          <button class="tab" type="button" data-view="templates">Templates</button>
+          <button class="tab" type="button" data-view="clients">Clients</button>
+        </div>
+        <div class="list" id="itemList"></div>
+      </section>
+
+      <aside class="panel detail" id="detailPanel">
+        <section class="panel-section">
+          <h2 class="panel-title">Selected</h2>
+          <div id="detailContent"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script>
+      const INVENTORY_ENDPOINT = "/api/meta-image-ad-editor/inventory";
+      const state = {
+        inventory: { clients: [], products: [], templates: [], ads: [], counts: {} },
+        view: "ads",
+        selectedId: "",
+        filters: {
+          search: "",
+          client: "",
+          template: "",
+          status: ""
+        }
+      };
+
+      const refs = {
+        statsGrid: document.getElementById("statsGrid"),
+        itemList: document.getElementById("itemList"),
+        detailContent: document.getElementById("detailContent"),
+        searchInput: document.getElementById("searchInput"),
+        clientFilter: document.getElementById("clientFilter"),
+        templateFilter: document.getElementById("templateFilter"),
+        statusFilter: document.getElementById("statusFilter"),
+        clearFiltersBtn: document.getElementById("clearFiltersBtn"),
+        refreshBtn: document.getElementById("refreshBtn"),
+        tabs: Array.from(document.querySelectorAll(".tab"))
+      };
+
+      function escapeHtml(value) {
+        return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;"
+        }[char]));
+      }
+
+      function formatDate(value) {
+        if (!value) return "Not saved";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return value;
+        return new Intl.DateTimeFormat(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit"
+        }).format(date);
+      }
+
+      function initials(value) {
+        return String(value || "Ad")
+          .split(/\s+/)
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((part) => part[0])
+          .join("")
+          .toUpperCase();
+      }
+
+      function thumbMarkup(src, label) {
+        if (!src) return `<span class="fallback">${escapeHtml(initials(label))}</span>`;
+        return `<img src="${escapeHtml(src)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'), { className: 'fallback', textContent: '${escapeHtml(initials(label))}' }))" />`;
+      }
+
+      function setOptions(select, values, label, selected) {
+        select.innerHTML = `<option value="">All ${label}</option>` + values.map((item) => {
+          const value = item.id || item.template || item;
+          const text = item.name || item.templateName || item;
+          return `<option value="${escapeHtml(value)}"${value === selected ? " selected" : ""}>${escapeHtml(text)}</option>`;
+        }).join("");
+      }
+
+      function searchableText(item) {
+        return [
+          item.clientName,
+          item.client,
+          item.productName,
+          item.product,
+          item.templateName,
+          item.template,
+          item.angleName,
+          item.status
+        ].filter(Boolean).join(" ").toLowerCase();
+      }
+
+      function filteredAds() {
+        const search = state.filters.search.trim().toLowerCase();
+        return state.inventory.ads.filter((ad) => {
+          if (state.filters.client && ad.client !== state.filters.client) return false;
+          if (state.filters.template && ad.template !== state.filters.template) return false;
+          if (state.filters.status && ad.status !== state.filters.status) return false;
+          if (search && !searchableText(ad).includes(search)) return false;
+          return true;
+        });
+      }
+
+      function renderStats() {
+        const counts = state.inventory.counts || {};
+        refs.statsGrid.innerHTML = [
+          ["Clients", counts.clients || 0],
+          ["Products", counts.products || 0],
+          ["Templates", counts.templates || 0],
+          ["Ads", counts.ads || 0]
+        ].map(([label, value]) => `
+          <div class="stat">
+            <span>${escapeHtml(label)}</span>
+            <strong>${escapeHtml(value)}</strong>
+          </div>
+        `).join("");
+      }
+
+      function renderFilters() {
+        setOptions(refs.clientFilter, state.inventory.clients, "clients", state.filters.client);
+        setOptions(refs.templateFilter, state.inventory.templates, "templates", state.filters.template);
+        refs.statusFilter.value = state.filters.status;
+      }
+
+      function statusClass(status) {
+        return status === "Saved project" ? "saved" : "warn";
+      }
+
+      function renderAds() {
+        const ads = filteredAds();
+        if (!ads.length) {
+          refs.itemList.innerHTML = `<div class="empty">No ads match the current filters.</div>`;
+          renderDetail(null);
+          return;
+        }
+
+        if (!ads.some((ad) => ad.id === state.selectedId)) {
+          state.selectedId = ads[0].id;
+        }
+
+        refs.itemList.innerHTML = ads.map((ad) => `
+          <article class="ad-row${ad.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(ad.id)}">
+            <div class="thumb">${thumbMarkup(ad.previewImage, ad.productName)}</div>
+            <div class="row-copy">
+              <h2>${escapeHtml(ad.productName)}</h2>
+              <p>${escapeHtml(ad.clientName)} · ${escapeHtml(ad.templateName)} · ${escapeHtml(ad.angleName)}</p>
+              <div class="chips">
+                <span class="chip ${statusClass(ad.status)}">${escapeHtml(ad.status)}</span>
+                <span class="chip">${escapeHtml(formatDate(ad.savedAt))}</span>
+              </div>
+            </div>
+            <div class="row-actions">
+              <button class="icon-btn ghost" type="button" title="Show details" aria-label="Show details" data-select="${escapeHtml(ad.id)}">
+                <svg class="icon" aria-hidden="true"><use href="#icon-grid"></use></svg>
+              </button>
+              <a class="btn primary" href="${escapeHtml(ad.editorUrl)}" title="Open editor">
+                <svg class="icon" aria-hidden="true"><use href="#icon-edit"></use></svg>
+                Edit
+              </a>
+            </div>
+          </article>
+        `).join("");
+        renderDetail(ads.find((ad) => ad.id === state.selectedId));
+      }
+
+      function renderTemplates() {
+        const templates = state.inventory.templates;
+        refs.itemList.innerHTML = templates.map((template) => `
+          <article class="template-row${template.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(template.id)}">
+            <div class="thumb">${thumbMarkup(template.referenceImage, template.name)}</div>
+            <div class="row-copy">
+              <h2>${escapeHtml(template.name)}</h2>
+              <p>${escapeHtml(template.referenceNote || template.id)}</p>
+              <div class="chips">
+                <span class="chip">${escapeHtml(template.id)}</span>
+              </div>
+            </div>
+            <div class="row-actions">
+              ${template.forensicTeardownUrl ? `<a class="icon-btn ghost" href="${escapeHtml(template.forensicTeardownUrl)}" title="Forensic teardown" aria-label="Forensic teardown"><svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg></a>` : ""}
+              ${template.assetRequirementsUrl ? `<a class="icon-btn ghost" href="${escapeHtml(template.assetRequirementsUrl)}" title="Asset requirements" aria-label="Asset requirements"><svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg></a>` : ""}
+            </div>
+          </article>
+        `).join("") || `<div class="empty">No templates found.</div>`;
+        renderDetail(null);
+      }
+
+      function renderClients() {
+        const clients = state.inventory.clients;
+        refs.itemList.innerHTML = clients.map((client) => `
+          <article class="client-row${client.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(client.id)}">
+            <div class="thumb"><span class="fallback">${escapeHtml(initials(client.name))}</span></div>
+            <div class="row-copy">
+              <h2>${escapeHtml(client.name)}</h2>
+              <p>${escapeHtml(client.adCount)} ad${client.adCount === 1 ? "" : "s"} across saved products and angles</p>
+              <div class="swatches">
+                ${(client.brandColors || []).map((color) => `<span class="swatch" title="${escapeHtml(color.name || color.value)}" style="background:${escapeHtml(color.value)}"></span>`).join("")}
+              </div>
+            </div>
+            <div class="row-actions">
+              <button class="btn ghost" type="button" data-client-filter="${escapeHtml(client.id)}">Ads</button>
+            </div>
+          </article>
+        `).join("") || `<div class="empty">No clients found.</div>`;
+        renderDetail(null);
+      }
+
+      function renderDetail(ad) {
+        if (!ad) {
+          refs.detailContent.innerHTML = `<p class="status">Select an ad to inspect its preview, context, and related documentation.</p>`;
+          return;
+        }
+        refs.detailContent.innerHTML = `
+          <div class="detail-preview">${thumbMarkup(ad.previewImage, ad.productName)}</div>
+          <h2>${escapeHtml(ad.productName)}</h2>
+          <p>${escapeHtml(ad.clientName)} · ${escapeHtml(ad.templateName)} · ${escapeHtml(ad.angleName)}</p>
+          <div class="chips">
+            <span class="chip ${statusClass(ad.status)}">${escapeHtml(ad.status)}</span>
+            <span class="chip">${escapeHtml(formatDate(ad.savedAt))}</span>
+          </div>
+          <div class="detail-links">
+            <a class="btn primary" href="${escapeHtml(ad.editorUrl)}">
+              <svg class="icon" aria-hidden="true"><use href="#icon-edit"></use></svg>
+              Open editor
+            </a>
+            ${(ad.docs || []).map((doc) => `
+              <a class="btn ghost" href="${escapeHtml(doc.url)}">
+                <svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg>
+                ${escapeHtml(doc.label)}
+              </a>
+            `).join("")}
+            ${ad.stateFile ? `
+              <a class="btn ghost" href="${escapeHtml(ad.stateFile)}">
+                <svg class="icon" aria-hidden="true"><use href="#icon-file"></use></svg>
+                Editor state
+              </a>
+            ` : ""}
+          </div>
+        `;
+      }
+
+      function render() {
+        renderStats();
+        renderFilters();
+        refs.tabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.view === state.view));
+        if (state.view === "templates") {
+          renderTemplates();
+        } else if (state.view === "clients") {
+          renderClients();
+        } else {
+          renderAds();
+        }
+      }
+
+      async function loadInventory() {
+        refs.itemList.innerHTML = `<div class="empty">Loading inventory...</div>`;
+        const response = await fetch(INVENTORY_ENDPOINT, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Inventory failed with ${response.status}`);
+        state.inventory = await response.json();
+        state.selectedId = state.inventory.ads[0]?.id || "";
+        render();
+      }
+
+      refs.searchInput.addEventListener("input", () => {
+        state.filters.search = refs.searchInput.value;
+        render();
+      });
+
+      refs.clientFilter.addEventListener("change", () => {
+        state.filters.client = refs.clientFilter.value;
+        state.selectedId = "";
+        render();
+      });
+
+      refs.templateFilter.addEventListener("change", () => {
+        state.filters.template = refs.templateFilter.value;
+        state.selectedId = "";
+        render();
+      });
+
+      refs.statusFilter.addEventListener("change", () => {
+        state.filters.status = refs.statusFilter.value;
+        state.selectedId = "";
+        render();
+      });
+
+      refs.clearFiltersBtn.addEventListener("click", () => {
+        state.filters = { search: "", client: "", template: "", status: "" };
+        refs.searchInput.value = "";
+        state.selectedId = "";
+        render();
+      });
+
+      refs.refreshBtn.addEventListener("click", () => {
+        loadInventory().catch((error) => {
+          refs.itemList.innerHTML = `<div class="empty">${escapeHtml(error.message)}</div>`;
+        });
+      });
+
+      refs.tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          state.view = tab.dataset.view;
+          state.selectedId = "";
+          render();
+        });
+      });
+
+      refs.itemList.addEventListener("click", (event) => {
+        const selectButton = event.target.closest("[data-select]");
+        if (selectButton) {
+          state.selectedId = selectButton.dataset.select;
+          render();
+          return;
+        }
+        const clientButton = event.target.closest("[data-client-filter]");
+        if (clientButton) {
+          state.view = "ads";
+          state.filters.client = clientButton.dataset.clientFilter;
+          state.selectedId = "";
+          render();
+          return;
+        }
+        const row = event.target.closest("[data-id]");
+        if (row && !event.target.closest("a")) {
+          state.selectedId = row.dataset.id;
+          render();
+        }
+      });
+
+      loadInventory().catch((error) => {
+        refs.itemList.innerHTML = `<div class="empty">${escapeHtml(error.message)}</div>`;
+      });
+    </script>
+  </body>
+</html>

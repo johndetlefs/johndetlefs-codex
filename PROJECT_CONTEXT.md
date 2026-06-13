@@ -2,6 +2,18 @@
 
 This file is workspace-level memory for agents working on JohnDetlefs.com. Use it to understand the product, audience, offer, funnel, and content strategy before making positioning, content, or implementation decisions.
 
+## Strategic Override As Of 2026-06-01
+
+The current direction is documented in `JOHNDETLEFS_PROGRAM_ROADMAP.md` and supersedes the older Fix-It Diagnostic direction below until this file is fully rewritten.
+
+- The primary commercial offer is now a checklist-driven Shopify coaching membership, working name **Shopify Growth Coaching**.
+- The assumed price remains `$695/month`, pending final confirmation.
+- There will be no discovery calls, no paid diagnostic calls, no paid implementation hours, and no done-for-you client work inside this offer.
+- Lead magnets, tools, and reports should point directly to coaching.
+- Members should log in, see their reports, see their recommended module/checklist, complete tasks, and attend weekly group coaching.
+- The product should teach merchants how to improve their own stores with structured checklists, Codex/GitHub/Shopify setup, and AI-assisted workflows.
+- Older references below to Shopify Fix-It Diagnostic, booking a paid diagnostic, scoped follow-on hours, or diagnostic-to-coaching bridges are legacy context and should not drive new implementation decisions.
+
 Last reviewed from `next/` source: 2026-05-20.
 
 ## Workspace Shape

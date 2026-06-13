@@ -1,7 +1,7 @@
 {
   "version": 1,
   "storageKey": "alessa-vino:visner-di-pergola-2024:r01-feature-benefit-product-hero",
-  "savedAt": "2026-05-27T00:43:38.769Z",
+  "savedAt": "2026-05-27T01:32:51.932Z",
   "project": {
     "elements": [
       {
@@ -63,14 +63,14 @@
         "lineHeight": 1.05,
         "layouts": {
           "story": {
-            "x": 95,
-            "y": 352,
-            "w": 890,
-            "h": 58,
+            "x": 79.755859375,
+            "y": 338.38671875,
+            "w": 931.5625,
+            "h": 71.603515625,
             "rotation": 0,
             "flipX": false,
             "flipY": false,
-            "fontSize": 55
+            "fontSize": 67.89988550646552
           },
           "portrait": {
             "x": 82,
@@ -114,8 +114,8 @@
         "radius": 8,
         "layouts": {
           "story": {
-            "x": 150,
-            "y": 432,
+            "x": 147.32421875,
+            "y": 431.951171875,
             "w": 780,
             "h": 58,
             "rotation": 0,
@@ -164,13 +164,13 @@
         "layouts": {
           "story": {
             "x": 188,
-            "y": 451,
-            "w": 704,
-            "h": 26,
+            "y": 444.84765625,
+            "w": 715.69921875,
+            "h": 32.15234375,
             "rotation": 0,
             "flipX": false,
             "flipY": false,
-            "fontSize": 28
+            "fontSize": 34.62560096153847
           },
           "portrait": {
             "x": 205,
@@ -303,13 +303,13 @@
         "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/arrow-curve-up-right.png",
         "layouts": {
           "story": {
-            "x": 278,
-            "y": 590,
+            "x": 244.55474853515625,
+            "y": 832.5451049804688,
             "w": 118,
             "h": 80,
-            "rotation": 14,
+            "rotation": -18.75307986862137,
             "flipX": false,
-            "flipY": false
+            "flipY": true
           },
           "portrait": {
             "x": 276,
@@ -349,11 +349,11 @@
         "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/sour-cherry-01.png",
         "layouts": {
           "story": {
-            "x": 155.27877807617188,
-            "y": 665.8209838867188,
-            "w": 96,
-            "h": 100,
-            "rotation": -2,
+            "x": 217.37799072265625,
+            "y": 622.4019425710042,
+            "w": 142.45140075683594,
+            "h": 148.3868757883708,
+            "rotation": 14.083986766602834,
             "flipX": false,
             "flipY": false
           },
@@ -399,8 +399,8 @@
         "lineHeight": 0.98,
         "layouts": {
           "story": {
-            "x": 72,
-            "y": 772,
+            "x": 158.650390625,
+            "y": 763.5769653320312,
             "w": 250,
             "h": 78,
             "rotation": 0,
@@ -449,11 +449,11 @@
         "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/wildflowers-01.png",
         "layouts": {
           "story": {
-            "x": 820,
-            "y": 660,
-            "w": 92,
-            "h": 92,
-            "rotation": 0,
+            "x": 716.9821166992188,
+            "y": 558.4143676757812,
+            "w": 207.93353271484375,
+            "h": 207.93353271484375,
+            "rotation": -4.089109987862983,
             "flipX": false,
             "flipY": false
           },
@@ -499,8 +499,8 @@
         "lineHeight": 0.98,
         "layouts": {
           "story": {
-            "x": 738,
-            "y": 762,
+            "x": 696.1073608398438,
+            "y": 743.4833374023438,
             "w": 270,
             "h": 76,
             "rotation": 0,
@@ -549,8 +549,8 @@
         "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
         "layouts": {
           "story": {
-            "x": 720,
-            "y": 835,
+            "x": 736.0101318359375,
+            "y": 809.5076293945312,
             "w": 130,
             "h": 86,
             "rotation": -68.5,
@@ -595,10 +595,10 @@
         "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/marche-ritual-01.png",
         "layouts": {
           "story": {
-            "x": 154,
-            "y": 970,
-            "w": 96,
-            "h": 96,
+            "x": 185.8032684326172,
+            "y": 940.7110595703125,
+            "w": 156.7928466796875,
+            "h": 156.7928466796875,
             "rotation": -5,
             "flipX": false,
             "flipY": false
@@ -645,11 +645,11 @@
         "lineHeight": 0.98,
         "layouts": {
           "story": {
-            "x": 82,
-            "y": 1075,
+            "x": 145.92820739746094,
+            "y": 1084.820556640625,
             "w": 230,
             "h": 76,
-            "rotation": 0,
+            "rotation": -0.6038320380617535,
             "flipX": false,
             "flipY": false,
             "fontSize": 29
@@ -695,8 +695,8 @@
         "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-right-curve-b.png",
         "layouts": {
           "story": {
-            "x": 230,
-            "y": 1148,
+            "x": 238.80410766601562,
+            "y": 1162.9766845703125,
             "w": 118,
             "h": 72,
             "rotation": 56,
@@ -737,14 +737,14 @@
         "name": "Chocolate pairing icon",
         "type": "image",
         "assetGroup": "icons",
-        "assetKey": "chocolate-pairing-01",
-        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-01.png",
+        "assetKey": "chocolate-pairing-02",
+        "src": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/icons/r01-feature-benefit/chocolate-pairing-02.png",
         "layouts": {
           "story": {
-            "x": 828,
-            "y": 970,
-            "w": 92,
-            "h": 92,
+            "x": 748.441162109375,
+            "y": 950.9144287109375,
+            "w": 154.52557373046875,
+            "h": 154.52557373046875,
             "rotation": 0,
             "flipX": false,
             "flipY": false
@@ -791,8 +791,8 @@
         "lineHeight": 0.98,
         "layouts": {
           "story": {
-            "x": 738,
-            "y": 1075,
+            "x": 684.6304321289062,
+            "y": 1078.1202392578125,
             "w": 270,
             "h": 76,
             "rotation": 0,
@@ -841,8 +841,8 @@
         "src": "/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/arrow-down-left-curve-a.png",
         "layouts": {
           "story": {
-            "x": 728,
-            "y": 1148,
+            "x": 710.4935913085938,
+            "y": 1147.699462890625,
             "w": 130,
             "h": 78,
             "rotation": -62.5,

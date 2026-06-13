@@ -39,6 +39,28 @@ Record the exact source text and how the wording works.
 - Copy formula:
 - Required adaptation rule:
 
+## 3A. Callout Strategy Gate
+
+Complete this before icon generation.
+
+- Product-page source:
+- Audience/angle:
+- User steering notes:
+- Callout matrix:
+  - Callout text:
+  - Product truth/source:
+  - Emotional job:
+  - Viewer takeaway:
+  - Visual role:
+  - Recommended icon metaphors:
+  - Banned icon metaphors:
+  - Mismatch risk:
+  - Asset set slug:
+  - Confidence:
+  - User decision:
+- Approval checkpoint:
+- Regeneration notes:
+
 ## 4. Composition Map
 
 Use percentages so the layout can be reproduced.
@@ -128,6 +150,7 @@ Use percentages so the layout can be reproduced.
 - Product treatment:
 - Typography:
 - Icons/arrows/stickers:
+- Icon size/legibility rule:
 - Props/scene:
 - Shadows/depth:
 
@@ -140,6 +163,9 @@ List what can be native/editor-built and what must be generated or sourced.
 - Hero image/scene:
 - Prop assets:
 - Icon/sticker/arrow set:
+- GPT Image 2.0 source sheet:
+- Contact sheet:
+- Prompt/audit note:
 - Typography/font asset:
 - Shadow/contact plate:
 - Other:
@@ -173,12 +199,14 @@ Score each line from 0-2 before considering the template ready.
 - Typography feel matches source:
 - Background/lighting matches source:
 - Icons/arrows/props match source:
+- Callout icon metaphors match product truth:
+- Icon visible size is appropriate for the final layout:
 - Arrow directions and head/tail positions match source:
 - Emotional job is preserved:
 - Product/client truth is preserved:
 - Safe-zone requirements are met:
 
-Minimum production threshold: 17/20, with no zero on composition, product focus, arrow directions, emotional job, product truth, or safe-zone requirements.
+Minimum production threshold: 21/24, with no zero on composition, product focus, callout metaphor fit, icon visible size, arrow directions, emotional job, product truth, or safe-zone requirements.
 
 ## 10. Open Questions
 

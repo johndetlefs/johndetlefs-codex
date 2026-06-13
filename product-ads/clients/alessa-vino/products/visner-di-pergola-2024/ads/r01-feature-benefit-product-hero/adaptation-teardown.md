@@ -45,6 +45,19 @@ Callouts:
 - `MARCHE / RITUAL`
 - `CHOCOLATE / PAIRING`
 
+## Callout Strategy Gate
+
+Detailed callout strategy and icon QA live in:
+
+- `/clients/alessa-vino/products/visner-di-pergola-2024/ads/r01-feature-benefit-product-hero/callout-strategy.md`
+
+Current diagnosis:
+
+- `Sour cherry nectar` should imply rich cherry wine, preserve, aroma, or ruby depth; a water droplet implies hydration or juice and should be banned.
+- `Chocolate pairing` should show wine plus chocolate/dessert context; coffee cups and cocoa plants imply a different category.
+- `Marche ritual` is ambiguous. If it means origin, landscape/village cues can work. If it means serving ritual, use pouring, table, glass, or cellar cues instead.
+- Icons must be judged by visible alpha artwork at final scale, not by the PNG/editor frame. The current selected icons feel too small and should be enlarged, cropped tighter, or regenerated with stronger visual density in the next pass.
+
 ## Visual Adaptation
 
 Preserve from source:
@@ -82,6 +95,7 @@ Icon set:
   - `wildflowers`
   - `marche-ritual`
   - `chocolate-pairing`
+- This first GPT icon pass is not final-approved. See `callout-strategy.md` for semantic-fit and icon-size issues to resolve before production acceptance.
 
 Arrow set:
 
@@ -95,6 +109,8 @@ Score before accepting:
 - Product bottle is cut out, not placed inside a white square.
 - Headline/subhead reads as one badge at thumbnail size.
 - Callouts feel like compact product satellites, not disconnected facts.
+- Icon metaphors match the callout meaning and product truth.
+- Icons are large and dense enough to read at thumbnail scale.
 - Arrowheads point back into the bottle/label area.
 - 9:16 key text and callouts sit inside the Reels-safe working area where practical.
 - Alcohol copy stays culinary and product-specific; no health, mood, confidence, or status promises.

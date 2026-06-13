@@ -1,6 +1,10 @@
 # Alessa Vino R01 GPT Image 2.0 Icon Sheet Prompt
 
-This file documents the production source for the Alessa Vino R01 callout icons.
+This file documents the first GPT Image 2.0 source for the Alessa Vino R01 callout icons.
+
+Status: first pass only, not final-approved. The follow-up callout audit found semantic-fit issues with several icons and scale/visible-density issues in layout. See:
+
+- `../../../ads/r01-feature-benefit-product-hero/callout-strategy.md`
 
 ## Output Files
 
@@ -34,3 +38,5 @@ Constraints: no words, no labels, no numbers, no watermark, no mockup UI, no sha
 - Expose callout variants through the ad-level `asset-groups.json`.
 - Assign each icon element an `assetSet` so the editor only shows variants relevant to that callout.
 - Do not place client callout icons in the shared template asset group.
+- Before regeneration, approve the callout strategy matrix. The next prompt should explicitly ban coffee cups, cocoa plants, water drops, landscape-only ritual icons, and overly thin artwork unless the callout copy changes.
+- After slicing, check visible alpha bbox and thumbnail legibility. The editor frame size is not enough to prove the icon is visually large enough.

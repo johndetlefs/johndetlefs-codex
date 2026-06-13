@@ -13,10 +13,15 @@ Product image:
 
 - `/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/product-shots/generated-ai/whey-pack-3quarter-ai-transparent.png`
 
-Shared arrows/icons:
+Shared arrows:
 
 - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v1/`
 - `/templates/r01-feature-benefit-product-hero/assets/icons/feature-benefit-v2/`
+
+Client/product callout icons:
+
+- `/clients/get-rid-of-dad-bod/products/chocolate-whey/assets/icons/r01-feature-benefit/`
+- `/clients/get-rid-of-dad-bod/products/chocolate-whey/ads/r01-feature-benefit-product-hero/asset-groups.json`
 
 Editor state:
 

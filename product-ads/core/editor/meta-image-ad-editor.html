@@ -491,11 +491,37 @@
         display: none;
       }
 
+      .export-tray-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
       .export-tray strong {
         display: block;
-        margin-bottom: 8px;
+        margin: 0;
         color: #253145;
         font-size: 12px;
+      }
+
+      .export-close-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border: 0;
+        border-radius: 7px;
+        background: rgba(23, 31, 45, 0.08);
+        color: #253145;
+        cursor: pointer;
+      }
+
+      .export-close-btn .icon {
+        width: 14px;
+        height: 14px;
       }
 
       .export-tray img {
@@ -863,6 +889,10 @@
         <p id="editorSubtitle">Edit the master creative, tune each ratio, then export all finished ad formats.</p>
       </div>
       <div class="actions">
+        <a class="btn icon-btn ghost" id="adminBtn" href="/meta-image-ad-admin.html" title="Ad admin" aria-label="Ad admin">
+          <svg class="icon" aria-hidden="true"><use href="#icon-gallery"></use></svg>
+          <span class="sr-only">Ad admin</span>
+        </a>
         <button class="btn icon-btn ghost" id="resetBtn" type="button" title="Reset" aria-label="Reset">
           <svg class="icon" aria-hidden="true"><use href="#icon-reset"></use></svg>
           <span class="sr-only">Reset</span>
@@ -939,7 +969,12 @@
           <span id="canvasInfo">9:16 - 1080 x 1920</span>
         </div>
         <div class="export-tray" id="exportTray" hidden>
-          <strong id="exportName">Export ready</strong>
+          <div class="export-tray-header">
+            <strong id="exportName">Export ready</strong>
+            <button class="export-close-btn" id="closeExportTrayBtn" type="button" title="Dismiss export" aria-label="Dismiss export">
+              <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+            </button>
+          </div>
           <img id="exportPreview" alt="Latest exported ad preview" />
           <a class="btn" id="downloadLink" href="#" download>
             <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
@@ -972,8 +1007,24 @@
 
     <script>
       const SVG_NS = "http://www.w3.org/2000/svg";
-      const CONFIG_ENDPOINT = "/api/meta-image-ad-editor/config";
-      const PROJECT_ENDPOINT = "/api/meta-image-ad-editor/project";
+      const CONTEXT_PARAM_KEYS = ["client", "product", "template", "angle"];
+
+      function endpointWithContext(path, extraParams = {}) {
+        const sourceParams = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams();
+        CONTEXT_PARAM_KEYS.forEach((key) => {
+          const value = sourceParams.get(key);
+          if (value) params.set(key, value);
+        });
+        Object.entries(extraParams).forEach(([key, value]) => {
+          if (value !== undefined && value !== null && value !== "") params.set(key, value);
+        });
+        const query = params.toString();
+        return query ? `${path}?${query}` : path;
+      }
+
+      const CONFIG_ENDPOINT = endpointWithContext("/api/meta-image-ad-editor/config");
+      const PROJECT_ENDPOINT = endpointWithContext("/api/meta-image-ad-editor/project");
       let STORAGE_KEY = "product-ads-editor";
       let editorConfig = {
         title: "Product Ads - Meta Ad Editor",
@@ -1143,6 +1194,8 @@
       const previewModal = document.getElementById("previewModal");
       const previewGrid = document.getElementById("previewGrid");
       const previewSubtitle = document.getElementById("previewSubtitle");
+      const exportTray = document.getElementById("exportTray");
+      const closeExportTrayBtn = document.getElementById("closeExportTrayBtn");
       let saveFeedbackTimer = null;
       let previewUrls = [];
       const safeZoneToggles = {
@@ -1353,7 +1406,7 @@
 
       async function loadProject() {
         try {
-          const response = await fetch(`${PROJECT_ENDPOINT}?storageKey=${encodeURIComponent(STORAGE_KEY)}`, {
+          const response = await fetch(endpointWithContext("/api/meta-image-ad-editor/project", { storageKey: STORAGE_KEY }), {
             cache: "no-store"
           });
           if (response.ok) {
@@ -2396,6 +2449,9 @@
       }
 
       saveBtn.addEventListener("click", saveProject);
+      closeExportTrayBtn.addEventListener("click", () => {
+        exportTray.hidden = true;
+      });
       document.getElementById("resetBtn").addEventListener("click", () => {
         if (!window.confirm("Reset this editor to the seeded ad layout?")) return;
         project = { background: clone(seedBackground), elements: clone(seedElements) };
@@ -2548,7 +2604,6 @@
         URL.revokeObjectURL(url);
         const png = canvas.toDataURL("image/png");
         const link = document.getElementById("downloadLink");
-        const exportTray = document.getElementById("exportTray");
         const exportPreview = document.getElementById("exportPreview");
         const exportName = document.getElementById("exportName");
         const filename = `${editorConfig.exportPrefix}-${ratio.label.replace(/[:.]/g, "-")}.png`;
