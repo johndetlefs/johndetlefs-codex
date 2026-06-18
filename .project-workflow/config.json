@@ -1,0 +1,9 @@
+{
+  "task_id_prefixes": [
+    "TASK"
+  ],
+  "default_task_id_prefix": "TASK",
+  "prefix_guidance": {
+    "TASK": "Workspace-level project work across JohnDetlefs.com, including parent-owned product, content, ads, lead magnets, and cross-repo coordination."
+  }
+}

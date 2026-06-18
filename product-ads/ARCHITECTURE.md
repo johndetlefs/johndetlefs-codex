@@ -85,6 +85,12 @@ Callout copy, icon metaphors, GPT Image 2.0 prompts, regeneration decisions, and
 
 - `CALLOUT_AND_ICON_PROCESS.md`
 
+Safe-zone QA for all templates should follow:
+
+- `SAFE_ZONE_QA.md`
+
+Template-specific common elements, such as R01 arrows or R02 fake phone chrome, belong under the relevant `templates/<template-slug>/` folder and should be referenced by the template documentation.
+
 ## Preview Model
 
 Preview should be layered the same way the files are layered:

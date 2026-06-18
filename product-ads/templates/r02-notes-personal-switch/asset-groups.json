@@ -1,0 +1,9 @@
+{
+  "r02NotesChrome": {
+    "notesTopActions": {
+      "label": "Notes top action icons",
+      "src": "/templates/r02-notes-personal-switch/assets/icons/notes-top-actions-v1.png",
+      "source": "/templates/r02-notes-personal-switch/assets/icons/notes-top-actions-v1.svg"
+    }
+  }
+}

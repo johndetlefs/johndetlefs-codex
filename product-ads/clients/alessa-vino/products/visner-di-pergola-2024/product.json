@@ -2,8 +2,7 @@
   "name": "Visner di Pergola Montepulciano Visciole 2024",
   "slug": "visner-di-pergola-2024",
   "editorTitle": "Alessa Vino - Meta Ad Editor",
-  "editorSubtitle": "R01 feature-benefit creative for Visner di Pergola. Tune each ratio, then export finished ad formats.",
-  "exportPrefix": "alessa-vino-r01-visner-di-pergola-2024",
+  "editorSubtitle": "Tune each ratio, then export finished ad formats for Visner di Pergola.",
   "backgroundStops": [
     "#f4efe1",
     "#d8cfaa",
@@ -74,6 +73,60 @@
       ]
     }
   ],
+  "templateOverrides": {
+    "r01-feature-benefit-product-hero": {
+      "editorSubtitle": "R01 feature-benefit creative for Visner di Pergola. Tune each ratio, then export finished ad formats.",
+      "exportPrefix": "alessa-vino-r01-visner-di-pergola-2024"
+    },
+    "r02-notes-personal-switch": {
+      "editorSubtitle": "R02 notes-app creative for Visner di Pergola. Tune each ratio, then export finished ad formats.",
+      "exportPrefix": "alessa-vino-r02-visner-di-pergola-2024",
+      "backgroundStops": [
+        "#ae4751",
+        "#8d2f38",
+        "#2a302d"
+      ],
+      "background": {
+        "type": "radial",
+        "angle": 180,
+        "positionX": 50,
+        "positionY": 56,
+        "stops": [
+          "#ae4751",
+          "#8d2f38",
+          "#2a302d"
+        ]
+      },
+      "backgroundPresets": [
+        {
+          "id": "alessa-ad-one-cherry-depth",
+          "name": "Ad one cherry depth",
+          "type": "radial",
+          "angle": 180,
+          "positionX": 50,
+          "positionY": 56,
+          "stops": [
+            "#ae4751",
+            "#8d2f38",
+            "#2a302d"
+          ]
+        },
+        {
+          "id": "alessa-lifted-cherry-depth",
+          "name": "Lifted cherry depth",
+          "type": "radial",
+          "angle": 180,
+          "positionX": 50,
+          "positionY": 52,
+          "stops": [
+            "#b95661",
+            "#8d2f38",
+            "#2a302d"
+          ]
+        }
+      ]
+    }
+  },
   "primaryProductImage": "/clients/alessa-vino/products/visner-di-pergola-2024/assets/product-shots/visner-di-pergola-cutout.png",
   "sourceAnalysis": "/clients/alessa-vino/products/visner-di-pergola-2024/source/product-page-analysis.md"
 }

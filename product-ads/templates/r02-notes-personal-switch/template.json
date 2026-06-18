@@ -1,0 +1,25 @@
+{
+  "id": "r02-notes-personal-switch",
+  "name": "R02 - Notes / Personal Switch",
+  "referenceImage": "/templates/r02-notes-personal-switch/reference/original.webp",
+  "referenceNote": "Source reference for notes-app chrome, first-person headline, checklist rhythm, and product-under-note hierarchy.",
+  "defaultBackgroundStops": [
+    "#fffaf0",
+    "#f7f0dc",
+    "#efe3bf"
+  ],
+  "defaultBackground": {
+    "type": "linear",
+    "angle": 180,
+    "positionX": 50,
+    "positionY": 50,
+    "stops": [
+      "#fffaf0",
+      "#f7f0dc",
+      "#efe3bf"
+    ]
+  },
+  "forensicTeardown": "/templates/r02-notes-personal-switch/forensic-teardown.md",
+  "assetRequirements": "/templates/r02-notes-personal-switch/asset-requirements.md",
+  "commonElements": "/templates/r02-notes-personal-switch/common-elements.json"
+}

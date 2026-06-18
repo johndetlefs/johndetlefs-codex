@@ -1,0 +1,21 @@
+{
+  "notesChrome": {
+    "description": "Reusable fake iPhone Notes top chrome for R02 ads. Decorative chrome should stay inside the edge guard, but does not need to sit inside Stories/Reels safe rectangles.",
+    "layers": [
+      {
+        "id": "topBack",
+        "name": "Notes back label",
+        "type": "text",
+        "text": "< All Notes"
+      },
+      {
+        "id": "topActions",
+        "name": "Notes action icons",
+        "type": "image",
+        "src": "/templates/r02-notes-personal-switch/assets/icons/notes-top-actions-v1.png",
+        "sourceSvg": "/templates/r02-notes-personal-switch/assets/icons/notes-top-actions-v1.svg",
+        "lockAspect": true
+      }
+    ]
+  }
+}

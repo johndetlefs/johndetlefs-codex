@@ -89,11 +89,17 @@ def build_context(args: argparse.Namespace) -> dict[str, Any]:
     template = load_json(template_dir / "template.json", {})
     brand = load_json(client_dir / "brand.json", {})
     product = load_json(product_dir / "product.json", {})
+    product_template_overrides = product.get("templateOverrides", {})
+    template_product = {}
+    if isinstance(product_template_overrides, dict):
+        candidate = product_template_overrides.get(template_slug)
+        if isinstance(candidate, dict):
+            template_product = candidate
     template_assets = load_json(template_dir / "asset-groups.json", {})
     base_ad_assets = load_json(base_ad_dir / "asset-groups.json", {})
     ad_assets = load_json(ad_dir / "asset-groups.json", {})
-    background_stops = product.get("backgroundStops") or template.get("defaultBackgroundStops") or ["#2079b8", "#184c94", "#123861"]
-    background = product.get("background") or template.get("defaultBackground") or background_from_stops(background_stops)
+    background_stops = template_product.get("backgroundStops") or product.get("backgroundStops") or template.get("defaultBackgroundStops") or ["#2079b8", "#184c94", "#123861"]
+    background = template_product.get("background") or product.get("background") or template.get("defaultBackground") or background_from_stops(background_stops)
 
     storage_key = f"{client_slug}:{product_slug}:{template_slug}"
     if angle_slug:
@@ -104,15 +110,15 @@ def build_context(args: argparse.Namespace) -> dict[str, Any]:
         "template": template_slug,
         "angle": angle_slug,
         "storageKey": storage_key,
-        "title": product.get("editorTitle") or f"{brand.get('name', client_slug)} - Meta Ad Editor",
-        "subtitle": product.get("editorSubtitle") or "Edit the master creative, tune each ratio, then export all finished ad formats.",
+        "title": template_product.get("editorTitle") or product.get("editorTitle") or f"{brand.get('name', client_slug)} - Meta Ad Editor",
+        "subtitle": template_product.get("editorSubtitle") or product.get("editorSubtitle") or "Edit the master creative, tune each ratio, then export all finished ad formats.",
         "referenceImage": template.get("referenceImage", ""),
         "referenceNote": template.get("referenceNote", ""),
-        "exportPrefix": product.get("exportPrefix") or f"{client_slug}-{product_slug}-{template_slug}",
+        "exportPrefix": template_product.get("exportPrefix") or product.get("exportPrefix") or f"{client_slug}-{product_slug}-{template_slug}",
         "backgroundStops": background_stops,
         "background": background,
-        "backgroundPresets": product.get("backgroundPresets") or template.get("backgroundPresets") or [],
-        "brandColors": product.get("brandColors") or brand.get("brandColors") or [],
+        "backgroundPresets": template_product.get("backgroundPresets") or product.get("backgroundPresets") or template.get("backgroundPresets") or [],
+        "brandColors": template_product.get("brandColors") or product.get("brandColors") or brand.get("brandColors") or [],
         "generatedAssetGroups": merge_asset_groups(template_assets, base_ad_assets, ad_assets),
         "paths": {
             "stateFile": str(state_file.relative_to(PRODUCT_ADS_ROOT)),
