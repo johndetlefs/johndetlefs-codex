@@ -5,8 +5,10 @@ Use this file for workspace-level workflow conventions that should survive proje
 ## Workspace Ownership
 
 - The workspace root `/Users/johndetlefs/repos/johndetlefs` is the project/control repo for JohnDetlefs.com.
-- Keep the main backlog in this parent `.project-workflow/` directory.
-- Use child repo trackers only for explicitly app-local work. Do not track parent-owned `product-ads/`, lead-magnet packet, roadmap, product memory, or cross-repo work inside `next/.project-workflow/` or `email/.project-workflow/`.
+- Keep the only live backlog in this parent `.project-workflow/` directory.
+- Do not create child repo trackers in `next/.project-workflow/` or `email/.project-workflow/`.
+- Run project-workflow from the parent workspace even when a task's implementation touches only `next/` or only `email/`.
+- Historical child workflow state is preserved under `.project-workflow/archive/` for lookup only. Do not update archived trackers as live workflow state.
 - Keep Git operations scoped to the repo that owns the changed files unless a task explicitly lists multiple repos.
 
 ## Required Task Metadata
@@ -16,7 +18,8 @@ Each workspace task should record these fields in its requirements or implementa
 - Primary repo: the repo that owns the main changed files.
 - Repos touched: every repo expected to change.
 - Branch/PR: branch names and pull request links or status for each touched repo.
-- Workflow owner: whether the task belongs to the parent workspace tracker or a child app-local tracker.
+- Workflow owner: parent workspace tracker.
+- Archived context: any archived child workflow document this task continues or supersedes.
 
 ## Owner Gates
 

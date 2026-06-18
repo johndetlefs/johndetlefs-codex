@@ -53,7 +53,7 @@ Create a second Alessa Vino Meta image ad direction for the Visner di Pergola 20
 ## Decisions (Resolved)
 
 - Use the parent workspace workflow tracker for this task because `product-ads/` belongs to the parent repo.
-- Keep `next/.project-workflow/` app-local and remove `TASK-006` from that tracker.
+- Keep all live workflow tracking in the parent workspace and remove project-workflow from child repos.
 - Use template-specific product overrides instead of duplicating product config per template.
 - Use a shared vector-derived `notes-top-actions-v1` icon asset instead of unicode fake Notes controls.
 

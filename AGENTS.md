@@ -13,11 +13,13 @@ Reusable lead-magnet frameworks and production packets live in `lead-magnets/`. 
 ## Project Boundaries
 
 - Treat `/Users/johndetlefs/repos/johndetlefs` as the overall JohnDetlefs.com project workspace.
-- Keep the main JohnDetlefs.com backlog in `/.project-workflow/`. Parent-owned work includes product memory, roadmaps, lead magnets, guide/video packets, `product-ads/`, and cross-repo coordination.
+- Keep the only live JohnDetlefs.com project workflow state in `/.project-workflow/`. Parent-owned work includes website work, email work, product memory, roadmaps, lead magnets, guide/video packets, `product-ads/`, and cross-repo coordination.
 - `next/` and `email/` are separate Git repositories and project components inside this workspace.
+- Do not add `.project-workflow/` or `.codex/skills/project-workflow/` back to `next/` or `email/`; run project-workflow from the parent workspace even when the implementation files live in a child repo.
 - Coordinate product, content, and implementation decisions across both repositories when the user refers to JohnDetlefs.com.
 - Keep Git operations scoped to the relevant child repository unless the user explicitly asks for cross-repo work.
 - When a workflow task spans repositories, record `Primary repo`, `Repos touched`, and branch/PR state in the task docs before implementation or handoff.
+- Historical workflow state removed from child repos is preserved under `/.project-workflow/archive/`.
 
 ## Component Repositories
 
