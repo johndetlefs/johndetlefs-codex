@@ -1,9 +1,23 @@
 {
   "task_id_prefixes": [
+    "WEB",
+    "COACH",
+    "EMAIL",
+    "ADS",
+    "LEAD",
+    "CONTENT",
+    "OPS",
     "TASK"
   ],
-  "default_task_id_prefix": "TASK",
+  "default_task_id_prefix": "OPS",
   "prefix_guidance": {
-    "TASK": "Workspace-level project work across JohnDetlefs.com, including parent-owned product, content, ads, lead magnets, and cross-repo coordination."
+    "WEB": "Website application work, normally implemented in the next repo: routes, React components, public pages, app APIs, auth/member UI, analytics wiring, and site infrastructure.",
+    "COACH": "Shopify Growth Coaching product work: curriculum, member modules, checklists, coaching workflows, readiness flows, and product packaging.",
+    "EMAIL": "Email repo or email-system work: transactional emails, newsletter infrastructure, Sendy/SES flows, templates, deliverability, and email assets.",
+    "ADS": "Advertising and creative production work: product-ads, Meta/TikTok creative, acquisition ad packets, offer tests, and visual QA for paid media.",
+    "LEAD": "Lead-magnet and report-style tool work: analyzers, calculators, signed reports, result pages, report emails, operator notifications, and conversion tracking.",
+    "CONTENT": "Content and publishing work: guides, YouTube/video packages, transcripts, SEO/editorial updates, content packets, and repurposing.",
+    "OPS": "Workspace operations and cross-repo coordination: project workflow, repo hygiene, integrations, data migrations, deployment/process tasks, and work that does not fit a product prefix.",
+    "TASK": "Legacy/general fallback for existing migrated tasks. Prefer a more specific prefix for new work when possible."
   }
 }

@@ -21,6 +21,21 @@ Each workspace task should record these fields in its requirements or implementa
 - Workflow owner: parent workspace tracker.
 - Archived context: any archived child workflow document this task continues or supersedes.
 
+## Task Prefixes
+
+Use the most specific configured prefix when creating new work:
+
+- `WEB`: website application work in `next/`.
+- `COACH`: Shopify Growth Coaching product, curriculum, member modules, and checklists.
+- `EMAIL`: email repo or email-system work.
+- `ADS`: product-ad and paid-media creative work.
+- `LEAD`: lead magnets, analyzers, calculators, and report-style tools.
+- `CONTENT`: guides, videos, content packets, SEO/editorial, and repurposing.
+- `OPS`: workflow, repo hygiene, integrations, migrations, and cross-repo/process work.
+- `TASK`: legacy/general fallback for existing migrated tasks; avoid it for new work when a specific prefix fits.
+
+When a task touches multiple streams, choose the prefix for the primary outcome, then record all touched repos and systems in the task metadata.
+
 ## Owner Gates
 
 - After creating a task or epic, treat all requirements, acceptance criteria, and implementation plans as drafts until the owner explicitly approves them.
