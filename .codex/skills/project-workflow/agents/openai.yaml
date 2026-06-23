@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Workflow"
+  short_description: "Run project-workflow from Codex"
+  default_prompt: "Use $project-workflow to manage a project task from requirements through QA and retro."
+
+policy:
+  allow_implicit_invocation: true

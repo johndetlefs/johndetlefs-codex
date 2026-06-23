@@ -1,0 +1,11 @@
+{
+  "task_id_prefixes": [
+    "TASK",
+    "JD"
+  ],
+  "default_task_id_prefix": "TASK",
+  "prefix_guidance": {
+    "TASK": "App-local task work owned by the next repository.",
+    "JD": "Legacy app-local JohnDetlefs.com website tasks retained for historical tracking."
+  }
+}

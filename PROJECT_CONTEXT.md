@@ -28,7 +28,7 @@ Intended main offer: **Shopify Fix-It Diagnostic**.
 - Promise: the customer leaves with a clear, prioritized plan rather than a sales pitch.
 - Guarantee: 100% satisfaction guarantee, full refund if the customer emails within 48 hours.
 - Tone: "No agency nonsense", "paid diagnosis", "clear next steps", "No proposal unless you ask for one".
-- Implementation note: the current app still has legacy `$249 AUD` Shopify Fix-It Call defaults in `NEXT_PUBLIC_FIXIT_CALL_PRICE_AUD=24900` / `STRIPE_AMOUNT_AUD=24900`. Update tracked in `next/.project-workflow/tasks/TASK-003-Reposition-Homepage-To-Shopify-Fix-It-Diagnostic/`.
+- Implementation note: the current app still has legacy `$249 AUD` Shopify Fix-It Call defaults in `NEXT_PUBLIC_FIXIT_CALL_PRICE_AUD=24900` / `STRIPE_AMOUNT_AUD=24900`. Historical tracking is preserved in `.project-workflow/archive/next-project-workflow-2026-06-18/tasks/TASK-003-Reposition-Homepage-To-Shopify-Fix-It-Diagnostic/`.
 
 Important implementation files:
 
@@ -356,7 +356,7 @@ Validation expectations:
 Important local instructions:
 
 - `next/AGENTS.md` has repo-specific engineering rules.
-- `next/.project-workflow/CONSTITUTION.md` has product decision filters.
+- `.project-workflow/CONSTITUTION.md` has product decision filters. The former `next/.project-workflow/CONSTITUTION.md` is preserved in `.project-workflow/archive/next-project-workflow-2026-06-18/CONSTITUTION.md`.
 
 ## Decision Filters
 
